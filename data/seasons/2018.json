@@ -1,6 +1,6 @@
 {
   "season": 2018,
-  "updated": "2026-09-15T22:04:25.822221+00:00",
+  "updated": "2026-09-16T14:34:40.876370+00:00",
   "current_round": 21,
   "has_sprint": false,
   "driver_standings": [
@@ -287,6 +287,14 @@
           "utc_end": "2018-03-24T01:00:00+00:00",
           "msk_date": "24.03.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-03-25T05:10:00+00:00",
+          "utc_end": "2018-03-25T07:10:00+00:00",
+          "msk_date": "25.03.2018",
+          "msk_time": "08:10"
         }
       ],
       "qualifying_results": [
@@ -815,23 +823,13 @@
           "delta": 1
         },
         {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 11,
-          "delta": 0
-        },
-        {
           "driver_id": "ericsson",
           "driver": "Marcus Ericsson",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 12,
+          "pos": 11,
           "delta": 0
         },
         {
@@ -841,27 +839,7 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 13,
-          "delta": 0
-        },
-        {
-          "driver_id": "brendon_hartley",
-          "driver": "Brendon Hartley",
-          "team": "Toro Rosso",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 14,
-          "delta": 0
-        },
-        {
-          "driver_id": "ocon",
-          "driver": "Esteban Ocon",
-          "team": "Force India",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 15,
+          "pos": 12,
           "delta": 0
         },
         {
@@ -871,17 +849,37 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 16,
+          "pos": 13,
           "delta": 0
         },
         {
-          "driver_id": "perez",
-          "driver": "Sergio Pérez",
+          "driver_id": "ocon",
+          "driver": "Esteban Ocon",
           "team": "Force India",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 17,
+          "pos": 14,
+          "delta": 0
+        },
+        {
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 15,
+          "delta": 0
+        },
+        {
+          "driver_id": "stroll",
+          "driver": "Lance Stroll",
+          "team": "Williams",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 16,
           "delta": 0
         },
         {
@@ -891,7 +889,7 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 18,
+          "pos": 17,
           "delta": 0
         },
         {
@@ -901,13 +899,23 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
+          "pos": 18,
+          "delta": 0
+        },
+        {
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
+          "team": "Force India",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
           "pos": 19,
           "delta": 0
         },
         {
-          "driver_id": "stroll",
-          "driver": "Lance Stroll",
-          "team": "Williams",
+          "driver_id": "brendon_hartley",
+          "driver": "Brendon Hartley",
+          "team": "Toro Rosso",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -955,6 +963,14 @@
           "utc_end": "2018-04-07T01:00:00+00:00",
           "msk_date": "07.04.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-04-08T15:10:00+00:00",
+          "utc_end": "2018-04-08T17:10:00+00:00",
+          "msk_date": "08.04.2018",
+          "msk_time": "18:10"
         }
       ],
       "qualifying_results": [
@@ -1503,23 +1519,33 @@
           "delta": 2
         },
         {
-          "driver_id": "ocon",
-          "driver": "Esteban Ocon",
-          "team": "Force India",
-          "sprint_pts": null,
-          "race_pts": 1,
-          "total_after": 1,
-          "pos": 13,
-          "delta": 1
-        },
-        {
           "driver_id": "sainz",
           "driver": "Carlos Sainz",
           "team": "Renault",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 1,
+          "pos": 13,
+          "delta": 0
+        },
+        {
+          "driver_id": "ocon",
+          "driver": "Esteban Ocon",
+          "team": "Force India",
+          "sprint_pts": null,
+          "race_pts": 1,
+          "total_after": 1,
           "pos": 14,
+          "delta": 1
+        },
+        {
+          "driver_id": "sirotkin",
+          "driver": "Sergey Sirotkin",
+          "team": "Williams",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 15,
           "delta": 0
         },
         {
@@ -1529,37 +1555,17 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 15,
-          "delta": 0
-        },
-        {
-          "driver_id": "brendon_hartley",
-          "driver": "Brendon Hartley",
-          "team": "Toro Rosso",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
           "pos": 16,
           "delta": 0
         },
         {
-          "driver_id": "sirotkin",
-          "driver": "Sergey Sirotkin",
+          "driver_id": "stroll",
+          "driver": "Lance Stroll",
           "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
           "pos": 17,
-          "delta": 0
-        },
-        {
-          "driver_id": "perez",
-          "driver": "Sergio Pérez",
-          "team": "Force India",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 18,
           "delta": 0
         },
         {
@@ -1569,13 +1575,23 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
+          "pos": 18,
+          "delta": 0
+        },
+        {
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
+          "team": "Force India",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
           "pos": 19,
           "delta": 0
         },
         {
-          "driver_id": "stroll",
-          "driver": "Lance Stroll",
-          "team": "Williams",
+          "driver_id": "brendon_hartley",
+          "driver": "Brendon Hartley",
+          "team": "Toro Rosso",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -1623,6 +1639,14 @@
           "utc_end": "2018-04-14T01:00:00+00:00",
           "msk_date": "14.04.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-04-15T06:10:00+00:00",
+          "utc_end": "2018-04-15T08:10:00+00:00",
+          "msk_date": "15.04.2018",
+          "msk_time": "09:10"
         }
       ],
       "qualifying_results": [
@@ -2101,24 +2125,24 @@
           "delta": 15
         },
         {
-          "driver_id": "hulkenberg",
-          "driver": "Nico Hülkenberg",
-          "team": "Renault",
-          "sprint_pts": null,
-          "race_pts": 8,
-          "total_after": 22,
-          "pos": 6,
-          "delta": 8
-        },
-        {
           "driver_id": "alonso",
           "driver": "Fernando Alonso",
           "team": "McLaren",
           "sprint_pts": null,
           "race_pts": 6,
           "total_after": 22,
-          "pos": 7,
+          "pos": 6,
           "delta": 6
+        },
+        {
+          "driver_id": "hulkenberg",
+          "driver": "Nico Hülkenberg",
+          "team": "Renault",
+          "sprint_pts": null,
+          "race_pts": 8,
+          "total_after": 22,
+          "pos": 7,
+          "delta": 8
         },
         {
           "driver_id": "max_verstappen",
@@ -2191,9 +2215,9 @@
           "delta": 0
         },
         {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
+          "driver_id": "sirotkin",
+          "driver": "Sergey Sirotkin",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -2201,9 +2225,9 @@
           "delta": 0
         },
         {
-          "driver_id": "brendon_hartley",
-          "driver": "Brendon Hartley",
-          "team": "Toro Rosso",
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -2211,23 +2235,13 @@
           "delta": 0
         },
         {
-          "driver_id": "sirotkin",
-          "driver": "Sergey Sirotkin",
+          "driver_id": "stroll",
+          "driver": "Lance Stroll",
           "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
           "pos": 17,
-          "delta": 0
-        },
-        {
-          "driver_id": "perez",
-          "driver": "Sergio Pérez",
-          "team": "Force India",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 18,
           "delta": 0
         },
         {
@@ -2237,13 +2251,23 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
+          "pos": 18,
+          "delta": 0
+        },
+        {
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
+          "team": "Force India",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
           "pos": 19,
           "delta": 0
         },
         {
-          "driver_id": "stroll",
-          "driver": "Lance Stroll",
-          "team": "Williams",
+          "driver_id": "brendon_hartley",
+          "driver": "Brendon Hartley",
+          "team": "Toro Rosso",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -2291,6 +2315,14 @@
           "utc_end": "2018-04-28T01:00:00+00:00",
           "msk_date": "28.04.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-04-29T12:10:00+00:00",
+          "utc_end": "2018-04-29T14:10:00+00:00",
+          "msk_date": "29.04.2018",
+          "msk_time": "15:10"
         }
       ],
       "qualifying_results": [
@@ -2839,24 +2871,24 @@
           "delta": 0
         },
         {
-          "driver_id": "leclerc",
-          "driver": "Charles Leclerc",
-          "team": "Sauber",
-          "sprint_pts": null,
-          "race_pts": 8,
-          "total_after": 8,
-          "pos": 13,
-          "delta": 8
-        },
-        {
           "driver_id": "vandoorne",
           "driver": "Stoffel Vandoorne",
           "team": "McLaren",
           "sprint_pts": null,
           "race_pts": 2,
           "total_after": 8,
-          "pos": 14,
+          "pos": 13,
           "delta": 2
+        },
+        {
+          "driver_id": "leclerc",
+          "driver": "Charles Leclerc",
+          "team": "Sauber",
+          "sprint_pts": null,
+          "race_pts": 8,
+          "total_after": 8,
+          "pos": 14,
+          "delta": 8
         },
         {
           "driver_id": "stroll",
@@ -2879,29 +2911,29 @@
           "delta": 0
         },
         {
-          "driver_id": "brendon_hartley",
-          "driver": "Brendon Hartley",
-          "team": "Toro Rosso",
-          "sprint_pts": null,
-          "race_pts": 1,
-          "total_after": 1,
-          "pos": 17,
-          "delta": 1
-        },
-        {
           "driver_id": "ocon",
           "driver": "Esteban Ocon",
           "team": "Force India",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 1,
-          "pos": 18,
+          "pos": 17,
           "delta": 0
         },
         {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
+          "driver_id": "brendon_hartley",
+          "driver": "Brendon Hartley",
+          "team": "Toro Rosso",
+          "sprint_pts": null,
+          "race_pts": 1,
+          "total_after": 1,
+          "pos": 18,
+          "delta": 1
+        },
+        {
+          "driver_id": "sirotkin",
+          "driver": "Sergey Sirotkin",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -2909,9 +2941,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sirotkin",
-          "driver": "Sergey Sirotkin",
-          "team": "Williams",
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -2959,6 +2991,14 @@
           "utc_end": "2018-05-12T01:00:00+00:00",
           "msk_date": "12.05.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-05-13T13:10:00+00:00",
+          "utc_end": "2018-05-13T15:10:00+00:00",
+          "msk_date": "13.05.2018",
+          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [
@@ -3547,9 +3587,9 @@
           "delta": 0
         },
         {
-          "driver_id": "brendon_hartley",
-          "driver": "Brendon Hartley",
-          "team": "Toro Rosso",
+          "driver_id": "ocon",
+          "driver": "Esteban Ocon",
+          "team": "Force India",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 1,
@@ -3557,9 +3597,9 @@
           "delta": 0
         },
         {
-          "driver_id": "ocon",
-          "driver": "Esteban Ocon",
-          "team": "Force India",
+          "driver_id": "brendon_hartley",
+          "driver": "Brendon Hartley",
+          "team": "Toro Rosso",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 1,
@@ -3567,9 +3607,9 @@
           "delta": 0
         },
         {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
+          "driver_id": "sirotkin",
+          "driver": "Sergey Sirotkin",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -3577,9 +3617,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sirotkin",
-          "driver": "Sergey Sirotkin",
-          "team": "Williams",
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -3627,6 +3667,14 @@
           "utc_end": "2018-05-26T01:00:00+00:00",
           "msk_date": "26.05.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-05-27T13:10:00+00:00",
+          "utc_end": "2018-05-27T15:10:00+00:00",
+          "msk_date": "27.05.2018",
+          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [
@@ -4235,9 +4283,9 @@
           "delta": 0
         },
         {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
+          "driver_id": "sirotkin",
+          "driver": "Sergey Sirotkin",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -4245,9 +4293,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sirotkin",
-          "driver": "Sergey Sirotkin",
-          "team": "Williams",
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -4295,6 +4343,14 @@
           "utc_end": "2018-06-09T01:00:00+00:00",
           "msk_date": "09.06.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-06-10T18:10:00+00:00",
+          "utc_end": "2018-06-10T20:10:00+00:00",
+          "msk_date": "10.06.2018",
+          "msk_time": "21:10"
         }
       ],
       "qualifying_results": [
@@ -4783,24 +4839,24 @@
           "delta": 15
         },
         {
-          "driver_id": "hulkenberg",
-          "driver": "Nico Hülkenberg",
-          "team": "Renault",
-          "sprint_pts": null,
-          "race_pts": 6,
-          "total_after": 32,
-          "pos": 7,
-          "delta": 6
-        },
-        {
           "driver_id": "alonso",
           "driver": "Fernando Alonso",
           "team": "McLaren",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 32,
-          "pos": 8,
+          "pos": 7,
           "delta": 0
+        },
+        {
+          "driver_id": "hulkenberg",
+          "driver": "Nico Hülkenberg",
+          "team": "Renault",
+          "sprint_pts": null,
+          "race_pts": 6,
+          "total_after": 32,
+          "pos": 8,
+          "delta": 6
         },
         {
           "driver_id": "sainz",
@@ -4903,9 +4959,9 @@
           "delta": 0
         },
         {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
+          "driver_id": "sirotkin",
+          "driver": "Sergey Sirotkin",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -4913,9 +4969,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sirotkin",
-          "driver": "Sergey Sirotkin",
-          "team": "Williams",
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -4963,6 +5019,14 @@
           "utc_end": "2018-06-23T01:00:00+00:00",
           "msk_date": "23.06.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-06-24T14:10:00+00:00",
+          "utc_end": "2018-06-24T16:10:00+00:00",
+          "msk_date": "24.06.2018",
+          "msk_time": "17:10"
         }
       ],
       "qualifying_results": [
@@ -5571,9 +5635,9 @@
           "delta": 0
         },
         {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
+          "driver_id": "sirotkin",
+          "driver": "Sergey Sirotkin",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -5581,9 +5645,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sirotkin",
-          "driver": "Sergey Sirotkin",
-          "team": "Williams",
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -5631,6 +5695,14 @@
           "utc_end": "2018-06-30T01:00:00+00:00",
           "msk_date": "30.06.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-07-01T13:10:00+00:00",
+          "utc_end": "2018-07-01T15:10:00+00:00",
+          "msk_date": "01.07.2018",
+          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [
@@ -6299,6 +6371,14 @@
           "utc_end": "2018-07-07T01:00:00+00:00",
           "msk_date": "07.07.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-07-08T13:10:00+00:00",
+          "utc_end": "2018-07-08T15:10:00+00:00",
+          "msk_date": "08.07.2018",
+          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [
@@ -6967,6 +7047,14 @@
           "utc_end": "2018-07-21T01:00:00+00:00",
           "msk_date": "21.07.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-07-22T13:10:00+00:00",
+          "utc_end": "2018-07-22T15:10:00+00:00",
+          "msk_date": "22.07.2018",
+          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [
@@ -7635,6 +7723,14 @@
           "utc_end": "2018-07-28T01:00:00+00:00",
           "msk_date": "28.07.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-07-29T13:10:00+00:00",
+          "utc_end": "2018-07-29T15:10:00+00:00",
+          "msk_date": "29.07.2018",
+          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [
@@ -8153,24 +8249,24 @@
           "delta": 4
         },
         {
-          "driver_id": "perez",
-          "driver": "Sergio Pérez",
-          "team": "Force India",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 30,
-          "pos": 10,
-          "delta": 0
-        },
-        {
           "driver_id": "sainz",
           "driver": "Carlos Sainz",
           "team": "Renault",
           "sprint_pts": null,
           "race_pts": 2,
           "total_after": 30,
-          "pos": 11,
+          "pos": 10,
           "delta": 2
+        },
+        {
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
+          "team": "Force India",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 30,
+          "pos": 11,
+          "delta": 0
         },
         {
           "driver_id": "ocon",
@@ -8303,6 +8399,14 @@
           "utc_end": "2018-08-25T01:00:00+00:00",
           "msk_date": "25.08.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-08-26T13:10:00+00:00",
+          "utc_end": "2018-08-26T15:10:00+00:00",
+          "msk_date": "26.08.2018",
+          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [
@@ -8971,6 +9075,14 @@
           "utc_end": "2018-09-01T01:00:00+00:00",
           "msk_date": "01.09.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-09-02T13:10:00+00:00",
+          "utc_end": "2018-09-02T15:10:00+00:00",
+          "msk_date": "02.09.2018",
+          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [
@@ -9639,6 +9751,14 @@
           "utc_end": "2018-09-15T01:00:00+00:00",
           "msk_date": "15.09.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-09-16T12:10:00+00:00",
+          "utc_end": "2018-09-16T14:10:00+00:00",
+          "msk_date": "16.09.2018",
+          "msk_time": "15:10"
         }
       ],
       "qualifying_results": [
@@ -10307,6 +10427,14 @@
           "utc_end": "2018-09-29T01:00:00+00:00",
           "msk_date": "29.09.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-09-30T11:10:00+00:00",
+          "utc_end": "2018-09-30T13:10:00+00:00",
+          "msk_date": "30.09.2018",
+          "msk_time": "14:10"
         }
       ],
       "qualifying_results": [
@@ -10975,6 +11103,14 @@
           "utc_end": "2018-10-06T01:00:00+00:00",
           "msk_date": "06.10.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-10-07T05:10:00+00:00",
+          "utc_end": "2018-10-07T07:10:00+00:00",
+          "msk_date": "07.10.2018",
+          "msk_time": "08:10"
         }
       ],
       "qualifying_results": [
@@ -11643,6 +11779,14 @@
           "utc_end": "2018-10-20T01:00:00+00:00",
           "msk_date": "20.10.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-10-21T18:10:00+00:00",
+          "utc_end": "2018-10-21T20:10:00+00:00",
+          "msk_date": "21.10.2018",
+          "msk_time": "21:10"
         }
       ],
       "qualifying_results": [
@@ -12311,6 +12455,14 @@
           "utc_end": "2018-10-27T01:00:00+00:00",
           "msk_date": "27.10.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-10-28T19:10:00+00:00",
+          "utc_end": "2018-10-28T21:10:00+00:00",
+          "msk_date": "28.10.2018",
+          "msk_time": "22:10"
         }
       ],
       "qualifying_results": [
@@ -12979,6 +13131,14 @@
           "utc_end": "2018-11-10T01:00:00+00:00",
           "msk_date": "10.11.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-11-11T17:10:00+00:00",
+          "utc_end": "2018-11-11T19:10:00+00:00",
+          "msk_date": "11.11.2018",
+          "msk_time": "20:10"
         }
       ],
       "qualifying_results": [
@@ -13647,6 +13807,14 @@
           "utc_end": "2018-11-24T01:00:00+00:00",
           "msk_date": "24.11.2018",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2018-11-25T13:10:00+00:00",
+          "utc_end": "2018-11-25T15:10:00+00:00",
+          "msk_date": "25.11.2018",
+          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [

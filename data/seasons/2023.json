@@ -1,6 +1,6 @@
 {
   "season": 2023,
-  "updated": "2026-09-15T22:06:02.546804+00:00",
+  "updated": "2026-09-16T14:36:26.945987+00:00",
   "current_round": 22,
   "has_sprint": true,
   "driver_standings": [
@@ -291,6 +291,14 @@
           "msk_time": "18:00"
         },
         {
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2023-03-04T11:30:00+00:00",
+          "utc_end": "2023-03-04T12:30:00+00:00",
+          "msk_date": "04.03.2023",
+          "msk_time": "14:30"
+        },
+        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2023-03-04T15:00:00+00:00",
@@ -299,12 +307,12 @@
           "msk_time": "18:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2023-03-04T11:30:00+00:00",
-          "utc_end": "2023-03-04T12:30:00+00:00",
-          "msk_date": "04.03.2023",
-          "msk_time": "14:30"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-03-05T15:00:00+00:00",
+          "utc_end": "2023-03-05T17:00:00+00:00",
+          "msk_date": "05.03.2023",
+          "msk_time": "18:00"
         }
       ],
       "qualifying_results": [
@@ -833,9 +841,9 @@
           "delta": 1
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "tsunoda",
+          "driver": "Yuki Tsunoda",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -853,23 +861,13 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
-          "team": "Alfa Romeo",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 13,
-          "delta": 0
-        },
-        {
-          "driver_id": "piastri",
-          "driver": "Oscar Piastri",
+          "driver_id": "norris",
+          "driver": "Lando Norris",
           "team": "McLaren",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 14,
+          "pos": 13,
           "delta": 0
         },
         {
@@ -879,7 +877,7 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 15,
+          "pos": 14,
           "delta": 0
         },
         {
@@ -889,13 +887,23 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
+          "pos": 15,
+          "delta": 0
+        },
+        {
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
           "pos": 16,
           "delta": 0
         },
         {
-          "driver_id": "tsunoda",
-          "driver": "Yuki Tsunoda",
-          "team": "AlphaTauri",
+          "driver_id": "piastri",
+          "driver": "Oscar Piastri",
+          "team": "McLaren",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -903,9 +911,9 @@
           "delta": 0
         },
         {
-          "driver_id": "hulkenberg",
-          "driver": "Nico Hülkenberg",
-          "team": "Haas F1 Team",
+          "driver_id": "leclerc",
+          "driver": "Charles Leclerc",
+          "team": "Ferrari",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -913,9 +921,9 @@
           "delta": 0
         },
         {
-          "driver_id": "norris",
-          "driver": "Lando Norris",
-          "team": "McLaren",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -923,9 +931,9 @@
           "delta": 0
         },
         {
-          "driver_id": "leclerc",
-          "driver": "Charles Leclerc",
-          "team": "Ferrari",
+          "driver_id": "hulkenberg",
+          "driver": "Nico Hülkenberg",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -959,6 +967,14 @@
           "msk_time": "20:00"
         },
         {
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2023-03-18T13:30:00+00:00",
+          "utc_end": "2023-03-18T14:30:00+00:00",
+          "msk_date": "18.03.2023",
+          "msk_time": "16:30"
+        },
+        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2023-03-18T17:00:00+00:00",
@@ -967,12 +983,12 @@
           "msk_time": "20:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2023-03-18T13:30:00+00:00",
-          "utc_end": "2023-03-18T14:30:00+00:00",
-          "msk_date": "18.03.2023",
-          "msk_time": "16:30"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-03-19T17:00:00+00:00",
+          "utc_end": "2023-03-19T19:00:00+00:00",
+          "msk_date": "19.03.2023",
+          "msk_time": "20:00"
         }
       ],
       "qualifying_results": [
@@ -1431,24 +1447,24 @@
           "delta": 15
         },
         {
-          "driver_id": "hamilton",
-          "driver": "Lewis Hamilton",
-          "team": "Mercedes",
-          "sprint_pts": null,
-          "race_pts": 10,
-          "total_after": 20,
-          "pos": 4,
-          "delta": 10
-        },
-        {
           "driver_id": "sainz",
           "driver": "Carlos Sainz",
           "team": "Ferrari",
           "sprint_pts": null,
           "race_pts": 8,
           "total_after": 20,
-          "pos": 5,
+          "pos": 4,
           "delta": 8
+        },
+        {
+          "driver_id": "hamilton",
+          "driver": "Lewis Hamilton",
+          "team": "Mercedes",
+          "sprint_pts": null,
+          "race_pts": 10,
+          "total_after": 20,
+          "pos": 5,
+          "delta": 10
         },
         {
           "driver_id": "russell",
@@ -1531,9 +1547,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "tsunoda",
+          "driver": "Yuki Tsunoda",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -1541,23 +1557,13 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
-          "team": "Alfa Romeo",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 15,
-          "delta": 0
-        },
-        {
-          "driver_id": "piastri",
-          "driver": "Oscar Piastri",
+          "driver_id": "norris",
+          "driver": "Lando Norris",
           "team": "McLaren",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 16,
+          "pos": 15,
           "delta": 0
         },
         {
@@ -1567,13 +1573,23 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
+          "pos": 16,
+          "delta": 0
+        },
+        {
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
           "pos": 17,
           "delta": 0
         },
         {
-          "driver_id": "tsunoda",
-          "driver": "Yuki Tsunoda",
-          "team": "AlphaTauri",
+          "driver_id": "piastri",
+          "driver": "Oscar Piastri",
+          "team": "McLaren",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -1581,9 +1597,9 @@
           "delta": 0
         },
         {
-          "driver_id": "hulkenberg",
-          "driver": "Nico Hülkenberg",
-          "team": "Haas F1 Team",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -1591,9 +1607,9 @@
           "delta": 0
         },
         {
-          "driver_id": "norris",
-          "driver": "Lando Norris",
-          "team": "McLaren",
+          "driver_id": "hulkenberg",
+          "driver": "Nico Hülkenberg",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -1627,6 +1643,14 @@
           "msk_time": "08:00"
         },
         {
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2023-04-01T01:30:00+00:00",
+          "utc_end": "2023-04-01T02:30:00+00:00",
+          "msk_date": "01.04.2023",
+          "msk_time": "04:30"
+        },
+        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2023-04-01T05:00:00+00:00",
@@ -1635,12 +1659,12 @@
           "msk_time": "08:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2023-04-01T01:30:00+00:00",
-          "utc_end": "2023-04-01T02:30:00+00:00",
-          "msk_date": "01.04.2023",
-          "msk_time": "04:30"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-04-02T05:00:00+00:00",
+          "utc_end": "2023-04-02T07:00:00+00:00",
+          "msk_date": "02.04.2023",
+          "msk_time": "08:00"
         }
       ],
       "qualifying_results": [
@@ -2149,34 +2173,24 @@
           "delta": 8
         },
         {
-          "driver_id": "hulkenberg",
-          "driver": "Nico Hülkenberg",
-          "team": "Haas F1 Team",
-          "sprint_pts": null,
-          "race_pts": 6,
-          "total_after": 6,
-          "pos": 9,
-          "delta": 6
-        },
-        {
           "driver_id": "leclerc",
           "driver": "Charles Leclerc",
           "team": "Ferrari",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 6,
-          "pos": 10,
+          "pos": 9,
           "delta": 0
         },
         {
-          "driver_id": "piastri",
-          "driver": "Oscar Piastri",
-          "team": "McLaren",
+          "driver_id": "hulkenberg",
+          "driver": "Nico Hülkenberg",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
-          "race_pts": 4,
-          "total_after": 4,
-          "pos": 11,
-          "delta": 4
+          "race_pts": 6,
+          "total_after": 6,
+          "pos": 10,
+          "delta": 6
         },
         {
           "driver_id": "bottas",
@@ -2185,7 +2199,7 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 4,
-          "pos": 12,
+          "pos": 11,
           "delta": 0
         },
         {
@@ -2195,8 +2209,18 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 4,
-          "pos": 13,
+          "pos": 12,
           "delta": 0
+        },
+        {
+          "driver_id": "piastri",
+          "driver": "Oscar Piastri",
+          "team": "McLaren",
+          "sprint_pts": null,
+          "race_pts": 4,
+          "total_after": 4,
+          "pos": 13,
+          "delta": 4
         },
         {
           "driver_id": "gasly",
@@ -2219,24 +2243,24 @@
           "delta": 2
         },
         {
-          "driver_id": "kevin_magnussen",
-          "driver": "Kevin Magnussen",
-          "team": "Haas F1 Team",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 1,
-          "pos": 16,
-          "delta": 0
-        },
-        {
           "driver_id": "tsunoda",
           "driver": "Yuki Tsunoda",
           "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 1,
           "total_after": 1,
-          "pos": 17,
+          "pos": 16,
           "delta": 1
+        },
+        {
+          "driver_id": "kevin_magnussen",
+          "driver": "Kevin Magnussen",
+          "team": "Haas F1 Team",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 1,
+          "pos": 17,
+          "delta": 0
         },
         {
           "driver_id": "albon",
@@ -2249,9 +2273,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "de_vries",
+          "driver": "Nyck de Vries",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -2259,9 +2283,9 @@
           "delta": 0
         },
         {
-          "driver_id": "de_vries",
-          "driver": "Nyck de Vries",
-          "team": "AlphaTauri",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -2287,6 +2311,14 @@
           "msk_time": "12:30"
         },
         {
+          "name": "Qualifying",
+          "name_ru": "Квалификация",
+          "utc_start": "2023-04-28T13:00:00+00:00",
+          "utc_end": "2023-04-28T14:00:00+00:00",
+          "msk_date": "28.04.2023",
+          "msk_time": "16:00"
+        },
+        {
           "name": "Sprint",
           "name_ru": "Спринт",
           "utc_start": "2023-04-29T13:30:00+00:00",
@@ -2295,12 +2327,12 @@
           "msk_time": "16:30"
         },
         {
-          "name": "Qualifying",
-          "name_ru": "Квалификация",
-          "utc_start": "2023-04-28T13:00:00+00:00",
-          "utc_end": "2023-04-28T14:00:00+00:00",
-          "msk_date": "28.04.2023",
-          "msk_time": "16:00"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-04-30T11:00:00+00:00",
+          "utc_end": "2023-04-30T13:00:00+00:00",
+          "msk_date": "30.04.2023",
+          "msk_time": "14:00"
         }
       ],
       "qualifying_results": [
@@ -3001,24 +3033,24 @@
           "delta": 14
         },
         {
-          "driver_id": "leclerc",
-          "driver": "Charles Leclerc",
-          "team": "Ferrari",
-          "sprint_pts": 7,
-          "race_pts": 15,
-          "total_after": 28,
-          "pos": 6,
-          "delta": 22
-        },
-        {
           "driver_id": "russell",
           "driver": "George Russell",
           "team": "Mercedes",
           "sprint_pts": 5,
           "race_pts": 5,
           "total_after": 28,
-          "pos": 7,
+          "pos": 6,
           "delta": 10
+        },
+        {
+          "driver_id": "leclerc",
+          "driver": "Charles Leclerc",
+          "team": "Ferrari",
+          "sprint_pts": 7,
+          "race_pts": 15,
+          "total_after": 28,
+          "pos": 7,
+          "delta": 22
         },
         {
           "driver_id": "stroll",
@@ -3051,9 +3083,9 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
-          "team": "Alfa Romeo",
+          "driver_id": "ocon",
+          "driver": "Esteban Ocon",
+          "team": "Alpine F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 4,
@@ -3071,9 +3103,9 @@
           "delta": 0
         },
         {
-          "driver_id": "ocon",
-          "driver": "Esteban Ocon",
-          "team": "Alpine F1 Team",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
+          "team": "Alfa Romeo",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 4,
@@ -3091,24 +3123,24 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
-          "team": "Alfa Romeo",
-          "sprint_pts": 0,
-          "race_pts": 0,
-          "total_after": 2,
-          "pos": 15,
-          "delta": 0
-        },
-        {
           "driver_id": "tsunoda",
           "driver": "Yuki Tsunoda",
           "team": "AlphaTauri",
           "sprint_pts": 0,
           "race_pts": 1,
           "total_after": 2,
-          "pos": 16,
+          "pos": 15,
           "delta": 1
+        },
+        {
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Alfa Romeo",
+          "sprint_pts": 0,
+          "race_pts": 0,
+          "total_after": 2,
+          "pos": 16,
+          "delta": 0
         },
         {
           "driver_id": "albon",
@@ -3131,9 +3163,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "de_vries",
+          "driver": "Nyck de Vries",
+          "team": "AlphaTauri",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
@@ -3141,9 +3173,9 @@
           "delta": 0
         },
         {
-          "driver_id": "de_vries",
-          "driver": "Nyck de Vries",
-          "team": "AlphaTauri",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
@@ -3177,6 +3209,14 @@
           "msk_time": "00:30"
         },
         {
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2023-05-06T16:30:00+00:00",
+          "utc_end": "2023-05-06T17:30:00+00:00",
+          "msk_date": "06.05.2023",
+          "msk_time": "19:30"
+        },
+        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2023-05-06T20:00:00+00:00",
@@ -3185,12 +3225,12 @@
           "msk_time": "23:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2023-05-06T16:30:00+00:00",
-          "utc_end": "2023-05-06T17:30:00+00:00",
-          "msk_date": "06.05.2023",
-          "msk_time": "19:30"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-05-07T19:30:00+00:00",
+          "utc_end": "2023-05-07T21:30:00+00:00",
+          "msk_date": "07.05.2023",
+          "msk_time": "22:30"
         }
       ],
       "qualifying_results": [
@@ -3739,9 +3779,9 @@
           "delta": 0
         },
         {
-          "driver_id": "piastri",
-          "driver": "Oscar Piastri",
-          "team": "McLaren",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
+          "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 4,
@@ -3749,13 +3789,23 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
-          "team": "Alfa Romeo",
+          "driver_id": "piastri",
+          "driver": "Oscar Piastri",
+          "team": "McLaren",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 4,
           "pos": 14,
+          "delta": 0
+        },
+        {
+          "driver_id": "tsunoda",
+          "driver": "Yuki Tsunoda",
+          "team": "AlphaTauri",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 2,
+          "pos": 15,
           "delta": 0
         },
         {
@@ -3765,23 +3815,13 @@
           "sprint_pts": null,
           "race_pts": 1,
           "total_after": 2,
-          "pos": 15,
+          "pos": 16,
           "delta": 1
         },
         {
           "driver_id": "zhou",
           "driver": "Guanyu Zhou",
           "team": "Alfa Romeo",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 2,
-          "pos": 16,
-          "delta": 0
-        },
-        {
-          "driver_id": "tsunoda",
-          "driver": "Yuki Tsunoda",
-          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 2,
@@ -3799,9 +3839,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "de_vries",
+          "driver": "Nyck de Vries",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -3809,9 +3849,9 @@
           "delta": 0
         },
         {
-          "driver_id": "de_vries",
-          "driver": "Nyck de Vries",
-          "team": "AlphaTauri",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -3845,6 +3885,14 @@
           "msk_time": "18:00"
         },
         {
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2023-05-27T10:30:00+00:00",
+          "utc_end": "2023-05-27T11:30:00+00:00",
+          "msk_date": "27.05.2023",
+          "msk_time": "13:30"
+        },
+        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2023-05-27T14:00:00+00:00",
@@ -3853,12 +3901,12 @@
           "msk_time": "17:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2023-05-27T10:30:00+00:00",
-          "utc_end": "2023-05-27T11:30:00+00:00",
-          "msk_date": "27.05.2023",
-          "msk_time": "13:30"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-05-28T13:00:00+00:00",
+          "utc_end": "2023-05-28T15:00:00+00:00",
+          "msk_date": "28.05.2023",
+          "msk_time": "16:00"
         }
       ],
       "qualifying_results": [
@@ -4427,9 +4475,9 @@
           "delta": 0
         },
         {
-          "driver_id": "kevin_magnussen",
-          "driver": "Kevin Magnussen",
-          "team": "Haas F1 Team",
+          "driver_id": "tsunoda",
+          "driver": "Yuki Tsunoda",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 2,
@@ -4437,9 +4485,9 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
-          "team": "Alfa Romeo",
+          "driver_id": "kevin_magnussen",
+          "driver": "Kevin Magnussen",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 2,
@@ -4447,9 +4495,9 @@
           "delta": 0
         },
         {
-          "driver_id": "tsunoda",
-          "driver": "Yuki Tsunoda",
-          "team": "AlphaTauri",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 2,
@@ -4467,9 +4515,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "de_vries",
+          "driver": "Nyck de Vries",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -4477,9 +4525,9 @@
           "delta": 0
         },
         {
-          "driver_id": "de_vries",
-          "driver": "Nyck de Vries",
-          "team": "AlphaTauri",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -4513,6 +4561,14 @@
           "msk_time": "18:00"
         },
         {
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2023-06-03T10:30:00+00:00",
+          "utc_end": "2023-06-03T11:30:00+00:00",
+          "msk_date": "03.06.2023",
+          "msk_time": "13:30"
+        },
+        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2023-06-03T14:00:00+00:00",
@@ -4521,12 +4577,12 @@
           "msk_time": "17:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2023-06-03T10:30:00+00:00",
-          "utc_end": "2023-06-03T11:30:00+00:00",
-          "msk_date": "03.06.2023",
-          "msk_time": "13:30"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-06-04T13:00:00+00:00",
+          "utc_end": "2023-06-04T15:00:00+00:00",
+          "msk_date": "04.06.2023",
+          "msk_time": "16:00"
         }
       ],
       "qualifying_results": [
@@ -5085,29 +5141,29 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
-          "team": "Alfa Romeo",
-          "sprint_pts": null,
-          "race_pts": 2,
-          "total_after": 4,
-          "pos": 14,
-          "delta": 2
-        },
-        {
           "driver_id": "bottas",
           "driver": "Valtteri Bottas",
           "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 4,
-          "pos": 15,
+          "pos": 14,
           "delta": 0
         },
         {
-          "driver_id": "kevin_magnussen",
-          "driver": "Kevin Magnussen",
-          "team": "Haas F1 Team",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Alfa Romeo",
+          "sprint_pts": null,
+          "race_pts": 2,
+          "total_after": 4,
+          "pos": 15,
+          "delta": 2
+        },
+        {
+          "driver_id": "tsunoda",
+          "driver": "Yuki Tsunoda",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 2,
@@ -5115,9 +5171,9 @@
           "delta": 0
         },
         {
-          "driver_id": "tsunoda",
-          "driver": "Yuki Tsunoda",
-          "team": "AlphaTauri",
+          "driver_id": "kevin_magnussen",
+          "driver": "Kevin Magnussen",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 2,
@@ -5135,9 +5191,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "de_vries",
+          "driver": "Nyck de Vries",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -5145,9 +5201,9 @@
           "delta": 0
         },
         {
-          "driver_id": "de_vries",
-          "driver": "Nyck de Vries",
-          "team": "AlphaTauri",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -5181,6 +5237,14 @@
           "msk_time": "00:00"
         },
         {
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2023-06-17T16:30:00+00:00",
+          "utc_end": "2023-06-17T17:30:00+00:00",
+          "msk_date": "17.06.2023",
+          "msk_time": "19:30"
+        },
+        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2023-06-17T20:00:00+00:00",
@@ -5189,12 +5253,12 @@
           "msk_time": "23:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2023-06-17T16:30:00+00:00",
-          "utc_end": "2023-06-17T17:30:00+00:00",
-          "msk_date": "17.06.2023",
-          "msk_time": "19:30"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-06-18T18:00:00+00:00",
+          "utc_end": "2023-06-18T20:00:00+00:00",
+          "msk_date": "18.06.2023",
+          "msk_time": "21:00"
         }
       ],
       "qualifying_results": [
@@ -5753,24 +5817,24 @@
           "delta": 0
         },
         {
-          "driver_id": "piastri",
-          "driver": "Oscar Piastri",
-          "team": "McLaren",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 5,
-          "pos": 14,
-          "delta": 0
-        },
-        {
           "driver_id": "bottas",
           "driver": "Valtteri Bottas",
           "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 1,
           "total_after": 5,
-          "pos": 15,
+          "pos": 14,
           "delta": 1
+        },
+        {
+          "driver_id": "piastri",
+          "driver": "Oscar Piastri",
+          "team": "McLaren",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 5,
+          "pos": 15,
+          "delta": 0
         },
         {
           "driver_id": "zhou",
@@ -5783,9 +5847,9 @@
           "delta": 0
         },
         {
-          "driver_id": "kevin_magnussen",
-          "driver": "Kevin Magnussen",
-          "team": "Haas F1 Team",
+          "driver_id": "tsunoda",
+          "driver": "Yuki Tsunoda",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 2,
@@ -5793,9 +5857,9 @@
           "delta": 0
         },
         {
-          "driver_id": "tsunoda",
-          "driver": "Yuki Tsunoda",
-          "team": "AlphaTauri",
+          "driver_id": "kevin_magnussen",
+          "driver": "Kevin Magnussen",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 2,
@@ -5803,9 +5867,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "de_vries",
+          "driver": "Nyck de Vries",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -5813,9 +5877,9 @@
           "delta": 0
         },
         {
-          "driver_id": "de_vries",
-          "driver": "Nyck de Vries",
-          "team": "AlphaTauri",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -5841,6 +5905,14 @@
           "msk_time": "14:30"
         },
         {
+          "name": "Qualifying",
+          "name_ru": "Квалификация",
+          "utc_start": "2023-06-30T15:00:00+00:00",
+          "utc_end": "2023-06-30T16:00:00+00:00",
+          "msk_date": "30.06.2023",
+          "msk_time": "18:00"
+        },
+        {
           "name": "Sprint",
           "name_ru": "Спринт",
           "utc_start": "2023-07-01T14:30:00+00:00",
@@ -5849,12 +5921,12 @@
           "msk_time": "17:30"
         },
         {
-          "name": "Qualifying",
-          "name_ru": "Квалификация",
-          "utc_start": "2023-06-30T15:00:00+00:00",
-          "utc_end": "2023-06-30T16:00:00+00:00",
-          "msk_date": "30.06.2023",
-          "msk_time": "18:00"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-07-02T13:00:00+00:00",
+          "utc_end": "2023-07-02T15:00:00+00:00",
+          "msk_date": "02.07.2023",
+          "msk_time": "16:00"
         }
       ],
       "qualifying_results": [
@@ -6555,24 +6627,24 @@
           "delta": 14
         },
         {
-          "driver_id": "leclerc",
-          "driver": "Charles Leclerc",
-          "team": "Ferrari",
-          "sprint_pts": 0,
-          "race_pts": 18,
-          "total_after": 72,
-          "pos": 6,
-          "delta": 18
-        },
-        {
           "driver_id": "russell",
           "driver": "George Russell",
           "team": "Mercedes",
           "sprint_pts": 1,
           "race_pts": 6,
           "total_after": 72,
-          "pos": 7,
+          "pos": 6,
           "delta": 7
+        },
+        {
+          "driver_id": "leclerc",
+          "driver": "Charles Leclerc",
+          "team": "Ferrari",
+          "sprint_pts": 0,
+          "race_pts": 18,
+          "total_after": 72,
+          "pos": 7,
+          "delta": 18
         },
         {
           "driver_id": "stroll",
@@ -6635,9 +6707,9 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
-          "team": "Alfa Romeo",
+          "driver_id": "piastri",
+          "driver": "Oscar Piastri",
+          "team": "McLaren",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 5,
@@ -6645,9 +6717,9 @@
           "delta": 0
         },
         {
-          "driver_id": "piastri",
-          "driver": "Oscar Piastri",
-          "team": "McLaren",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
+          "team": "Alfa Romeo",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 5,
@@ -6685,9 +6757,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "de_vries",
+          "driver": "Nyck de Vries",
+          "team": "AlphaTauri",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
@@ -6695,9 +6767,9 @@
           "delta": 0
         },
         {
-          "driver_id": "de_vries",
-          "driver": "Nyck de Vries",
-          "team": "AlphaTauri",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
@@ -6731,6 +6803,14 @@
           "msk_time": "18:00"
         },
         {
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2023-07-08T10:30:00+00:00",
+          "utc_end": "2023-07-08T11:30:00+00:00",
+          "msk_date": "08.07.2023",
+          "msk_time": "13:30"
+        },
+        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2023-07-08T14:00:00+00:00",
@@ -6739,12 +6819,12 @@
           "msk_time": "17:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2023-07-08T10:30:00+00:00",
-          "utc_end": "2023-07-08T11:30:00+00:00",
-          "msk_date": "08.07.2023",
-          "msk_time": "13:30"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-07-09T14:00:00+00:00",
+          "utc_end": "2023-07-09T16:00:00+00:00",
+          "msk_date": "09.07.2023",
+          "msk_time": "17:00"
         }
       ],
       "qualifying_results": [
@@ -7333,9 +7413,9 @@
           "delta": 0
         },
         {
-          "driver_id": "kevin_magnussen",
-          "driver": "Kevin Magnussen",
-          "team": "Haas F1 Team",
+          "driver_id": "tsunoda",
+          "driver": "Yuki Tsunoda",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 2,
@@ -7343,9 +7423,9 @@
           "delta": 0
         },
         {
-          "driver_id": "tsunoda",
-          "driver": "Yuki Tsunoda",
-          "team": "AlphaTauri",
+          "driver_id": "kevin_magnussen",
+          "driver": "Kevin Magnussen",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 2,
@@ -7353,9 +7433,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "de_vries",
+          "driver": "Nyck de Vries",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -7363,9 +7443,9 @@
           "delta": 0
         },
         {
-          "driver_id": "de_vries",
-          "driver": "Nyck de Vries",
-          "team": "AlphaTauri",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -7399,6 +7479,14 @@
           "msk_time": "18:00"
         },
         {
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2023-07-22T10:30:00+00:00",
+          "utc_end": "2023-07-22T11:30:00+00:00",
+          "msk_date": "22.07.2023",
+          "msk_time": "13:30"
+        },
+        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2023-07-22T14:00:00+00:00",
@@ -7407,12 +7495,12 @@
           "msk_time": "17:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2023-07-22T10:30:00+00:00",
-          "utc_end": "2023-07-22T11:30:00+00:00",
-          "msk_date": "22.07.2023",
-          "msk_time": "13:30"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-07-23T13:00:00+00:00",
+          "utc_end": "2023-07-23T15:00:00+00:00",
+          "msk_date": "23.07.2023",
+          "msk_time": "16:00"
         }
       ],
       "qualifying_results": [
@@ -8001,9 +8089,9 @@
           "delta": 0
         },
         {
-          "driver_id": "kevin_magnussen",
-          "driver": "Kevin Magnussen",
-          "team": "Haas F1 Team",
+          "driver_id": "tsunoda",
+          "driver": "Yuki Tsunoda",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 2,
@@ -8011,9 +8099,9 @@
           "delta": 0
         },
         {
-          "driver_id": "tsunoda",
-          "driver": "Yuki Tsunoda",
-          "team": "AlphaTauri",
+          "driver_id": "kevin_magnussen",
+          "driver": "Kevin Magnussen",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 2,
@@ -8059,6 +8147,14 @@
           "msk_time": "14:30"
         },
         {
+          "name": "Qualifying",
+          "name_ru": "Квалификация",
+          "utc_start": "2023-07-28T15:00:00+00:00",
+          "utc_end": "2023-07-28T16:00:00+00:00",
+          "msk_date": "28.07.2023",
+          "msk_time": "18:00"
+        },
+        {
           "name": "Sprint",
           "name_ru": "Спринт",
           "utc_start": "2023-07-29T14:30:00+00:00",
@@ -8067,12 +8163,12 @@
           "msk_time": "17:30"
         },
         {
-          "name": "Qualifying",
-          "name_ru": "Квалификация",
-          "utc_start": "2023-07-28T15:00:00+00:00",
-          "utc_end": "2023-07-28T16:00:00+00:00",
-          "msk_date": "28.07.2023",
-          "msk_time": "18:00"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-07-30T13:00:00+00:00",
+          "utc_end": "2023-07-30T15:00:00+00:00",
+          "msk_date": "30.07.2023",
+          "msk_time": "16:00"
         }
       ],
       "qualifying_results": [
@@ -8763,24 +8859,24 @@
           "delta": 15
         },
         {
-          "driver_id": "leclerc",
-          "driver": "Charles Leclerc",
-          "team": "Ferrari",
-          "sprint_pts": 4,
-          "race_pts": 15,
-          "total_after": 99,
-          "pos": 5,
-          "delta": 19
-        },
-        {
           "driver_id": "russell",
           "driver": "George Russell",
           "team": "Mercedes",
           "sprint_pts": 1,
           "race_pts": 8,
           "total_after": 99,
-          "pos": 6,
+          "pos": 5,
           "delta": 9
+        },
+        {
+          "driver_id": "leclerc",
+          "driver": "Charles Leclerc",
+          "team": "Ferrari",
+          "sprint_pts": 4,
+          "race_pts": 15,
+          "total_after": 99,
+          "pos": 6,
+          "delta": 19
         },
         {
           "driver_id": "sainz",
@@ -8949,6 +9045,14 @@
           "msk_time": "17:00"
         },
         {
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2023-08-26T09:30:00+00:00",
+          "utc_end": "2023-08-26T10:30:00+00:00",
+          "msk_date": "26.08.2023",
+          "msk_time": "12:30"
+        },
+        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2023-08-26T13:00:00+00:00",
@@ -8957,12 +9061,12 @@
           "msk_time": "16:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2023-08-26T09:30:00+00:00",
-          "utc_end": "2023-08-26T10:30:00+00:00",
-          "msk_date": "26.08.2023",
-          "msk_time": "12:30"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-08-27T13:00:00+00:00",
+          "utc_end": "2023-08-27T15:00:00+00:00",
+          "msk_date": "27.08.2023",
+          "msk_time": "16:00"
         }
       ],
       "qualifying_results": [
@@ -9491,24 +9595,24 @@
           "delta": 15
         },
         {
-          "driver_id": "piastri",
-          "driver": "Oscar Piastri",
-          "team": "McLaren",
-          "sprint_pts": null,
-          "race_pts": 2,
-          "total_after": 36,
-          "pos": 11,
-          "delta": 2
-        },
-        {
           "driver_id": "ocon",
           "driver": "Esteban Ocon",
           "team": "Alpine F1 Team",
           "sprint_pts": null,
           "race_pts": 1,
           "total_after": 36,
-          "pos": 12,
+          "pos": 11,
           "delta": 1
+        },
+        {
+          "driver_id": "piastri",
+          "driver": "Oscar Piastri",
+          "team": "McLaren",
+          "sprint_pts": null,
+          "race_pts": 2,
+          "total_after": 36,
+          "pos": 12,
+          "delta": 2
         },
         {
           "driver_id": "albon",
@@ -9571,9 +9675,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "lawson",
+          "driver": "Liam Lawson",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -9581,9 +9685,9 @@
           "delta": 0
         },
         {
-          "driver_id": "lawson",
-          "driver": "Liam Lawson",
-          "team": "AlphaTauri",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -9617,6 +9721,14 @@
           "msk_time": "18:00"
         },
         {
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2023-09-02T10:30:00+00:00",
+          "utc_end": "2023-09-02T11:30:00+00:00",
+          "msk_date": "02.09.2023",
+          "msk_time": "13:30"
+        },
+        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2023-09-02T14:00:00+00:00",
@@ -9625,12 +9737,12 @@
           "msk_time": "17:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2023-09-02T10:30:00+00:00",
-          "utc_end": "2023-09-02T11:30:00+00:00",
-          "msk_date": "02.09.2023",
-          "msk_time": "13:30"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-09-03T13:00:00+00:00",
+          "utc_end": "2023-09-03T15:00:00+00:00",
+          "msk_date": "03.09.2023",
+          "msk_time": "16:00"
         }
       ],
       "qualifying_results": [
@@ -10159,9 +10271,9 @@
           "delta": 0
         },
         {
-          "driver_id": "piastri",
-          "driver": "Oscar Piastri",
-          "team": "McLaren",
+          "driver_id": "ocon",
+          "driver": "Esteban Ocon",
+          "team": "Alpine F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 36,
@@ -10169,9 +10281,9 @@
           "delta": 0
         },
         {
-          "driver_id": "ocon",
-          "driver": "Esteban Ocon",
-          "team": "Alpine F1 Team",
+          "driver_id": "piastri",
+          "driver": "Oscar Piastri",
+          "team": "McLaren",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 36,
@@ -10239,9 +10351,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "lawson",
+          "driver": "Liam Lawson",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -10249,9 +10361,9 @@
           "delta": 0
         },
         {
-          "driver_id": "lawson",
-          "driver": "Liam Lawson",
-          "team": "AlphaTauri",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -10285,6 +10397,14 @@
           "msk_time": "16:00"
         },
         {
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2023-09-16T09:30:00+00:00",
+          "utc_end": "2023-09-16T10:30:00+00:00",
+          "msk_date": "16.09.2023",
+          "msk_time": "12:30"
+        },
+        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2023-09-16T13:00:00+00:00",
@@ -10293,12 +10413,12 @@
           "msk_time": "16:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2023-09-16T09:30:00+00:00",
-          "utc_end": "2023-09-16T10:30:00+00:00",
-          "msk_date": "16.09.2023",
-          "msk_time": "12:30"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-09-17T12:00:00+00:00",
+          "utc_end": "2023-09-17T14:00:00+00:00",
+          "msk_date": "17.09.2023",
+          "msk_time": "15:00"
         }
       ],
       "qualifying_results": [
@@ -10887,24 +11007,24 @@
           "delta": 0
         },
         {
-          "driver_id": "kevin_magnussen",
-          "driver": "Kevin Magnussen",
-          "team": "Haas F1 Team",
-          "sprint_pts": null,
-          "race_pts": 1,
-          "total_after": 3,
-          "pos": 17,
-          "delta": 1
-        },
-        {
           "driver_id": "tsunoda",
           "driver": "Yuki Tsunoda",
           "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 3,
-          "pos": 18,
+          "pos": 17,
           "delta": 0
+        },
+        {
+          "driver_id": "kevin_magnussen",
+          "driver": "Kevin Magnussen",
+          "team": "Haas F1 Team",
+          "sprint_pts": null,
+          "race_pts": 1,
+          "total_after": 3,
+          "pos": 18,
+          "delta": 1
         },
         {
           "driver_id": "lawson",
@@ -10953,6 +11073,14 @@
           "msk_time": "09:00"
         },
         {
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2023-09-23T02:30:00+00:00",
+          "utc_end": "2023-09-23T03:30:00+00:00",
+          "msk_date": "23.09.2023",
+          "msk_time": "05:30"
+        },
+        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2023-09-23T06:00:00+00:00",
@@ -10961,12 +11089,12 @@
           "msk_time": "09:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2023-09-23T02:30:00+00:00",
-          "utc_end": "2023-09-23T03:30:00+00:00",
-          "msk_date": "23.09.2023",
-          "msk_time": "05:30"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-09-24T05:00:00+00:00",
+          "utc_end": "2023-09-24T07:00:00+00:00",
+          "msk_date": "24.09.2023",
+          "msk_time": "08:00"
         }
       ],
       "qualifying_results": [
@@ -11455,24 +11583,24 @@
           "delta": 12
         },
         {
-          "driver_id": "russell",
-          "driver": "George Russell",
-          "team": "Mercedes",
-          "sprint_pts": null,
-          "race_pts": 6,
-          "total_after": 115,
-          "pos": 7,
-          "delta": 6
-        },
-        {
           "driver_id": "norris",
           "driver": "Lando Norris",
           "team": "McLaren",
           "sprint_pts": null,
           "race_pts": 18,
           "total_after": 115,
-          "pos": 8,
+          "pos": 7,
           "delta": 18
+        },
+        {
+          "driver_id": "russell",
+          "driver": "George Russell",
+          "team": "Mercedes",
+          "sprint_pts": null,
+          "race_pts": 6,
+          "total_after": 115,
+          "pos": 8,
+          "delta": 6
         },
         {
           "driver_id": "piastri",
@@ -11555,9 +11683,9 @@
           "delta": 0
         },
         {
-          "driver_id": "kevin_magnussen",
-          "driver": "Kevin Magnussen",
-          "team": "Haas F1 Team",
+          "driver_id": "tsunoda",
+          "driver": "Yuki Tsunoda",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 3,
@@ -11565,9 +11693,9 @@
           "delta": 0
         },
         {
-          "driver_id": "tsunoda",
-          "driver": "Yuki Tsunoda",
-          "team": "AlphaTauri",
+          "driver_id": "kevin_magnussen",
+          "driver": "Kevin Magnussen",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 3,
@@ -11613,6 +11741,14 @@
           "msk_time": "16:30"
         },
         {
+          "name": "Qualifying",
+          "name_ru": "Квалификация",
+          "utc_start": "2023-10-06T17:00:00+00:00",
+          "utc_end": "2023-10-06T18:00:00+00:00",
+          "msk_date": "06.10.2023",
+          "msk_time": "20:00"
+        },
+        {
           "name": "Sprint",
           "name_ru": "Спринт",
           "utc_start": "2023-10-07T17:30:00+00:00",
@@ -11621,11 +11757,11 @@
           "msk_time": "20:30"
         },
         {
-          "name": "Qualifying",
-          "name_ru": "Квалификация",
-          "utc_start": "2023-10-06T17:00:00+00:00",
-          "utc_end": "2023-10-06T18:00:00+00:00",
-          "msk_date": "06.10.2023",
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-10-08T17:00:00+00:00",
+          "utc_end": "2023-10-08T19:00:00+00:00",
+          "msk_date": "08.10.2023",
           "msk_time": "20:00"
         }
       ],
@@ -12495,6 +12631,14 @@
           "msk_time": "20:30"
         },
         {
+          "name": "Qualifying",
+          "name_ru": "Квалификация",
+          "utc_start": "2023-10-20T21:00:00+00:00",
+          "utc_end": "2023-10-20T22:00:00+00:00",
+          "msk_date": "21.10.2023",
+          "msk_time": "00:00"
+        },
+        {
           "name": "Sprint",
           "name_ru": "Спринт",
           "utc_start": "2023-10-21T22:00:00+00:00",
@@ -12503,12 +12647,12 @@
           "msk_time": "01:00"
         },
         {
-          "name": "Qualifying",
-          "name_ru": "Квалификация",
-          "utc_start": "2023-10-20T21:00:00+00:00",
-          "utc_end": "2023-10-20T22:00:00+00:00",
-          "msk_date": "21.10.2023",
-          "msk_time": "00:00"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-10-22T19:00:00+00:00",
+          "utc_end": "2023-10-22T21:00:00+00:00",
+          "msk_date": "22.10.2023",
+          "msk_time": "22:00"
         }
       ],
       "qualifying_results": [
@@ -13385,6 +13529,14 @@
           "msk_time": "01:00"
         },
         {
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2023-10-28T17:30:00+00:00",
+          "utc_end": "2023-10-28T18:30:00+00:00",
+          "msk_date": "28.10.2023",
+          "msk_time": "20:30"
+        },
+        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2023-10-28T21:00:00+00:00",
@@ -13393,12 +13545,12 @@
           "msk_time": "00:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2023-10-28T17:30:00+00:00",
-          "utc_end": "2023-10-28T18:30:00+00:00",
-          "msk_date": "28.10.2023",
-          "msk_time": "20:30"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-10-29T20:00:00+00:00",
+          "utc_end": "2023-10-29T22:00:00+00:00",
+          "msk_date": "29.10.2023",
+          "msk_time": "23:00"
         }
       ],
       "qualifying_results": [
@@ -13987,24 +14139,24 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
-          "team": "Alfa Romeo",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 6,
-          "pos": 17,
-          "delta": 0
-        },
-        {
           "driver_id": "ricciardo",
           "driver": "Daniel Ricciardo",
           "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 6,
           "total_after": 6,
-          "pos": 18,
+          "pos": 17,
           "delta": 6
+        },
+        {
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Alfa Romeo",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 6,
+          "pos": 18,
+          "delta": 0
         },
         {
           "driver_id": "kevin_magnussen",
@@ -14045,6 +14197,14 @@
           "msk_time": "17:30"
         },
         {
+          "name": "Qualifying",
+          "name_ru": "Квалификация",
+          "utc_start": "2023-11-03T18:00:00+00:00",
+          "utc_end": "2023-11-03T19:00:00+00:00",
+          "msk_date": "03.11.2023",
+          "msk_time": "21:00"
+        },
+        {
           "name": "Sprint",
           "name_ru": "Спринт",
           "utc_start": "2023-11-04T18:30:00+00:00",
@@ -14053,12 +14213,12 @@
           "msk_time": "21:30"
         },
         {
-          "name": "Qualifying",
-          "name_ru": "Квалификация",
-          "utc_start": "2023-11-03T18:00:00+00:00",
-          "utc_end": "2023-11-03T19:00:00+00:00",
-          "msk_date": "03.11.2023",
-          "msk_time": "21:00"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-11-05T17:00:00+00:00",
+          "utc_end": "2023-11-05T19:00:00+00:00",
+          "msk_date": "05.11.2023",
+          "msk_time": "20:00"
         }
       ],
       "qualifying_results": [
@@ -14935,6 +15095,14 @@
           "msk_time": "11:00"
         },
         {
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2023-11-17T04:30:00+00:00",
+          "utc_end": "2023-11-17T05:30:00+00:00",
+          "msk_date": "17.11.2023",
+          "msk_time": "07:30"
+        },
+        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2023-11-17T08:00:00+00:00",
@@ -14943,12 +15111,12 @@
           "msk_time": "11:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2023-11-17T04:30:00+00:00",
-          "utc_end": "2023-11-17T05:30:00+00:00",
-          "msk_date": "17.11.2023",
-          "msk_time": "07:30"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-11-19T06:00:00+00:00",
+          "utc_end": "2023-11-19T08:00:00+00:00",
+          "msk_date": "19.11.2023",
+          "msk_time": "09:00"
         }
       ],
       "qualifying_results": [
@@ -15537,9 +15705,9 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
-          "team": "Alfa Romeo",
+          "driver_id": "ricciardo",
+          "driver": "Daniel Ricciardo",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 6,
@@ -15547,9 +15715,9 @@
           "delta": 0
         },
         {
-          "driver_id": "ricciardo",
-          "driver": "Daniel Ricciardo",
-          "team": "AlphaTauri",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 6,
@@ -15603,6 +15771,14 @@
           "msk_time": "16:00"
         },
         {
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2023-11-25T10:30:00+00:00",
+          "utc_end": "2023-11-25T11:30:00+00:00",
+          "msk_date": "25.11.2023",
+          "msk_time": "13:30"
+        },
+        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2023-11-25T14:00:00+00:00",
@@ -15611,12 +15787,12 @@
           "msk_time": "17:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2023-11-25T10:30:00+00:00",
-          "utc_end": "2023-11-25T11:30:00+00:00",
-          "msk_date": "25.11.2023",
-          "msk_time": "13:30"
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2023-11-26T13:00:00+00:00",
+          "utc_end": "2023-11-26T15:00:00+00:00",
+          "msk_date": "26.11.2023",
+          "msk_time": "16:00"
         }
       ],
       "qualifying_results": [
@@ -16075,24 +16251,24 @@
           "delta": 2
         },
         {
-          "driver_id": "alonso",
-          "driver": "Fernando Alonso",
-          "team": "Aston Martin",
-          "sprint_pts": null,
-          "race_pts": 6,
-          "total_after": 206,
-          "pos": 4,
-          "delta": 6
-        },
-        {
           "driver_id": "leclerc",
           "driver": "Charles Leclerc",
           "team": "Ferrari",
           "sprint_pts": null,
           "race_pts": 18,
           "total_after": 206,
-          "pos": 5,
+          "pos": 4,
           "delta": 18
+        },
+        {
+          "driver_id": "alonso",
+          "driver": "Fernando Alonso",
+          "team": "Aston Martin",
+          "sprint_pts": null,
+          "race_pts": 6,
+          "total_after": 206,
+          "pos": 5,
+          "delta": 6
         },
         {
           "driver_id": "norris",
@@ -16205,9 +16381,9 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
-          "team": "Alfa Romeo",
+          "driver_id": "ricciardo",
+          "driver": "Daniel Ricciardo",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 6,
@@ -16215,9 +16391,9 @@
           "delta": 0
         },
         {
-          "driver_id": "ricciardo",
-          "driver": "Daniel Ricciardo",
-          "team": "AlphaTauri",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 6,

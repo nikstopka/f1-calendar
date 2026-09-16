@@ -1,6 +1,6 @@
 {
   "season": 2016,
-  "updated": "2026-09-15T22:03:49.593841+00:00",
+  "updated": "2026-09-16T14:34:01.279156+00:00",
   "current_round": 21,
   "has_sprint": false,
   "driver_standings": [
@@ -329,6 +329,14 @@
           "utc_end": "2016-03-19T01:00:00+00:00",
           "msk_date": "19.03.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-03-20T05:00:00+00:00",
+          "utc_end": "2016-03-20T07:00:00+00:00",
+          "msk_date": "20.03.2016",
+          "msk_time": "08:00"
         }
       ],
       "qualifying_results": [
@@ -909,9 +917,9 @@
           "delta": 0
         },
         {
-          "driver_id": "kevin_magnussen",
-          "driver": "Kevin Magnussen",
-          "team": "Renault",
+          "driver_id": "kvyat",
+          "driver": "Daniil Kvyat",
+          "team": "Red Bull",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -919,43 +927,13 @@
           "delta": 0
         },
         {
-          "driver_id": "haryanto",
-          "driver": "Rio Haryanto",
-          "team": "Manor Marussia",
+          "driver_id": "kevin_magnussen",
+          "driver": "Kevin Magnussen",
+          "team": "Renault",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
           "pos": 13,
-          "delta": 0
-        },
-        {
-          "driver_id": "kvyat",
-          "driver": "Daniil Kvyat",
-          "team": "Red Bull",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 14,
-          "delta": 0
-        },
-        {
-          "driver_id": "wehrlein",
-          "driver": "Pascal Wehrlein",
-          "team": "Manor Marussia",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 15,
-          "delta": 0
-        },
-        {
-          "driver_id": "perez",
-          "driver": "Sergio Pérez",
-          "team": "Force India",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 16,
           "delta": 0
         },
         {
@@ -965,37 +943,7 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 17,
-          "delta": 0
-        },
-        {
-          "driver_id": "button",
-          "driver": "Jenson Button",
-          "team": "McLaren",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 18,
-          "delta": 0
-        },
-        {
-          "driver_id": "jolyon_palmer",
-          "driver": "Jolyon Palmer",
-          "team": "Renault",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 19,
-          "delta": 0
-        },
-        {
-          "driver_id": "alonso",
-          "driver": "Fernando Alonso",
-          "team": "McLaren",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 20,
+          "pos": 14,
           "delta": 0
         },
         {
@@ -1005,13 +953,73 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 21,
+          "pos": 15,
+          "delta": 0
+        },
+        {
+          "driver_id": "button",
+          "driver": "Jenson Button",
+          "team": "McLaren",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 16,
+          "delta": 0
+        },
+        {
+          "driver_id": "wehrlein",
+          "driver": "Pascal Wehrlein",
+          "team": "Manor Marussia",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 17,
           "delta": 0
         },
         {
           "driver_id": "gutierrez",
           "driver": "Esteban Gutiérrez",
           "team": "Haas F1 Team",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 18,
+          "delta": 0
+        },
+        {
+          "driver_id": "alonso",
+          "driver": "Fernando Alonso",
+          "team": "McLaren",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 19,
+          "delta": 0
+        },
+        {
+          "driver_id": "jolyon_palmer",
+          "driver": "Jolyon Palmer",
+          "team": "Renault",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 20,
+          "delta": 0
+        },
+        {
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
+          "team": "Force India",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 21,
+          "delta": 0
+        },
+        {
+          "driver_id": "haryanto",
+          "driver": "Rio Haryanto",
+          "team": "Manor Marussia",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -1059,6 +1067,14 @@
           "utc_end": "2016-04-02T01:00:00+00:00",
           "msk_date": "02.04.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-04-03T15:00:00+00:00",
+          "utc_end": "2016-04-03T17:00:00+00:00",
+          "msk_date": "03.04.2016",
+          "msk_time": "18:00"
         }
       ],
       "qualifying_results": [
@@ -1559,24 +1575,24 @@
           "delta": 12
         },
         {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
-          "sprint_pts": null,
-          "race_pts": 10,
-          "total_after": 18,
-          "pos": 4,
-          "delta": 10
-        },
-        {
           "driver_id": "raikkonen",
           "driver": "Kimi Räikkönen",
           "team": "Ferrari",
           "sprint_pts": null,
           "race_pts": 18,
           "total_after": 18,
-          "pos": 5,
+          "pos": 4,
           "delta": 18
+        },
+        {
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
+          "sprint_pts": null,
+          "race_pts": 10,
+          "total_after": 18,
+          "pos": 5,
+          "delta": 10
         },
         {
           "driver_id": "vettel",
@@ -1679,13 +1695,23 @@
           "delta": 0
         },
         {
-          "driver_id": "haryanto",
-          "driver": "Rio Haryanto",
-          "team": "Manor Marussia",
+          "driver_id": "nasr",
+          "driver": "Felipe Nasr",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
           "pos": 16,
+          "delta": 0
+        },
+        {
+          "driver_id": "button",
+          "driver": "Jenson Button",
+          "team": "McLaren",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 17,
           "delta": 0
         },
         {
@@ -1695,23 +1721,13 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 17,
-          "delta": 0
-        },
-        {
-          "driver_id": "perez",
-          "driver": "Sergio Pérez",
-          "team": "Force India",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
           "pos": 18,
           "delta": 0
         },
         {
-          "driver_id": "button",
-          "driver": "Jenson Button",
-          "team": "McLaren",
+          "driver_id": "gutierrez",
+          "driver": "Esteban Gutiérrez",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -1729,9 +1745,9 @@
           "delta": 0
         },
         {
-          "driver_id": "nasr",
-          "driver": "Felipe Nasr",
-          "team": "Sauber",
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
+          "team": "Force India",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -1739,9 +1755,9 @@
           "delta": 0
         },
         {
-          "driver_id": "gutierrez",
-          "driver": "Esteban Gutiérrez",
-          "team": "Haas F1 Team",
+          "driver_id": "haryanto",
+          "driver": "Rio Haryanto",
+          "team": "Manor Marussia",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -1789,6 +1805,14 @@
           "utc_end": "2016-04-16T01:00:00+00:00",
           "msk_date": "16.04.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-04-17T06:00:00+00:00",
+          "utc_end": "2016-04-17T08:00:00+00:00",
+          "msk_date": "17.04.2016",
+          "msk_time": "09:00"
         }
       ],
       "qualifying_results": [
@@ -2399,33 +2423,13 @@
           "delta": 0
         },
         {
-          "driver_id": "haryanto",
-          "driver": "Rio Haryanto",
-          "team": "Manor Marussia",
+          "driver_id": "nasr",
+          "driver": "Felipe Nasr",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
           "pos": 15,
-          "delta": 0
-        },
-        {
-          "driver_id": "wehrlein",
-          "driver": "Pascal Wehrlein",
-          "team": "Manor Marussia",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 16,
-          "delta": 0
-        },
-        {
-          "driver_id": "perez",
-          "driver": "Sergio Pérez",
-          "team": "Force India",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 17,
           "delta": 0
         },
         {
@@ -2435,17 +2439,17 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 18,
+          "pos": 16,
           "delta": 0
         },
         {
-          "driver_id": "jolyon_palmer",
-          "driver": "Jolyon Palmer",
-          "team": "Renault",
+          "driver_id": "wehrlein",
+          "driver": "Pascal Wehrlein",
+          "team": "Manor Marussia",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 19,
+          "pos": 17,
           "delta": 0
         },
         {
@@ -2455,13 +2459,33 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
+          "pos": 18,
+          "delta": 0
+        },
+        {
+          "driver_id": "gutierrez",
+          "driver": "Esteban Gutiérrez",
+          "team": "Haas F1 Team",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 19,
+          "delta": 0
+        },
+        {
+          "driver_id": "jolyon_palmer",
+          "driver": "Jolyon Palmer",
+          "team": "Renault",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
           "pos": 20,
           "delta": 0
         },
         {
-          "driver_id": "nasr",
-          "driver": "Felipe Nasr",
-          "team": "Sauber",
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
+          "team": "Force India",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -2469,9 +2493,9 @@
           "delta": 0
         },
         {
-          "driver_id": "gutierrez",
-          "driver": "Esteban Gutiérrez",
-          "team": "Haas F1 Team",
+          "driver_id": "haryanto",
+          "driver": "Rio Haryanto",
+          "team": "Manor Marussia",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -2519,6 +2543,14 @@
           "utc_end": "2016-04-30T01:00:00+00:00",
           "msk_date": "30.04.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-05-01T12:00:00+00:00",
+          "utc_end": "2016-05-01T14:00:00+00:00",
+          "msk_date": "01.05.2016",
+          "msk_time": "15:00"
         }
       ],
       "qualifying_results": [
@@ -3159,9 +3191,9 @@
           "delta": 0
         },
         {
-          "driver_id": "haryanto",
-          "driver": "Rio Haryanto",
-          "team": "Manor Marussia",
+          "driver_id": "nasr",
+          "driver": "Felipe Nasr",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -3179,9 +3211,9 @@
           "delta": 0
         },
         {
-          "driver_id": "jolyon_palmer",
-          "driver": "Jolyon Palmer",
-          "team": "Renault",
+          "driver_id": "gutierrez",
+          "driver": "Esteban Gutiérrez",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -3189,9 +3221,9 @@
           "delta": 0
         },
         {
-          "driver_id": "nasr",
-          "driver": "Felipe Nasr",
-          "team": "Sauber",
+          "driver_id": "jolyon_palmer",
+          "driver": "Jolyon Palmer",
+          "team": "Renault",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -3199,9 +3231,9 @@
           "delta": 0
         },
         {
-          "driver_id": "gutierrez",
-          "driver": "Esteban Gutiérrez",
-          "team": "Haas F1 Team",
+          "driver_id": "haryanto",
+          "driver": "Rio Haryanto",
+          "team": "Manor Marussia",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -3249,6 +3281,14 @@
           "utc_end": "2016-05-14T01:00:00+00:00",
           "msk_date": "14.05.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-05-15T12:00:00+00:00",
+          "utc_end": "2016-05-15T14:00:00+00:00",
+          "msk_date": "15.05.2016",
+          "msk_time": "15:00"
         }
       ],
       "qualifying_results": [
@@ -3799,24 +3839,24 @@
           "delta": 10
         },
         {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 22,
-          "pos": 9,
-          "delta": 0
-        },
-        {
           "driver_id": "kvyat",
           "driver": "Daniil Kvyat",
           "team": "Toro Rosso",
           "sprint_pts": null,
           "race_pts": 1,
           "total_after": 22,
-          "pos": 10,
+          "pos": 9,
           "delta": 1
+        },
+        {
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 22,
+          "pos": 10,
+          "delta": 0
         },
         {
           "driver_id": "sainz",
@@ -3829,24 +3869,24 @@
           "delta": 8
         },
         {
-          "driver_id": "perez",
-          "driver": "Sergio Pérez",
-          "team": "Force India",
-          "sprint_pts": null,
-          "race_pts": 6,
-          "total_after": 8,
-          "pos": 12,
-          "delta": 6
-        },
-        {
           "driver_id": "alonso",
           "driver": "Fernando Alonso",
           "team": "McLaren",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 8,
-          "pos": 13,
+          "pos": 12,
           "delta": 0
+        },
+        {
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
+          "team": "Force India",
+          "sprint_pts": null,
+          "race_pts": 6,
+          "total_after": 8,
+          "pos": 13,
+          "delta": 6
         },
         {
           "driver_id": "kevin_magnussen",
@@ -3889,9 +3929,9 @@
           "delta": 0
         },
         {
-          "driver_id": "haryanto",
-          "driver": "Rio Haryanto",
-          "team": "Manor Marussia",
+          "driver_id": "nasr",
+          "driver": "Felipe Nasr",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -3909,9 +3949,9 @@
           "delta": 0
         },
         {
-          "driver_id": "jolyon_palmer",
-          "driver": "Jolyon Palmer",
-          "team": "Renault",
+          "driver_id": "gutierrez",
+          "driver": "Esteban Gutiérrez",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -3919,9 +3959,9 @@
           "delta": 0
         },
         {
-          "driver_id": "nasr",
-          "driver": "Felipe Nasr",
-          "team": "Sauber",
+          "driver_id": "jolyon_palmer",
+          "driver": "Jolyon Palmer",
+          "team": "Renault",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -3929,9 +3969,9 @@
           "delta": 0
         },
         {
-          "driver_id": "gutierrez",
-          "driver": "Esteban Gutiérrez",
-          "team": "Haas F1 Team",
+          "driver_id": "haryanto",
+          "driver": "Rio Haryanto",
+          "team": "Manor Marussia",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -3979,6 +4019,14 @@
           "utc_end": "2016-05-28T01:00:00+00:00",
           "msk_date": "28.05.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-05-29T12:00:00+00:00",
+          "utc_end": "2016-05-29T14:00:00+00:00",
+          "msk_date": "29.05.2016",
+          "msk_time": "15:00"
         }
       ],
       "qualifying_results": [
@@ -4539,9 +4587,9 @@
           "delta": 15
         },
         {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
+          "driver_id": "kvyat",
+          "driver": "Daniil Kvyat",
+          "team": "Toro Rosso",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 22,
@@ -4549,9 +4597,9 @@
           "delta": 0
         },
         {
-          "driver_id": "kvyat",
-          "driver": "Daniil Kvyat",
-          "team": "Toro Rosso",
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 22,
@@ -4619,9 +4667,9 @@
           "delta": 0
         },
         {
-          "driver_id": "haryanto",
-          "driver": "Rio Haryanto",
-          "team": "Manor Marussia",
+          "driver_id": "nasr",
+          "driver": "Felipe Nasr",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -4639,9 +4687,9 @@
           "delta": 0
         },
         {
-          "driver_id": "jolyon_palmer",
-          "driver": "Jolyon Palmer",
-          "team": "Renault",
+          "driver_id": "gutierrez",
+          "driver": "Esteban Gutiérrez",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -4649,9 +4697,9 @@
           "delta": 0
         },
         {
-          "driver_id": "nasr",
-          "driver": "Felipe Nasr",
-          "team": "Sauber",
+          "driver_id": "jolyon_palmer",
+          "driver": "Jolyon Palmer",
+          "team": "Renault",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -4659,9 +4707,9 @@
           "delta": 0
         },
         {
-          "driver_id": "gutierrez",
-          "driver": "Esteban Gutiérrez",
-          "team": "Haas F1 Team",
+          "driver_id": "haryanto",
+          "driver": "Rio Haryanto",
+          "team": "Manor Marussia",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -4709,6 +4757,14 @@
           "utc_end": "2016-06-11T01:00:00+00:00",
           "msk_date": "11.06.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-06-12T18:00:00+00:00",
+          "utc_end": "2016-06-12T20:00:00+00:00",
+          "msk_date": "12.06.2016",
+          "msk_time": "21:00"
         }
       ],
       "qualifying_results": [
@@ -5259,9 +5315,9 @@
           "delta": 1
         },
         {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
+          "driver_id": "kvyat",
+          "driver": "Daniil Kvyat",
+          "team": "Toro Rosso",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 22,
@@ -5269,9 +5325,9 @@
           "delta": 0
         },
         {
-          "driver_id": "kvyat",
-          "driver": "Daniil Kvyat",
-          "team": "Toro Rosso",
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 22,
@@ -5289,24 +5345,24 @@
           "delta": 2
         },
         {
-          "driver_id": "hulkenberg",
-          "driver": "Nico Hülkenberg",
-          "team": "Force India",
-          "sprint_pts": null,
-          "race_pts": 4,
-          "total_after": 18,
-          "pos": 13,
-          "delta": 4
-        },
-        {
           "driver_id": "alonso",
           "driver": "Fernando Alonso",
           "team": "McLaren",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 18,
-          "pos": 14,
+          "pos": 13,
           "delta": 0
+        },
+        {
+          "driver_id": "hulkenberg",
+          "driver": "Nico Hülkenberg",
+          "team": "Force India",
+          "sprint_pts": null,
+          "race_pts": 4,
+          "total_after": 18,
+          "pos": 14,
+          "delta": 4
         },
         {
           "driver_id": "kevin_magnussen",
@@ -5339,9 +5395,9 @@
           "delta": 0
         },
         {
-          "driver_id": "haryanto",
-          "driver": "Rio Haryanto",
-          "team": "Manor Marussia",
+          "driver_id": "nasr",
+          "driver": "Felipe Nasr",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -5359,9 +5415,9 @@
           "delta": 0
         },
         {
-          "driver_id": "jolyon_palmer",
-          "driver": "Jolyon Palmer",
-          "team": "Renault",
+          "driver_id": "gutierrez",
+          "driver": "Esteban Gutiérrez",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -5369,9 +5425,9 @@
           "delta": 0
         },
         {
-          "driver_id": "nasr",
-          "driver": "Felipe Nasr",
-          "team": "Sauber",
+          "driver_id": "jolyon_palmer",
+          "driver": "Jolyon Palmer",
+          "team": "Renault",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -5379,9 +5435,9 @@
           "delta": 0
         },
         {
-          "driver_id": "gutierrez",
-          "driver": "Esteban Gutiérrez",
-          "team": "Haas F1 Team",
+          "driver_id": "haryanto",
+          "driver": "Rio Haryanto",
+          "team": "Manor Marussia",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -5429,6 +5485,14 @@
           "utc_end": "2016-06-18T01:00:00+00:00",
           "msk_date": "18.06.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-06-19T13:00:00+00:00",
+          "utc_end": "2016-06-19T15:00:00+00:00",
+          "msk_date": "19.06.2016",
+          "msk_time": "16:00"
         }
       ],
       "qualifying_results": [
@@ -5989,9 +6053,9 @@
           "delta": 1
         },
         {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
+          "driver_id": "kvyat",
+          "driver": "Daniil Kvyat",
+          "team": "Toro Rosso",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 22,
@@ -5999,9 +6063,9 @@
           "delta": 0
         },
         {
-          "driver_id": "kvyat",
-          "driver": "Daniil Kvyat",
-          "team": "Toro Rosso",
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 22,
@@ -6069,9 +6133,9 @@
           "delta": 0
         },
         {
-          "driver_id": "haryanto",
-          "driver": "Rio Haryanto",
-          "team": "Manor Marussia",
+          "driver_id": "nasr",
+          "driver": "Felipe Nasr",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -6089,9 +6153,9 @@
           "delta": 0
         },
         {
-          "driver_id": "jolyon_palmer",
-          "driver": "Jolyon Palmer",
-          "team": "Renault",
+          "driver_id": "gutierrez",
+          "driver": "Esteban Gutiérrez",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -6099,9 +6163,9 @@
           "delta": 0
         },
         {
-          "driver_id": "nasr",
-          "driver": "Felipe Nasr",
-          "team": "Sauber",
+          "driver_id": "jolyon_palmer",
+          "driver": "Jolyon Palmer",
+          "team": "Renault",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -6109,9 +6173,9 @@
           "delta": 0
         },
         {
-          "driver_id": "gutierrez",
-          "driver": "Esteban Gutiérrez",
-          "team": "Haas F1 Team",
+          "driver_id": "haryanto",
+          "driver": "Rio Haryanto",
+          "team": "Manor Marussia",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -6159,6 +6223,14 @@
           "utc_end": "2016-07-02T01:00:00+00:00",
           "msk_date": "02.07.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-07-03T12:00:00+00:00",
+          "utc_end": "2016-07-03T14:00:00+00:00",
+          "msk_date": "03.07.2016",
+          "msk_time": "15:00"
         }
       ],
       "qualifying_results": [
@@ -6649,24 +6721,24 @@
           "delta": 25
         },
         {
-          "driver_id": "vettel",
-          "driver": "Sebastian Vettel",
-          "team": "Ferrari",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 96,
-          "pos": 3,
-          "delta": 0
-        },
-        {
           "driver_id": "raikkonen",
           "driver": "Kimi Räikkönen",
           "team": "Ferrari",
           "sprint_pts": null,
           "race_pts": 15,
           "total_after": 96,
-          "pos": 4,
+          "pos": 3,
           "delta": 15
+        },
+        {
+          "driver_id": "vettel",
+          "driver": "Sebastian Vettel",
+          "team": "Ferrari",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 96,
+          "pos": 4,
+          "delta": 0
         },
         {
           "driver_id": "ricciardo",
@@ -6809,13 +6881,23 @@
           "delta": 0
         },
         {
-          "driver_id": "haryanto",
-          "driver": "Rio Haryanto",
-          "team": "Manor Marussia",
+          "driver_id": "nasr",
+          "driver": "Felipe Nasr",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
           "pos": 19,
+          "delta": 0
+        },
+        {
+          "driver_id": "gutierrez",
+          "driver": "Esteban Gutiérrez",
+          "team": "Haas F1 Team",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 20,
           "delta": 0
         },
         {
@@ -6825,23 +6907,13 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 20,
-          "delta": 0
-        },
-        {
-          "driver_id": "nasr",
-          "driver": "Felipe Nasr",
-          "team": "Sauber",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
           "pos": 21,
           "delta": 0
         },
         {
-          "driver_id": "gutierrez",
-          "driver": "Esteban Gutiérrez",
-          "team": "Haas F1 Team",
+          "driver_id": "haryanto",
+          "driver": "Rio Haryanto",
+          "team": "Manor Marussia",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -6889,6 +6961,14 @@
           "utc_end": "2016-07-09T01:00:00+00:00",
           "msk_date": "09.07.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-07-10T12:00:00+00:00",
+          "utc_end": "2016-07-10T14:00:00+00:00",
+          "msk_date": "10.07.2016",
+          "msk_time": "15:00"
         }
       ],
       "qualifying_results": [
@@ -7529,13 +7609,23 @@
           "delta": 0
         },
         {
-          "driver_id": "haryanto",
-          "driver": "Rio Haryanto",
-          "team": "Manor Marussia",
+          "driver_id": "nasr",
+          "driver": "Felipe Nasr",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
           "pos": 19,
+          "delta": 0
+        },
+        {
+          "driver_id": "gutierrez",
+          "driver": "Esteban Gutiérrez",
+          "team": "Haas F1 Team",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 20,
           "delta": 0
         },
         {
@@ -7545,23 +7635,13 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 20,
-          "delta": 0
-        },
-        {
-          "driver_id": "nasr",
-          "driver": "Felipe Nasr",
-          "team": "Sauber",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
           "pos": 21,
           "delta": 0
         },
         {
-          "driver_id": "gutierrez",
-          "driver": "Esteban Gutiérrez",
-          "team": "Haas F1 Team",
+          "driver_id": "haryanto",
+          "driver": "Rio Haryanto",
+          "team": "Manor Marussia",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -7609,6 +7689,14 @@
           "utc_end": "2016-07-23T01:00:00+00:00",
           "msk_date": "23.07.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-07-24T12:00:00+00:00",
+          "utc_end": "2016-07-24T14:00:00+00:00",
+          "msk_date": "24.07.2016",
+          "msk_time": "15:00"
         }
       ],
       "qualifying_results": [
@@ -8259,13 +8347,23 @@
           "delta": 0
         },
         {
-          "driver_id": "haryanto",
-          "driver": "Rio Haryanto",
-          "team": "Manor Marussia",
+          "driver_id": "nasr",
+          "driver": "Felipe Nasr",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
           "pos": 19,
+          "delta": 0
+        },
+        {
+          "driver_id": "gutierrez",
+          "driver": "Esteban Gutiérrez",
+          "team": "Haas F1 Team",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 20,
           "delta": 0
         },
         {
@@ -8275,23 +8373,13 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 20,
-          "delta": 0
-        },
-        {
-          "driver_id": "nasr",
-          "driver": "Felipe Nasr",
-          "team": "Sauber",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
           "pos": 21,
           "delta": 0
         },
         {
-          "driver_id": "gutierrez",
-          "driver": "Esteban Gutiérrez",
-          "team": "Haas F1 Team",
+          "driver_id": "haryanto",
+          "driver": "Rio Haryanto",
+          "team": "Manor Marussia",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -8339,6 +8427,14 @@
           "utc_end": "2016-07-30T01:00:00+00:00",
           "msk_date": "30.07.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-07-31T12:00:00+00:00",
+          "utc_end": "2016-07-31T14:00:00+00:00",
+          "msk_date": "31.07.2016",
+          "msk_time": "15:00"
         }
       ],
       "qualifying_results": [
@@ -8989,13 +9085,23 @@
           "delta": 0
         },
         {
-          "driver_id": "haryanto",
-          "driver": "Rio Haryanto",
-          "team": "Manor Marussia",
+          "driver_id": "nasr",
+          "driver": "Felipe Nasr",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
           "pos": 19,
+          "delta": 0
+        },
+        {
+          "driver_id": "gutierrez",
+          "driver": "Esteban Gutiérrez",
+          "team": "Haas F1 Team",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 20,
           "delta": 0
         },
         {
@@ -9005,23 +9111,13 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 20,
-          "delta": 0
-        },
-        {
-          "driver_id": "nasr",
-          "driver": "Felipe Nasr",
-          "team": "Sauber",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
           "pos": 21,
           "delta": 0
         },
         {
-          "driver_id": "gutierrez",
-          "driver": "Esteban Gutiérrez",
-          "team": "Haas F1 Team",
+          "driver_id": "haryanto",
+          "driver": "Rio Haryanto",
+          "team": "Manor Marussia",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -9069,6 +9165,14 @@
           "utc_end": "2016-08-27T01:00:00+00:00",
           "msk_date": "27.08.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-08-28T12:00:00+00:00",
+          "utc_end": "2016-08-28T14:00:00+00:00",
+          "msk_date": "28.08.2016",
+          "msk_time": "15:00"
         }
       ],
       "qualifying_results": [
@@ -9719,9 +9823,9 @@
           "delta": 0
         },
         {
-          "driver_id": "jolyon_palmer",
-          "driver": "Jolyon Palmer",
-          "team": "Renault",
+          "driver_id": "nasr",
+          "driver": "Felipe Nasr",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -9729,9 +9833,9 @@
           "delta": 0
         },
         {
-          "driver_id": "nasr",
-          "driver": "Felipe Nasr",
-          "team": "Sauber",
+          "driver_id": "gutierrez",
+          "driver": "Esteban Gutiérrez",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -9739,9 +9843,9 @@
           "delta": 0
         },
         {
-          "driver_id": "gutierrez",
-          "driver": "Esteban Gutiérrez",
-          "team": "Haas F1 Team",
+          "driver_id": "jolyon_palmer",
+          "driver": "Jolyon Palmer",
+          "team": "Renault",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -9789,6 +9893,14 @@
           "utc_end": "2016-09-03T01:00:00+00:00",
           "msk_date": "03.09.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-09-04T12:00:00+00:00",
+          "utc_end": "2016-09-04T14:00:00+00:00",
+          "msk_date": "04.09.2016",
+          "msk_time": "15:00"
         }
       ],
       "qualifying_results": [
@@ -10439,9 +10551,9 @@
           "delta": 0
         },
         {
-          "driver_id": "jolyon_palmer",
-          "driver": "Jolyon Palmer",
-          "team": "Renault",
+          "driver_id": "nasr",
+          "driver": "Felipe Nasr",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -10449,9 +10561,9 @@
           "delta": 0
         },
         {
-          "driver_id": "nasr",
-          "driver": "Felipe Nasr",
-          "team": "Sauber",
+          "driver_id": "gutierrez",
+          "driver": "Esteban Gutiérrez",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -10459,9 +10571,9 @@
           "delta": 0
         },
         {
-          "driver_id": "gutierrez",
-          "driver": "Esteban Gutiérrez",
-          "team": "Haas F1 Team",
+          "driver_id": "jolyon_palmer",
+          "driver": "Jolyon Palmer",
+          "team": "Renault",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -10509,6 +10621,14 @@
           "utc_end": "2016-09-17T01:00:00+00:00",
           "msk_date": "17.09.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-09-18T12:00:00+00:00",
+          "utc_end": "2016-09-18T14:00:00+00:00",
+          "msk_date": "18.09.2016",
+          "msk_time": "15:00"
         }
       ],
       "qualifying_results": [
@@ -11169,9 +11289,9 @@
           "delta": 0
         },
         {
-          "driver_id": "jolyon_palmer",
-          "driver": "Jolyon Palmer",
-          "team": "Renault",
+          "driver_id": "nasr",
+          "driver": "Felipe Nasr",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -11179,9 +11299,9 @@
           "delta": 0
         },
         {
-          "driver_id": "nasr",
-          "driver": "Felipe Nasr",
-          "team": "Sauber",
+          "driver_id": "gutierrez",
+          "driver": "Esteban Gutiérrez",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -11189,9 +11309,9 @@
           "delta": 0
         },
         {
-          "driver_id": "gutierrez",
-          "driver": "Esteban Gutiérrez",
-          "team": "Haas F1 Team",
+          "driver_id": "jolyon_palmer",
+          "driver": "Jolyon Palmer",
+          "team": "Renault",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -11239,6 +11359,14 @@
           "utc_end": "2016-10-01T01:00:00+00:00",
           "msk_date": "01.10.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-10-02T07:00:00+00:00",
+          "utc_end": "2016-10-02T09:00:00+00:00",
+          "msk_date": "02.10.2016",
+          "msk_time": "10:00"
         }
       ],
       "qualifying_results": [
@@ -11969,6 +12097,14 @@
           "utc_end": "2016-10-08T01:00:00+00:00",
           "msk_date": "08.10.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-10-09T05:00:00+00:00",
+          "utc_end": "2016-10-09T07:00:00+00:00",
+          "msk_date": "09.10.2016",
+          "msk_time": "08:00"
         }
       ],
       "qualifying_results": [
@@ -12699,6 +12835,14 @@
           "utc_end": "2016-10-22T01:00:00+00:00",
           "msk_date": "22.10.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-10-23T19:00:00+00:00",
+          "utc_end": "2016-10-23T21:00:00+00:00",
+          "msk_date": "23.10.2016",
+          "msk_time": "22:00"
         }
       ],
       "qualifying_results": [
@@ -13429,6 +13573,14 @@
           "utc_end": "2016-10-29T01:00:00+00:00",
           "msk_date": "29.10.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-10-30T19:00:00+00:00",
+          "utc_end": "2016-10-30T21:00:00+00:00",
+          "msk_date": "30.10.2016",
+          "msk_time": "22:00"
         }
       ],
       "qualifying_results": [
@@ -14149,6 +14301,14 @@
           "utc_end": "2016-11-12T01:00:00+00:00",
           "msk_date": "12.11.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-11-13T16:00:00+00:00",
+          "utc_end": "2016-11-13T18:00:00+00:00",
+          "msk_date": "13.11.2016",
+          "msk_time": "19:00"
         }
       ],
       "qualifying_results": [
@@ -14879,6 +15039,14 @@
           "utc_end": "2016-11-26T01:00:00+00:00",
           "msk_date": "26.11.2016",
           "msk_time": "03:00"
+        },
+        {
+          "name": "Race",
+          "name_ru": "Гонка",
+          "utc_start": "2016-11-27T13:00:00+00:00",
+          "utc_end": "2016-11-27T15:00:00+00:00",
+          "msk_date": "27.11.2016",
+          "msk_time": "16:00"
         }
       ],
       "qualifying_results": [
