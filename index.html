@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формула 1 — Календарь и зачёты</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #0a0a0f; --surface: #15151f; --surface2: #1c1c2a; --border: #2a2a3a;
+            --text: #e8e8f0; --text-dim: #8888a0; --red: #e10600; --red-dim: #b00500;
+            --green: #00d97e; --yellow: #ffb800; --blue: #00a3ff; --purple: #9b59ff;
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+        header { background: linear-gradient(135deg, #1a0a0a 0%, var(--bg) 100%); border-bottom: 3px solid var(--red); padding: 40px 0 32px; }
+        header h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 6px; }
+        header .subtitle { color: var(--text-dim); font-size: 0.95rem; }
+        .header-badge { display: inline-block; background: var(--red); color: #fff; font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 4px; margin-bottom: 12px; letter-spacing: 1px; text-transform: uppercase; }
+        .header-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+        .year-selector { display: flex; gap: 4px; flex-wrap: wrap; }
+        .year-btn { padding: 6px 14px; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; color: var(--text-dim); cursor: pointer; font-size: 0.8rem; font-weight: 700; transition: all 0.2s; }
+        .year-btn:hover { color: var(--text); border-color: var(--text-dim); }
+        .year-btn.active { background: var(--red); color: #fff; border-color: var(--red); }
+
+        .next-race { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--red); border-radius: 12px; padding: 20px 24px; margin-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        .next-race-info h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+        .next-race-info .meta { color: var(--text-dim); font-size: 0.85rem; }
+        .countdown { text-align: center; min-width: 180px; }
+        .countdown-label { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+        .countdown-timer { font-size: 1.6rem; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--red); }
+
+        .expand-toggle { margin-left: auto; padding: 6px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; color: var(--text-dim); cursor: pointer; font-size: 0.8rem; font-weight: 600; transition: all 0.2s; }
+        .expand-toggle:hover { color: var(--text); border-color: var(--text-dim); }
+        .expand-toggle:hover { color: var(--red); border-color: var(--red); }
+
+        .tabs { display: flex; gap: 4px; margin: 24px 0 20px; flex-wrap: wrap; align-items: center; }
+        .tab { padding: 8px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; color: var(--text-dim); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .tab:hover { color: var(--text); border-color: var(--text-dim); }
+        .tab.active { background: var(--red); color: #fff; border-color: var(--red); }
+
+        .race-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 12px; overflow: hidden; transition: border-color 0.2s; }
+        .race-card:hover { border-color: var(--text-dim); }
+        .race-card.upcoming { border-left: 4px solid var(--red); }
+        .race-card.ongoing { border-left: 4px solid var(--green); }
+        .race-card.completed { border-left: 4px solid var(--text-dim); }
+        .race-card.collapsed .race-body { display: none; }
+        .race-card.collapsed .race-header { border-bottom: none; }
+
+        .race-header { padding: 16px 22px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; cursor: pointer; user-select: none; }
+        .race-header-left { display: flex; align-items: center; gap: 14px; flex: 1; min-width: 250px; }
+        .race-header-chevron { color: var(--text-dim); font-size: 0.7rem; transition: transform 0.2s; flex-shrink: 0; }
+        .race-card:not(.collapsed) .race-header-chevron { transform: rotate(90deg); }
+        .race-header-summary { color: var(--text-dim); font-size: 0.8rem; white-space: nowrap; }
+        .race-header-right { display: flex; align-items: center; gap: 8px; }
+        .race-title { flex: 1; min-width: 250px; }
+        .race-round { font-size: 0.7rem; font-weight: 700; color: var(--red); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+        .race-name { font-size: 1.2rem; font-weight: 700; margin-bottom: 4px; }
+        .race-circuit { color: var(--text-dim); font-size: 0.85rem; }
+        .sprint-badge { display: inline-block; background: var(--purple); color: #fff; font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .status-badge { font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .status-badge.upcoming { background: var(--red); color: #fff; }
+        .status-badge.ongoing { background: var(--green); color: #000; }
+        .status-badge.completed { background: var(--surface2); color: var(--text-dim); }
+
+        .race-body { border-top: 1px solid var(--border); }
+        .race-body { animation: slideDown 0.2s ease; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+
+        .sessions { padding: 14px 22px; display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+        .session { background: var(--surface2); border-radius: 8px; padding: 10px 14px; border: 1px solid var(--border); }
+        .session.race { border-color: var(--red); }
+        .session.qualifying { border-color: var(--yellow); }
+        .session.sprint-session { border-color: var(--purple); }
+        .session-name { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+        .session.race .session-name { color: var(--red); }
+        .session.qualifying .session-name { color: var(--yellow); }
+        .session.sprint-session .session-name { color: var(--purple); }
+        .session-date { font-size: 0.8rem; font-weight: 600; margin-bottom: 2px; }
+        .session-time { font-size: 0.95rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+        .race-details { padding: 0 22px 18px; }
+        .details-toggle { background: none; border: 1px solid var(--border); color: var(--text-dim); padding: 6px 16px; border-radius: 8px; cursor: pointer; font-size: 0.8rem; font-weight: 600; transition: all 0.2s; margin-bottom: 14px; }
+        .details-toggle:hover { color: var(--text); border-color: var(--text-dim); }
+        .details-toggle.open { color: var(--red); border-color: var(--red); }
+        .details-content { display: none; }
+        .details-content.open { display: block; }
+
+        /* Unified points table per race */
+        .pts-table-section { background: var(--surface2); border-radius: 10px; padding: 16px; margin-bottom: 14px; }
+        .pts-table-title { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; color: var(--text-dim); }
+        .pts-table { width: 100%; font-size: 0.82rem; }
+        .pts-table th { text-align: left; padding: 7px 8px; color: var(--text-dim); font-weight: 600; font-size: 0.75rem; border-bottom: 1px solid var(--border); white-space: nowrap; }
+        .pts-table td { padding: 7px 8px; border-bottom: 1px solid var(--border); }
+        .pts-table tr:last-child td { border-bottom: none; }
+        .pts-table .pos { font-weight: 700; width: 30px; }
+        .pts-table .pts { text-align: right; font-weight: 700; }
+        .pts-table .sprint-pts { text-align: right; color: var(--purple); }
+        .pts-table .race-pts { text-align: right; color: var(--yellow); }
+        .pts-table .total { text-align: right; font-weight: 800; color: var(--green); }
+        .pts-table .delta { text-align: right; font-size: 0.78rem; width: 50px; }
+        .pts-table .delta.pos { color: var(--green); }
+        .pts-table .delta.zero { color: var(--text-dim); }
+        .driver-color { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+        .pts-table-wrapper { overflow-x: auto; }
+
+        .quali-section { background: var(--surface2); border-radius: 10px; padding: 16px; margin-bottom: 14px; }
+        .quali-title { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; color: var(--yellow); }
+        .quali-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 6px; }
+        .quali-row { display: flex; align-items: center; gap: 10px; padding: 6px 10px; background: var(--surface); border-radius: 6px; font-size: 0.82rem; }
+        .quali-row .qpos { font-weight: 800; min-width: 24px; text-align: center; }
+        .quali-row .qpos.pole { color: var(--yellow); }
+        .quali-row .qdriver { flex: 1; font-weight: 600; }
+        .quali-row .qteam { color: var(--text-dim); font-size: 0.78rem; }
+        .quali-row .qtime { font-variant-numeric: tabular-nums; color: var(--text-dim); font-size: 0.78rem; }
+
+        .race-results-section { background: var(--surface2); border-radius: 10px; padding: 16px; }
+        .race-results-title { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; color: var(--red); }
+        .sprint-results-title { color: var(--purple); }
+
+        .standings-page { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px; margin-bottom: 20px; }
+        .standings-page h2 { font-size: 1.3rem; margin-bottom: 4px; }
+        .standings-page .updated { color: var(--text-dim); font-size: 0.8rem; margin-bottom: 20px; }
+        .standings-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        @media (max-width: 700px) { .standings-grid { grid-template-columns: 1fr; } }
+        .standings-table { width: 100%; font-size: 0.82rem; }
+        .standings-table th { text-align: left; padding: 6px 8px; color: var(--text-dim); font-weight: 600; font-size: 0.75rem; border-bottom: 1px solid var(--border); }
+        .standings-table td { padding: 7px 8px; border-bottom: 1px solid var(--border); }
+        .standings-table tr:last-child td { border-bottom: none; }
+        .standings-table .pos { font-weight: 700; width: 30px; }
+        .standings-table .pts { text-align: right; font-weight: 700; color: var(--yellow); }
+
+        .ics-download { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 32px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        .ics-download-info h3 { font-size: 1.1rem; margin-bottom: 4px; }
+        .ics-download-info p { color: var(--text-dim); font-size: 0.85rem; }
+        .ics-btn { background: var(--red); color: #fff; border: none; padding: 12px 24px; border-radius: 8px; font-size: 0.9rem; font-weight: 700; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s; }
+        .ics-btn:hover { background: var(--red-dim); }
+
+        .auto-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--green); color: #000; font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 4px; margin-left: 8px; }
+        .auto-badge::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #000; }
+
+        .loading { text-align: center; padding: 40px; color: var(--text-dim); }
+
+        footer { text-align: center; padding: 40px 0; color: var(--text-dim); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 40px; }
+        footer a { color: var(--text-dim); text-decoration: underline; }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.5rem; }
+            .next-race { flex-direction: column; align-items: flex-start; }
+            .countdown { text-align: left; min-width: 0; }
+            .countdown-timer { font-size: 1.3rem; }
+            .sessions { grid-template-columns: 1fr 1fr; }
+            .quali-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div>
+                    <span class="header-badge" id="yearBadge">Сезон 2026</span>
+                    <h1>Формула 1 — Календарь и зачёты</h1>
+                    <p class="subtitle">Все этапы · Все сессии · Время по МСК · Личный и командный зачёт · История 10 лет</p>
+                </div>
+                <div class="year-selector" id="yearSelector"></div>
+            </div>
+            <div class="next-race" id="nextRaceBanner"></div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="tabs" id="tabs">
+            <div class="tab active" data-view="races" data-filter="all">Все этапы</div>
+            <div class="tab" data-view="races" data-filter="upcoming">Предстоящие</div>
+            <div class="tab" data-view="races" data-filter="completed">Завершённые</div>
+            <div class="tab" data-view="standings">Зачёты</div>
+            <button class="expand-toggle" id="expandToggle" onclick="toggleAllCards()">Развернуть все</button>
+        </div>
+        <div id="content"><div class="loading">Загрузка...</div></div>
+
+        <div class="ics-download" id="icsDownload">
+            <div class="ics-download-info">
+                <h3>Календарь для iPhone</h3>
+                <p>Скачайте .ics файл и импортируйте в приложение «Календарь»</p>
+            </div>
+            <a href="f1-calendar.ics" download="f1-calendar.ics" class="ics-btn">Скачать .ics</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Данные: <a href="https://api.jolpi.ca/ergast/f1">Jolpica F1 API</a> (бесплатно, без ключа) · Время по МСК (UTC+3)</p>
+            <p style="margin-top:6px">Автоматическое обновление через GitHub Actions · Создано с помощью Perplexity Computer</p>
+        </div>
+    </footer>
+
+    <script>
+        const TEAM_COLORS = {
+            'Mercedes': '#00d2b8', 'Ferrari': '#dc0000', 'McLaren': '#ff8000',
+            'Red Bull': '#1e2a78', 'Racing Bulls': '#6692ff', 'RB F1 Team': '#6692ff',
+            'Toro Rosso': '#6692ff', 'AlphaTauri': '#6692ff',
+            'Alpine': '#0093ff', 'Alpine F1 Team': '#0093ff', 'Renault': '#0093ff',
+            'Haas': '#b6babd', 'Haas F1 Team': '#b6babd',
+            'Audi': '#bb1c2b', 'Williams': '#005aff',
+            'Aston Martin': '#229971', 'Force India': '#ff5cd7', 'Sauber': '#9b0000',
+            'Cadillac': '#7b2d8e', 'Cadillac F1 Team': '#7b2d8e',
+            'Lotus': '#ffb800', 'Lotus F1 Team': '#ffb800',
+            'Marussia': '#6e0000', 'Manor': '#6e0000', 'Caterham': '#005030',
+            'Mercedes AMG Petronas F1 Team': '#00d2b8',
+            'Scuderia Ferrari': '#dc0000',
+            'Red Bull Racing': '#1e2a78',
+            'McLaren F1 Team': '#ff8000',
+            'Williams F1 Team': '#005aff',
+            'Aston Martin F1 Team': '#229971',
+            'Alpine F1 Team': '#0093ff',
+            'MoneyGram Haas F1 Team': '#b6babd',
+            'Stake F1 Team Kick Sauber': '#9b0000',
+            'Kick Sauber': '#9b0000',
+        };
+
+        let seasonData = null;
+        let indexData = null;
+        let currentYear = new Date().getFullYear();
+        let currentView = 'races';
+        let currentFilter = 'all';
+
+        async function loadIndex() {
+            try {
+                const res = await fetch('data/index.json');
+                indexData = await res.json();
+                currentYear = indexData.current_year || currentYear;
+                renderYearSelector();
+            } catch (e) {
+                // Fallback: try current year
+                renderYearSelector();
+            }
+        }
+
+        function renderYearSelector() {
+            const selector = document.getElementById('yearSelector');
+            const years = indexData ? indexData.years : [currentYear];
+            // Show years in descending order
+            years.slice().reverse().forEach(y => {
+                const btn = document.createElement('div');
+                btn.className = 'year-btn' + (y === currentYear ? ' active' : '');
+                btn.textContent = y;
+                btn.onclick = () => {
+                    currentYear = y;
+                    document.querySelectorAll('.year-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    loadSeason(y);
+                };
+                selector.appendChild(btn);
+            });
+        }
+
+        async function loadSeason(year) {
+            document.getElementById('content').innerHTML = '<div class="loading">Загрузка сезона ' + year + '...</div>';
+            document.getElementById('yearBadge').textContent = 'Сезон ' + year;
+
+            // Hide ICS download for non-current years
+            document.getElementById('icsDownload').style.display = (year === (indexData?.current_year || new Date().getFullYear())) ? 'flex' : 'none';
+
+            try {
+                const res = await fetch(`data/seasons/${year}.json`);
+                seasonData = await res.json();
+            } catch (e) {
+                document.getElementById('content').innerHTML = '<div class="loading">Данные за ' + year + ' год недоступны</div>';
+                return;
+            }
+
+            renderNextRace();
+            renderContent();
+            if (currentView !== 'standings') startCountdown();
+        }
+
+        function renderNextRace() {
+            const banner = document.getElementById('nextRaceBanner');
+            if (!seasonData) return;
+            const now = new Date();
+            const upcoming = seasonData.races.find(r => {
+                const raceSession = r.sessions.find(s => s.name === 'Race');
+                return raceSession && new Date(raceSession.utc_start) > now;
+            });
+            if (!upcoming) { banner.innerHTML = '<div class="next-race-info"><h3>Сезон завершён</h3></div>'; return; }
+            const raceSession = upcoming.sessions.find(s => s.name === 'Race');
+            const raceDate = new Date(raceSession.utc_start);
+            banner.innerHTML = `
+                <div class="next-race-info">
+                    <h3>${upcoming.gp}</h3>
+                    <p class="meta">Этап ${upcoming.round} · ${upcoming.circuit} · ${upcoming.location}${upcoming.sprint ? ' <span class="sprint-badge" style="margin-left:8px">Спринт</span>' : ''}</p>
+                </div>
+                <div class="countdown">
+                    <div class="countdown-label">Гонка через</div>
+                    <div class="countdown-timer" id="countdownTimer">—</div>
+                </div>`;
+            banner.dataset.raceTime = raceDate.toISOString();
+        }
+
+        function startCountdown() {
+            function update() {
+                const banner = document.getElementById('nextRaceBanner');
+                if (!banner || !banner.dataset.raceTime) return;
+                const diff = new Date(banner.dataset.raceTime) - new Date();
+                if (diff <= 0) return;
+                const d = Math.floor(diff / 86400000), h = Math.floor((diff % 86400000) / 3600000), m = Math.floor((diff % 3600000) / 60000), s = Math.floor((diff % 60000) / 1000);
+                const timer = document.getElementById('countdownTimer');
+                if (timer) timer.textContent = `${d}д ${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+            }
+            update(); setInterval(update, 1000);
+        }
+
+        function renderContent() {
+            const expandBtn = document.getElementById('expandToggle');
+            if (currentView === 'standings') {
+                if (expandBtn) expandBtn.style.display = 'none';
+                renderStandingsPage();
+            } else {
+                if (expandBtn) expandBtn.style.display = '';
+                renderRaces();
+            }
+        }
+
+        function renderStandingsPage() {
+            const round = seasonData.current_round || 0;
+            const updated = new Date(seasonData.updated).toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' });
+            const ds = seasonData.driver_standings || [];
+            const cs = seasonData.constructor_standings || [];
+
+            const driverRows = ds.map(s => `
+                <tr>
+                    <td class="pos">${s.pos}</td>
+                    <td><span class="driver-color" style="background:${TEAM_COLORS[s.team] || '#666'}"></span>${s.driver}</td>
+                    <td style="color:var(--text-dim)">${s.team}</td>
+                    <td style="text-align:right">${s.wins || 0}</td>
+                    <td class="pts">${s.points}</td>
+                </tr>`).join('');
+            const constructorRows = cs.map(s => `
+                <tr>
+                    <td class="pos">${s.pos}</td>
+                    <td><span class="driver-color" style="background:${TEAM_COLORS[s.team] || '#666'}"></span>${s.team}</td>
+                    <td style="text-align:right">${s.wins || 0}</td>
+                    <td class="pts">${s.points}</td>
+                </tr>`).join('');
+
+            // Sprint standings
+            let sprintHtml = '';
+            const sprintPts = {};
+            seasonData.races.forEach(race => {
+                if (race.sprint_results) {
+                    race.sprint_results.forEach(r => {
+                        if (!sprintPts[r.driver]) sprintPts[r.driver] = { driver: r.driver, team: r.team, points: 0 };
+                        sprintPts[r.driver].points += r.points || 0;
+                    });
+                }
+            });
+            const sprintSorted = Object.values(sprintPts).filter(s => s.points > 0).sort((a, b) => b.points - a.points);
+            if (sprintSorted.length > 0) {
+                const sprintRows = sprintSorted.map((s, i) => `
+                    <tr>
+                        <td class="pos">${i + 1}</td>
+                        <td><span class="driver-color" style="background:${TEAM_COLORS[s.team] || '#666'}"></span>${s.driver}</td>
+                        <td style="color:var(--text-dim)">${s.team}</td>
+                        <td class="pts" style="color:var(--purple)">${s.points}</td>
+                    </tr>`).join('');
+                sprintHtml = `
+                    <div class="pts-table-section" style="margin-top:20px">
+                        <div class="pts-table-title" style="color:var(--purple);font-size:0.9rem">Зачёт спринтов — очки только из спринт-гонок</div>
+                        <table class="standings-table" style="max-width:500px"><thead><tr><th>#</th><th>Пилот</th><th>Команда</th><th style="text-align:right">Очки</th></tr></thead><tbody>${sprintRows}</tbody></table>
+                    </div>`;
+            }
+
+            document.getElementById('content').innerHTML = `
+                <div class="standings-page">
+                    <h2>Зачёты — Сезон ${seasonData.season}</h2>
+                    <p class="updated">${round > 0 ? 'После этапа ' + round : 'Финальные зачёты'} · обновлено ${updated} МСК</p>
+                    <div class="standings-grid">
+                        <div>
+                            <div class="pts-table-title" style="color:var(--blue);font-size:0.9rem">Личный зачёт пилотов</div>
+                            <table class="standings-table"><thead><tr><th>#</th><th>Пилот</th><th>Команда</th><th style="text-align:right">Побед</th><th style="text-align:right">Очки</th></tr></thead><tbody>${driverRows}</tbody></table>
+                        </div>
+                        <div>
+                            <div class="pts-table-title" style="color:var(--yellow);font-size:0.9rem">Командный зачёт</div>
+                            <table class="standings-table"><thead><tr><th>#</th><th>Команда</th><th style="text-align:right">Побед</th><th style="text-align:right">Очки</th></tr></thead><tbody>${constructorRows}</tbody></table>
+                        </div>
+                    </div>
+                    ${sprintHtml}
+                </div>`;
+        }
+
+        function renderPointsTable(race) {
+            if (!race.points_table) return '';
+            const pt = race.points_table;
+            const hasSprint = race.sprint;
+            const round = race.round;
+
+            const rows = pt.map(row => {
+                const delta = row.delta || 0;
+                let deltaHtml = '';
+                if (round > 1) {
+                    const cls = delta > 0 ? 'pos' : 'zero';
+                    const sign = delta > 0 ? '+' : '';
+                    deltaHtml = `<td class="delta ${cls}">${sign}${delta}</td>`;
+                } else {
+                    deltaHtml = '<td class="delta zero">—</td>';
+                }
+                const sprintCell = hasSprint
+                    ? `<td class="sprint-pts">${row.sprint_pts !== null ? '+' + row.sprint_pts : '—'}</td>`
+                    : '';
+                return `<tr>
+                    <td class="pos">${row.pos}</td>
+                    <td><span class="driver-color" style="background:${TEAM_COLORS[row.team] || '#666'}"></span>${row.driver}</td>
+                    <td style="color:var(--text-dim)">${row.team}</td>
+                    ${sprintCell}
+                    <td class="race-pts">+${row.race_pts}</td>
+                    <td class="total">${row.total_after}</td>
+                    ${deltaHtml}
+                </tr>`;
+            }).join('');
+
+            const sprintHeader = hasSprint ? '<th style="text-align:right">Спринт</th>' : '';
+            const deltaHeader = round > 1 ? '<th style="text-align:right">Δ</th>' : '';
+
+            return `
+                <div class="pts-table-section">
+                    <div class="pts-table-title">Зачёт после этапа ${round} — ${race.gp}</div>
+                    <div class="pts-table-wrapper">
+                        <table class="pts-table">
+                            <thead><tr>
+                                <th>#</th><th>Пилот</th><th>Команда</th>
+                                ${sprintHeader}
+                                <th style="text-align:right">Гонка</th>
+                                <th style="text-align:right">Итого</th>
+                                ${deltaHeader}
+                            </tr></thead>
+                            <tbody>${rows}</tbody>
+                        </table>
+                    </div>
+                </div>`;
+        }
+
+        function renderRaces() {
+            const container = document.getElementById('content');
+            let races = seasonData.races;
+            if (currentFilter !== 'all') races = races.filter(r => r.status === currentFilter);
+            if (races.length === 0) { container.innerHTML = '<div class="loading">Нет этапов в этой категории.</div>'; return; }
+
+            container.innerHTML = races.map(race => {
+                const statusClass = race.status;
+                const statusText = race.status === 'upcoming' ? 'Предстоящий' : race.status === 'ongoing' ? 'Идёт' : 'Завершён';
+                const sessionsHtml = race.sessions.map(s => {
+                    let cls = '';
+                    if (s.name === 'Race') cls = 'race';
+                    else if (s.name === 'Qualifying') cls = 'qualifying';
+                    else if (s.name === 'Sprint' || s.name === 'SprintQualifying') cls = 'sprint-session';
+                    return `<div class="session ${cls}"><div class="session-name">${s.name_ru}</div><div class="session-date">${s.msk_date}</div><div class="session-time">${s.msk_time} МСК</div></div>`;
+                }).join('');
+
+                let detailsHtml = '<div class="details-content" id="details-' + race.round + '">';
+                detailsHtml += renderPointsTable(race);
+
+                if (race.qualifying_results) {
+                    detailsHtml += `<div class="quali-section"><div class="quali-title">Квалификация — стартовая решётка</div><div class="quali-grid">${race.qualifying_results.map(q => `<div class="quali-row"><span class="qpos ${q.pos === 1 ? 'pole' : ''}">${q.pos}</span><span class="qdriver">${q.driver}</span><span class="qteam">${q.team}</span><span class="qtime">${q.q3 || q.q2 || q.q1 || '—'}</span></div>`).join('')}</div></div>`;
+                }
+                if (race.sprint_results) {
+                    detailsHtml += `<div class="race-results-section" style="border:1px solid var(--purple)"><div class="race-results-title sprint-results-title">Финишный протокол спринта</div><div class="quali-grid">${race.sprint_results.map(r => `<div class="quali-row"><span class="qpos ${r.pos == 1 ? 'pole' : ''}">${r.pos}</span><span class="qdriver">${r.driver}</span><span class="qteam">${r.team}</span><span class="qtime">${r.time}</span></div>`).join('')}</div></div>`;
+                }
+                if (race.race_results) {
+                    detailsHtml += `<div class="race-results-section"><div class="race-results-title">Финишный протокол гонки</div><div class="quali-grid">${race.race_results.map(r => `<div class="quali-row"><span class="qpos ${r.pos == 1 ? 'pole' : ''}">${r.pos}</span><span class="qdriver">${r.driver}</span><span class="qteam">${r.team}</span><span class="qtime">${r.time}</span></div>`).join('')}</div></div>`;
+                }
+                detailsHtml += '</div>';
+
+                const raceSession = race.sessions.find(s => s.name === 'Race');
+                const raceDateShort = raceSession ? `${raceSession.msk_date} · ${raceSession.msk_time} МСК` : '';
+
+                return `<article class="race-card ${statusClass} collapsed" id="card-${race.round}">
+                    <div class="race-header" onclick="toggleCard(${race.round})">
+                        <div class="race-header-left">
+                            <span class="race-header-chevron">▶</span>
+                            <div class="race-title">
+                                <div class="race-round">Этап ${race.round}</div>
+                                <div class="race-name">${race.gp}</div>
+                                <div class="race-circuit">${race.circuit} · ${race.location}${race.sprint ? '<span class="sprint-badge" style="margin-left:6px">Спринт</span>' : ''}</div>
+                            </div>
+                        </div>
+                        <div class="race-header-right">
+                            ${raceDateShort ? `<span class="race-header-summary">${raceDateShort}</span>` : ''}
+                            <span class="status-badge ${statusClass}">${statusText}</span>
+                        </div>
+                    </div>
+                    <div class="race-body">
+                        <div class="sessions">${sessionsHtml}</div>
+                        <div class="race-details">
+                            <button class="details-toggle" onclick="event.stopPropagation(); toggleDetails(${race.round}, this)">Подробнее: зачёты и результаты</button>
+                            ${detailsHtml}
+                        </div>
+                    </div>
+                </article>`;
+            }).join('');
+        }
+
+        function toggleCard(round) {
+            const card = document.getElementById('card-' + round);
+            if (card) card.classList.toggle('collapsed');
+        }
+
+        function toggleDetails(round, btn) {
+            const content = document.getElementById('details-' + round);
+            if (content) { content.classList.toggle('open'); btn.classList.toggle('open'); }
+        }
+
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                currentView = tab.dataset.view;
+                currentFilter = tab.dataset.filter || 'all';
+                renderContent();
+            });
+        });
+
+        (async function() {
+            await loadIndex();
+            await loadSeason(currentYear);
+        })();
+    </script>
+</body>
+</html>

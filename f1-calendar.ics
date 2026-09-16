@@ -1,0 +1,1734 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//F1 Calendar//Perplexity Computer//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Формула 1 2026
+X-WR-TIMEZONE:UTC
+X-WR-DESC:Календарь Формулы 1 — все сессии всех этапов
+BEGIN:VEVENT
+UID:f1-2026-r01-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260306T013000Z
+DTEND:20260306T023000Z
+SUMMARY:F1: Australian Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 1 — Australian Grand Prix\nТрасса: Albert Park Grand Prix Circuit\nМесто: Melbourne\, Australia\nСессия: Свободная практика 1\n\nЗачёт после этапа 1:\n  1. George Russell (Mercedes) — 25 очков\n  2. Andrea Kimi Antonelli (Mercedes) — 18 очков\n  3. Charles Leclerc (Ferrari) — 15 очков\n  4. Lewis Hamilton (Ferrari) — 12 очков\n  5. Lando Norris (McLaren) — 10 очков\n  6. Max Verstappen (Red Bull) — 8 очков\n  7. Oliver Bearman (Haas F1 Team) — 6 очков\n  8. Arvid Lindblad (RB F1 Team) — 4 очков\n  9. Gabriel Bortoleto (Audi) — 2 очков\n  10. Pierre Gasly (Alpine F1 Team) — 1 очков\n
+LOCATION:Melbourne\, Australia
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Australian Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r01-secondpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260306T050000Z
+DTEND:20260306T060000Z
+SUMMARY:F1: Australian Grand Prix — Свободная практика 2
+DESCRIPTION:Этап 1 — Australian Grand Prix\nТрасса: Albert Park Grand Prix Circuit\nМесто: Melbourne\, Australia\nСессия: Свободная практика 2\n\nЗачёт после этапа 1:\n  1. George Russell (Mercedes) — 25 очков\n  2. Andrea Kimi Antonelli (Mercedes) — 18 очков\n  3. Charles Leclerc (Ferrari) — 15 очков\n  4. Lewis Hamilton (Ferrari) — 12 очков\n  5. Lando Norris (McLaren) — 10 очков\n  6. Max Verstappen (Red Bull) — 8 очков\n  7. Oliver Bearman (Haas F1 Team) — 6 очков\n  8. Arvid Lindblad (RB F1 Team) — 4 очков\n  9. Gabriel Bortoleto (Audi) — 2 очков\n  10. Pierre Gasly (Alpine F1 Team) — 1 очков\n
+LOCATION:Melbourne\, Australia
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Australian Grand Prix — Свободная практика 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r01-thirdpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260307T013000Z
+DTEND:20260307T023000Z
+SUMMARY:F1: Australian Grand Prix — Свободная практика 3
+DESCRIPTION:Этап 1 — Australian Grand Prix\nТрасса: Albert Park Grand Prix Circuit\nМесто: Melbourne\, Australia\nСессия: Свободная практика 3\n\nЗачёт после этапа 1:\n  1. George Russell (Mercedes) — 25 очков\n  2. Andrea Kimi Antonelli (Mercedes) — 18 очков\n  3. Charles Leclerc (Ferrari) — 15 очков\n  4. Lewis Hamilton (Ferrari) — 12 очков\n  5. Lando Norris (McLaren) — 10 очков\n  6. Max Verstappen (Red Bull) — 8 очков\n  7. Oliver Bearman (Haas F1 Team) — 6 очков\n  8. Arvid Lindblad (RB F1 Team) — 4 очков\n  9. Gabriel Bortoleto (Audi) — 2 очков\n  10. Pierre Gasly (Alpine F1 Team) — 1 очков\n
+LOCATION:Melbourne\, Australia
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Australian Grand Prix — Свободная практика 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r01-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260307T050000Z
+DTEND:20260307T060000Z
+SUMMARY:F1: Australian Grand Prix — Квалификация
+DESCRIPTION:Этап 1 — Australian Grand Prix\nТрасса: Albert Park Grand Prix Circuit\nМесто: Melbourne\, Australia\nСессия: Квалификация\n\nЗачёт после этапа 1:\n  1. George Russell (Mercedes) — 25 очков\n  2. Andrea Kimi Antonelli (Mercedes) — 18 очков\n  3. Charles Leclerc (Ferrari) — 15 очков\n  4. Lewis Hamilton (Ferrari) — 12 очков\n  5. Lando Norris (McLaren) — 10 очков\n  6. Max Verstappen (Red Bull) — 8 очков\n  7. Oliver Bearman (Haas F1 Team) — 6 очков\n  8. Arvid Lindblad (RB F1 Team) — 4 очков\n  9. Gabriel Bortoleto (Audi) — 2 очков\n  10. Pierre Gasly (Alpine F1 Team) — 1 очков\n\nКвалификация:\n  1. George Russell (Mercedes) — 1:18.518\n  2. Andrea Kimi Antonelli (Mercedes) — 1:18.811\n  3. Isack Hadjar (Red Bull) — 1:19.303\n  4. Charles Leclerc (Ferrari) — 1:19.327\n  5. Oscar Piastri (McLaren) — 1:19.380\n  6. Lando Norris (McLaren) — 1:19.475\n  7. Lewis Hamilton (Ferrari) — 1:19.478\n  8. Liam Lawson (RB F1 Team) — 1:19.994\n  9. Arvid Lindblad (RB F1 Team) — 1:21.247\n  10. Gabriel Bortoleto (Audi) — 
+LOCATION:Melbourne\, Australia
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Australian Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r01-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260308T040000Z
+DTEND:20260308T060000Z
+SUMMARY:F1: Australian Grand Prix — Гонка
+DESCRIPTION:Этап 1 — Australian Grand Prix\nТрасса: Albert Park Grand Prix Circuit\nМесто: Melbourne\, Australia\nСессия: Гонка\n\nЗачёт после этапа 1:\n  1. George Russell (Mercedes) — 25 очков\n  2. Andrea Kimi Antonelli (Mercedes) — 18 очков\n  3. Charles Leclerc (Ferrari) — 15 очков\n  4. Lewis Hamilton (Ferrari) — 12 очков\n  5. Lando Norris (McLaren) — 10 очков\n  6. Max Verstappen (Red Bull) — 8 очков\n  7. Oliver Bearman (Haas F1 Team) — 6 очков\n  8. Arvid Lindblad (RB F1 Team) — 4 очков\n  9. Gabriel Bortoleto (Audi) — 2 очков\n  10. Pierre Gasly (Alpine F1 Team) — 1 очков\n\nРезультаты гонки:\n  1. George Russell (Mercedes) — 1:23:06.801 (+25 очков)\n  2. Andrea Kimi Antonelli (Mercedes) — +2.974 (+18 очков)\n  3. Charles Leclerc (Ferrari) — +15.519 (+15 очков)\n  4. Lewis Hamilton (Ferrari) — +16.144 (+12 очков)\n  5. Lando Norris (McLaren) — +51.741 (+10 очков)\n  6. Max Verstappen (Red Bull) — +54.617 (+8 очков)\n  7. Oliver Bearman (Haas F1 Team) — Lapped (+6 очков)\n  8. Arvid Lindblad (RB F1 Team) — Lapped (+4 очков)\n  9. Gabriel Bortoleto (Audi) — Lapped (+2 очков)\n  10. Pierre Gasly (Alpine F1 Team) — Lapped (+1 очков)\n\nКвалификация:\n  1. George Russell (Mercedes) — 1:18.518\n  2. Andrea Kimi Antonelli (Mercedes) — 1:18.811\n  3. Isack Hadjar (Red Bull) — 1:19.303\n  4. Charles Leclerc (Ferrari) — 1:19.327\n  5. Oscar Piastri (McLaren) — 1:19.380\n  6. Lando Norris (McLaren) — 1:19.475\n  7. Lewis Hamilton (Ferrari) — 1:19.478\n  8. Liam Lawson (RB F1 Team) — 1:19.994\n  9. Arvid Lindblad (RB F1 Team) — 1:21.247\n  10. Gabriel Bortoleto (Audi) — 
+LOCATION:Melbourne\, Australia
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Australian Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r02-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260313T033000Z
+DTEND:20260313T043000Z
+SUMMARY:F1: Chinese Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 2 — Chinese Grand Prix\nТрасса: Shanghai International Circuit\nМесто: Shanghai\, China\nСессия: Свободная практика 1\nФормат: Спринт-уикенд\n\nЗачёт после этапа 2:\n  1. George Russell (Mercedes) — 51 очков\n  2. Andrea Kimi Antonelli (Mercedes) — 47 очков\n  3. Charles Leclerc (Ferrari) — 34 очков\n  4. Lewis Hamilton (Ferrari) — 33 очков\n  5. Oliver Bearman (Haas F1 Team) — 17 очков\n  6. Lando Norris (McLaren) — 15 очков\n  7. Pierre Gasly (Alpine F1 Team) — 9 очков\n  8. Max Verstappen (Red Bull) — 8 очков\n  9. Liam Lawson (RB F1 Team) — 8 очков\n  10. Isack Hadjar (Red Bull) — 4 очков\n
+LOCATION:Shanghai\, China
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Chinese Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r02-sprintqualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260313T073000Z
+DTEND:20260313T081500Z
+SUMMARY:F1: Chinese Grand Prix — Спринт-квалификация
+DESCRIPTION:Этап 2 — Chinese Grand Prix\nТрасса: Shanghai International Circuit\nМесто: Shanghai\, China\nСессия: Спринт-квалификация\nФормат: Спринт-уикенд\n\nЗачёт после этапа 2:\n  1. George Russell (Mercedes) — 51 очков\n  2. Andrea Kimi Antonelli (Mercedes) — 47 очков\n  3. Charles Leclerc (Ferrari) — 34 очков\n  4. Lewis Hamilton (Ferrari) — 33 очков\n  5. Oliver Bearman (Haas F1 Team) — 17 очков\n  6. Lando Norris (McLaren) — 15 очков\n  7. Pierre Gasly (Alpine F1 Team) — 9 очков\n  8. Max Verstappen (Red Bull) — 8 очков\n  9. Liam Lawson (RB F1 Team) — 8 очков\n  10. Isack Hadjar (Red Bull) — 4 очков\n
+LOCATION:Shanghai\, China
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Chinese Grand Prix — Спринт-квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r02-sprint@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260314T030000Z
+DTEND:20260314T040000Z
+SUMMARY:F1: Chinese Grand Prix — Спринт
+DESCRIPTION:Этап 2 — Chinese Grand Prix\nТрасса: Shanghai International Circuit\nМесто: Shanghai\, China\nСессия: Спринт\nФормат: Спринт-уикенд\n\nЗачёт после этапа 2:\n  1. George Russell (Mercedes) — 51 очков\n  2. Andrea Kimi Antonelli (Mercedes) — 47 очков\n  3. Charles Leclerc (Ferrari) — 34 очков\n  4. Lewis Hamilton (Ferrari) — 33 очков\n  5. Oliver Bearman (Haas F1 Team) — 17 очков\n  6. Lando Norris (McLaren) — 15 очков\n  7. Pierre Gasly (Alpine F1 Team) — 9 очков\n  8. Max Verstappen (Red Bull) — 8 очков\n  9. Liam Lawson (RB F1 Team) — 8 очков\n  10. Isack Hadjar (Red Bull) — 4 очков\n\nРезультаты спринта:\n  1. George Russell (Mercedes) — 33:38.998 (+8 очков)\n  2. Charles Leclerc (Ferrari) — +0.674 (+7 очков)\n  3. Lewis Hamilton (Ferrari) — +2.554 (+6 очков)\n  4. Lando Norris (McLaren) — +4.433 (+5 очков)\n  5. Andrea Kimi Antonelli (Mercedes) — +5.688 (+4 очков)\n  6. Oscar Piastri (McLaren) — +6.809 (+3 очков)\n  7. Liam Lawson (RB F1 Team) — +10.900 (+2 очков)\n  8. Oliver Bearman (Haas F1 Team) — +11.271 (+1 очков)\n  9. Max Verstappen (Red Bull) — +11.619\n  10. Esteban Ocon (Haas F1 Team) — +13.887\n
+LOCATION:Shanghai\, China
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Chinese Grand Prix — Спринт
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r02-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260314T070000Z
+DTEND:20260314T080000Z
+SUMMARY:F1: Chinese Grand Prix — Квалификация
+DESCRIPTION:Этап 2 — Chinese Grand Prix\nТрасса: Shanghai International Circuit\nМесто: Shanghai\, China\nСессия: Квалификация\nФормат: Спринт-уикенд\n\nЗачёт после этапа 2:\n  1. George Russell (Mercedes) — 51 очков\n  2. Andrea Kimi Antonelli (Mercedes) — 47 очков\n  3. Charles Leclerc (Ferrari) — 34 очков\n  4. Lewis Hamilton (Ferrari) — 33 очков\n  5. Oliver Bearman (Haas F1 Team) — 17 очков\n  6. Lando Norris (McLaren) — 15 очков\n  7. Pierre Gasly (Alpine F1 Team) — 9 очков\n  8. Max Verstappen (Red Bull) — 8 очков\n  9. Liam Lawson (RB F1 Team) — 8 очков\n  10. Isack Hadjar (Red Bull) — 4 очков\n\nКвалификация:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:32.064\n  2. George Russell (Mercedes) — 1:32.286\n  3. Lewis Hamilton (Ferrari) — 1:32.415\n  4. Charles Leclerc (Ferrari) — 1:32.428\n  5. Oscar Piastri (McLaren) — 1:32.550\n  6. Lando Norris (McLaren) — 1:32.608\n  7. Pierre Gasly (Alpine F1 Team) — 1:32.873\n  8. Max Verstappen (Red Bull) — 1:33.002\n  9. Isack Hadjar (Red Bull) — 1:33.121\n  10. Oliver Bearman (Haas F1 Team) — 1:33.292
+LOCATION:Shanghai\, China
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Chinese Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r02-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260315T070000Z
+DTEND:20260315T090000Z
+SUMMARY:F1: Chinese Grand Prix — Гонка
+DESCRIPTION:Этап 2 — Chinese Grand Prix\nТрасса: Shanghai International Circuit\nМесто: Shanghai\, China\nСессия: Гонка\nФормат: Спринт-уикенд\n\nЗачёт после этапа 2:\n  1. George Russell (Mercedes) — 51 очков\n  2. Andrea Kimi Antonelli (Mercedes) — 47 очков\n  3. Charles Leclerc (Ferrari) — 34 очков\n  4. Lewis Hamilton (Ferrari) — 33 очков\n  5. Oliver Bearman (Haas F1 Team) — 17 очков\n  6. Lando Norris (McLaren) — 15 очков\n  7. Pierre Gasly (Alpine F1 Team) — 9 очков\n  8. Max Verstappen (Red Bull) — 8 очков\n  9. Liam Lawson (RB F1 Team) — 8 очков\n  10. Isack Hadjar (Red Bull) — 4 очков\n\nРезультаты гонки:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:33:15.607 (+25 очков)\n  2. George Russell (Mercedes) — +5.515 (+18 очков)\n  3. Lewis Hamilton (Ferrari) — +25.267 (+15 очков)\n  4. Charles Leclerc (Ferrari) — +28.894 (+12 очков)\n  5. Oliver Bearman (Haas F1 Team) — +57.268 (+10 очков)\n  6. Pierre Gasly (Alpine F1 Team) — +59.647 (+8 очков)\n  7. Liam Lawson (RB F1 Team) — +1:20.588 (+6 очков)\n  8. Isack Hadjar (Red Bull) — +1:27.247 (+4 очков)\n  9. Carlos Sainz (Williams) — Lapped (+2 очков)\n  10. Franco Colapinto (Alpine F1 Team) — Lapped (+1 очков)\n\nКвалификация:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:32.064\n  2. George Russell (Mercedes) — 1:32.286\n  3. Lewis Hamilton (Ferrari) — 1:32.415\n  4. Charles Leclerc (Ferrari) — 1:32.428\n  5. Oscar Piastri (McLaren) — 1:32.550\n  6. Lando Norris (McLaren) — 1:32.608\n  7. Pierre Gasly (Alpine F1 Team) — 1:32.873\n  8. Max Verstappen (Red Bull) — 1:33.002\n  9. Isack Hadjar (Red Bull) — 1:33.121\n  10. Oliver Bearman (Haas F1 Team) — 1:33.292
+LOCATION:Shanghai\, China
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Chinese Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r03-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260327T023000Z
+DTEND:20260327T033000Z
+SUMMARY:F1: Japanese Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 3 — Japanese Grand Prix\nТрасса: Suzuka Circuit\nМесто: Suzuka\, Japan\nСессия: Свободная практика 1\n\nЗачёт после этапа 3:\n  1. Andrea Kimi Antonelli (Mercedes) — 72 очков\n  2. George Russell (Mercedes) — 63 очков\n  3. Charles Leclerc (Ferrari) — 49 очков\n  4. Lewis Hamilton (Ferrari) — 41 очков\n  5. Lando Norris (McLaren) — 25 очков\n  6. Oscar Piastri (McLaren) — 21 очков\n  7. Oliver Bearman (Haas F1 Team) — 17 очков\n  8. Pierre Gasly (Alpine F1 Team) — 15 очков\n  9. Max Verstappen (Red Bull) — 12 очков\n  10. Liam Lawson (RB F1 Team) — 10 очков\n
+LOCATION:Suzuka\, Japan
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Japanese Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r03-secondpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260327T060000Z
+DTEND:20260327T070000Z
+SUMMARY:F1: Japanese Grand Prix — Свободная практика 2
+DESCRIPTION:Этап 3 — Japanese Grand Prix\nТрасса: Suzuka Circuit\nМесто: Suzuka\, Japan\nСессия: Свободная практика 2\n\nЗачёт после этапа 3:\n  1. Andrea Kimi Antonelli (Mercedes) — 72 очков\n  2. George Russell (Mercedes) — 63 очков\n  3. Charles Leclerc (Ferrari) — 49 очков\n  4. Lewis Hamilton (Ferrari) — 41 очков\n  5. Lando Norris (McLaren) — 25 очков\n  6. Oscar Piastri (McLaren) — 21 очков\n  7. Oliver Bearman (Haas F1 Team) — 17 очков\n  8. Pierre Gasly (Alpine F1 Team) — 15 очков\n  9. Max Verstappen (Red Bull) — 12 очков\n  10. Liam Lawson (RB F1 Team) — 10 очков\n
+LOCATION:Suzuka\, Japan
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Japanese Grand Prix — Свободная практика 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r03-thirdpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260328T023000Z
+DTEND:20260328T033000Z
+SUMMARY:F1: Japanese Grand Prix — Свободная практика 3
+DESCRIPTION:Этап 3 — Japanese Grand Prix\nТрасса: Suzuka Circuit\nМесто: Suzuka\, Japan\nСессия: Свободная практика 3\n\nЗачёт после этапа 3:\n  1. Andrea Kimi Antonelli (Mercedes) — 72 очков\n  2. George Russell (Mercedes) — 63 очков\n  3. Charles Leclerc (Ferrari) — 49 очков\n  4. Lewis Hamilton (Ferrari) — 41 очков\n  5. Lando Norris (McLaren) — 25 очков\n  6. Oscar Piastri (McLaren) — 21 очков\n  7. Oliver Bearman (Haas F1 Team) — 17 очков\n  8. Pierre Gasly (Alpine F1 Team) — 15 очков\n  9. Max Verstappen (Red Bull) — 12 очков\n  10. Liam Lawson (RB F1 Team) — 10 очков\n
+LOCATION:Suzuka\, Japan
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Japanese Grand Prix — Свободная практика 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r03-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260328T060000Z
+DTEND:20260328T070000Z
+SUMMARY:F1: Japanese Grand Prix — Квалификация
+DESCRIPTION:Этап 3 — Japanese Grand Prix\nТрасса: Suzuka Circuit\nМесто: Suzuka\, Japan\nСессия: Квалификация\n\nЗачёт после этапа 3:\n  1. Andrea Kimi Antonelli (Mercedes) — 72 очков\n  2. George Russell (Mercedes) — 63 очков\n  3. Charles Leclerc (Ferrari) — 49 очков\n  4. Lewis Hamilton (Ferrari) — 41 очков\n  5. Lando Norris (McLaren) — 25 очков\n  6. Oscar Piastri (McLaren) — 21 очков\n  7. Oliver Bearman (Haas F1 Team) — 17 очков\n  8. Pierre Gasly (Alpine F1 Team) — 15 очков\n  9. Max Verstappen (Red Bull) — 12 очков\n  10. Liam Lawson (RB F1 Team) — 10 очков\n\nКвалификация:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:28.778\n  2. George Russell (Mercedes) — 1:29.076\n  3. Oscar Piastri (McLaren) — 1:29.132\n  4. Charles Leclerc (Ferrari) — 1:29.405\n  5. Lando Norris (McLaren) — 1:29.409\n  6. Lewis Hamilton (Ferrari) — 1:29.567\n  7. Pierre Gasly (Alpine F1 Team) — 1:29.691\n  8. Isack Hadjar (Red Bull) — 1:29.978\n  9. Gabriel Bortoleto (Audi) — 1:30.274\n  10. Arvid Lindblad (RB F1 Team) — 1:30.319
+LOCATION:Suzuka\, Japan
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Japanese Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r03-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260329T050000Z
+DTEND:20260329T070000Z
+SUMMARY:F1: Japanese Grand Prix — Гонка
+DESCRIPTION:Этап 3 — Japanese Grand Prix\nТрасса: Suzuka Circuit\nМесто: Suzuka\, Japan\nСессия: Гонка\n\nЗачёт после этапа 3:\n  1. Andrea Kimi Antonelli (Mercedes) — 72 очков\n  2. George Russell (Mercedes) — 63 очков\n  3. Charles Leclerc (Ferrari) — 49 очков\n  4. Lewis Hamilton (Ferrari) — 41 очков\n  5. Lando Norris (McLaren) — 25 очков\n  6. Oscar Piastri (McLaren) — 21 очков\n  7. Oliver Bearman (Haas F1 Team) — 17 очков\n  8. Pierre Gasly (Alpine F1 Team) — 15 очков\n  9. Max Verstappen (Red Bull) — 12 очков\n  10. Liam Lawson (RB F1 Team) — 10 очков\n\nРезультаты гонки:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:28:03.403 (+25 очков)\n  2. Oscar Piastri (McLaren) — +13.722 (+18 очков)\n  3. Charles Leclerc (Ferrari) — +15.270 (+15 очков)\n  4. George Russell (Mercedes) — +15.754 (+12 очков)\n  5. Lando Norris (McLaren) — +23.479 (+10 очков)\n  6. Lewis Hamilton (Ferrari) — +25.037 (+8 очков)\n  7. Pierre Gasly (Alpine F1 Team) — +32.340 (+6 очков)\n  8. Max Verstappen (Red Bull) — +32.677 (+4 очков)\n  9. Liam Lawson (RB F1 Team) — +50.180 (+2 очков)\n  10. Esteban Ocon (Haas F1 Team) — +51.216 (+1 очков)\n\nКвалификация:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:28.778\n  2. George Russell (Mercedes) — 1:29.076\n  3. Oscar Piastri (McLaren) — 1:29.132\n  4. Charles Leclerc (Ferrari) — 1:29.405\n  5. Lando Norris (McLaren) — 1:29.409\n  6. Lewis Hamilton (Ferrari) — 1:29.567\n  7. Pierre Gasly (Alpine F1 Team) — 1:29.691\n  8. Isack Hadjar (Red Bull) — 1:29.978\n  9. Gabriel Bortoleto (Audi) — 1:30.274\n  10. Arvid Lindblad (RB F1 Team) — 1:30.319
+LOCATION:Suzuka\, Japan
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Japanese Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r04-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260501T160000Z
+DTEND:20260501T170000Z
+SUMMARY:F1: Miami Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 4 — Miami Grand Prix\nТрасса: Miami International Autodrome\nМесто: Miami\, USA\nСессия: Свободная практика 1\nФормат: Спринт-уикенд\n\nЗачёт после этапа 4:\n  1. Andrea Kimi Antonelli (Mercedes) — 100 очков\n  2. George Russell (Mercedes) — 80 очков\n  3. Charles Leclerc (Ferrari) — 59 очков\n  4. Lando Norris (McLaren) — 51 очков\n  5. Lewis Hamilton (Ferrari) — 51 очков\n  6. Oscar Piastri (McLaren) — 43 очков\n  7. Max Verstappen (Red Bull) — 26 очков\n  8. Oliver Bearman (Haas F1 Team) — 17 очков\n  9. Pierre Gasly (Alpine F1 Team) — 16 очков\n  10. Liam Lawson (RB F1 Team) — 10 очков\n
+LOCATION:Miami\, USA
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Miami Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r04-sprintqualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260501T203000Z
+DTEND:20260501T211500Z
+SUMMARY:F1: Miami Grand Prix — Спринт-квалификация
+DESCRIPTION:Этап 4 — Miami Grand Prix\nТрасса: Miami International Autodrome\nМесто: Miami\, USA\nСессия: Спринт-квалификация\nФормат: Спринт-уикенд\n\nЗачёт после этапа 4:\n  1. Andrea Kimi Antonelli (Mercedes) — 100 очков\n  2. George Russell (Mercedes) — 80 очков\n  3. Charles Leclerc (Ferrari) — 59 очков\n  4. Lando Norris (McLaren) — 51 очков\n  5. Lewis Hamilton (Ferrari) — 51 очков\n  6. Oscar Piastri (McLaren) — 43 очков\n  7. Max Verstappen (Red Bull) — 26 очков\n  8. Oliver Bearman (Haas F1 Team) — 17 очков\n  9. Pierre Gasly (Alpine F1 Team) — 16 очков\n  10. Liam Lawson (RB F1 Team) — 10 очков\n
+LOCATION:Miami\, USA
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Miami Grand Prix — Спринт-квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r04-sprint@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260502T160000Z
+DTEND:20260502T170000Z
+SUMMARY:F1: Miami Grand Prix — Спринт
+DESCRIPTION:Этап 4 — Miami Grand Prix\nТрасса: Miami International Autodrome\nМесто: Miami\, USA\nСессия: Спринт\nФормат: Спринт-уикенд\n\nЗачёт после этапа 4:\n  1. Andrea Kimi Antonelli (Mercedes) — 100 очков\n  2. George Russell (Mercedes) — 80 очков\n  3. Charles Leclerc (Ferrari) — 59 очков\n  4. Lando Norris (McLaren) — 51 очков\n  5. Lewis Hamilton (Ferrari) — 51 очков\n  6. Oscar Piastri (McLaren) — 43 очков\n  7. Max Verstappen (Red Bull) — 26 очков\n  8. Oliver Bearman (Haas F1 Team) — 17 очков\n  9. Pierre Gasly (Alpine F1 Team) — 16 очков\n  10. Liam Lawson (RB F1 Team) — 10 очков\n\nРезультаты спринта:\n  1. Lando Norris (McLaren) — 29:15.045 (+8 очков)\n  2. Oscar Piastri (McLaren) — +3.766 (+7 очков)\n  3. Charles Leclerc (Ferrari) — +6.251 (+6 очков)\n  4. George Russell (Mercedes) — +12.951 (+5 очков)\n  5. Max Verstappen (Red Bull) — +13.639 (+4 очков)\n  6. Andrea Kimi Antonelli (Mercedes) — +13.777 (+3 очков)\n  7. Lewis Hamilton (Ferrari) — +21.665 (+2 очков)\n  8. Pierre Gasly (Alpine F1 Team) — +30.525 (+1 очков)\n  9. Isack Hadjar (Red Bull) — +35.346\n  10. Franco Colapinto (Alpine F1 Team) — +36.970\n
+LOCATION:Miami\, USA
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Miami Grand Prix — Спринт
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r04-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260502T200000Z
+DTEND:20260502T210000Z
+SUMMARY:F1: Miami Grand Prix — Квалификация
+DESCRIPTION:Этап 4 — Miami Grand Prix\nТрасса: Miami International Autodrome\nМесто: Miami\, USA\nСессия: Квалификация\nФормат: Спринт-уикенд\n\nЗачёт после этапа 4:\n  1. Andrea Kimi Antonelli (Mercedes) — 100 очков\n  2. George Russell (Mercedes) — 80 очков\n  3. Charles Leclerc (Ferrari) — 59 очков\n  4. Lando Norris (McLaren) — 51 очков\n  5. Lewis Hamilton (Ferrari) — 51 очков\n  6. Oscar Piastri (McLaren) — 43 очков\n  7. Max Verstappen (Red Bull) — 26 очков\n  8. Oliver Bearman (Haas F1 Team) — 17 очков\n  9. Pierre Gasly (Alpine F1 Team) — 16 очков\n  10. Liam Lawson (RB F1 Team) — 10 очков\n\nКвалификация:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:27.798\n  2. Max Verstappen (Red Bull) — 1:27.964\n  3. Charles Leclerc (Ferrari) — 1:28.143\n  4. Lando Norris (McLaren) — 1:28.183\n  5. George Russell (Mercedes) — 1:28.197\n  6. Lewis Hamilton (Ferrari) — 1:28.319\n  7. Oscar Piastri (McLaren) — 1:28.500\n  8. Franco Colapinto (Alpine F1 Team) — 1:28.762\n  9. Pierre Gasly (Alpine F1 Team) — 1:28.810\n  10. Nico Hülkenberg (Audi) — 
+LOCATION:Miami\, USA
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Miami Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r04-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260503T200000Z
+DTEND:20260503T220000Z
+SUMMARY:F1: Miami Grand Prix — Гонка
+DESCRIPTION:Этап 4 — Miami Grand Prix\nТрасса: Miami International Autodrome\nМесто: Miami\, USA\nСессия: Гонка\nФормат: Спринт-уикенд\n\nЗачёт после этапа 4:\n  1. Andrea Kimi Antonelli (Mercedes) — 100 очков\n  2. George Russell (Mercedes) — 80 очков\n  3. Charles Leclerc (Ferrari) — 59 очков\n  4. Lando Norris (McLaren) — 51 очков\n  5. Lewis Hamilton (Ferrari) — 51 очков\n  6. Oscar Piastri (McLaren) — 43 очков\n  7. Max Verstappen (Red Bull) — 26 очков\n  8. Oliver Bearman (Haas F1 Team) — 17 очков\n  9. Pierre Gasly (Alpine F1 Team) — 16 очков\n  10. Liam Lawson (RB F1 Team) — 10 очков\n\nРезультаты гонки:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:33:19.273 (+25 очков)\n  2. Lando Norris (McLaren) — +3.264 (+18 очков)\n  3. Oscar Piastri (McLaren) — +27.092 (+15 очков)\n  4. George Russell (Mercedes) — +43.051 (+12 очков)\n  5. Max Verstappen (Red Bull) — +48.949 (+10 очков)\n  6. Lewis Hamilton (Ferrari) — +53.753 (+8 очков)\n  7. Franco Colapinto (Alpine F1 Team) — +1:01.871 (+6 очков)\n  8. Charles Leclerc (Ferrari) — +1:04.245 (+4 очков)\n  9. Carlos Sainz (Williams) — +1:22.072 (+2 очков)\n  10. Alexander Albon (Williams) — +1:30.972 (+1 очков)\n\nКвалификация:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:27.798\n  2. Max Verstappen (Red Bull) — 1:27.964\n  3. Charles Leclerc (Ferrari) — 1:28.143\n  4. Lando Norris (McLaren) — 1:28.183\n  5. George Russell (Mercedes) — 1:28.197\n  6. Lewis Hamilton (Ferrari) — 1:28.319\n  7. Oscar Piastri (McLaren) — 1:28.500\n  8. Franco Colapinto (Alpine F1 Team) — 1:28.762\n  9. Pierre Gasly (Alpine F1 Team) — 1:28.810\n  10. Nico Hülkenberg (Audi) — 
+LOCATION:Miami\, USA
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Miami Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r05-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260522T163000Z
+DTEND:20260522T173000Z
+SUMMARY:F1: Canadian Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 5 — Canadian Grand Prix\nТрасса: Circuit Gilles Villeneuve\nМесто: Montreal\, Canada\nСессия: Свободная практика 1\nФормат: Спринт-уикенд\n\nЗачёт после этапа 5:\n  1. Andrea Kimi Antonelli (Mercedes) — 131 очков\n  2. George Russell (Mercedes) — 88 очков\n  3. Charles Leclerc (Ferrari) — 75 очков\n  4. Lewis Hamilton (Ferrari) — 72 очков\n  5. Lando Norris (McLaren) — 58 очков\n  6. Oscar Piastri (McLaren) — 48 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Pierre Gasly (Alpine F1 Team) — 20 очков\n  9. Oliver Bearman (Haas F1 Team) — 18 очков\n  10. Liam Lawson (RB F1 Team) — 16 очков\n
+LOCATION:Montreal\, Canada
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Canadian Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r05-sprintqualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260522T203000Z
+DTEND:20260522T211500Z
+SUMMARY:F1: Canadian Grand Prix — Спринт-квалификация
+DESCRIPTION:Этап 5 — Canadian Grand Prix\nТрасса: Circuit Gilles Villeneuve\nМесто: Montreal\, Canada\nСессия: Спринт-квалификация\nФормат: Спринт-уикенд\n\nЗачёт после этапа 5:\n  1. Andrea Kimi Antonelli (Mercedes) — 131 очков\n  2. George Russell (Mercedes) — 88 очков\n  3. Charles Leclerc (Ferrari) — 75 очков\n  4. Lewis Hamilton (Ferrari) — 72 очков\n  5. Lando Norris (McLaren) — 58 очков\n  6. Oscar Piastri (McLaren) — 48 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Pierre Gasly (Alpine F1 Team) — 20 очков\n  9. Oliver Bearman (Haas F1 Team) — 18 очков\n  10. Liam Lawson (RB F1 Team) — 16 очков\n
+LOCATION:Montreal\, Canada
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Canadian Grand Prix — Спринт-квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r05-sprint@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260523T160000Z
+DTEND:20260523T170000Z
+SUMMARY:F1: Canadian Grand Prix — Спринт
+DESCRIPTION:Этап 5 — Canadian Grand Prix\nТрасса: Circuit Gilles Villeneuve\nМесто: Montreal\, Canada\nСессия: Спринт\nФормат: Спринт-уикенд\n\nЗачёт после этапа 5:\n  1. Andrea Kimi Antonelli (Mercedes) — 131 очков\n  2. George Russell (Mercedes) — 88 очков\n  3. Charles Leclerc (Ferrari) — 75 очков\n  4. Lewis Hamilton (Ferrari) — 72 очков\n  5. Lando Norris (McLaren) — 58 очков\n  6. Oscar Piastri (McLaren) — 48 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Pierre Gasly (Alpine F1 Team) — 20 очков\n  9. Oliver Bearman (Haas F1 Team) — 18 очков\n  10. Liam Lawson (RB F1 Team) — 16 очков\n\nРезультаты спринта:\n  1. George Russell (Mercedes) — 28:50.951 (+8 очков)\n  2. Lando Norris (McLaren) — +1.272 (+7 очков)\n  3. Andrea Kimi Antonelli (Mercedes) — +1.843 (+6 очков)\n  4. Oscar Piastri (McLaren) — +9.797 (+5 очков)\n  5. Charles Leclerc (Ferrari) — +9.929 (+4 очков)\n  6. Lewis Hamilton (Ferrari) — +10.545 (+3 очков)\n  7. Max Verstappen (Red Bull) — +15.935 (+2 очков)\n  8. Arvid Lindblad (RB F1 Team) — +29.710 (+1 очков)\n  9. Franco Colapinto (Alpine F1 Team) — +31.621\n  10. Carlos Sainz (Williams) — +36.793\n
+LOCATION:Montreal\, Canada
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Canadian Grand Prix — Спринт
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r05-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260523T200000Z
+DTEND:20260523T210000Z
+SUMMARY:F1: Canadian Grand Prix — Квалификация
+DESCRIPTION:Этап 5 — Canadian Grand Prix\nТрасса: Circuit Gilles Villeneuve\nМесто: Montreal\, Canada\nСессия: Квалификация\nФормат: Спринт-уикенд\n\nЗачёт после этапа 5:\n  1. Andrea Kimi Antonelli (Mercedes) — 131 очков\n  2. George Russell (Mercedes) — 88 очков\n  3. Charles Leclerc (Ferrari) — 75 очков\n  4. Lewis Hamilton (Ferrari) — 72 очков\n  5. Lando Norris (McLaren) — 58 очков\n  6. Oscar Piastri (McLaren) — 48 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Pierre Gasly (Alpine F1 Team) — 20 очков\n  9. Oliver Bearman (Haas F1 Team) — 18 очков\n  10. Liam Lawson (RB F1 Team) — 16 очков\n\nКвалификация:\n  1. George Russell (Mercedes) — 1:12.578\n  2. Andrea Kimi Antonelli (Mercedes) — 1:12.646\n  3. Lando Norris (McLaren) — 1:12.729\n  4. Oscar Piastri (McLaren) — 1:12.781\n  5. Lewis Hamilton (Ferrari) — 1:12.868\n  6. Max Verstappen (Red Bull) — 1:12.907\n  7. Isack Hadjar (Red Bull) — 1:12.935\n  8. Charles Leclerc (Ferrari) — 1:12.976\n  9. Arvid Lindblad (RB F1 Team) — 1:13.280\n  10. Franco Colapinto (Alpine F1 Team) — 1:13.697
+LOCATION:Montreal\, Canada
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Canadian Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r05-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260524T200000Z
+DTEND:20260524T220000Z
+SUMMARY:F1: Canadian Grand Prix — Гонка
+DESCRIPTION:Этап 5 — Canadian Grand Prix\nТрасса: Circuit Gilles Villeneuve\nМесто: Montreal\, Canada\nСессия: Гонка\nФормат: Спринт-уикенд\n\nЗачёт после этапа 5:\n  1. Andrea Kimi Antonelli (Mercedes) — 131 очков\n  2. George Russell (Mercedes) — 88 очков\n  3. Charles Leclerc (Ferrari) — 75 очков\n  4. Lewis Hamilton (Ferrari) — 72 очков\n  5. Lando Norris (McLaren) — 58 очков\n  6. Oscar Piastri (McLaren) — 48 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Pierre Gasly (Alpine F1 Team) — 20 очков\n  9. Oliver Bearman (Haas F1 Team) — 18 очков\n  10. Liam Lawson (RB F1 Team) — 16 очков\n\nРезультаты гонки:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:28:15.758 (+25 очков)\n  2. Lewis Hamilton (Ferrari) — +10.768 (+18 очков)\n  3. Max Verstappen (Red Bull) — +11.276 (+15 очков)\n  4. Charles Leclerc (Ferrari) — +44.151 (+12 очков)\n  5. Isack Hadjar (Red Bull) — Lapped (+10 очков)\n  6. Franco Colapinto (Alpine F1 Team) — Lapped (+8 очков)\n  7. Liam Lawson (RB F1 Team) — Lapped (+6 очков)\n  8. Pierre Gasly (Alpine F1 Team) — Lapped (+4 очков)\n  9. Carlos Sainz (Williams) — Lapped (+2 очков)\n  10. Oliver Bearman (Haas F1 Team) — Lapped (+1 очков)\n\nКвалификация:\n  1. George Russell (Mercedes) — 1:12.578\n  2. Andrea Kimi Antonelli (Mercedes) — 1:12.646\n  3. Lando Norris (McLaren) — 1:12.729\n  4. Oscar Piastri (McLaren) — 1:12.781\n  5. Lewis Hamilton (Ferrari) — 1:12.868\n  6. Max Verstappen (Red Bull) — 1:12.907\n  7. Isack Hadjar (Red Bull) — 1:12.935\n  8. Charles Leclerc (Ferrari) — 1:12.976\n  9. Arvid Lindblad (RB F1 Team) — 1:13.280\n  10. Franco Colapinto (Alpine F1 Team) — 1:13.697
+LOCATION:Montreal\, Canada
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Canadian Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r06-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260605T113000Z
+DTEND:20260605T123000Z
+SUMMARY:F1: Monaco Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 6 — Monaco Grand Prix\nТрасса: Circuit de Monaco\nМесто: Monte Carlo\, Monaco\nСессия: Свободная практика 1\n\nЗачёт после этапа 6:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 90 очков\n  3. George Russell (Mercedes) — 88 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Oscar Piastri (McLaren) — 60 очков\n  6. Lando Norris (McLaren) — 58 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Isack Hadjar (Red Bull) — 29 очков\n  9. Pierre Gasly (Alpine F1 Team) — 26 очков\n  10. Liam Lawson (RB F1 Team) — 26 очков\n
+LOCATION:Monte Carlo\, Monaco
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Monaco Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r06-secondpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260605T150000Z
+DTEND:20260605T160000Z
+SUMMARY:F1: Monaco Grand Prix — Свободная практика 2
+DESCRIPTION:Этап 6 — Monaco Grand Prix\nТрасса: Circuit de Monaco\nМесто: Monte Carlo\, Monaco\nСессия: Свободная практика 2\n\nЗачёт после этапа 6:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 90 очков\n  3. George Russell (Mercedes) — 88 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Oscar Piastri (McLaren) — 60 очков\n  6. Lando Norris (McLaren) — 58 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Isack Hadjar (Red Bull) — 29 очков\n  9. Pierre Gasly (Alpine F1 Team) — 26 очков\n  10. Liam Lawson (RB F1 Team) — 26 очков\n
+LOCATION:Monte Carlo\, Monaco
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Monaco Grand Prix — Свободная практика 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r06-thirdpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260606T103000Z
+DTEND:20260606T113000Z
+SUMMARY:F1: Monaco Grand Prix — Свободная практика 3
+DESCRIPTION:Этап 6 — Monaco Grand Prix\nТрасса: Circuit de Monaco\nМесто: Monte Carlo\, Monaco\nСессия: Свободная практика 3\n\nЗачёт после этапа 6:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 90 очков\n  3. George Russell (Mercedes) — 88 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Oscar Piastri (McLaren) — 60 очков\n  6. Lando Norris (McLaren) — 58 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Isack Hadjar (Red Bull) — 29 очков\n  9. Pierre Gasly (Alpine F1 Team) — 26 очков\n  10. Liam Lawson (RB F1 Team) — 26 очков\n
+LOCATION:Monte Carlo\, Monaco
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Monaco Grand Prix — Свободная практика 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r06-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260606T140000Z
+DTEND:20260606T150000Z
+SUMMARY:F1: Monaco Grand Prix — Квалификация
+DESCRIPTION:Этап 6 — Monaco Grand Prix\nТрасса: Circuit de Monaco\nМесто: Monte Carlo\, Monaco\nСессия: Квалификация\n\nЗачёт после этапа 6:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 90 очков\n  3. George Russell (Mercedes) — 88 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Oscar Piastri (McLaren) — 60 очков\n  6. Lando Norris (McLaren) — 58 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Isack Hadjar (Red Bull) — 29 очков\n  9. Pierre Gasly (Alpine F1 Team) — 26 очков\n  10. Liam Lawson (RB F1 Team) — 26 очков\n\nКвалификация:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:12.051\n  2. Max Verstappen (Red Bull) — 1:12.094\n  3. Lewis Hamilton (Ferrari) — 1:12.279\n  4. Charles Leclerc (Ferrari) — 1:12.351\n  5. Isack Hadjar (Red Bull) — 1:12.434\n  6. George Russell (Mercedes) — 1:12.445\n  7. Oscar Piastri (McLaren) — 1:12.624\n  8. Lando Norris (McLaren) — 1:12.765\n  9. Pierre Gasly (Alpine F1 Team) — 1:13.226\n  10. Liam Lawson (RB F1 Team) — 1:13.412
+LOCATION:Monte Carlo\, Monaco
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Monaco Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r06-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260607T130000Z
+DTEND:20260607T150000Z
+SUMMARY:F1: Monaco Grand Prix — Гонка
+DESCRIPTION:Этап 6 — Monaco Grand Prix\nТрасса: Circuit de Monaco\nМесто: Monte Carlo\, Monaco\nСессия: Гонка\n\nЗачёт после этапа 6:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 90 очков\n  3. George Russell (Mercedes) — 88 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Oscar Piastri (McLaren) — 60 очков\n  6. Lando Norris (McLaren) — 58 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Isack Hadjar (Red Bull) — 29 очков\n  9. Pierre Gasly (Alpine F1 Team) — 26 очков\n  10. Liam Lawson (RB F1 Team) — 26 очков\n\nРезультаты гонки:\n  1. Andrea Kimi Antonelli (Mercedes) — 2:23:31.243 (+25 очков)\n  2. Lewis Hamilton (Ferrari) — +6.271 (+18 очков)\n  3. Isack Hadjar (Red Bull) — +23.394 (+15 очков)\n  4. Oscar Piastri (McLaren) — +24.261 (+12 очков)\n  5. Liam Lawson (RB F1 Team) — +26.553 (+10 очков)\n  6. Arvid Lindblad (RB F1 Team) — +29.010 (+8 очков)\n  7. Pierre Gasly (Alpine F1 Team) — +30.369 (+6 очков)\n  8. Alexander Albon (Williams) — +33.413 (+4 очков)\n  9. Esteban Ocon (Haas F1 Team) — +37.140 (+2 очков)\n  10. Fernando Alonso (Aston Martin) — +41.899 (+1 очков)\n\nКвалификация:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:12.051\n  2. Max Verstappen (Red Bull) — 1:12.094\n  3. Lewis Hamilton (Ferrari) — 1:12.279\n  4. Charles Leclerc (Ferrari) — 1:12.351\n  5. Isack Hadjar (Red Bull) — 1:12.434\n  6. George Russell (Mercedes) — 1:12.445\n  7. Oscar Piastri (McLaren) — 1:12.624\n  8. Lando Norris (McLaren) — 1:12.765\n  9. Pierre Gasly (Alpine F1 Team) — 1:13.226\n  10. Liam Lawson (RB F1 Team) — 1:13.412
+LOCATION:Monte Carlo\, Monaco
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Monaco Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r07-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260612T113000Z
+DTEND:20260612T123000Z
+SUMMARY:F1: Barcelona Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 7 — Barcelona Grand Prix\nТрасса: Circuit de Barcelona-Catalunya\nМесто: Barcelona\, Spain\nСессия: Свободная практика 1\n\nЗачёт после этапа 7:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 115 очков\n  3. George Russell (Mercedes) — 106 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Lando Norris (McLaren) — 73 очков\n  6. Oscar Piastri (McLaren) — 70 очков\n  7. Max Verstappen (Red Bull) — 55 очков\n  8. Isack Hadjar (Red Bull) — 37 очков\n  9. Pierre Gasly (Alpine F1 Team) — 32 очков\n  10. Liam Lawson (RB F1 Team) — 30 очков\n
+LOCATION:Barcelona\, Spain
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Barcelona Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r07-secondpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260612T150000Z
+DTEND:20260612T160000Z
+SUMMARY:F1: Barcelona Grand Prix — Свободная практика 2
+DESCRIPTION:Этап 7 — Barcelona Grand Prix\nТрасса: Circuit de Barcelona-Catalunya\nМесто: Barcelona\, Spain\nСессия: Свободная практика 2\n\nЗачёт после этапа 7:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 115 очков\n  3. George Russell (Mercedes) — 106 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Lando Norris (McLaren) — 73 очков\n  6. Oscar Piastri (McLaren) — 70 очков\n  7. Max Verstappen (Red Bull) — 55 очков\n  8. Isack Hadjar (Red Bull) — 37 очков\n  9. Pierre Gasly (Alpine F1 Team) — 32 очков\n  10. Liam Lawson (RB F1 Team) — 30 очков\n
+LOCATION:Barcelona\, Spain
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Barcelona Grand Prix — Свободная практика 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r07-thirdpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260613T103000Z
+DTEND:20260613T113000Z
+SUMMARY:F1: Barcelona Grand Prix — Свободная практика 3
+DESCRIPTION:Этап 7 — Barcelona Grand Prix\nТрасса: Circuit de Barcelona-Catalunya\nМесто: Barcelona\, Spain\nСессия: Свободная практика 3\n\nЗачёт после этапа 7:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 115 очков\n  3. George Russell (Mercedes) — 106 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Lando Norris (McLaren) — 73 очков\n  6. Oscar Piastri (McLaren) — 70 очков\n  7. Max Verstappen (Red Bull) — 55 очков\n  8. Isack Hadjar (Red Bull) — 37 очков\n  9. Pierre Gasly (Alpine F1 Team) — 32 очков\n  10. Liam Lawson (RB F1 Team) — 30 очков\n
+LOCATION:Barcelona\, Spain
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Barcelona Grand Prix — Свободная практика 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r07-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260613T140000Z
+DTEND:20260613T150000Z
+SUMMARY:F1: Barcelona Grand Prix — Квалификация
+DESCRIPTION:Этап 7 — Barcelona Grand Prix\nТрасса: Circuit de Barcelona-Catalunya\nМесто: Barcelona\, Spain\nСессия: Квалификация\n\nЗачёт после этапа 7:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 115 очков\n  3. George Russell (Mercedes) — 106 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Lando Norris (McLaren) — 73 очков\n  6. Oscar Piastri (McLaren) — 70 очков\n  7. Max Verstappen (Red Bull) — 55 очков\n  8. Isack Hadjar (Red Bull) — 37 очков\n  9. Pierre Gasly (Alpine F1 Team) — 32 очков\n  10. Liam Lawson (RB F1 Team) — 30 очков\n\nКвалификация:\n  1. George Russell (Mercedes) — 1:14.679\n  2. Lewis Hamilton (Ferrari) — 1:14.743\n  3. Andrea Kimi Antonelli (Mercedes) — 1:14.998\n  4. Lando Norris (McLaren) — 1:15.001\n  5. Max Verstappen (Red Bull) — 1:15.021\n  6. Isack Hadjar (Red Bull) — 1:15.077\n  7. Oscar Piastri (McLaren) — 1:15.090\n  8. Liam Lawson (RB F1 Team) — 1:16.542\n  9. Nico Hülkenberg (Audi) — 1:16.657\n  10. Charles Leclerc (Ferrari) — 
+LOCATION:Barcelona\, Spain
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Barcelona Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r07-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260614T130000Z
+DTEND:20260614T150000Z
+SUMMARY:F1: Barcelona Grand Prix — Гонка
+DESCRIPTION:Этап 7 — Barcelona Grand Prix\nТрасса: Circuit de Barcelona-Catalunya\nМесто: Barcelona\, Spain\nСессия: Гонка\n\nЗачёт после этапа 7:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 115 очков\n  3. George Russell (Mercedes) — 106 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Lando Norris (McLaren) — 73 очков\n  6. Oscar Piastri (McLaren) — 70 очков\n  7. Max Verstappen (Red Bull) — 55 очков\n  8. Isack Hadjar (Red Bull) — 37 очков\n  9. Pierre Gasly (Alpine F1 Team) — 32 очков\n  10. Liam Lawson (RB F1 Team) — 30 очков\n\nРезультаты гонки:\n  1. Lewis Hamilton (Ferrari) — 1:32:28.105 (+25 очков)\n  2. George Russell (Mercedes) — +19.561 (+18 очков)\n  3. Lando Norris (McLaren) — +23.719 (+15 очков)\n  4. Max Verstappen (Red Bull) — +40.497 (+12 очков)\n  5. Oscar Piastri (McLaren) — +58.661 (+10 очков)\n  6. Isack Hadjar (Red Bull) — Lapped (+8 очков)\n  7. Pierre Gasly (Alpine F1 Team) — Lapped (+6 очков)\n  8. Liam Lawson (RB F1 Team) — Lapped (+4 очков)\n  9. Arvid Lindblad (RB F1 Team) — Lapped (+2 очков)\n  10. Franco Colapinto (Alpine F1 Team) — Lapped (+1 очков)\n\nКвалификация:\n  1. George Russell (Mercedes) — 1:14.679\n  2. Lewis Hamilton (Ferrari) — 1:14.743\n  3. Andrea Kimi Antonelli (Mercedes) — 1:14.998\n  4. Lando Norris (McLaren) — 1:15.001\n  5. Max Verstappen (Red Bull) — 1:15.021\n  6. Isack Hadjar (Red Bull) — 1:15.077\n  7. Oscar Piastri (McLaren) — 1:15.090\n  8. Liam Lawson (RB F1 Team) — 1:16.542\n  9. Nico Hülkenberg (Audi) — 1:16.657\n  10. Charles Leclerc (Ferrari) — 
+LOCATION:Barcelona\, Spain
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Barcelona Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r08-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260626T113000Z
+DTEND:20260626T123000Z
+SUMMARY:F1: Austrian Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 8 — Austrian Grand Prix\nТрасса: Red Bull Ring\nМесто: Spielberg\, Austria\nСессия: Свободная практика 1\n\nЗачёт после этапа 8:\n  1. Andrea Kimi Antonelli (Mercedes) — 171 очков\n  2. George Russell (Mercedes) — 131 очков\n  3. Lewis Hamilton (Ferrari) — 125 очков\n  4. Oscar Piastri (McLaren) — 82 очков\n  5. Lando Norris (McLaren) — 79 очков\n  6. Charles Leclerc (Ferrari) — 79 очков\n  7. Max Verstappen (Red Bull) — 73 очков\n  8. Isack Hadjar (Red Bull) — 45 очков\n  9. Pierre Gasly (Alpine F1 Team) — 32 очков\n  10. Liam Lawson (RB F1 Team) — 32 очков\n
+LOCATION:Spielberg\, Austria
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Austrian Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r08-secondpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260626T150000Z
+DTEND:20260626T160000Z
+SUMMARY:F1: Austrian Grand Prix — Свободная практика 2
+DESCRIPTION:Этап 8 — Austrian Grand Prix\nТрасса: Red Bull Ring\nМесто: Spielberg\, Austria\nСессия: Свободная практика 2\n\nЗачёт после этапа 8:\n  1. Andrea Kimi Antonelli (Mercedes) — 171 очков\n  2. George Russell (Mercedes) — 131 очков\n  3. Lewis Hamilton (Ferrari) — 125 очков\n  4. Oscar Piastri (McLaren) — 82 очков\n  5. Lando Norris (McLaren) — 79 очков\n  6. Charles Leclerc (Ferrari) — 79 очков\n  7. Max Verstappen (Red Bull) — 73 очков\n  8. Isack Hadjar (Red Bull) — 45 очков\n  9. Pierre Gasly (Alpine F1 Team) — 32 очков\n  10. Liam Lawson (RB F1 Team) — 32 очков\n
+LOCATION:Spielberg\, Austria
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Austrian Grand Prix — Свободная практика 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r08-thirdpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260627T103000Z
+DTEND:20260627T113000Z
+SUMMARY:F1: Austrian Grand Prix — Свободная практика 3
+DESCRIPTION:Этап 8 — Austrian Grand Prix\nТрасса: Red Bull Ring\nМесто: Spielberg\, Austria\nСессия: Свободная практика 3\n\nЗачёт после этапа 8:\n  1. Andrea Kimi Antonelli (Mercedes) — 171 очков\n  2. George Russell (Mercedes) — 131 очков\n  3. Lewis Hamilton (Ferrari) — 125 очков\n  4. Oscar Piastri (McLaren) — 82 очков\n  5. Lando Norris (McLaren) — 79 очков\n  6. Charles Leclerc (Ferrari) — 79 очков\n  7. Max Verstappen (Red Bull) — 73 очков\n  8. Isack Hadjar (Red Bull) — 45 очков\n  9. Pierre Gasly (Alpine F1 Team) — 32 очков\n  10. Liam Lawson (RB F1 Team) — 32 очков\n
+LOCATION:Spielberg\, Austria
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Austrian Grand Prix — Свободная практика 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r08-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260627T140000Z
+DTEND:20260627T150000Z
+SUMMARY:F1: Austrian Grand Prix — Квалификация
+DESCRIPTION:Этап 8 — Austrian Grand Prix\nТрасса: Red Bull Ring\nМесто: Spielberg\, Austria\nСессия: Квалификация\n\nЗачёт после этапа 8:\n  1. Andrea Kimi Antonelli (Mercedes) — 171 очков\n  2. George Russell (Mercedes) — 131 очков\n  3. Lewis Hamilton (Ferrari) — 125 очков\n  4. Oscar Piastri (McLaren) — 82 очков\n  5. Lando Norris (McLaren) — 79 очков\n  6. Charles Leclerc (Ferrari) — 79 очков\n  7. Max Verstappen (Red Bull) — 73 очков\n  8. Isack Hadjar (Red Bull) — 45 очков\n  9. Pierre Gasly (Alpine F1 Team) — 32 очков\n  10. Liam Lawson (RB F1 Team) — 32 очков\n\nКвалификация:\n  1. George Russell (Mercedes) — 1:06.113\n  2. Charles Leclerc (Ferrari) — 1:06.349\n  3. Lewis Hamilton (Ferrari) — 1:06.408\n  4. Andrea Kimi Antonelli (Mercedes) — 1:06.414\n  5. Max Verstappen (Red Bull) — 1:06.475\n  6. Lando Norris (McLaren) — 1:06.502\n  7. Oscar Piastri (McLaren) — 1:06.511\n  8. Isack Hadjar (Red Bull) — 1:06.632\n  9. Liam Lawson (RB F1 Team) — 1:06.955\n  10. Arvid Lindblad (RB F1 Team) — 1:07.007
+LOCATION:Spielberg\, Austria
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Austrian Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r08-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260628T130000Z
+DTEND:20260628T150000Z
+SUMMARY:F1: Austrian Grand Prix — Гонка
+DESCRIPTION:Этап 8 — Austrian Grand Prix\nТрасса: Red Bull Ring\nМесто: Spielberg\, Austria\nСессия: Гонка\n\nЗачёт после этапа 8:\n  1. Andrea Kimi Antonelli (Mercedes) — 171 очков\n  2. George Russell (Mercedes) — 131 очков\n  3. Lewis Hamilton (Ferrari) — 125 очков\n  4. Oscar Piastri (McLaren) — 82 очков\n  5. Lando Norris (McLaren) — 79 очков\n  6. Charles Leclerc (Ferrari) — 79 очков\n  7. Max Verstappen (Red Bull) — 73 очков\n  8. Isack Hadjar (Red Bull) — 45 очков\n  9. Pierre Gasly (Alpine F1 Team) — 32 очков\n  10. Liam Lawson (RB F1 Team) — 32 очков\n\nРезультаты гонки:\n  1. George Russell (Mercedes) — 1:26:37.979 (+25 очков)\n  2. Max Verstappen (Red Bull) — +1.611 (+18 очков)\n  3. Andrea Kimi Antonelli (Mercedes) — +1.986 (+15 очков)\n  4. Oscar Piastri (McLaren) — +21.809 (+12 очков)\n  5. Lewis Hamilton (Ferrari) — +26.393 (+10 очков)\n  6. Isack Hadjar (Red Bull) — +29.399 (+8 очков)\n  7. Lando Norris (McLaren) — +31.505 (+6 очков)\n  8. Charles Leclerc (Ferrari) — +45.659 (+4 очков)\n  9. Liam Lawson (RB F1 Team) — Lapped (+2 очков)\n  10. Arvid Lindblad (RB F1 Team) — Lapped (+1 очков)\n\nКвалификация:\n  1. George Russell (Mercedes) — 1:06.113\n  2. Charles Leclerc (Ferrari) — 1:06.349\n  3. Lewis Hamilton (Ferrari) — 1:06.408\n  4. Andrea Kimi Antonelli (Mercedes) — 1:06.414\n  5. Max Verstappen (Red Bull) — 1:06.475\n  6. Lando Norris (McLaren) — 1:06.502\n  7. Oscar Piastri (McLaren) — 1:06.511\n  8. Isack Hadjar (Red Bull) — 1:06.632\n  9. Liam Lawson (RB F1 Team) — 1:06.955\n  10. Arvid Lindblad (RB F1 Team) — 1:07.007
+LOCATION:Spielberg\, Austria
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Austrian Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r09-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260703T113000Z
+DTEND:20260703T123000Z
+SUMMARY:F1: British Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 9 — British Grand Prix\nТрасса: Silverstone Circuit\nМесто: Silverstone\, UK\nСессия: Свободная практика 1\nФормат: Спринт-уикенд\n\nЗачёт после этапа 9:\n  1. Andrea Kimi Antonelli (Mercedes) — 179 очков\n  2. George Russell (Mercedes) — 154 очков\n  3. Lewis Hamilton (Ferrari) — 147 очков\n  4. Charles Leclerc (Ferrari) — 108 очков\n  5. Lando Norris (McLaren) — 97 очков\n  6. Oscar Piastri (McLaren) — 84 очков\n  7. Max Verstappen (Red Bull) — 76 очков\n  8. Isack Hadjar (Red Bull) — 55 очков\n  9. Liam Lawson (RB F1 Team) — 41 очков\n  10. Pierre Gasly (Alpine F1 Team) — 33 очков\n
+LOCATION:Silverstone\, UK
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: British Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r09-sprintqualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260703T153000Z
+DTEND:20260703T161500Z
+SUMMARY:F1: British Grand Prix — Спринт-квалификация
+DESCRIPTION:Этап 9 — British Grand Prix\nТрасса: Silverstone Circuit\nМесто: Silverstone\, UK\nСессия: Спринт-квалификация\nФормат: Спринт-уикенд\n\nЗачёт после этапа 9:\n  1. Andrea Kimi Antonelli (Mercedes) — 179 очков\n  2. George Russell (Mercedes) — 154 очков\n  3. Lewis Hamilton (Ferrari) — 147 очков\n  4. Charles Leclerc (Ferrari) — 108 очков\n  5. Lando Norris (McLaren) — 97 очков\n  6. Oscar Piastri (McLaren) — 84 очков\n  7. Max Verstappen (Red Bull) — 76 очков\n  8. Isack Hadjar (Red Bull) — 55 очков\n  9. Liam Lawson (RB F1 Team) — 41 очков\n  10. Pierre Gasly (Alpine F1 Team) — 33 очков\n
+LOCATION:Silverstone\, UK
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: British Grand Prix — Спринт-квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r09-sprint@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260704T110000Z
+DTEND:20260704T120000Z
+SUMMARY:F1: British Grand Prix — Спринт
+DESCRIPTION:Этап 9 — British Grand Prix\nТрасса: Silverstone Circuit\nМесто: Silverstone\, UK\nСессия: Спринт\nФормат: Спринт-уикенд\n\nЗачёт после этапа 9:\n  1. Andrea Kimi Antonelli (Mercedes) — 179 очков\n  2. George Russell (Mercedes) — 154 очков\n  3. Lewis Hamilton (Ferrari) — 147 очков\n  4. Charles Leclerc (Ferrari) — 108 очков\n  5. Lando Norris (McLaren) — 97 очков\n  6. Oscar Piastri (McLaren) — 84 очков\n  7. Max Verstappen (Red Bull) — 76 очков\n  8. Isack Hadjar (Red Bull) — 55 очков\n  9. Liam Lawson (RB F1 Team) — 41 очков\n  10. Pierre Gasly (Alpine F1 Team) — 33 очков\n\nРезультаты спринта:\n  1. Andrea Kimi Antonelli (Mercedes) — 26:12.129 (+8 очков)\n  2. Lewis Hamilton (Ferrari) — +2.745 (+7 очков)\n  3. Lando Norris (McLaren) — +9.783 (+6 очков)\n  4. George Russell (Mercedes) — +10.639 (+5 очков)\n  5. Charles Leclerc (Ferrari) — +12.620 (+4 очков)\n  6. Max Verstappen (Red Bull) — +16.550 (+3 очков)\n  7. Oscar Piastri (McLaren) — +17.551 (+2 очков)\n  8. Liam Lawson (RB F1 Team) — +30.233 (+1 очков)\n  9. Isack Hadjar (Red Bull) — +30.953\n  10. Arvid Lindblad (RB F1 Team) — +35.110\n
+LOCATION:Silverstone\, UK
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: British Grand Prix — Спринт
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r09-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260704T150000Z
+DTEND:20260704T160000Z
+SUMMARY:F1: British Grand Prix — Квалификация
+DESCRIPTION:Этап 9 — British Grand Prix\nТрасса: Silverstone Circuit\nМесто: Silverstone\, UK\nСессия: Квалификация\nФормат: Спринт-уикенд\n\nЗачёт после этапа 9:\n  1. Andrea Kimi Antonelli (Mercedes) — 179 очков\n  2. George Russell (Mercedes) — 154 очков\n  3. Lewis Hamilton (Ferrari) — 147 очков\n  4. Charles Leclerc (Ferrari) — 108 очков\n  5. Lando Norris (McLaren) — 97 очков\n  6. Oscar Piastri (McLaren) — 84 очков\n  7. Max Verstappen (Red Bull) — 76 очков\n  8. Isack Hadjar (Red Bull) — 55 очков\n  9. Liam Lawson (RB F1 Team) — 41 очков\n  10. Pierre Gasly (Alpine F1 Team) — 33 очков\n\nКвалификация:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:28.111\n  2. Charles Leclerc (Ferrari) — 1:28.286\n  3. Lewis Hamilton (Ferrari) — 1:28.458\n  4. George Russell (Mercedes) — 1:28.481\n  5. Isack Hadjar (Red Bull) — 1:28.746\n  6. Lando Norris (McLaren) — 1:28.877\n  7. Max Verstappen (Red Bull) — 1:28.893\n  8. Oscar Piastri (McLaren) — 1:29.032\n  9. Arvid Lindblad (RB F1 Team) — 1:29.305\n  10. Liam Lawson (RB F1 Team) — 1:29.716
+LOCATION:Silverstone\, UK
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: British Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r09-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260705T140000Z
+DTEND:20260705T160000Z
+SUMMARY:F1: British Grand Prix — Гонка
+DESCRIPTION:Этап 9 — British Grand Prix\nТрасса: Silverstone Circuit\nМесто: Silverstone\, UK\nСессия: Гонка\nФормат: Спринт-уикенд\n\nЗачёт после этапа 9:\n  1. Andrea Kimi Antonelli (Mercedes) — 179 очков\n  2. George Russell (Mercedes) — 154 очков\n  3. Lewis Hamilton (Ferrari) — 147 очков\n  4. Charles Leclerc (Ferrari) — 108 очков\n  5. Lando Norris (McLaren) — 97 очков\n  6. Oscar Piastri (McLaren) — 84 очков\n  7. Max Verstappen (Red Bull) — 76 очков\n  8. Isack Hadjar (Red Bull) — 55 очков\n  9. Liam Lawson (RB F1 Team) — 41 очков\n  10. Pierre Gasly (Alpine F1 Team) — 33 очков\n\nРезультаты гонки:\n  1. Charles Leclerc (Ferrari) — 1:27:11.335 (+25 очков)\n  2. George Russell (Mercedes) — +0.427 (+18 очков)\n  3. Lewis Hamilton (Ferrari) — +0.772 (+15 очков)\n  4. Lando Norris (McLaren) — +1.149 (+12 очков)\n  5. Isack Hadjar (Red Bull) — +1.598 (+10 очков)\n  6. Liam Lawson (RB F1 Team) — +2.023 (+8 очков)\n  7. Arvid Lindblad (RB F1 Team) — +2.214 (+6 очков)\n  8. Gabriel Bortoleto (Audi) — +2.413 (+4 очков)\n  9. Franco Colapinto (Alpine F1 Team) — +3.229 (+2 очков)\n  10. Pierre Gasly (Alpine F1 Team) — +3.445 (+1 очков)\n\nКвалификация:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:28.111\n  2. Charles Leclerc (Ferrari) — 1:28.286\n  3. Lewis Hamilton (Ferrari) — 1:28.458\n  4. George Russell (Mercedes) — 1:28.481\n  5. Isack Hadjar (Red Bull) — 1:28.746\n  6. Lando Norris (McLaren) — 1:28.877\n  7. Max Verstappen (Red Bull) — 1:28.893\n  8. Oscar Piastri (McLaren) — 1:29.032\n  9. Arvid Lindblad (RB F1 Team) — 1:29.305\n  10. Liam Lawson (RB F1 Team) — 1:29.716
+LOCATION:Silverstone\, UK
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: British Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r10-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260717T113000Z
+DTEND:20260717T123000Z
+SUMMARY:F1: Belgian Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 10 — Belgian Grand Prix\nТрасса: Circuit de Spa-Francorchamps\nМесто: Spa\, Belgium\nСессия: Свободная практика 1\n\nЗачёт после этапа 10:\n  1. Andrea Kimi Antonelli (Mercedes) — 204 очков\n  2. Lewis Hamilton (Ferrari) — 159 очков\n  3. George Russell (Mercedes) — 154 очков\n  4. Charles Leclerc (Ferrari) — 126 очков\n  5. Lando Norris (McLaren) — 103 очков\n  6. Oscar Piastri (McLaren) — 94 очков\n  7. Max Verstappen (Red Bull) — 91 очков\n  8. Isack Hadjar (Red Bull) — 63 очков\n  9. Liam Lawson (RB F1 Team) — 41 очков\n  10. Pierre Gasly (Alpine F1 Team) — 33 очков\n
+LOCATION:Spa\, Belgium
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Belgian Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r10-secondpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260717T150000Z
+DTEND:20260717T160000Z
+SUMMARY:F1: Belgian Grand Prix — Свободная практика 2
+DESCRIPTION:Этап 10 — Belgian Grand Prix\nТрасса: Circuit de Spa-Francorchamps\nМесто: Spa\, Belgium\nСессия: Свободная практика 2\n\nЗачёт после этапа 10:\n  1. Andrea Kimi Antonelli (Mercedes) — 204 очков\n  2. Lewis Hamilton (Ferrari) — 159 очков\n  3. George Russell (Mercedes) — 154 очков\n  4. Charles Leclerc (Ferrari) — 126 очков\n  5. Lando Norris (McLaren) — 103 очков\n  6. Oscar Piastri (McLaren) — 94 очков\n  7. Max Verstappen (Red Bull) — 91 очков\n  8. Isack Hadjar (Red Bull) — 63 очков\n  9. Liam Lawson (RB F1 Team) — 41 очков\n  10. Pierre Gasly (Alpine F1 Team) — 33 очков\n
+LOCATION:Spa\, Belgium
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Belgian Grand Prix — Свободная практика 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r10-thirdpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260718T103000Z
+DTEND:20260718T113000Z
+SUMMARY:F1: Belgian Grand Prix — Свободная практика 3
+DESCRIPTION:Этап 10 — Belgian Grand Prix\nТрасса: Circuit de Spa-Francorchamps\nМесто: Spa\, Belgium\nСессия: Свободная практика 3\n\nЗачёт после этапа 10:\n  1. Andrea Kimi Antonelli (Mercedes) — 204 очков\n  2. Lewis Hamilton (Ferrari) — 159 очков\n  3. George Russell (Mercedes) — 154 очков\n  4. Charles Leclerc (Ferrari) — 126 очков\n  5. Lando Norris (McLaren) — 103 очков\n  6. Oscar Piastri (McLaren) — 94 очков\n  7. Max Verstappen (Red Bull) — 91 очков\n  8. Isack Hadjar (Red Bull) — 63 очков\n  9. Liam Lawson (RB F1 Team) — 41 очков\n  10. Pierre Gasly (Alpine F1 Team) — 33 очков\n
+LOCATION:Spa\, Belgium
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Belgian Grand Prix — Свободная практика 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r10-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260718T140000Z
+DTEND:20260718T150000Z
+SUMMARY:F1: Belgian Grand Prix — Квалификация
+DESCRIPTION:Этап 10 — Belgian Grand Prix\nТрасса: Circuit de Spa-Francorchamps\nМесто: Spa\, Belgium\nСессия: Квалификация\n\nЗачёт после этапа 10:\n  1. Andrea Kimi Antonelli (Mercedes) — 204 очков\n  2. Lewis Hamilton (Ferrari) — 159 очков\n  3. George Russell (Mercedes) — 154 очков\n  4. Charles Leclerc (Ferrari) — 126 очков\n  5. Lando Norris (McLaren) — 103 очков\n  6. Oscar Piastri (McLaren) — 94 очков\n  7. Max Verstappen (Red Bull) — 91 очков\n  8. Isack Hadjar (Red Bull) — 63 очков\n  9. Liam Lawson (RB F1 Team) — 41 очков\n  10. Pierre Gasly (Alpine F1 Team) — 33 очков\n\nКвалификация:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:44.361\n  2. Max Verstappen (Red Bull) — 1:44.678\n  3. Lando Norris (McLaren) — 1:44.801\n  5. Charles Leclerc (Ferrari) — 1:44.893\n  10. Isack Hadjar (Red Bull) — \n  4. George Russell (Mercedes) — 1:44.869\n  6. Lewis Hamilton (Ferrari) — 1:44.895\n  7. Oscar Piastri (McLaren) — 1:45.016\n  8. Arvid Lindblad (RB F1 Team) — 1:45.143\n  9. Gabriel Bortoleto (Audi) — 1:45.628
+LOCATION:Spa\, Belgium
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Belgian Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r10-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260719T130000Z
+DTEND:20260719T150000Z
+SUMMARY:F1: Belgian Grand Prix — Гонка
+DESCRIPTION:Этап 10 — Belgian Grand Prix\nТрасса: Circuit de Spa-Francorchamps\nМесто: Spa\, Belgium\nСессия: Гонка\n\nЗачёт после этапа 10:\n  1. Andrea Kimi Antonelli (Mercedes) — 204 очков\n  2. Lewis Hamilton (Ferrari) — 159 очков\n  3. George Russell (Mercedes) — 154 очков\n  4. Charles Leclerc (Ferrari) — 126 очков\n  5. Lando Norris (McLaren) — 103 очков\n  6. Oscar Piastri (McLaren) — 94 очков\n  7. Max Verstappen (Red Bull) — 91 очков\n  8. Isack Hadjar (Red Bull) — 63 очков\n  9. Liam Lawson (RB F1 Team) — 41 очков\n  10. Pierre Gasly (Alpine F1 Team) — 33 очков\n\nРезультаты гонки:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:24:42.479 (+25 очков)\n  2. Charles Leclerc (Ferrari) — +1.952 (+18 очков)\n  3. Max Verstappen (Red Bull) — +11.586 (+15 очков)\n  4. Lewis Hamilton (Ferrari) — +17.245 (+12 очков)\n  5. Oscar Piastri (McLaren) — +18.988 (+10 очков)\n  6. Isack Hadjar (Red Bull) — +23.307 (+8 очков)\n  7. Lando Norris (McLaren) — +24.014 (+6 очков)\n  8. Gabriel Bortoleto (Audi) — +49.140 (+4 очков)\n  9. Arvid Lindblad (RB F1 Team) — +50.406 (+2 очков)\n  10. Franco Colapinto (Alpine F1 Team) — +1:16.037 (+1 очков)\n\nКвалификация:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:44.361\n  2. Max Verstappen (Red Bull) — 1:44.678\n  3. Lando Norris (McLaren) — 1:44.801\n  5. Charles Leclerc (Ferrari) — 1:44.893\n  10. Isack Hadjar (Red Bull) — \n  4. George Russell (Mercedes) — 1:44.869\n  6. Lewis Hamilton (Ferrari) — 1:44.895\n  7. Oscar Piastri (McLaren) — 1:45.016\n  8. Arvid Lindblad (RB F1 Team) — 1:45.143\n  9. Gabriel Bortoleto (Audi) — 1:45.628
+LOCATION:Spa\, Belgium
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Belgian Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r11-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260724T113000Z
+DTEND:20260724T123000Z
+SUMMARY:F1: Hungarian Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 11 — Hungarian Grand Prix\nТрасса: Hungaroring\nМесто: Budapest\, Hungary\nСессия: Свободная практика 1\n\nЗачёт после этапа 11:\n  1. Andrea Kimi Antonelli (Mercedes) — 219 очков\n  2. Lewis Hamilton (Ferrari) — 169 очков\n  3. George Russell (Mercedes) — 160 очков\n  4. Charles Leclerc (Ferrari) — 138 очков\n  5. Lando Norris (McLaren) — 128 очков\n  6. Max Verstappen (Red Bull) — 109 очков\n  7. Oscar Piastri (McLaren) — 94 очков\n  8. Isack Hadjar (Red Bull) — 71 очков\n  9. Liam Lawson (RB F1 Team) — 45 очков\n  10. Pierre Gasly (Alpine F1 Team) — 33 очков\n
+LOCATION:Budapest\, Hungary
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Hungarian Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r11-secondpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260724T150000Z
+DTEND:20260724T160000Z
+SUMMARY:F1: Hungarian Grand Prix — Свободная практика 2
+DESCRIPTION:Этап 11 — Hungarian Grand Prix\nТрасса: Hungaroring\nМесто: Budapest\, Hungary\nСессия: Свободная практика 2\n\nЗачёт после этапа 11:\n  1. Andrea Kimi Antonelli (Mercedes) — 219 очков\n  2. Lewis Hamilton (Ferrari) — 169 очков\n  3. George Russell (Mercedes) — 160 очков\n  4. Charles Leclerc (Ferrari) — 138 очков\n  5. Lando Norris (McLaren) — 128 очков\n  6. Max Verstappen (Red Bull) — 109 очков\n  7. Oscar Piastri (McLaren) — 94 очков\n  8. Isack Hadjar (Red Bull) — 71 очков\n  9. Liam Lawson (RB F1 Team) — 45 очков\n  10. Pierre Gasly (Alpine F1 Team) — 33 очков\n
+LOCATION:Budapest\, Hungary
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Hungarian Grand Prix — Свободная практика 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r11-thirdpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260725T103000Z
+DTEND:20260725T113000Z
+SUMMARY:F1: Hungarian Grand Prix — Свободная практика 3
+DESCRIPTION:Этап 11 — Hungarian Grand Prix\nТрасса: Hungaroring\nМесто: Budapest\, Hungary\nСессия: Свободная практика 3\n\nЗачёт после этапа 11:\n  1. Andrea Kimi Antonelli (Mercedes) — 219 очков\n  2. Lewis Hamilton (Ferrari) — 169 очков\n  3. George Russell (Mercedes) — 160 очков\n  4. Charles Leclerc (Ferrari) — 138 очков\n  5. Lando Norris (McLaren) — 128 очков\n  6. Max Verstappen (Red Bull) — 109 очков\n  7. Oscar Piastri (McLaren) — 94 очков\n  8. Isack Hadjar (Red Bull) — 71 очков\n  9. Liam Lawson (RB F1 Team) — 45 очков\n  10. Pierre Gasly (Alpine F1 Team) — 33 очков\n
+LOCATION:Budapest\, Hungary
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Hungarian Grand Prix — Свободная практика 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r11-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260725T140000Z
+DTEND:20260725T150000Z
+SUMMARY:F1: Hungarian Grand Prix — Квалификация
+DESCRIPTION:Этап 11 — Hungarian Grand Prix\nТрасса: Hungaroring\nМесто: Budapest\, Hungary\nСессия: Квалификация\n\nЗачёт после этапа 11:\n  1. Andrea Kimi Antonelli (Mercedes) — 219 очков\n  2. Lewis Hamilton (Ferrari) — 169 очков\n  3. George Russell (Mercedes) — 160 очков\n  4. Charles Leclerc (Ferrari) — 138 очков\n  5. Lando Norris (McLaren) — 128 очков\n  6. Max Verstappen (Red Bull) — 109 очков\n  7. Oscar Piastri (McLaren) — 94 очков\n  8. Isack Hadjar (Red Bull) — 71 очков\n  9. Liam Lawson (RB F1 Team) — 45 очков\n  10. Pierre Gasly (Alpine F1 Team) — 33 очков\n\nКвалификация:\n  1. Lando Norris (McLaren) — 1:17.207\n  2. Lewis Hamilton (Ferrari) — 1:17.219\n  3. Charles Leclerc (Ferrari) — 1:17.445\n  4. Andrea Kimi Antonelli (Mercedes) — 1:17.479\n  5. Oscar Piastri (McLaren) — 1:17.684\n  6. Max Verstappen (Red Bull) — 1:17.725\n  7. George Russell (Mercedes) — 1:17.760\n  8. Isack Hadjar (Red Bull) — 1:17.856\n  9. Arvid Lindblad (RB F1 Team) — 1:18.281\n  10. Nico Hülkenberg (Audi) — 1:18.686
+LOCATION:Budapest\, Hungary
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Hungarian Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r11-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260726T130000Z
+DTEND:20260726T150000Z
+SUMMARY:F1: Hungarian Grand Prix — Гонка
+DESCRIPTION:Этап 11 — Hungarian Grand Prix\nТрасса: Hungaroring\nМесто: Budapest\, Hungary\nСессия: Гонка\n\nЗачёт после этапа 11:\n  1. Andrea Kimi Antonelli (Mercedes) — 219 очков\n  2. Lewis Hamilton (Ferrari) — 169 очков\n  3. George Russell (Mercedes) — 160 очков\n  4. Charles Leclerc (Ferrari) — 138 очков\n  5. Lando Norris (McLaren) — 128 очков\n  6. Max Verstappen (Red Bull) — 109 очков\n  7. Oscar Piastri (McLaren) — 94 очков\n  8. Isack Hadjar (Red Bull) — 71 очков\n  9. Liam Lawson (RB F1 Team) — 45 очков\n  10. Pierre Gasly (Alpine F1 Team) — 33 очков\n\nРезультаты гонки:\n  1. Lando Norris (McLaren) — 1:39:56.180 (+25 очков)\n  2. Max Verstappen (Red Bull) — +15.080 (+18 очков)\n  3. Andrea Kimi Antonelli (Mercedes) — +18.728 (+15 очков)\n  4. Charles Leclerc (Ferrari) — +23.840 (+12 очков)\n  5. Lewis Hamilton (Ferrari) — +24.540 (+10 очков)\n  6. Isack Hadjar (Red Bull) — +55.488 (+8 очков)\n  7. George Russell (Mercedes) — +57.503 (+6 очков)\n  8. Liam Lawson (RB F1 Team) — Lapped (+4 очков)\n  9. Nico Hülkenberg (Audi) — Lapped (+2 очков)\n  10. Arvid Lindblad (RB F1 Team) — Lapped (+1 очков)\n\nКвалификация:\n  1. Lando Norris (McLaren) — 1:17.207\n  2. Lewis Hamilton (Ferrari) — 1:17.219\n  3. Charles Leclerc (Ferrari) — 1:17.445\n  4. Andrea Kimi Antonelli (Mercedes) — 1:17.479\n  5. Oscar Piastri (McLaren) — 1:17.684\n  6. Max Verstappen (Red Bull) — 1:17.725\n  7. George Russell (Mercedes) — 1:17.760\n  8. Isack Hadjar (Red Bull) — 1:17.856\n  9. Arvid Lindblad (RB F1 Team) — 1:18.281\n  10. Nico Hülkenberg (Audi) — 1:18.686
+LOCATION:Budapest\, Hungary
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Hungarian Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r12-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260821T103000Z
+DTEND:20260821T113000Z
+SUMMARY:F1: Dutch Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 12 — Dutch Grand Prix\nТрасса: Circuit Park Zandvoort\nМесто: Zandvoort\, Netherlands\nСессия: Свободная практика 1\nФормат: Спринт-уикенд\n\nЗачёт после этапа 12:\n  1. Andrea Kimi Antonelli (Mercedes) — 242 очков\n  2. George Russell (Mercedes) — 183 очков\n  3. Lewis Hamilton (Ferrari) — 183 очков\n  4. Lando Norris (McLaren) — 159 очков\n  5. Charles Leclerc (Ferrari) — 155 очков\n  6. Max Verstappen (Red Bull) — 112 очков\n  7. Oscar Piastri (McLaren) — 106 очков\n  8. Liam Lawson (Red Bull) — 51 очков\n  9. Pierre Gasly (Alpine F1 Team) — 35 очков\n  10. Arvid Lindblad (RB F1 Team) — 25 очков\n
+LOCATION:Zandvoort\, Netherlands
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Dutch Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r12-sprintqualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260821T143000Z
+DTEND:20260821T151500Z
+SUMMARY:F1: Dutch Grand Prix — Спринт-квалификация
+DESCRIPTION:Этап 12 — Dutch Grand Prix\nТрасса: Circuit Park Zandvoort\nМесто: Zandvoort\, Netherlands\nСессия: Спринт-квалификация\nФормат: Спринт-уикенд\n\nЗачёт после этапа 12:\n  1. Andrea Kimi Antonelli (Mercedes) — 242 очков\n  2. George Russell (Mercedes) — 183 очков\n  3. Lewis Hamilton (Ferrari) — 183 очков\n  4. Lando Norris (McLaren) — 159 очков\n  5. Charles Leclerc (Ferrari) — 155 очков\n  6. Max Verstappen (Red Bull) — 112 очков\n  7. Oscar Piastri (McLaren) — 106 очков\n  8. Liam Lawson (Red Bull) — 51 очков\n  9. Pierre Gasly (Alpine F1 Team) — 35 очков\n  10. Arvid Lindblad (RB F1 Team) — 25 очков\n
+LOCATION:Zandvoort\, Netherlands
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Dutch Grand Prix — Спринт-квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r12-sprint@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260822T100000Z
+DTEND:20260822T110000Z
+SUMMARY:F1: Dutch Grand Prix — Спринт
+DESCRIPTION:Этап 12 — Dutch Grand Prix\nТрасса: Circuit Park Zandvoort\nМесто: Zandvoort\, Netherlands\nСессия: Спринт\nФормат: Спринт-уикенд\n\nЗачёт после этапа 12:\n  1. Andrea Kimi Antonelli (Mercedes) — 242 очков\n  2. George Russell (Mercedes) — 183 очков\n  3. Lewis Hamilton (Ferrari) — 183 очков\n  4. Lando Norris (McLaren) — 159 очков\n  5. Charles Leclerc (Ferrari) — 155 очков\n  6. Max Verstappen (Red Bull) — 112 очков\n  7. Oscar Piastri (McLaren) — 106 очков\n  8. Liam Lawson (Red Bull) — 51 очков\n  9. Pierre Gasly (Alpine F1 Team) — 35 очков\n  10. Arvid Lindblad (RB F1 Team) — 25 очков\n\nРезультаты спринта:\n  1. George Russell (Mercedes) — 30:25.318 (+8 очков)\n  2. Charles Leclerc (Ferrari) — +1.360 (+7 очков)\n  3. Lando Norris (McLaren) — +5.196 (+6 очков)\n  4. Andrea Kimi Antonelli (Mercedes) — +5.581 (+5 очков)\n  5. Oscar Piastri (McLaren) — +10.185 (+4 очков)\n  6. Max Verstappen (Red Bull) — +10.529 (+3 очков)\n  7. Lewis Hamilton (Ferrari) — +12.188 (+2 очков)\n  8. Pierre Gasly (Alpine F1 Team) — +42.510 (+1 очков)\n  9. Gabriel Bortoleto (Audi) — +44.437\n  10. Arvid Lindblad (RB F1 Team) — +44.971\n
+LOCATION:Zandvoort\, Netherlands
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Dutch Grand Prix — Спринт
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r12-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260822T140000Z
+DTEND:20260822T150000Z
+SUMMARY:F1: Dutch Grand Prix — Квалификация
+DESCRIPTION:Этап 12 — Dutch Grand Prix\nТрасса: Circuit Park Zandvoort\nМесто: Zandvoort\, Netherlands\nСессия: Квалификация\nФормат: Спринт-уикенд\n\nЗачёт после этапа 12:\n  1. Andrea Kimi Antonelli (Mercedes) — 242 очков\n  2. George Russell (Mercedes) — 183 очков\n  3. Lewis Hamilton (Ferrari) — 183 очков\n  4. Lando Norris (McLaren) — 159 очков\n  5. Charles Leclerc (Ferrari) — 155 очков\n  6. Max Verstappen (Red Bull) — 112 очков\n  7. Oscar Piastri (McLaren) — 106 очков\n  8. Liam Lawson (Red Bull) — 51 очков\n  9. Pierre Gasly (Alpine F1 Team) — 35 очков\n  10. Arvid Lindblad (RB F1 Team) — 25 очков\n\nКвалификация:\n  1. Lando Norris (McLaren) — 1:11.163\n  2. George Russell (Mercedes) — 1:11.265\n  3. Andrea Kimi Antonelli (Mercedes) — 1:11.296\n  4. Oscar Piastri (McLaren) — 1:11.305\n  5. Lewis Hamilton (Ferrari) — 1:11.494\n  6. Charles Leclerc (Ferrari) — 1:11.558\n  7. Max Verstappen (Red Bull) — 1:11.618\n  8. Liam Lawson (Red Bull) — 1:11.733\n  9. Gabriel Bortoleto (Audi) — 1:12.079\n  10. Arvid Lindblad (RB F1 Team) — 1:12.185
+LOCATION:Zandvoort\, Netherlands
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Dutch Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r12-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260823T130000Z
+DTEND:20260823T150000Z
+SUMMARY:F1: Dutch Grand Prix — Гонка
+DESCRIPTION:Этап 12 — Dutch Grand Prix\nТрасса: Circuit Park Zandvoort\nМесто: Zandvoort\, Netherlands\nСессия: Гонка\nФормат: Спринт-уикенд\n\nЗачёт после этапа 12:\n  1. Andrea Kimi Antonelli (Mercedes) — 242 очков\n  2. George Russell (Mercedes) — 183 очков\n  3. Lewis Hamilton (Ferrari) — 183 очков\n  4. Lando Norris (McLaren) — 159 очков\n  5. Charles Leclerc (Ferrari) — 155 очков\n  6. Max Verstappen (Red Bull) — 112 очков\n  7. Oscar Piastri (McLaren) — 106 очков\n  8. Liam Lawson (Red Bull) — 51 очков\n  9. Pierre Gasly (Alpine F1 Team) — 35 очков\n  10. Arvid Lindblad (RB F1 Team) — 25 очков\n\nРезультаты гонки:\n  1. Lando Norris (McLaren) — 2:04:44.859 (+25 очков)\n  2. Andrea Kimi Antonelli (Mercedes) — +11.536 (+18 очков)\n  3. George Russell (Mercedes) — +15.906 (+15 очков)\n  4. Lewis Hamilton (Ferrari) — +16.755 (+12 очков)\n  5. Charles Leclerc (Ferrari) — +17.258 (+10 очков)\n  6. Oscar Piastri (McLaren) — +32.332 (+8 очков)\n  7. Liam Lawson (Red Bull) — +1:19.915 (+6 очков)\n  8. Nico Hülkenberg (Audi) — Lapped (+4 очков)\n  9. Fernando Alonso (Aston Martin) — Lapped (+2 очков)\n  10. Pierre Gasly (Alpine F1 Team) — Lapped (+1 очков)\n\nКвалификация:\n  1. Lando Norris (McLaren) — 1:11.163\n  2. George Russell (Mercedes) — 1:11.265\n  3. Andrea Kimi Antonelli (Mercedes) — 1:11.296\n  4. Oscar Piastri (McLaren) — 1:11.305\n  5. Lewis Hamilton (Ferrari) — 1:11.494\n  6. Charles Leclerc (Ferrari) — 1:11.558\n  7. Max Verstappen (Red Bull) — 1:11.618\n  8. Liam Lawson (Red Bull) — 1:11.733\n  9. Gabriel Bortoleto (Audi) — 1:12.079\n  10. Arvid Lindblad (RB F1 Team) — 1:12.185
+LOCATION:Zandvoort\, Netherlands
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Dutch Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r13-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260904T103000Z
+DTEND:20260904T113000Z
+SUMMARY:F1: Italian Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 13 — Italian Grand Prix\nТрасса: Autodromo Nazionale di Monza\nМесто: Monza\, Italy\nСессия: Свободная практика 1\n\nЗачёт после этапа 13:\n  1. Andrea Kimi Antonelli (Mercedes) — 267 очков\n  2. George Russell (Mercedes) — 201 очков\n  3. Lewis Hamilton (Ferrari) — 191 очков\n  4. Lando Norris (McLaren) — 171 очков\n  5. Charles Leclerc (Ferrari) — 155 очков\n  6. Max Verstappen (Red Bull) — 127 очков\n  7. Oscar Piastri (McLaren) — 116 очков\n  8. Liam Lawson (Red Bull) — 51 очков\n  9. Pierre Gasly (Alpine F1 Team) — 41 очков\n  10. Arvid Lindblad (RB F1 Team) — 29 очков\n
+LOCATION:Monza\, Italy
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Italian Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r13-secondpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260904T140000Z
+DTEND:20260904T150000Z
+SUMMARY:F1: Italian Grand Prix — Свободная практика 2
+DESCRIPTION:Этап 13 — Italian Grand Prix\nТрасса: Autodromo Nazionale di Monza\nМесто: Monza\, Italy\nСессия: Свободная практика 2\n\nЗачёт после этапа 13:\n  1. Andrea Kimi Antonelli (Mercedes) — 267 очков\n  2. George Russell (Mercedes) — 201 очков\n  3. Lewis Hamilton (Ferrari) — 191 очков\n  4. Lando Norris (McLaren) — 171 очков\n  5. Charles Leclerc (Ferrari) — 155 очков\n  6. Max Verstappen (Red Bull) — 127 очков\n  7. Oscar Piastri (McLaren) — 116 очков\n  8. Liam Lawson (Red Bull) — 51 очков\n  9. Pierre Gasly (Alpine F1 Team) — 41 очков\n  10. Arvid Lindblad (RB F1 Team) — 29 очков\n
+LOCATION:Monza\, Italy
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Italian Grand Prix — Свободная практика 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r13-thirdpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260905T103000Z
+DTEND:20260905T113000Z
+SUMMARY:F1: Italian Grand Prix — Свободная практика 3
+DESCRIPTION:Этап 13 — Italian Grand Prix\nТрасса: Autodromo Nazionale di Monza\nМесто: Monza\, Italy\nСессия: Свободная практика 3\n\nЗачёт после этапа 13:\n  1. Andrea Kimi Antonelli (Mercedes) — 267 очков\n  2. George Russell (Mercedes) — 201 очков\n  3. Lewis Hamilton (Ferrari) — 191 очков\n  4. Lando Norris (McLaren) — 171 очков\n  5. Charles Leclerc (Ferrari) — 155 очков\n  6. Max Verstappen (Red Bull) — 127 очков\n  7. Oscar Piastri (McLaren) — 116 очков\n  8. Liam Lawson (Red Bull) — 51 очков\n  9. Pierre Gasly (Alpine F1 Team) — 41 очков\n  10. Arvid Lindblad (RB F1 Team) — 29 очков\n
+LOCATION:Monza\, Italy
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Italian Grand Prix — Свободная практика 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r13-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260905T140000Z
+DTEND:20260905T150000Z
+SUMMARY:F1: Italian Grand Prix — Квалификация
+DESCRIPTION:Этап 13 — Italian Grand Prix\nТрасса: Autodromo Nazionale di Monza\nМесто: Monza\, Italy\nСессия: Квалификация\n\nЗачёт после этапа 13:\n  1. Andrea Kimi Antonelli (Mercedes) — 267 очков\n  2. George Russell (Mercedes) — 201 очков\n  3. Lewis Hamilton (Ferrari) — 191 очков\n  4. Lando Norris (McLaren) — 171 очков\n  5. Charles Leclerc (Ferrari) — 155 очков\n  6. Max Verstappen (Red Bull) — 127 очков\n  7. Oscar Piastri (McLaren) — 116 очков\n  8. Liam Lawson (Red Bull) — 51 очков\n  9. Pierre Gasly (Alpine F1 Team) — 41 очков\n  10. Arvid Lindblad (RB F1 Team) — 29 очков\n\nКвалификация:\n  1. Pierre Gasly (Alpine F1 Team) — 1:21.786\n  2. George Russell (Mercedes) — 1:21.846\n  3. Oscar Piastri (McLaren) — 1:21.966\n  4. Charles Leclerc (Ferrari) — 1:22.004\n  5. Lewis Hamilton (Ferrari) — 1:22.011\n  6. Max Verstappen (Red Bull) — 1:22.070\n  7. Andrea Kimi Antonelli (Mercedes) — 1:22.093\n  8. Franco Colapinto (Alpine F1 Team) — 1:22.220\n  9. Lando Norris (McLaren) — 1:22.256\n  10. Arvid Lindblad (RB F1 Team) — 1:22.286
+LOCATION:Monza\, Italy
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Italian Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r13-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260906T130000Z
+DTEND:20260906T150000Z
+SUMMARY:F1: Italian Grand Prix — Гонка
+DESCRIPTION:Этап 13 — Italian Grand Prix\nТрасса: Autodromo Nazionale di Monza\nМесто: Monza\, Italy\nСессия: Гонка\n\nЗачёт после этапа 13:\n  1. Andrea Kimi Antonelli (Mercedes) — 267 очков\n  2. George Russell (Mercedes) — 201 очков\n  3. Lewis Hamilton (Ferrari) — 191 очков\n  4. Lando Norris (McLaren) — 171 очков\n  5. Charles Leclerc (Ferrari) — 155 очков\n  6. Max Verstappen (Red Bull) — 127 очков\n  7. Oscar Piastri (McLaren) — 116 очков\n  8. Liam Lawson (Red Bull) — 51 очков\n  9. Pierre Gasly (Alpine F1 Team) — 41 очков\n  10. Arvid Lindblad (RB F1 Team) — 29 очков\n\nРезультаты гонки:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:51:15.281 (+25 очков)\n  2. George Russell (Mercedes) — +3.857 (+18 очков)\n  3. Max Verstappen (Red Bull) — +14.718 (+15 очков)\n  4. Lando Norris (McLaren) — +19.056 (+12 очков)\n  5. Oscar Piastri (McLaren) — +19.253 (+10 очков)\n  6. Lewis Hamilton (Ferrari) — +24.655 (+8 очков)\n  7. Pierre Gasly (Alpine F1 Team) — +27.351 (+6 очков)\n  8. Arvid Lindblad (RB F1 Team) — +45.136 (+4 очков)\n  9. Franco Colapinto (Alpine F1 Team) — +47.353 (+2 очков)\n  10. Yuki Tsunoda (RB F1 Team) — +58.187 (+1 очков)\n\nКвалификация:\n  1. Pierre Gasly (Alpine F1 Team) — 1:21.786\n  2. George Russell (Mercedes) — 1:21.846\n  3. Oscar Piastri (McLaren) — 1:21.966\n  4. Charles Leclerc (Ferrari) — 1:22.004\n  5. Lewis Hamilton (Ferrari) — 1:22.011\n  6. Max Verstappen (Red Bull) — 1:22.070\n  7. Andrea Kimi Antonelli (Mercedes) — 1:22.093\n  8. Franco Colapinto (Alpine F1 Team) — 1:22.220\n  9. Lando Norris (McLaren) — 1:22.256\n  10. Arvid Lindblad (RB F1 Team) — 1:22.286
+LOCATION:Monza\, Italy
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Italian Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r14-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260911T113000Z
+DTEND:20260911T123000Z
+SUMMARY:F1: Spanish Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 14 — Spanish Grand Prix\nТрасса: Madring\nМесто: Madrid\, Spain\nСессия: Свободная практика 1\n\nЗачёт после этапа 14:\n  1. Andrea Kimi Antonelli (Mercedes) — 292 очков\n  2. George Russell (Mercedes) — 211 очков\n  3. Lewis Hamilton (Ferrari) — 191 очков\n  4. Lando Norris (McLaren) — 186 очков\n  5. Charles Leclerc (Ferrari) — 167 очков\n  6. Max Verstappen (Red Bull) — 145 очков\n  7. Oscar Piastri (McLaren) — 120 очков\n  8. Liam Lawson (Red Bull) — 59 очков\n  9. Pierre Gasly (Alpine F1 Team) — 41 очков\n  10. Arvid Lindblad (RB F1 Team) — 31 очков\n
+LOCATION:Madrid\, Spain
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Spanish Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r14-secondpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260911T150000Z
+DTEND:20260911T160000Z
+SUMMARY:F1: Spanish Grand Prix — Свободная практика 2
+DESCRIPTION:Этап 14 — Spanish Grand Prix\nТрасса: Madring\nМесто: Madrid\, Spain\nСессия: Свободная практика 2\n\nЗачёт после этапа 14:\n  1. Andrea Kimi Antonelli (Mercedes) — 292 очков\n  2. George Russell (Mercedes) — 211 очков\n  3. Lewis Hamilton (Ferrari) — 191 очков\n  4. Lando Norris (McLaren) — 186 очков\n  5. Charles Leclerc (Ferrari) — 167 очков\n  6. Max Verstappen (Red Bull) — 145 очков\n  7. Oscar Piastri (McLaren) — 120 очков\n  8. Liam Lawson (Red Bull) — 59 очков\n  9. Pierre Gasly (Alpine F1 Team) — 41 очков\n  10. Arvid Lindblad (RB F1 Team) — 31 очков\n
+LOCATION:Madrid\, Spain
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Spanish Grand Prix — Свободная практика 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r14-thirdpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260912T103000Z
+DTEND:20260912T113000Z
+SUMMARY:F1: Spanish Grand Prix — Свободная практика 3
+DESCRIPTION:Этап 14 — Spanish Grand Prix\nТрасса: Madring\nМесто: Madrid\, Spain\nСессия: Свободная практика 3\n\nЗачёт после этапа 14:\n  1. Andrea Kimi Antonelli (Mercedes) — 292 очков\n  2. George Russell (Mercedes) — 211 очков\n  3. Lewis Hamilton (Ferrari) — 191 очков\n  4. Lando Norris (McLaren) — 186 очков\n  5. Charles Leclerc (Ferrari) — 167 очков\n  6. Max Verstappen (Red Bull) — 145 очков\n  7. Oscar Piastri (McLaren) — 120 очков\n  8. Liam Lawson (Red Bull) — 59 очков\n  9. Pierre Gasly (Alpine F1 Team) — 41 очков\n  10. Arvid Lindblad (RB F1 Team) — 31 очков\n
+LOCATION:Madrid\, Spain
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Spanish Grand Prix — Свободная практика 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r14-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260912T140000Z
+DTEND:20260912T150000Z
+SUMMARY:F1: Spanish Grand Prix — Квалификация
+DESCRIPTION:Этап 14 — Spanish Grand Prix\nТрасса: Madring\nМесто: Madrid\, Spain\nСессия: Квалификация\n\nЗачёт после этапа 14:\n  1. Andrea Kimi Antonelli (Mercedes) — 292 очков\n  2. George Russell (Mercedes) — 211 очков\n  3. Lewis Hamilton (Ferrari) — 191 очков\n  4. Lando Norris (McLaren) — 186 очков\n  5. Charles Leclerc (Ferrari) — 167 очков\n  6. Max Verstappen (Red Bull) — 145 очков\n  7. Oscar Piastri (McLaren) — 120 очков\n  8. Liam Lawson (Red Bull) — 59 очков\n  9. Pierre Gasly (Alpine F1 Team) — 41 очков\n  10. Arvid Lindblad (RB F1 Team) — 31 очков\n\nКвалификация:\n  1. Lando Norris (McLaren) — 1:31.824\n  2. Andrea Kimi Antonelli (Mercedes) — 1:31.835\n  3. Max Verstappen (Red Bull) — 1:31.964\n  4. Lewis Hamilton (Ferrari) — 1:32.013\n  5. Charles Leclerc (Ferrari) — 1:32.019\n  6. George Russell (Mercedes) — 1:32.149\n  7. Oscar Piastri (McLaren) — 1:32.294\n  8. Liam Lawson (Red Bull) — 1:32.316\n  9. Franco Colapinto (Alpine F1 Team) — 1:32.903\n  10. Arvid Lindblad (RB F1 Team) — 1:33.041
+LOCATION:Madrid\, Spain
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Spanish Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r14-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260913T130000Z
+DTEND:20260913T150000Z
+SUMMARY:F1: Spanish Grand Prix — Гонка
+DESCRIPTION:Этап 14 — Spanish Grand Prix\nТрасса: Madring\nМесто: Madrid\, Spain\nСессия: Гонка\n\nЗачёт после этапа 14:\n  1. Andrea Kimi Antonelli (Mercedes) — 292 очков\n  2. George Russell (Mercedes) — 211 очков\n  3. Lewis Hamilton (Ferrari) — 191 очков\n  4. Lando Norris (McLaren) — 186 очков\n  5. Charles Leclerc (Ferrari) — 167 очков\n  6. Max Verstappen (Red Bull) — 145 очков\n  7. Oscar Piastri (McLaren) — 120 очков\n  8. Liam Lawson (Red Bull) — 59 очков\n  9. Pierre Gasly (Alpine F1 Team) — 41 очков\n  10. Arvid Lindblad (RB F1 Team) — 31 очков\n\nРезультаты гонки:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:34:23.754 (+25 очков)\n  2. Max Verstappen (Red Bull) — +4.351 (+18 очков)\n  3. Lando Norris (McLaren) — +5.089 (+15 очков)\n  4. Charles Leclerc (Ferrari) — +29.116 (+12 очков)\n  5. George Russell (Mercedes) — +29.829 (+10 очков)\n  6. Liam Lawson (Red Bull) — +1:26.746 (+8 очков)\n  7. Franco Colapinto (Alpine F1 Team) — +1:34.281 (+6 очков)\n  8. Oscar Piastri (McLaren) — +1:35.839 (+4 очков)\n  9. Arvid Lindblad (RB F1 Team) — Lapped (+2 очков)\n  10. Nico Hülkenberg (Audi) — Lapped (+1 очков)\n\nКвалификация:\n  1. Lando Norris (McLaren) — 1:31.824\n  2. Andrea Kimi Antonelli (Mercedes) — 1:31.835\n  3. Max Verstappen (Red Bull) — 1:31.964\n  4. Lewis Hamilton (Ferrari) — 1:32.013\n  5. Charles Leclerc (Ferrari) — 1:32.019\n  6. George Russell (Mercedes) — 1:32.149\n  7. Oscar Piastri (McLaren) — 1:32.294\n  8. Liam Lawson (Red Bull) — 1:32.316\n  9. Franco Colapinto (Alpine F1 Team) — 1:32.903\n  10. Arvid Lindblad (RB F1 Team) — 1:33.041
+LOCATION:Madrid\, Spain
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Spanish Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r15-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260924T083000Z
+DTEND:20260924T093000Z
+SUMMARY:F1: Azerbaijan Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 15 — Azerbaijan Grand Prix\nТрасса: Baku City Circuit\nМесто: Baku\, Azerbaijan\nСессия: Свободная практика 1\n
+LOCATION:Baku\, Azerbaijan
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Azerbaijan Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r15-secondpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260924T120000Z
+DTEND:20260924T130000Z
+SUMMARY:F1: Azerbaijan Grand Prix — Свободная практика 2
+DESCRIPTION:Этап 15 — Azerbaijan Grand Prix\nТрасса: Baku City Circuit\nМесто: Baku\, Azerbaijan\nСессия: Свободная практика 2\n
+LOCATION:Baku\, Azerbaijan
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Azerbaijan Grand Prix — Свободная практика 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r15-thirdpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260925T083000Z
+DTEND:20260925T093000Z
+SUMMARY:F1: Azerbaijan Grand Prix — Свободная практика 3
+DESCRIPTION:Этап 15 — Azerbaijan Grand Prix\nТрасса: Baku City Circuit\nМесто: Baku\, Azerbaijan\nСессия: Свободная практика 3\n
+LOCATION:Baku\, Azerbaijan
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Azerbaijan Grand Prix — Свободная практика 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r15-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260925T120000Z
+DTEND:20260925T130000Z
+SUMMARY:F1: Azerbaijan Grand Prix — Квалификация
+DESCRIPTION:Этап 15 — Azerbaijan Grand Prix\nТрасса: Baku City Circuit\nМесто: Baku\, Azerbaijan\nСессия: Квалификация\n
+LOCATION:Baku\, Azerbaijan
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Azerbaijan Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r15-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20260926T110000Z
+DTEND:20260926T130000Z
+SUMMARY:F1: Azerbaijan Grand Prix — Гонка
+DESCRIPTION:Этап 15 — Azerbaijan Grand Prix\nТрасса: Baku City Circuit\nМесто: Baku\, Azerbaijan\nСессия: Гонка\n
+LOCATION:Baku\, Azerbaijan
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Azerbaijan Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r16-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261002T043000Z
+DTEND:20261002T053000Z
+SUMMARY:F1: Bahrain Grand Prix in Malaysia — Свободная практика 1
+DESCRIPTION:Этап 16 — Bahrain Grand Prix in Malaysia\nТрасса: Sepang International Circuit\nМесто: Kuala Lumpur\, Malaysia\nСессия: Свободная практика 1\n
+LOCATION:Kuala Lumpur\, Malaysia
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Bahrain Grand Prix in Malaysia — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r16-secondpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261002T080000Z
+DTEND:20261002T090000Z
+SUMMARY:F1: Bahrain Grand Prix in Malaysia — Свободная практика 2
+DESCRIPTION:Этап 16 — Bahrain Grand Prix in Malaysia\nТрасса: Sepang International Circuit\nМесто: Kuala Lumpur\, Malaysia\nСессия: Свободная практика 2\n
+LOCATION:Kuala Lumpur\, Malaysia
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Bahrain Grand Prix in Malaysia — Свободная практика 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r16-thirdpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261003T043000Z
+DTEND:20261003T053000Z
+SUMMARY:F1: Bahrain Grand Prix in Malaysia — Свободная практика 3
+DESCRIPTION:Этап 16 — Bahrain Grand Prix in Malaysia\nТрасса: Sepang International Circuit\nМесто: Kuala Lumpur\, Malaysia\nСессия: Свободная практика 3\n
+LOCATION:Kuala Lumpur\, Malaysia
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Bahrain Grand Prix in Malaysia — Свободная практика 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r16-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261003T080000Z
+DTEND:20261003T090000Z
+SUMMARY:F1: Bahrain Grand Prix in Malaysia — Квалификация
+DESCRIPTION:Этап 16 — Bahrain Grand Prix in Malaysia\nТрасса: Sepang International Circuit\nМесто: Kuala Lumpur\, Malaysia\nСессия: Квалификация\n
+LOCATION:Kuala Lumpur\, Malaysia
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Bahrain Grand Prix in Malaysia — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r16-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261004T070000Z
+DTEND:20261004T090000Z
+SUMMARY:F1: Bahrain Grand Prix in Malaysia — Гонка
+DESCRIPTION:Этап 16 — Bahrain Grand Prix in Malaysia\nТрасса: Sepang International Circuit\nМесто: Kuala Lumpur\, Malaysia\nСессия: Гонка\n
+LOCATION:Kuala Lumpur\, Malaysia
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Bahrain Grand Prix in Malaysia — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r17-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261009T083000Z
+DTEND:20261009T093000Z
+SUMMARY:F1: Singapore Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 17 — Singapore Grand Prix\nТрасса: Marina Bay Street Circuit\nМесто: Marina Bay\, Singapore\nСессия: Свободная практика 1\nФормат: Спринт-уикенд\n
+LOCATION:Marina Bay\, Singapore
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Singapore Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r17-sprintqualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261009T123000Z
+DTEND:20261009T131500Z
+SUMMARY:F1: Singapore Grand Prix — Спринт-квалификация
+DESCRIPTION:Этап 17 — Singapore Grand Prix\nТрасса: Marina Bay Street Circuit\nМесто: Marina Bay\, Singapore\nСессия: Спринт-квалификация\nФормат: Спринт-уикенд\n
+LOCATION:Marina Bay\, Singapore
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Singapore Grand Prix — Спринт-квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r17-sprint@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261010T090000Z
+DTEND:20261010T100000Z
+SUMMARY:F1: Singapore Grand Prix — Спринт
+DESCRIPTION:Этап 17 — Singapore Grand Prix\nТрасса: Marina Bay Street Circuit\nМесто: Marina Bay\, Singapore\nСессия: Спринт\nФормат: Спринт-уикенд\n
+LOCATION:Marina Bay\, Singapore
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Singapore Grand Prix — Спринт
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r17-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261010T130000Z
+DTEND:20261010T140000Z
+SUMMARY:F1: Singapore Grand Prix — Квалификация
+DESCRIPTION:Этап 17 — Singapore Grand Prix\nТрасса: Marina Bay Street Circuit\nМесто: Marina Bay\, Singapore\nСессия: Квалификация\nФормат: Спринт-уикенд\n
+LOCATION:Marina Bay\, Singapore
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Singapore Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r17-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261011T120000Z
+DTEND:20261011T140000Z
+SUMMARY:F1: Singapore Grand Prix — Гонка
+DESCRIPTION:Этап 17 — Singapore Grand Prix\nТрасса: Marina Bay Street Circuit\nМесто: Marina Bay\, Singapore\nСессия: Гонка\nФормат: Спринт-уикенд\n
+LOCATION:Marina Bay\, Singapore
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Singapore Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r18-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261023T173000Z
+DTEND:20261023T183000Z
+SUMMARY:F1: United States Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 18 — United States Grand Prix\nТрасса: Circuit of the Americas\nМесто: Austin\, USA\nСессия: Свободная практика 1\n
+LOCATION:Austin\, USA
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: United States Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r18-secondpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261023T210000Z
+DTEND:20261023T220000Z
+SUMMARY:F1: United States Grand Prix — Свободная практика 2
+DESCRIPTION:Этап 18 — United States Grand Prix\nТрасса: Circuit of the Americas\nМесто: Austin\, USA\nСессия: Свободная практика 2\n
+LOCATION:Austin\, USA
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: United States Grand Prix — Свободная практика 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r18-thirdpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261024T173000Z
+DTEND:20261024T183000Z
+SUMMARY:F1: United States Grand Prix — Свободная практика 3
+DESCRIPTION:Этап 18 — United States Grand Prix\nТрасса: Circuit of the Americas\nМесто: Austin\, USA\nСессия: Свободная практика 3\n
+LOCATION:Austin\, USA
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: United States Grand Prix — Свободная практика 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r18-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261024T210000Z
+DTEND:20261024T220000Z
+SUMMARY:F1: United States Grand Prix — Квалификация
+DESCRIPTION:Этап 18 — United States Grand Prix\nТрасса: Circuit of the Americas\nМесто: Austin\, USA\nСессия: Квалификация\n
+LOCATION:Austin\, USA
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: United States Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r18-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261025T200000Z
+DTEND:20261025T220000Z
+SUMMARY:F1: United States Grand Prix — Гонка
+DESCRIPTION:Этап 18 — United States Grand Prix\nТрасса: Circuit of the Americas\nМесто: Austin\, USA\nСессия: Гонка\n
+LOCATION:Austin\, USA
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: United States Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r19-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261030T183000Z
+DTEND:20261030T193000Z
+SUMMARY:F1: Mexico City Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 19 — Mexico City Grand Prix\nТрасса: Autódromo Hermanos Rodríguez\nМесто: Mexico City\, Mexico\nСессия: Свободная практика 1\n
+LOCATION:Mexico City\, Mexico
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Mexico City Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r19-secondpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261030T220000Z
+DTEND:20261030T230000Z
+SUMMARY:F1: Mexico City Grand Prix — Свободная практика 2
+DESCRIPTION:Этап 19 — Mexico City Grand Prix\nТрасса: Autódromo Hermanos Rodríguez\nМесто: Mexico City\, Mexico\nСессия: Свободная практика 2\n
+LOCATION:Mexico City\, Mexico
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Mexico City Grand Prix — Свободная практика 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r19-thirdpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261031T173000Z
+DTEND:20261031T183000Z
+SUMMARY:F1: Mexico City Grand Prix — Свободная практика 3
+DESCRIPTION:Этап 19 — Mexico City Grand Prix\nТрасса: Autódromo Hermanos Rodríguez\nМесто: Mexico City\, Mexico\nСессия: Свободная практика 3\n
+LOCATION:Mexico City\, Mexico
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Mexico City Grand Prix — Свободная практика 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r19-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261031T210000Z
+DTEND:20261031T220000Z
+SUMMARY:F1: Mexico City Grand Prix — Квалификация
+DESCRIPTION:Этап 19 — Mexico City Grand Prix\nТрасса: Autódromo Hermanos Rodríguez\nМесто: Mexico City\, Mexico\nСессия: Квалификация\n
+LOCATION:Mexico City\, Mexico
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Mexico City Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r19-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261101T200000Z
+DTEND:20261101T220000Z
+SUMMARY:F1: Mexico City Grand Prix — Гонка
+DESCRIPTION:Этап 19 — Mexico City Grand Prix\nТрасса: Autódromo Hermanos Rodríguez\nМесто: Mexico City\, Mexico\nСессия: Гонка\n
+LOCATION:Mexico City\, Mexico
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Mexico City Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r20-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261106T153000Z
+DTEND:20261106T163000Z
+SUMMARY:F1: Brazilian Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 20 — Brazilian Grand Prix\nТрасса: Autódromo José Carlos Pace\nМесто: São Paulo\, Brazil\nСессия: Свободная практика 1\n
+LOCATION:São Paulo\, Brazil
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Brazilian Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r20-secondpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261106T190000Z
+DTEND:20261106T200000Z
+SUMMARY:F1: Brazilian Grand Prix — Свободная практика 2
+DESCRIPTION:Этап 20 — Brazilian Grand Prix\nТрасса: Autódromo José Carlos Pace\nМесто: São Paulo\, Brazil\nСессия: Свободная практика 2\n
+LOCATION:São Paulo\, Brazil
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Brazilian Grand Prix — Свободная практика 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r20-thirdpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261107T143000Z
+DTEND:20261107T153000Z
+SUMMARY:F1: Brazilian Grand Prix — Свободная практика 3
+DESCRIPTION:Этап 20 — Brazilian Grand Prix\nТрасса: Autódromo José Carlos Pace\nМесто: São Paulo\, Brazil\nСессия: Свободная практика 3\n
+LOCATION:São Paulo\, Brazil
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Brazilian Grand Prix — Свободная практика 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r20-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261107T180000Z
+DTEND:20261107T190000Z
+SUMMARY:F1: Brazilian Grand Prix — Квалификация
+DESCRIPTION:Этап 20 — Brazilian Grand Prix\nТрасса: Autódromo José Carlos Pace\nМесто: São Paulo\, Brazil\nСессия: Квалификация\n
+LOCATION:São Paulo\, Brazil
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Brazilian Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r20-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261108T170000Z
+DTEND:20261108T190000Z
+SUMMARY:F1: Brazilian Grand Prix — Гонка
+DESCRIPTION:Этап 20 — Brazilian Grand Prix\nТрасса: Autódromo José Carlos Pace\nМесто: São Paulo\, Brazil\nСессия: Гонка\n
+LOCATION:São Paulo\, Brazil
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Brazilian Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r21-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261120T003000Z
+DTEND:20261120T013000Z
+SUMMARY:F1: Las Vegas Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 21 — Las Vegas Grand Prix\nТрасса: Las Vegas Strip Street Circuit\nМесто: Las Vegas\, USA\nСессия: Свободная практика 1\n
+LOCATION:Las Vegas\, USA
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Las Vegas Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r21-secondpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261120T040000Z
+DTEND:20261120T050000Z
+SUMMARY:F1: Las Vegas Grand Prix — Свободная практика 2
+DESCRIPTION:Этап 21 — Las Vegas Grand Prix\nТрасса: Las Vegas Strip Street Circuit\nМесто: Las Vegas\, USA\nСессия: Свободная практика 2\n
+LOCATION:Las Vegas\, USA
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Las Vegas Grand Prix — Свободная практика 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r21-thirdpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261121T003000Z
+DTEND:20261121T013000Z
+SUMMARY:F1: Las Vegas Grand Prix — Свободная практика 3
+DESCRIPTION:Этап 21 — Las Vegas Grand Prix\nТрасса: Las Vegas Strip Street Circuit\nМесто: Las Vegas\, USA\nСессия: Свободная практика 3\n
+LOCATION:Las Vegas\, USA
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Las Vegas Grand Prix — Свободная практика 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r21-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261121T040000Z
+DTEND:20261121T050000Z
+SUMMARY:F1: Las Vegas Grand Prix — Квалификация
+DESCRIPTION:Этап 21 — Las Vegas Grand Prix\nТрасса: Las Vegas Strip Street Circuit\nМесто: Las Vegas\, USA\nСессия: Квалификация\n
+LOCATION:Las Vegas\, USA
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Las Vegas Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r21-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261122T040000Z
+DTEND:20261122T060000Z
+SUMMARY:F1: Las Vegas Grand Prix — Гонка
+DESCRIPTION:Этап 21 — Las Vegas Grand Prix\nТрасса: Las Vegas Strip Street Circuit\nМесто: Las Vegas\, USA\nСессия: Гонка\n
+LOCATION:Las Vegas\, USA
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Las Vegas Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r22-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261127T133000Z
+DTEND:20261127T143000Z
+SUMMARY:F1: Qatar Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 22 — Qatar Grand Prix\nТрасса: Lusail International Circuit\nМесто: Lusail\, Qatar\nСессия: Свободная практика 1\n
+LOCATION:Lusail\, Qatar
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Qatar Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r22-secondpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261127T170000Z
+DTEND:20261127T180000Z
+SUMMARY:F1: Qatar Grand Prix — Свободная практика 2
+DESCRIPTION:Этап 22 — Qatar Grand Prix\nТрасса: Lusail International Circuit\nМесто: Lusail\, Qatar\nСессия: Свободная практика 2\n
+LOCATION:Lusail\, Qatar
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Qatar Grand Prix — Свободная практика 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r22-thirdpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261128T143000Z
+DTEND:20261128T153000Z
+SUMMARY:F1: Qatar Grand Prix — Свободная практика 3
+DESCRIPTION:Этап 22 — Qatar Grand Prix\nТрасса: Lusail International Circuit\nМесто: Lusail\, Qatar\nСессия: Свободная практика 3\n
+LOCATION:Lusail\, Qatar
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Qatar Grand Prix — Свободная практика 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r22-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261128T180000Z
+DTEND:20261128T190000Z
+SUMMARY:F1: Qatar Grand Prix — Квалификация
+DESCRIPTION:Этап 22 — Qatar Grand Prix\nТрасса: Lusail International Circuit\nМесто: Lusail\, Qatar\nСессия: Квалификация\n
+LOCATION:Lusail\, Qatar
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Qatar Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r22-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261129T160000Z
+DTEND:20261129T180000Z
+SUMMARY:F1: Qatar Grand Prix — Гонка
+DESCRIPTION:Этап 22 — Qatar Grand Prix\nТрасса: Lusail International Circuit\nМесто: Lusail\, Qatar\nСессия: Гонка\n
+LOCATION:Lusail\, Qatar
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Qatar Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r23-firstpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261204T093000Z
+DTEND:20261204T103000Z
+SUMMARY:F1: Abu Dhabi Grand Prix — Свободная практика 1
+DESCRIPTION:Этап 23 — Abu Dhabi Grand Prix\nТрасса: Yas Marina Circuit\nМесто: Abu Dhabi\, UAE\nСессия: Свободная практика 1\n
+LOCATION:Abu Dhabi\, UAE
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Abu Dhabi Grand Prix — Свободная практика 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r23-secondpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261204T130000Z
+DTEND:20261204T140000Z
+SUMMARY:F1: Abu Dhabi Grand Prix — Свободная практика 2
+DESCRIPTION:Этап 23 — Abu Dhabi Grand Prix\nТрасса: Yas Marina Circuit\nМесто: Abu Dhabi\, UAE\nСессия: Свободная практика 2\n
+LOCATION:Abu Dhabi\, UAE
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Abu Dhabi Grand Prix — Свободная практика 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r23-thirdpractice@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261205T103000Z
+DTEND:20261205T113000Z
+SUMMARY:F1: Abu Dhabi Grand Prix — Свободная практика 3
+DESCRIPTION:Этап 23 — Abu Dhabi Grand Prix\nТрасса: Yas Marina Circuit\nМесто: Abu Dhabi\, UAE\nСессия: Свободная практика 3\n
+LOCATION:Abu Dhabi\, UAE
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Abu Dhabi Grand Prix — Свободная практика 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r23-qualifying@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261205T140000Z
+DTEND:20261205T150000Z
+SUMMARY:F1: Abu Dhabi Grand Prix — Квалификация
+DESCRIPTION:Этап 23 — Abu Dhabi Grand Prix\nТрасса: Yas Marina Circuit\nМесто: Abu Dhabi\, UAE\nСессия: Квалификация\n
+LOCATION:Abu Dhabi\, UAE
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Abu Dhabi Grand Prix — Квалификация
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-r23-race@f1-calendar
+DTSTAMP:20260915T220817Z
+DTSTART:20261206T130000Z
+DTEND:20261206T150000Z
+SUMMARY:F1: Abu Dhabi Grand Prix — Гонка
+DESCRIPTION:Этап 23 — Abu Dhabi Grand Prix\nТрасса: Yas Marina Circuit\nМесто: Abu Dhabi\, UAE\nСессия: Гонка\n
+LOCATION:Abu Dhabi\, UAE
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Через 30 минут: Abu Dhabi Grand Prix — Гонка
+END:VALARM
+END:VEVENT
+END:VCALENDAR
