@@ -8,7 +8,7 @@ X-WR-TIMEZONE:UTC
 X-WR-DESC:Календарь Формулы 1 — все сессии всех этапов
 BEGIN:VEVENT
 UID:f1-2026-r01-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260306T013000Z
 DTEND:20260306T023000Z
 SUMMARY:F1: Australian Grand Prix — Свободная практика 1
@@ -23,7 +23,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r01-secondpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260306T050000Z
 DTEND:20260306T060000Z
 SUMMARY:F1: Australian Grand Prix — Свободная практика 2
@@ -38,7 +38,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r01-thirdpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260307T013000Z
 DTEND:20260307T023000Z
 SUMMARY:F1: Australian Grand Prix — Свободная практика 3
@@ -53,7 +53,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r01-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260307T050000Z
 DTEND:20260307T060000Z
 SUMMARY:F1: Australian Grand Prix — Квалификация
@@ -68,7 +68,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r01-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260308T040000Z
 DTEND:20260308T060000Z
 SUMMARY:F1: Australian Grand Prix — Гонка
@@ -83,7 +83,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r02-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260313T033000Z
 DTEND:20260313T043000Z
 SUMMARY:F1: Chinese Grand Prix — Свободная практика 1
@@ -98,7 +98,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r02-sprintqualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260313T073000Z
 DTEND:20260313T081500Z
 SUMMARY:F1: Chinese Grand Prix — Спринт-квалификация
@@ -113,7 +113,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r02-sprint@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260314T030000Z
 DTEND:20260314T040000Z
 SUMMARY:F1: Chinese Grand Prix — Спринт
@@ -128,7 +128,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r02-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260314T070000Z
 DTEND:20260314T080000Z
 SUMMARY:F1: Chinese Grand Prix — Квалификация
@@ -143,7 +143,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r02-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260315T070000Z
 DTEND:20260315T090000Z
 SUMMARY:F1: Chinese Grand Prix — Гонка
@@ -158,7 +158,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r03-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260327T023000Z
 DTEND:20260327T033000Z
 SUMMARY:F1: Japanese Grand Prix — Свободная практика 1
@@ -173,7 +173,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r03-secondpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260327T060000Z
 DTEND:20260327T070000Z
 SUMMARY:F1: Japanese Grand Prix — Свободная практика 2
@@ -188,7 +188,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r03-thirdpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260328T023000Z
 DTEND:20260328T033000Z
 SUMMARY:F1: Japanese Grand Prix — Свободная практика 3
@@ -203,7 +203,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r03-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260328T060000Z
 DTEND:20260328T070000Z
 SUMMARY:F1: Japanese Grand Prix — Квалификация
@@ -218,7 +218,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r03-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260329T050000Z
 DTEND:20260329T070000Z
 SUMMARY:F1: Japanese Grand Prix — Гонка
@@ -233,7 +233,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r04-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260501T160000Z
 DTEND:20260501T170000Z
 SUMMARY:F1: Miami Grand Prix — Свободная практика 1
@@ -248,7 +248,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r04-sprintqualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260501T203000Z
 DTEND:20260501T211500Z
 SUMMARY:F1: Miami Grand Prix — Спринт-квалификация
@@ -263,7 +263,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r04-sprint@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260502T160000Z
 DTEND:20260502T170000Z
 SUMMARY:F1: Miami Grand Prix — Спринт
@@ -278,7 +278,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r04-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260502T200000Z
 DTEND:20260502T210000Z
 SUMMARY:F1: Miami Grand Prix — Квалификация
@@ -293,7 +293,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r04-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260503T200000Z
 DTEND:20260503T220000Z
 SUMMARY:F1: Miami Grand Prix — Гонка
@@ -308,7 +308,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r05-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260522T163000Z
 DTEND:20260522T173000Z
 SUMMARY:F1: Canadian Grand Prix — Свободная практика 1
@@ -323,7 +323,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r05-sprintqualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260522T203000Z
 DTEND:20260522T211500Z
 SUMMARY:F1: Canadian Grand Prix — Спринт-квалификация
@@ -338,7 +338,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r05-sprint@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260523T160000Z
 DTEND:20260523T170000Z
 SUMMARY:F1: Canadian Grand Prix — Спринт
@@ -353,7 +353,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r05-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260523T200000Z
 DTEND:20260523T210000Z
 SUMMARY:F1: Canadian Grand Prix — Квалификация
@@ -368,7 +368,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r05-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260524T200000Z
 DTEND:20260524T220000Z
 SUMMARY:F1: Canadian Grand Prix — Гонка
@@ -383,11 +383,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r06-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260605T113000Z
 DTEND:20260605T123000Z
 SUMMARY:F1: Monaco Grand Prix — Свободная практика 1
-DESCRIPTION:Этап 6 — Monaco Grand Prix\nТрасса: Circuit de Monaco\nМесто: Monte Carlo\, Monaco\nСессия: Свободная практика 1\n\nЗачёт после этапа 6:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 90 очков\n  3. George Russell (Mercedes) — 88 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Oscar Piastri (McLaren) — 60 очков\n  6. Lando Norris (McLaren) — 58 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Isack Hadjar (Red Bull) — 29 очков\n  9. Pierre Gasly (Alpine F1 Team) — 26 очков\n  10. Liam Lawson (RB F1 Team) — 26 очков\n
+DESCRIPTION:Этап 6 — Monaco Grand Prix\nТрасса: Circuit de Monaco\nМесто: Monte Carlo\, Monaco\nСессия: Свободная практика 1\n\nЗачёт после этапа 6:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 90 очков\n  3. George Russell (Mercedes) — 88 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Oscar Piastri (McLaren) — 60 очков\n  6. Lando Norris (McLaren) — 58 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Isack Hadjar (Red Bull) — 29 очков\n  9. Liam Lawson (RB F1 Team) — 26 очков\n  10. Pierre Gasly (Alpine F1 Team) — 26 очков\n
 LOCATION:Monte Carlo\, Monaco
 STATUS:CONFIRMED
 BEGIN:VALARM
@@ -398,11 +398,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r06-secondpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260605T150000Z
 DTEND:20260605T160000Z
 SUMMARY:F1: Monaco Grand Prix — Свободная практика 2
-DESCRIPTION:Этап 6 — Monaco Grand Prix\nТрасса: Circuit de Monaco\nМесто: Monte Carlo\, Monaco\nСессия: Свободная практика 2\n\nЗачёт после этапа 6:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 90 очков\n  3. George Russell (Mercedes) — 88 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Oscar Piastri (McLaren) — 60 очков\n  6. Lando Norris (McLaren) — 58 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Isack Hadjar (Red Bull) — 29 очков\n  9. Pierre Gasly (Alpine F1 Team) — 26 очков\n  10. Liam Lawson (RB F1 Team) — 26 очков\n
+DESCRIPTION:Этап 6 — Monaco Grand Prix\nТрасса: Circuit de Monaco\nМесто: Monte Carlo\, Monaco\nСессия: Свободная практика 2\n\nЗачёт после этапа 6:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 90 очков\n  3. George Russell (Mercedes) — 88 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Oscar Piastri (McLaren) — 60 очков\n  6. Lando Norris (McLaren) — 58 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Isack Hadjar (Red Bull) — 29 очков\n  9. Liam Lawson (RB F1 Team) — 26 очков\n  10. Pierre Gasly (Alpine F1 Team) — 26 очков\n
 LOCATION:Monte Carlo\, Monaco
 STATUS:CONFIRMED
 BEGIN:VALARM
@@ -413,11 +413,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r06-thirdpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260606T103000Z
 DTEND:20260606T113000Z
 SUMMARY:F1: Monaco Grand Prix — Свободная практика 3
-DESCRIPTION:Этап 6 — Monaco Grand Prix\nТрасса: Circuit de Monaco\nМесто: Monte Carlo\, Monaco\nСессия: Свободная практика 3\n\nЗачёт после этапа 6:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 90 очков\n  3. George Russell (Mercedes) — 88 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Oscar Piastri (McLaren) — 60 очков\n  6. Lando Norris (McLaren) — 58 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Isack Hadjar (Red Bull) — 29 очков\n  9. Pierre Gasly (Alpine F1 Team) — 26 очков\n  10. Liam Lawson (RB F1 Team) — 26 очков\n
+DESCRIPTION:Этап 6 — Monaco Grand Prix\nТрасса: Circuit de Monaco\nМесто: Monte Carlo\, Monaco\nСессия: Свободная практика 3\n\nЗачёт после этапа 6:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 90 очков\n  3. George Russell (Mercedes) — 88 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Oscar Piastri (McLaren) — 60 очков\n  6. Lando Norris (McLaren) — 58 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Isack Hadjar (Red Bull) — 29 очков\n  9. Liam Lawson (RB F1 Team) — 26 очков\n  10. Pierre Gasly (Alpine F1 Team) — 26 очков\n
 LOCATION:Monte Carlo\, Monaco
 STATUS:CONFIRMED
 BEGIN:VALARM
@@ -428,11 +428,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r06-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260606T140000Z
 DTEND:20260606T150000Z
 SUMMARY:F1: Monaco Grand Prix — Квалификация
-DESCRIPTION:Этап 6 — Monaco Grand Prix\nТрасса: Circuit de Monaco\nМесто: Monte Carlo\, Monaco\nСессия: Квалификация\n\nЗачёт после этапа 6:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 90 очков\n  3. George Russell (Mercedes) — 88 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Oscar Piastri (McLaren) — 60 очков\n  6. Lando Norris (McLaren) — 58 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Isack Hadjar (Red Bull) — 29 очков\n  9. Pierre Gasly (Alpine F1 Team) — 26 очков\n  10. Liam Lawson (RB F1 Team) — 26 очков\n\nКвалификация:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:12.051\n  2. Max Verstappen (Red Bull) — 1:12.094\n  3. Lewis Hamilton (Ferrari) — 1:12.279\n  4. Charles Leclerc (Ferrari) — 1:12.351\n  5. Isack Hadjar (Red Bull) — 1:12.434\n  6. George Russell (Mercedes) — 1:12.445\n  7. Oscar Piastri (McLaren) — 1:12.624\n  8. Lando Norris (McLaren) — 1:12.765\n  9. Pierre Gasly (Alpine F1 Team) — 1:13.226\n  10. Liam Lawson (RB F1 Team) — 1:13.412
+DESCRIPTION:Этап 6 — Monaco Grand Prix\nТрасса: Circuit de Monaco\nМесто: Monte Carlo\, Monaco\nСессия: Квалификация\n\nЗачёт после этапа 6:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 90 очков\n  3. George Russell (Mercedes) — 88 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Oscar Piastri (McLaren) — 60 очков\n  6. Lando Norris (McLaren) — 58 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Isack Hadjar (Red Bull) — 29 очков\n  9. Liam Lawson (RB F1 Team) — 26 очков\n  10. Pierre Gasly (Alpine F1 Team) — 26 очков\n\nКвалификация:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:12.051\n  2. Max Verstappen (Red Bull) — 1:12.094\n  3. Lewis Hamilton (Ferrari) — 1:12.279\n  4. Charles Leclerc (Ferrari) — 1:12.351\n  5. Isack Hadjar (Red Bull) — 1:12.434\n  6. George Russell (Mercedes) — 1:12.445\n  7. Oscar Piastri (McLaren) — 1:12.624\n  8. Lando Norris (McLaren) — 1:12.765\n  9. Pierre Gasly (Alpine F1 Team) — 1:13.226\n  10. Liam Lawson (RB F1 Team) — 1:13.412
 LOCATION:Monte Carlo\, Monaco
 STATUS:CONFIRMED
 BEGIN:VALARM
@@ -443,11 +443,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r06-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260607T130000Z
 DTEND:20260607T150000Z
 SUMMARY:F1: Monaco Grand Prix — Гонка
-DESCRIPTION:Этап 6 — Monaco Grand Prix\nТрасса: Circuit de Monaco\nМесто: Monte Carlo\, Monaco\nСессия: Гонка\n\nЗачёт после этапа 6:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 90 очков\n  3. George Russell (Mercedes) — 88 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Oscar Piastri (McLaren) — 60 очков\n  6. Lando Norris (McLaren) — 58 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Isack Hadjar (Red Bull) — 29 очков\n  9. Pierre Gasly (Alpine F1 Team) — 26 очков\n  10. Liam Lawson (RB F1 Team) — 26 очков\n\nРезультаты гонки:\n  1. Andrea Kimi Antonelli (Mercedes) — 2:23:31.243 (+25 очков)\n  2. Lewis Hamilton (Ferrari) — +6.271 (+18 очков)\n  3. Isack Hadjar (Red Bull) — +23.394 (+15 очков)\n  4. Oscar Piastri (McLaren) — +24.261 (+12 очков)\n  5. Liam Lawson (RB F1 Team) — +26.553 (+10 очков)\n  6. Arvid Lindblad (RB F1 Team) — +29.010 (+8 очков)\n  7. Pierre Gasly (Alpine F1 Team) — +30.369 (+6 очков)\n  8. Alexander Albon (Williams) — +33.413 (+4 очков)\n  9. Esteban Ocon (Haas F1 Team) — +37.140 (+2 очков)\n  10. Fernando Alonso (Aston Martin) — +41.899 (+1 очков)\n\nКвалификация:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:12.051\n  2. Max Verstappen (Red Bull) — 1:12.094\n  3. Lewis Hamilton (Ferrari) — 1:12.279\n  4. Charles Leclerc (Ferrari) — 1:12.351\n  5. Isack Hadjar (Red Bull) — 1:12.434\n  6. George Russell (Mercedes) — 1:12.445\n  7. Oscar Piastri (McLaren) — 1:12.624\n  8. Lando Norris (McLaren) — 1:12.765\n  9. Pierre Gasly (Alpine F1 Team) — 1:13.226\n  10. Liam Lawson (RB F1 Team) — 1:13.412
+DESCRIPTION:Этап 6 — Monaco Grand Prix\nТрасса: Circuit de Monaco\nМесто: Monte Carlo\, Monaco\nСессия: Гонка\n\nЗачёт после этапа 6:\n  1. Andrea Kimi Antonelli (Mercedes) — 156 очков\n  2. Lewis Hamilton (Ferrari) — 90 очков\n  3. George Russell (Mercedes) — 88 очков\n  4. Charles Leclerc (Ferrari) — 75 очков\n  5. Oscar Piastri (McLaren) — 60 очков\n  6. Lando Norris (McLaren) — 58 очков\n  7. Max Verstappen (Red Bull) — 43 очков\n  8. Isack Hadjar (Red Bull) — 29 очков\n  9. Liam Lawson (RB F1 Team) — 26 очков\n  10. Pierre Gasly (Alpine F1 Team) — 26 очков\n\nРезультаты гонки:\n  1. Andrea Kimi Antonelli (Mercedes) — 2:23:31.243 (+25 очков)\n  2. Lewis Hamilton (Ferrari) — +6.271 (+18 очков)\n  3. Isack Hadjar (Red Bull) — +23.394 (+15 очков)\n  4. Oscar Piastri (McLaren) — +24.261 (+12 очков)\n  5. Liam Lawson (RB F1 Team) — +26.553 (+10 очков)\n  6. Arvid Lindblad (RB F1 Team) — +29.010 (+8 очков)\n  7. Pierre Gasly (Alpine F1 Team) — +30.369 (+6 очков)\n  8. Alexander Albon (Williams) — +33.413 (+4 очков)\n  9. Esteban Ocon (Haas F1 Team) — +37.140 (+2 очков)\n  10. Fernando Alonso (Aston Martin) — +41.899 (+1 очков)\n\nКвалификация:\n  1. Andrea Kimi Antonelli (Mercedes) — 1:12.051\n  2. Max Verstappen (Red Bull) — 1:12.094\n  3. Lewis Hamilton (Ferrari) — 1:12.279\n  4. Charles Leclerc (Ferrari) — 1:12.351\n  5. Isack Hadjar (Red Bull) — 1:12.434\n  6. George Russell (Mercedes) — 1:12.445\n  7. Oscar Piastri (McLaren) — 1:12.624\n  8. Lando Norris (McLaren) — 1:12.765\n  9. Pierre Gasly (Alpine F1 Team) — 1:13.226\n  10. Liam Lawson (RB F1 Team) — 1:13.412
 LOCATION:Monte Carlo\, Monaco
 STATUS:CONFIRMED
 BEGIN:VALARM
@@ -458,7 +458,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r07-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260612T113000Z
 DTEND:20260612T123000Z
 SUMMARY:F1: Barcelona Grand Prix — Свободная практика 1
@@ -473,7 +473,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r07-secondpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260612T150000Z
 DTEND:20260612T160000Z
 SUMMARY:F1: Barcelona Grand Prix — Свободная практика 2
@@ -488,7 +488,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r07-thirdpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260613T103000Z
 DTEND:20260613T113000Z
 SUMMARY:F1: Barcelona Grand Prix — Свободная практика 3
@@ -503,7 +503,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r07-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260613T140000Z
 DTEND:20260613T150000Z
 SUMMARY:F1: Barcelona Grand Prix — Квалификация
@@ -518,7 +518,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r07-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260614T130000Z
 DTEND:20260614T150000Z
 SUMMARY:F1: Barcelona Grand Prix — Гонка
@@ -533,11 +533,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r08-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260626T113000Z
 DTEND:20260626T123000Z
 SUMMARY:F1: Austrian Grand Prix — Свободная практика 1
-DESCRIPTION:Этап 8 — Austrian Grand Prix\nТрасса: Red Bull Ring\nМесто: Spielberg\, Austria\nСессия: Свободная практика 1\n\nЗачёт после этапа 8:\n  1. Andrea Kimi Antonelli (Mercedes) — 171 очков\n  2. George Russell (Mercedes) — 131 очков\n  3. Lewis Hamilton (Ferrari) — 125 очков\n  4. Oscar Piastri (McLaren) — 82 очков\n  5. Charles Leclerc (Ferrari) — 79 очков\n  6. Lando Norris (McLaren) — 79 очков\n  7. Max Verstappen (Red Bull) — 73 очков\n  8. Isack Hadjar (Red Bull) — 45 очков\n  9. Pierre Gasly (Alpine F1 Team) — 32 очков\n  10. Liam Lawson (RB F1 Team) — 32 очков\n
+DESCRIPTION:Этап 8 — Austrian Grand Prix\nТрасса: Red Bull Ring\nМесто: Spielberg\, Austria\nСессия: Свободная практика 1\n\nЗачёт после этапа 8:\n  1. Andrea Kimi Antonelli (Mercedes) — 171 очков\n  2. George Russell (Mercedes) — 131 очков\n  3. Lewis Hamilton (Ferrari) — 125 очков\n  4. Oscar Piastri (McLaren) — 82 очков\n  5. Charles Leclerc (Ferrari) — 79 очков\n  6. Lando Norris (McLaren) — 79 очков\n  7. Max Verstappen (Red Bull) — 73 очков\n  8. Isack Hadjar (Red Bull) — 45 очков\n  9. Liam Lawson (RB F1 Team) — 32 очков\n  10. Pierre Gasly (Alpine F1 Team) — 32 очков\n
 LOCATION:Spielberg\, Austria
 STATUS:CONFIRMED
 BEGIN:VALARM
@@ -548,11 +548,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r08-secondpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260626T150000Z
 DTEND:20260626T160000Z
 SUMMARY:F1: Austrian Grand Prix — Свободная практика 2
-DESCRIPTION:Этап 8 — Austrian Grand Prix\nТрасса: Red Bull Ring\nМесто: Spielberg\, Austria\nСессия: Свободная практика 2\n\nЗачёт после этапа 8:\n  1. Andrea Kimi Antonelli (Mercedes) — 171 очков\n  2. George Russell (Mercedes) — 131 очков\n  3. Lewis Hamilton (Ferrari) — 125 очков\n  4. Oscar Piastri (McLaren) — 82 очков\n  5. Charles Leclerc (Ferrari) — 79 очков\n  6. Lando Norris (McLaren) — 79 очков\n  7. Max Verstappen (Red Bull) — 73 очков\n  8. Isack Hadjar (Red Bull) — 45 очков\n  9. Pierre Gasly (Alpine F1 Team) — 32 очков\n  10. Liam Lawson (RB F1 Team) — 32 очков\n
+DESCRIPTION:Этап 8 — Austrian Grand Prix\nТрасса: Red Bull Ring\nМесто: Spielberg\, Austria\nСессия: Свободная практика 2\n\nЗачёт после этапа 8:\n  1. Andrea Kimi Antonelli (Mercedes) — 171 очков\n  2. George Russell (Mercedes) — 131 очков\n  3. Lewis Hamilton (Ferrari) — 125 очков\n  4. Oscar Piastri (McLaren) — 82 очков\n  5. Charles Leclerc (Ferrari) — 79 очков\n  6. Lando Norris (McLaren) — 79 очков\n  7. Max Verstappen (Red Bull) — 73 очков\n  8. Isack Hadjar (Red Bull) — 45 очков\n  9. Liam Lawson (RB F1 Team) — 32 очков\n  10. Pierre Gasly (Alpine F1 Team) — 32 очков\n
 LOCATION:Spielberg\, Austria
 STATUS:CONFIRMED
 BEGIN:VALARM
@@ -563,11 +563,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r08-thirdpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260627T103000Z
 DTEND:20260627T113000Z
 SUMMARY:F1: Austrian Grand Prix — Свободная практика 3
-DESCRIPTION:Этап 8 — Austrian Grand Prix\nТрасса: Red Bull Ring\nМесто: Spielberg\, Austria\nСессия: Свободная практика 3\n\nЗачёт после этапа 8:\n  1. Andrea Kimi Antonelli (Mercedes) — 171 очков\n  2. George Russell (Mercedes) — 131 очков\n  3. Lewis Hamilton (Ferrari) — 125 очков\n  4. Oscar Piastri (McLaren) — 82 очков\n  5. Charles Leclerc (Ferrari) — 79 очков\n  6. Lando Norris (McLaren) — 79 очков\n  7. Max Verstappen (Red Bull) — 73 очков\n  8. Isack Hadjar (Red Bull) — 45 очков\n  9. Pierre Gasly (Alpine F1 Team) — 32 очков\n  10. Liam Lawson (RB F1 Team) — 32 очков\n
+DESCRIPTION:Этап 8 — Austrian Grand Prix\nТрасса: Red Bull Ring\nМесто: Spielberg\, Austria\nСессия: Свободная практика 3\n\nЗачёт после этапа 8:\n  1. Andrea Kimi Antonelli (Mercedes) — 171 очков\n  2. George Russell (Mercedes) — 131 очков\n  3. Lewis Hamilton (Ferrari) — 125 очков\n  4. Oscar Piastri (McLaren) — 82 очков\n  5. Charles Leclerc (Ferrari) — 79 очков\n  6. Lando Norris (McLaren) — 79 очков\n  7. Max Verstappen (Red Bull) — 73 очков\n  8. Isack Hadjar (Red Bull) — 45 очков\n  9. Liam Lawson (RB F1 Team) — 32 очков\n  10. Pierre Gasly (Alpine F1 Team) — 32 очков\n
 LOCATION:Spielberg\, Austria
 STATUS:CONFIRMED
 BEGIN:VALARM
@@ -578,11 +578,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r08-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260627T140000Z
 DTEND:20260627T150000Z
 SUMMARY:F1: Austrian Grand Prix — Квалификация
-DESCRIPTION:Этап 8 — Austrian Grand Prix\nТрасса: Red Bull Ring\nМесто: Spielberg\, Austria\nСессия: Квалификация\n\nЗачёт после этапа 8:\n  1. Andrea Kimi Antonelli (Mercedes) — 171 очков\n  2. George Russell (Mercedes) — 131 очков\n  3. Lewis Hamilton (Ferrari) — 125 очков\n  4. Oscar Piastri (McLaren) — 82 очков\n  5. Charles Leclerc (Ferrari) — 79 очков\n  6. Lando Norris (McLaren) — 79 очков\n  7. Max Verstappen (Red Bull) — 73 очков\n  8. Isack Hadjar (Red Bull) — 45 очков\n  9. Pierre Gasly (Alpine F1 Team) — 32 очков\n  10. Liam Lawson (RB F1 Team) — 32 очков\n\nКвалификация:\n  1. George Russell (Mercedes) — 1:06.113\n  2. Charles Leclerc (Ferrari) — 1:06.349\n  3. Lewis Hamilton (Ferrari) — 1:06.408\n  4. Andrea Kimi Antonelli (Mercedes) — 1:06.414\n  5. Max Verstappen (Red Bull) — 1:06.475\n  6. Lando Norris (McLaren) — 1:06.502\n  7. Oscar Piastri (McLaren) — 1:06.511\n  8. Isack Hadjar (Red Bull) — 1:06.632\n  9. Liam Lawson (RB F1 Team) — 1:06.955\n  10. Arvid Lindblad (RB F1 Team) — 1:07.007
+DESCRIPTION:Этап 8 — Austrian Grand Prix\nТрасса: Red Bull Ring\nМесто: Spielberg\, Austria\nСессия: Квалификация\n\nЗачёт после этапа 8:\n  1. Andrea Kimi Antonelli (Mercedes) — 171 очков\n  2. George Russell (Mercedes) — 131 очков\n  3. Lewis Hamilton (Ferrari) — 125 очков\n  4. Oscar Piastri (McLaren) — 82 очков\n  5. Charles Leclerc (Ferrari) — 79 очков\n  6. Lando Norris (McLaren) — 79 очков\n  7. Max Verstappen (Red Bull) — 73 очков\n  8. Isack Hadjar (Red Bull) — 45 очков\n  9. Liam Lawson (RB F1 Team) — 32 очков\n  10. Pierre Gasly (Alpine F1 Team) — 32 очков\n\nКвалификация:\n  1. George Russell (Mercedes) — 1:06.113\n  2. Charles Leclerc (Ferrari) — 1:06.349\n  3. Lewis Hamilton (Ferrari) — 1:06.408\n  4. Andrea Kimi Antonelli (Mercedes) — 1:06.414\n  5. Max Verstappen (Red Bull) — 1:06.475\n  6. Lando Norris (McLaren) — 1:06.502\n  7. Oscar Piastri (McLaren) — 1:06.511\n  8. Isack Hadjar (Red Bull) — 1:06.632\n  9. Liam Lawson (RB F1 Team) — 1:06.955\n  10. Arvid Lindblad (RB F1 Team) — 1:07.007
 LOCATION:Spielberg\, Austria
 STATUS:CONFIRMED
 BEGIN:VALARM
@@ -593,11 +593,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r08-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260628T130000Z
 DTEND:20260628T150000Z
 SUMMARY:F1: Austrian Grand Prix — Гонка
-DESCRIPTION:Этап 8 — Austrian Grand Prix\nТрасса: Red Bull Ring\nМесто: Spielberg\, Austria\nСессия: Гонка\n\nЗачёт после этапа 8:\n  1. Andrea Kimi Antonelli (Mercedes) — 171 очков\n  2. George Russell (Mercedes) — 131 очков\n  3. Lewis Hamilton (Ferrari) — 125 очков\n  4. Oscar Piastri (McLaren) — 82 очков\n  5. Charles Leclerc (Ferrari) — 79 очков\n  6. Lando Norris (McLaren) — 79 очков\n  7. Max Verstappen (Red Bull) — 73 очков\n  8. Isack Hadjar (Red Bull) — 45 очков\n  9. Pierre Gasly (Alpine F1 Team) — 32 очков\n  10. Liam Lawson (RB F1 Team) — 32 очков\n\nРезультаты гонки:\n  1. George Russell (Mercedes) — 1:26:37.979 (+25 очков)\n  2. Max Verstappen (Red Bull) — +1.611 (+18 очков)\n  3. Andrea Kimi Antonelli (Mercedes) — +1.986 (+15 очков)\n  4. Oscar Piastri (McLaren) — +21.809 (+12 очков)\n  5. Lewis Hamilton (Ferrari) — +26.393 (+10 очков)\n  6. Isack Hadjar (Red Bull) — +29.399 (+8 очков)\n  7. Lando Norris (McLaren) — +31.505 (+6 очков)\n  8. Charles Leclerc (Ferrari) — +45.659 (+4 очков)\n  9. Liam Lawson (RB F1 Team) — Lapped (+2 очков)\n  10. Arvid Lindblad (RB F1 Team) — Lapped (+1 очков)\n\nКвалификация:\n  1. George Russell (Mercedes) — 1:06.113\n  2. Charles Leclerc (Ferrari) — 1:06.349\n  3. Lewis Hamilton (Ferrari) — 1:06.408\n  4. Andrea Kimi Antonelli (Mercedes) — 1:06.414\n  5. Max Verstappen (Red Bull) — 1:06.475\n  6. Lando Norris (McLaren) — 1:06.502\n  7. Oscar Piastri (McLaren) — 1:06.511\n  8. Isack Hadjar (Red Bull) — 1:06.632\n  9. Liam Lawson (RB F1 Team) — 1:06.955\n  10. Arvid Lindblad (RB F1 Team) — 1:07.007
+DESCRIPTION:Этап 8 — Austrian Grand Prix\nТрасса: Red Bull Ring\nМесто: Spielberg\, Austria\nСессия: Гонка\n\nЗачёт после этапа 8:\n  1. Andrea Kimi Antonelli (Mercedes) — 171 очков\n  2. George Russell (Mercedes) — 131 очков\n  3. Lewis Hamilton (Ferrari) — 125 очков\n  4. Oscar Piastri (McLaren) — 82 очков\n  5. Charles Leclerc (Ferrari) — 79 очков\n  6. Lando Norris (McLaren) — 79 очков\n  7. Max Verstappen (Red Bull) — 73 очков\n  8. Isack Hadjar (Red Bull) — 45 очков\n  9. Liam Lawson (RB F1 Team) — 32 очков\n  10. Pierre Gasly (Alpine F1 Team) — 32 очков\n\nРезультаты гонки:\n  1. George Russell (Mercedes) — 1:26:37.979 (+25 очков)\n  2. Max Verstappen (Red Bull) — +1.611 (+18 очков)\n  3. Andrea Kimi Antonelli (Mercedes) — +1.986 (+15 очков)\n  4. Oscar Piastri (McLaren) — +21.809 (+12 очков)\n  5. Lewis Hamilton (Ferrari) — +26.393 (+10 очков)\n  6. Isack Hadjar (Red Bull) — +29.399 (+8 очков)\n  7. Lando Norris (McLaren) — +31.505 (+6 очков)\n  8. Charles Leclerc (Ferrari) — +45.659 (+4 очков)\n  9. Liam Lawson (RB F1 Team) — Lapped (+2 очков)\n  10. Arvid Lindblad (RB F1 Team) — Lapped (+1 очков)\n\nКвалификация:\n  1. George Russell (Mercedes) — 1:06.113\n  2. Charles Leclerc (Ferrari) — 1:06.349\n  3. Lewis Hamilton (Ferrari) — 1:06.408\n  4. Andrea Kimi Antonelli (Mercedes) — 1:06.414\n  5. Max Verstappen (Red Bull) — 1:06.475\n  6. Lando Norris (McLaren) — 1:06.502\n  7. Oscar Piastri (McLaren) — 1:06.511\n  8. Isack Hadjar (Red Bull) — 1:06.632\n  9. Liam Lawson (RB F1 Team) — 1:06.955\n  10. Arvid Lindblad (RB F1 Team) — 1:07.007
 LOCATION:Spielberg\, Austria
 STATUS:CONFIRMED
 BEGIN:VALARM
@@ -608,7 +608,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r09-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260703T113000Z
 DTEND:20260703T123000Z
 SUMMARY:F1: British Grand Prix — Свободная практика 1
@@ -623,7 +623,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r09-sprintqualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260703T153000Z
 DTEND:20260703T161500Z
 SUMMARY:F1: British Grand Prix — Спринт-квалификация
@@ -638,7 +638,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r09-sprint@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260704T110000Z
 DTEND:20260704T120000Z
 SUMMARY:F1: British Grand Prix — Спринт
@@ -653,7 +653,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r09-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260704T150000Z
 DTEND:20260704T160000Z
 SUMMARY:F1: British Grand Prix — Квалификация
@@ -668,7 +668,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r09-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260705T140000Z
 DTEND:20260705T160000Z
 SUMMARY:F1: British Grand Prix — Гонка
@@ -683,7 +683,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r10-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260717T113000Z
 DTEND:20260717T123000Z
 SUMMARY:F1: Belgian Grand Prix — Свободная практика 1
@@ -698,7 +698,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r10-secondpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260717T150000Z
 DTEND:20260717T160000Z
 SUMMARY:F1: Belgian Grand Prix — Свободная практика 2
@@ -713,7 +713,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r10-thirdpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260718T103000Z
 DTEND:20260718T113000Z
 SUMMARY:F1: Belgian Grand Prix — Свободная практика 3
@@ -728,7 +728,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r10-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260718T140000Z
 DTEND:20260718T150000Z
 SUMMARY:F1: Belgian Grand Prix — Квалификация
@@ -743,7 +743,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r10-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260719T130000Z
 DTEND:20260719T150000Z
 SUMMARY:F1: Belgian Grand Prix — Гонка
@@ -758,7 +758,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r11-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260724T113000Z
 DTEND:20260724T123000Z
 SUMMARY:F1: Hungarian Grand Prix — Свободная практика 1
@@ -773,7 +773,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r11-secondpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260724T150000Z
 DTEND:20260724T160000Z
 SUMMARY:F1: Hungarian Grand Prix — Свободная практика 2
@@ -788,7 +788,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r11-thirdpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260725T103000Z
 DTEND:20260725T113000Z
 SUMMARY:F1: Hungarian Grand Prix — Свободная практика 3
@@ -803,7 +803,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r11-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260725T140000Z
 DTEND:20260725T150000Z
 SUMMARY:F1: Hungarian Grand Prix — Квалификация
@@ -818,7 +818,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r11-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260726T130000Z
 DTEND:20260726T150000Z
 SUMMARY:F1: Hungarian Grand Prix — Гонка
@@ -833,7 +833,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r12-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260821T103000Z
 DTEND:20260821T113000Z
 SUMMARY:F1: Dutch Grand Prix — Свободная практика 1
@@ -848,7 +848,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r12-sprintqualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260821T143000Z
 DTEND:20260821T151500Z
 SUMMARY:F1: Dutch Grand Prix — Спринт-квалификация
@@ -863,7 +863,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r12-sprint@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260822T100000Z
 DTEND:20260822T110000Z
 SUMMARY:F1: Dutch Grand Prix — Спринт
@@ -878,7 +878,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r12-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260822T140000Z
 DTEND:20260822T150000Z
 SUMMARY:F1: Dutch Grand Prix — Квалификация
@@ -893,7 +893,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r12-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260823T130000Z
 DTEND:20260823T150000Z
 SUMMARY:F1: Dutch Grand Prix — Гонка
@@ -908,7 +908,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r13-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260904T103000Z
 DTEND:20260904T113000Z
 SUMMARY:F1: Italian Grand Prix — Свободная практика 1
@@ -923,7 +923,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r13-secondpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260904T140000Z
 DTEND:20260904T150000Z
 SUMMARY:F1: Italian Grand Prix — Свободная практика 2
@@ -938,7 +938,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r13-thirdpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260905T103000Z
 DTEND:20260905T113000Z
 SUMMARY:F1: Italian Grand Prix — Свободная практика 3
@@ -953,7 +953,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r13-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260905T140000Z
 DTEND:20260905T150000Z
 SUMMARY:F1: Italian Grand Prix — Квалификация
@@ -968,7 +968,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r13-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260906T130000Z
 DTEND:20260906T150000Z
 SUMMARY:F1: Italian Grand Prix — Гонка
@@ -983,7 +983,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r14-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260911T113000Z
 DTEND:20260911T123000Z
 SUMMARY:F1: Spanish Grand Prix — Свободная практика 1
@@ -998,7 +998,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r14-secondpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260911T150000Z
 DTEND:20260911T160000Z
 SUMMARY:F1: Spanish Grand Prix — Свободная практика 2
@@ -1013,7 +1013,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r14-thirdpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260912T103000Z
 DTEND:20260912T113000Z
 SUMMARY:F1: Spanish Grand Prix — Свободная практика 3
@@ -1028,7 +1028,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r14-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260912T140000Z
 DTEND:20260912T150000Z
 SUMMARY:F1: Spanish Grand Prix — Квалификация
@@ -1043,7 +1043,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r14-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260913T130000Z
 DTEND:20260913T150000Z
 SUMMARY:F1: Spanish Grand Prix — Гонка
@@ -1058,7 +1058,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r15-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260924T083000Z
 DTEND:20260924T093000Z
 SUMMARY:F1: Azerbaijan Grand Prix — Свободная практика 1
@@ -1073,7 +1073,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r15-secondpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260924T120000Z
 DTEND:20260924T130000Z
 SUMMARY:F1: Azerbaijan Grand Prix — Свободная практика 2
@@ -1088,7 +1088,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r15-thirdpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260925T083000Z
 DTEND:20260925T093000Z
 SUMMARY:F1: Azerbaijan Grand Prix — Свободная практика 3
@@ -1103,7 +1103,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r15-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260925T120000Z
 DTEND:20260925T130000Z
 SUMMARY:F1: Azerbaijan Grand Prix — Квалификация
@@ -1118,7 +1118,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r15-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20260926T110000Z
 DTEND:20260926T130000Z
 SUMMARY:F1: Azerbaijan Grand Prix — Гонка
@@ -1133,7 +1133,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r16-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261002T043000Z
 DTEND:20261002T053000Z
 SUMMARY:F1: Bahrain Grand Prix in Malaysia — Свободная практика 1
@@ -1148,7 +1148,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r16-secondpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261002T080000Z
 DTEND:20261002T090000Z
 SUMMARY:F1: Bahrain Grand Prix in Malaysia — Свободная практика 2
@@ -1163,7 +1163,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r16-thirdpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261003T043000Z
 DTEND:20261003T053000Z
 SUMMARY:F1: Bahrain Grand Prix in Malaysia — Свободная практика 3
@@ -1178,7 +1178,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r16-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261003T080000Z
 DTEND:20261003T090000Z
 SUMMARY:F1: Bahrain Grand Prix in Malaysia — Квалификация
@@ -1193,7 +1193,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r16-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261004T070000Z
 DTEND:20261004T090000Z
 SUMMARY:F1: Bahrain Grand Prix in Malaysia — Гонка
@@ -1208,7 +1208,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r17-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261009T083000Z
 DTEND:20261009T093000Z
 SUMMARY:F1: Singapore Grand Prix — Свободная практика 1
@@ -1223,7 +1223,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r17-sprintqualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261009T123000Z
 DTEND:20261009T131500Z
 SUMMARY:F1: Singapore Grand Prix — Спринт-квалификация
@@ -1238,7 +1238,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r17-sprint@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261010T090000Z
 DTEND:20261010T100000Z
 SUMMARY:F1: Singapore Grand Prix — Спринт
@@ -1253,7 +1253,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r17-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261010T130000Z
 DTEND:20261010T140000Z
 SUMMARY:F1: Singapore Grand Prix — Квалификация
@@ -1268,7 +1268,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r17-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261011T120000Z
 DTEND:20261011T140000Z
 SUMMARY:F1: Singapore Grand Prix — Гонка
@@ -1283,7 +1283,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r18-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261023T173000Z
 DTEND:20261023T183000Z
 SUMMARY:F1: United States Grand Prix — Свободная практика 1
@@ -1298,7 +1298,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r18-secondpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261023T210000Z
 DTEND:20261023T220000Z
 SUMMARY:F1: United States Grand Prix — Свободная практика 2
@@ -1313,7 +1313,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r18-thirdpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261024T173000Z
 DTEND:20261024T183000Z
 SUMMARY:F1: United States Grand Prix — Свободная практика 3
@@ -1328,7 +1328,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r18-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261024T210000Z
 DTEND:20261024T220000Z
 SUMMARY:F1: United States Grand Prix — Квалификация
@@ -1343,7 +1343,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r18-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261025T200000Z
 DTEND:20261025T220000Z
 SUMMARY:F1: United States Grand Prix — Гонка
@@ -1358,7 +1358,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r19-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261030T183000Z
 DTEND:20261030T193000Z
 SUMMARY:F1: Mexico City Grand Prix — Свободная практика 1
@@ -1373,7 +1373,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r19-secondpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261030T220000Z
 DTEND:20261030T230000Z
 SUMMARY:F1: Mexico City Grand Prix — Свободная практика 2
@@ -1388,7 +1388,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r19-thirdpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261031T173000Z
 DTEND:20261031T183000Z
 SUMMARY:F1: Mexico City Grand Prix — Свободная практика 3
@@ -1403,7 +1403,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r19-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261031T210000Z
 DTEND:20261031T220000Z
 SUMMARY:F1: Mexico City Grand Prix — Квалификация
@@ -1418,7 +1418,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r19-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261101T200000Z
 DTEND:20261101T220000Z
 SUMMARY:F1: Mexico City Grand Prix — Гонка
@@ -1433,7 +1433,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r20-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261106T153000Z
 DTEND:20261106T163000Z
 SUMMARY:F1: Brazilian Grand Prix — Свободная практика 1
@@ -1448,7 +1448,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r20-secondpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261106T190000Z
 DTEND:20261106T200000Z
 SUMMARY:F1: Brazilian Grand Prix — Свободная практика 2
@@ -1463,7 +1463,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r20-thirdpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261107T143000Z
 DTEND:20261107T153000Z
 SUMMARY:F1: Brazilian Grand Prix — Свободная практика 3
@@ -1478,7 +1478,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r20-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261107T180000Z
 DTEND:20261107T190000Z
 SUMMARY:F1: Brazilian Grand Prix — Квалификация
@@ -1493,7 +1493,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r20-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261108T170000Z
 DTEND:20261108T190000Z
 SUMMARY:F1: Brazilian Grand Prix — Гонка
@@ -1508,7 +1508,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r21-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261120T003000Z
 DTEND:20261120T013000Z
 SUMMARY:F1: Las Vegas Grand Prix — Свободная практика 1
@@ -1523,7 +1523,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r21-secondpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261120T040000Z
 DTEND:20261120T050000Z
 SUMMARY:F1: Las Vegas Grand Prix — Свободная практика 2
@@ -1538,7 +1538,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r21-thirdpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261121T003000Z
 DTEND:20261121T013000Z
 SUMMARY:F1: Las Vegas Grand Prix — Свободная практика 3
@@ -1553,7 +1553,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r21-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261121T040000Z
 DTEND:20261121T050000Z
 SUMMARY:F1: Las Vegas Grand Prix — Квалификация
@@ -1568,7 +1568,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r21-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261122T040000Z
 DTEND:20261122T060000Z
 SUMMARY:F1: Las Vegas Grand Prix — Гонка
@@ -1583,7 +1583,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r22-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261127T133000Z
 DTEND:20261127T143000Z
 SUMMARY:F1: Qatar Grand Prix — Свободная практика 1
@@ -1598,7 +1598,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r22-secondpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261127T170000Z
 DTEND:20261127T180000Z
 SUMMARY:F1: Qatar Grand Prix — Свободная практика 2
@@ -1613,7 +1613,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r22-thirdpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261128T143000Z
 DTEND:20261128T153000Z
 SUMMARY:F1: Qatar Grand Prix — Свободная практика 3
@@ -1628,7 +1628,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r22-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261128T180000Z
 DTEND:20261128T190000Z
 SUMMARY:F1: Qatar Grand Prix — Квалификация
@@ -1643,7 +1643,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r22-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261129T160000Z
 DTEND:20261129T180000Z
 SUMMARY:F1: Qatar Grand Prix — Гонка
@@ -1658,7 +1658,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r23-firstpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261204T093000Z
 DTEND:20261204T103000Z
 SUMMARY:F1: Abu Dhabi Grand Prix — Свободная практика 1
@@ -1673,7 +1673,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r23-secondpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261204T130000Z
 DTEND:20261204T140000Z
 SUMMARY:F1: Abu Dhabi Grand Prix — Свободная практика 2
@@ -1688,7 +1688,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r23-thirdpractice@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261205T103000Z
 DTEND:20261205T113000Z
 SUMMARY:F1: Abu Dhabi Grand Prix — Свободная практика 3
@@ -1703,7 +1703,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r23-qualifying@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261205T140000Z
 DTEND:20261205T150000Z
 SUMMARY:F1: Abu Dhabi Grand Prix — Квалификация
@@ -1718,7 +1718,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1-2026-r23-race@f1-calendar
-DTSTAMP:20260925T055649Z
+DTSTAMP:20260925T113541Z
 DTSTART:20261206T130000Z
 DTEND:20261206T150000Z
 SUMMARY:F1: Abu Dhabi Grand Prix — Гонка
