@@ -32,13 +32,37 @@ import time
 from datetime import datetime, timedelta, timezone
 from typing import Any
 
-import fastf1
-import pandas as pd
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastf1 import Cache
 
 from livews import LiveFeed
+
+# FastF1 is imported lazily, never at module level.
+#
+# It drags in pandas, scipy, matplotlib, cryptography and rapidfuzz — roughly
+# 400 MB of image and several seconds of start-up. The default live-only mode
+# never touches any of that: it just holds a WebSocket and keeps the last value
+# per driver. Lazy import keeps the deployed image at ~120 MB and the boot fast.
+_ARCHIVE = None
+
+
+def fastf1_deps():
+    """Import and cache FastF1 + pandas. Only the archive path needs them."""
+    global _ARCHIVE
+    if _ARCHIVE is None:
+        import fastf1
+        import pandas as pd
+
+        if ARCHIVE_FALLBACK:
+            from fastf1 import Cache
+
+            try:
+                os.makedirs(CACHE_DIR, exist_ok=True)
+                Cache.enable_cache(CACHE_DIR)
+            except Exception as exc:      # кэш не обязателен
+                log(f"кэш FastF1 недоступен ({exc}) — работаю без него")
+        _ARCHIVE = (fastf1, pd)
+    return _ARCHIVE
 
 CACHE_DIR = os.environ.get("F1_CACHE_DIR", ".ffcache")
 POLL_SECONDS = float(os.environ.get("F1_POLL_SECONDS", "3"))
@@ -55,8 +79,7 @@ SESSION_LENGTH = timedelta(hours=2.5)
 # Only consider sessions that started within this window
 RELEVANT_WINDOW = timedelta(hours=6)
 
-os.makedirs(CACHE_DIR, exist_ok=True)
-Cache.enable_cache(CACHE_DIR)
+os.makedirs(CACHE_DIR, exist_ok=True)   # только для archive-режима
 
 app = FastAPI(
     title="F1 Live Timing Service",
@@ -101,16 +124,40 @@ def log(msg: str) -> None:
 feed = LiveFeed(log=log)
 
 
+def _elapsed_seconds(v):
+    """Seconds in a FastF1 elapsed-time value, without importing pandas.
+
+    The Time column of `weather_data` holds a pandas.Timedelta, which
+    float() rejects. Timedelta exposes total_seconds() directly, so try that
+    first and fall back to a plain number.
+    """
+    for attr in ("total_seconds",):
+        fn = getattr(v, attr, None)
+        if callable(fn):
+            try:
+                return float(fn())
+            except (TypeError, ValueError):
+                return None
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return None
+
+
 def clean(v):
-    """JSON-safe scalar: turns NaN/None/odd types into None or a number."""
+    """JSON-safe scalar: turns NaN/None/odd types into None or a number.
+
+    Deliberately free of pandas: `pd.NaT` is recognised by its type name and
+    `pd.Timestamp` is a `datetime` subclass, so no import is needed.
+    """
     if v is None:
         return None
     try:
-        if v != v or v is pd.NaT:  # NaN
+        if v != v or type(v).__name__ == "NaTType":   # float('nan') / pd.NaT
             return None
     except (TypeError, ValueError):
         return None
-    if isinstance(v, (pd.Timestamp, datetime)):
+    if isinstance(v, datetime):            # pd.Timestamp is a datetime subclass
         return v.isoformat()
     if isinstance(v, (int,)):
         return v
@@ -125,10 +172,18 @@ def clean(v):
 
 # ── session discovery ──────────────────────────────────────────────────────
 def _session_start(s) -> datetime | None:
+    """Naive UTC start of a FastF1 session (archive path only)."""
     for attr in ("date", "date_start"):
         v = getattr(s, attr, None)
-        if v is not None:
-            return pd.Timestamp(v).to_pydatetime().replace(tzinfo=None)
+        if v is None:
+            continue
+        if isinstance(v, datetime):
+            return v.replace(tzinfo=None)
+        try:                       # ISO-строка, если FastF1 отдаёт её как текст
+            return datetime.fromisoformat(str(v).replace("Z", "+00:00")
+                                          ).replace(tzinfo=None)
+        except ValueError:
+            continue
     try:
         return s.session_start_time.replace(tzinfo=None)
     except Exception:
@@ -172,6 +227,7 @@ def find_current_session():
     raises "truth value is ambiguous". Work with the DataFrame properly and
     resolve Event objects by name.
     """
+    fastf1, _pd = fastf1_deps()
     year = now().year
     try:
         sched = fastf1.get_event_schedule(year, include_testing=False)
@@ -326,10 +382,9 @@ def build_snapshot(session, bounds) -> dict:
         elapsed = last.get("Time")
         base = _session_start(session)
         if elapsed is not None and base is not None:
-            try:
-                stamp = (base + pd.Timedelta(elapsed)).isoformat()
-            except (TypeError, ValueError):
-                stamp = None
+            secs = _elapsed_seconds(elapsed)
+            if secs is not None:
+                stamp = (base + timedelta(seconds=secs)).isoformat()
         weather = {
             "t": stamp,
             "air": clean(last.get("AirTemp")),
@@ -455,14 +510,8 @@ def seconds(v) -> float | None:
             return None
     except (TypeError, ValueError):
         return None
-    try:
-        total = pd.Timedelta(v).total_seconds()
-    except (TypeError, ValueError):
-        try:
-            total = float(v)
-        except (TypeError, ValueError):
-            return None
-    return round(total, 3)
+    total = _elapsed_seconds(v)
+    return round(total, 3) if total is not None else None
 
 
 TRACK_STATUS = {

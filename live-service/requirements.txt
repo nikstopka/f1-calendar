@@ -1,6 +1,10 @@
+# Зависимости для режима по умолчанию (F1_ARCHIVE_FALLBACK=0).
+#
+# Живёт только WebSocket-клиент и HTTP-сервис — этого хватает для трансляции.
+# FastF1 сюда намеренно НЕ включён: он тянет pandas, scipy, matplotlib,
+# cryptography и rapidfuzz (~400 МБ образа и лишние секунды на старте),
+# а в live-режиме не нужен. Он ставится отдельным слоем, см.
+# requirements-archive.txt и README.
 fastapi==0.115.6
 uvicorn[standard]==0.34.0
 websocket-client==1.9.2
-fastf1==3.8.3
-pandas==2.2.3
-numpy==2.2.1
