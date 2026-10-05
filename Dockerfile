@@ -1,8 +1,14 @@
 # syntax=docker/dockerfile:1
 #
-# Контекст сборки — корень репозитория, поэтому пути с префиксом live-service/.
-# Локально:
-#   docker build -f live-service/Dockerfile -t f1live .
+# F1 Live Timing Service.
+#
+# Dockerfile лежит в корне репозитория намеренно: это путь по умолчанию для
+# Railway, Render и Fly, поэтому deploy работает без ручной настройки. Контекст
+# сборки — тоже корень, поэтому файлы берутся с префиксом live-service/.
+#
+#   docker build -t f1live .                                   # лёгкий образ
+#   docker build --build-arg ARCHIVE=1 -t f1live .              # + FastF1
+#   docker run -d -p 8080:8080 f1live
 
 FROM python:3.12-slim
 
@@ -17,14 +23,14 @@ WORKDIR /app
 
 # Режим по умолчанию — только живой фид: WebSocket плюс HTTP-сервис, ~120 МБ
 # образа. FastF1 не ставится: он нужен лишь для F1_ARCHIVE_FALLBACK=1, тянет
-# ~400 МБ и в трансляции не используется.
+# ~400 МБ и во время трансляции не используется.
 COPY live-service/requirements.txt .
 RUN pip install -r requirements.txt
 
-# Opt-in слой для архивного режима:
-#   docker build -f live-service/Dockerfile --build-arg ARCHIVE=1 -t f1live .
-ARG ARCHIVE=0
+# Необязательный слой для архивного режима: FastF1 подтягивает телеметрию
+# последней завершённой сессии, но требует ~780 МБ RAM.
 COPY live-service/requirements-archive.txt ./requirements-archive.txt
+ARG ARCHIVE=0
 RUN if [ "$ARCHIVE" = "1" ]; then pip install -r requirements-archive.txt; fi
 
 COPY live-service/app.py live-service/livefeed.py live-service/livews.py ./

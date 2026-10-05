@@ -12,7 +12,7 @@ app = "f1-live-telemetry"
 primary_region = "fra"   # Франкфурт — ближайший к Москве
 
 [build]
-  dockerfile = "live-service/Dockerfile"
+  dockerfile = "Dockerfile"
 
 [env]
   F1_POLL_SECONDS = "3"

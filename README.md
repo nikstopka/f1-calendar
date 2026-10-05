@@ -36,9 +36,15 @@ f1-calendar/
 │   ├── update_live_data.py    # Сборщик данных Live View из OpenF1
 │   └── make_icons.py          # Генерация иконок сайта
 ├── live-service/              # Опциональный микросервис реального времени
-│   ├── app.py                 # FastAPI + FastF1, CORS открыт
-│   ├── Dockerfile
-│   └── requirements.txt
+│   ├── app.py                 # FastAPI, CORS открыт
+│   ├── livews.py              # WebSocket-клиент ленты F1
+│   ├── livefeed.py            # Разбор телеметрии, ~112 МБ RAM
+│   ├── requirements.txt       # Лёгкие зависимости (без FastF1)
+│   ├── requirements-archive.txt
+│   ├── test_livefeed.py       # Сверка с FastF1 на архиве F1
+│   ├── test_poll_loop.py      # Тест машины состояний, без сети
+│   └── DEPLOY.md              # Пошаговая инструкция развёртывания
+├── Dockerfile                 # Сборка образа сервиса
 ├── favicon.svg, favicon.ico, apple-touch-icon.png, icon-192/512.png
 ├── f1-calendar.ics            # ICS-календарь (генерируется автоматически)
 ├── index.html                 # Веб-сайт
@@ -110,10 +116,11 @@ SignalR-JSON сам, без negotiate.
 вкладка Live View молча возвращается к ним.
 
 Разместить можно бесплатно и без банковской карты на Railway или Render
-(Dockerfile уже готов). Fly.io не подойдёт — он требует привязку карты.
+(`Dockerfile` уже готов в корне репозитория). Fly.io не подойдёт — он требует
+привязку карты.
 
-Подробности, ограничения по памяти и варианты развёртывания — в
-[`live-service/README.md`](live-service/README.md).
+Пошаговая инструкция — в [`live-service/DEPLOY.md`](live-service/DEPLOY.md).
+Подробности и ограничения — в [`live-service/README.md`](live-service/README.md).
 
 ## Настройка (подробная инструкция)
 

@@ -128,23 +128,28 @@ OK  driver 63 резина: SOFT vs SOFT
 Koyeb, VPS.
 
 ```bash
-docker build -t f1live .
+docker build -t f1live .                              # из корня репозитория
 docker run -d --name f1live -p 8080:8080 --restart unless-stopped f1live
 ```
 
-`Dockerfile` лежит в `live-service/`, контекст сборки — корень репозитория,
-поэтому `docker build -f live-service/Dockerfile .`.
+`Dockerfile` лежит в корне репозитория — это путь, который Railway, Render и Fly
+подхватывают сами, без ручной настройки. Контекст сборки там же корень, отсюда
+`COPY live-service/...`.
+
+Пошаговая инструкция с проверками — в [`DEPLOY.md`](DEPLOY.md).
 
 ### Railway (бесплатно, без карты)
 
-Подключить репозиторий на [railway.app](https://railway.app), указать
-Dockerfile `live-service/Dockerfile`, порт 8080. Тариф Free даёт 512 МБ —
-ровно столько нужно.
+Подключить репозиторий на [railway.app](https://railway.app) через
+**New Project → Deploy from GitHub repo**. Railway сам найдёт `Dockerfile` в
+корне, порт возьмёт из `EXPOSE 8080`. Тариф Free даёт 512 МБ — ровно столько
+нужно.
 
 ### Render (бесплатно, без карты)
 
-Web Service → Dockerfile, порт 8080. Бесплатный тариф засыпает после 15 минут
-простоя и просыпается за ~50 секунд — для календаря это незаметно.
+**New → Web Service**, Environment **Docker**, порт 8080. Бесплатный тариф
+засыпает после 15 минут простоя и просыпается за ~50 секунд — для календаря
+это незаметно.
 
 ## Подключение к сайту
 
