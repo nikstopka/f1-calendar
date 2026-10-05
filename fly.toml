@@ -1,0 +1,47 @@
+# Конфигурация Fly.io для F1 Live Timing Service.
+#
+# ВНИМАНИЕ: Fly.io требует привязки банковской карты, даже на тарифе
+# без оплаты. Для бесплатного размещения без карты используйте Railway или
+# Render — инструкция в live-service/README.md.
+#
+# Запуск из КОРНЯ репозитория:
+#   fly launch --no-deploy --copy-config
+#   fly deploy
+
+app = "f1-live-telemetry"
+primary_region = "fra"   # Франкфурт — ближайший к Москве
+
+[build]
+  dockerfile = "live-service/Dockerfile"
+
+[env]
+  F1_POLL_SECONDS = "3"
+  F1_ARCHIVE_FALLBACK = "0"
+
+# По умолчанию сервис работает как чистый live-фид: измерено 112 МБ рабочей
+# памяти и ~0 CPU. Этого хватает бесплатным тарифам с 512 МБ.
+#
+# Если включить F1_ARCHIVE_FALLBACK=1, сервис начнёт подтягивать телеметрию
+# последней завершённой сессии через FastF1 — это ~780 МБ, и тогда нужен
+# тариф от 1 ГБ (size shared-cpu-2x + memory 1024mb), плюс volume:
+#   fly volumes create f1_cache --size 1 --region fra
+#   # и раскомментировать F1_CACHE_DIR + [[mounts]] ниже
+[vm]
+  size = "shared-cpu-2x"
+  memory = "512mb"
+
+# Машина не должна засыпать: живой сокет должен быть поднят к началу трансляции,
+# а просыпание занимает десятки секунд.
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 1
+
+  [[http_service.checks]]
+    interval = "30s"
+    timeout = "10s"
+    grace_period = "60s"
+    method = "GET"
+    path = "/health"

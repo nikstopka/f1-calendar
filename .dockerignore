@@ -1,0 +1,10 @@
+.git
+.github
+**/__pycache__
+**/*.pyc
+**/.ffcache
+data
+index.html
+README.md
+f1-calendar.ics
+fly.toml

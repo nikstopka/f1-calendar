@@ -38,9 +38,17 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastf1 import Cache
 
+from livews import LiveFeed
+
 CACHE_DIR = os.environ.get("F1_CACHE_DIR", ".ffcache")
 POLL_SECONDS = float(os.environ.get("F1_POLL_SECONDS", "3"))
 GRID = 1000  # must match the quantisation used by data/live/circuits/*.json
+
+# The archive path (FastF1 Session.load) needs ~780 MB, which does not fit a
+# 512 MB free tier. It is therefore opt-in: with it off the service is a pure
+# live feed that only reports a session while it is actually running. History is
+# already covered by the precomputed OpenF1 data on the site.
+ARCHIVE_FALLBACK = os.environ.get("F1_ARCHIVE_FALLBACK", "0").lower() in ("1", "true", "yes")
 
 # Session length fallback when the schedule has no reliable end time
 SESSION_LENGTH = timedelta(hours=2.5)
@@ -74,7 +82,12 @@ _state: dict[str, Any] = {
     "started_at": None,
     "load_seconds": None,
     "bounds": None,
+    "source": None,          # "livefeed" or "archive"
 }
+
+# Live WebSocket feed. While a session is running this is the cheap path:
+# no telemetry download, no DataFrames, tens of MB of RAM.
+# Created after log() is defined below.
 
 
 def now() -> datetime:
@@ -83,6 +96,9 @@ def now() -> datetime:
 
 def log(msg: str) -> None:
     print(f"[{now():%H:%M:%S}] {msg}", flush=True)
+
+
+feed = LiveFeed(log=log)
 
 
 def clean(v):
@@ -468,6 +484,33 @@ def track_status_label(raw) -> str | None:
     return TRACK_STATUS.get(key, key)
 
 
+_circuit_cache: dict[str, str] = {}
+
+
+def _circuit_key_for(session_key: str) -> str | None:
+    """Map a session key to OpenF1's circuit_key.
+
+    F1's SessionInfo.Gaming.Key and OpenF1's session_key are the same number
+    space, so one cached OpenF1 call per session is enough.
+    """
+    if session_key in _circuit_cache:
+        return _circuit_cache[session_key]
+    import json as _json
+    import urllib.request as _u
+    url = f"https://api.openf1.org/v1/sessions?session_key={session_key}"
+    try:
+        req = _u.Request(url, headers={"User-Agent": "f1-live-service/1.1"})
+        with _u.urlopen(req, timeout=15) as r:
+            rows = _json.loads(r.read().decode())
+    except Exception:
+        return None
+    if not rows:
+        return None
+    ck = str(rows[0].get("circuit_key"))
+    _circuit_cache[session_key] = ck
+    return ck
+
+
 def _snapshot_or_503() -> dict:
     if _state["snapshot"] is None:
         raise HTTPException(503, _state["error"] or "service is still warming up")
@@ -475,10 +518,73 @@ def _snapshot_or_503() -> dict:
 
 
 # ── poller ─────────────────────────────────────────────────────────────────
+def _waiting_snapshot() -> dict:
+    """Заглушка для периодов между сессиями.
+
+    Формат совпадает с боевым снимком, чтобы фронтенд не различал ветки:
+    пустые списки вместо null, флаг waiting_for_session.
+    """
+    return {
+        "generated": now().isoformat(),
+        "is_live": False,
+        "waiting_for_session": True,
+        "message": "Ожидание активной сессии F1 — данные появятся здесь "
+                   "во время трансляции",
+        "feed": feed.status(),
+        "drivers": [], "cars": [], "positions": {}, "gaps": {},
+        "best_laps": {}, "tyres": {}, "stints": {},
+        "weather": {}, "race_control": [],
+    }
+
+
 async def poll_loop():
     loaded_ident = None
+    was_live = False
     while True:
         try:
+            # --- 1. живой путь: сокет передаёт данные прямо сейчас ---
+            st = feed.status()
+            fresh = (st["connected"] and st["messages"] > 0
+                     and (st["idle_seconds"] or 999) < 90)
+            if fresh and feed.state.cars:
+                sk = feed.state.session_info.get("key")
+                circuit_key = _circuit_key_for(str(sk)) if sk else None
+                snap = feed.state.snapshot(circuit_key=circuit_key, is_live=True)
+                _state["session_key"] = str(sk) if sk else _state["session_key"]
+                _state["snapshot"] = snap
+                _state["updated"] = now().isoformat()
+                _state["is_live"] = True
+                _state["source"] = "livefeed"
+                _state["error"] = None
+                if not was_live:
+                    log(f"живая сессия: key={_state['session_key']} "
+                        f"машин={len(feed.state.cars)}")
+                    was_live = True
+                await asyncio.sleep(POLL_SECONDS)
+                continue
+
+            # --- 2. запасной путь: последняя завершённая сессия через load() ---
+            # Выключен по умолчанию: требует ~780 МБ RAM. История и так есть
+            # в статических данных сайта.
+            if not ARCHIVE_FALLBACK:
+                _state["source"] = "livefeed"
+                _state["is_live"] = False
+                # Снимок живой сессии после финиша застывает: машины стоят на
+                # последнем круге, но с каждым опросом выглядят всё свежее. Как
+                # только поток перестал идти, отдаём заглушку — иначе фронтенд
+                # будет показывать мёртвые координаты.
+                if was_live:
+                    log("сессия больше не идёт — снимок сброшен")
+                    _state["snapshot"] = None
+                    _state["session_key"] = None
+                    was_live = False
+                if _state["snapshot"] is None:
+                    _state["error"] = None
+                    _state["updated"] = now().isoformat()
+                    _state["snapshot"] = _waiting_snapshot()
+                await asyncio.sleep(POLL_SECONDS)
+                continue
+
             session, is_live = await asyncio.to_thread(find_current_session)
             ident = _session_ident(session)
 
@@ -525,6 +631,7 @@ async def poll_loop():
                 session = _state["session"]
 
             _state["is_live"] = is_live
+            _state["source"] = "archive"
             snap = await asyncio.to_thread(build_snapshot, session, _state["bounds"])
             _state["snapshot"] = snap
             _state["updated"] = snap["generated"]
@@ -541,7 +648,9 @@ async def poll_loop():
 
 @app.on_event("startup")
 async def startup():
-    log(f"cache={CACHE_DIR} poll={POLL_SECONDS}s")
+    log(f"cache={CACHE_DIR} poll={POLL_SECONDS}s "
+        f"archive_fallback={'on' if ARCHIVE_FALLBACK else 'off'}")
+    feed.start()
     asyncio.create_task(poll_loop())
 
 
@@ -558,6 +667,9 @@ async def health():
         "snapshot_age_seconds": age,
         "load_seconds": _state["load_seconds"],
         "is_live": _state["is_live"],
+        "source": _state["source"],
+        "archive_fallback": ARCHIVE_FALLBACK,
+        "feed": feed.status(),
         "grid": GRID,
         "polling": POLL_SECONDS,
     }
@@ -600,5 +712,6 @@ async def root():
         "service": "F1 Live Timing Service",
         "docs": "/docs",
         "endpoints": ["/health", "/api/status", "/api/snapshot"],
-        "source": "F1 live timing feed via FastF1 (no API key, non-commercial)",
+        "source": "F1 live timing WebSocket feed (no API key, non-commercial)",
+        "archive_fallback": ARCHIVE_FALLBACK,
     }
