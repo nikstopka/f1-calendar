@@ -1,6 +1,6 @@
 {
   "season": 2024,
-  "updated": "2026-09-16T14:36:50.818903+00:00",
+  "updated": "2026-09-15T22:06:24.244528+00:00",
   "current_round": 24,
   "has_sprint": true,
   "driver_standings": [
@@ -309,14 +309,6 @@
           "msk_time": "18:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2024-03-01T12:30:00+00:00",
-          "utc_end": "2024-03-01T13:30:00+00:00",
-          "msk_date": "01.03.2024",
-          "msk_time": "15:30"
-        },
-        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2024-03-01T16:00:00+00:00",
@@ -325,12 +317,12 @@
           "msk_time": "19:00"
         },
         {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-03-02T15:00:00+00:00",
-          "utc_end": "2024-03-02T17:00:00+00:00",
-          "msk_date": "02.03.2024",
-          "msk_time": "18:00"
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2024-03-01T12:30:00+00:00",
+          "utc_end": "2024-03-01T13:30:00+00:00",
+          "msk_date": "01.03.2024",
+          "msk_time": "15:30"
         }
       ],
       "qualifying_results": [
@@ -859,23 +851,13 @@
           "delta": 1
         },
         {
-          "driver_id": "tsunoda",
-          "driver": "Yuki Tsunoda",
-          "team": "RB F1 Team",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
           "pos": 11,
-          "delta": 0
-        },
-        {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
-          "team": "Sauber",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 12,
           "delta": 0
         },
         {
@@ -885,13 +867,23 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
+          "pos": 12,
+          "delta": 0
+        },
+        {
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Sauber",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
           "pos": 13,
           "delta": 0
         },
         {
-          "driver_id": "albon",
-          "driver": "Alexander Albon",
-          "team": "Williams",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -909,13 +901,23 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "tsunoda",
+          "driver": "Yuki Tsunoda",
+          "team": "RB F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
           "pos": 16,
+          "delta": 0
+        },
+        {
+          "driver_id": "albon",
+          "driver": "Alexander Albon",
+          "team": "Williams",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 17,
           "delta": 0
         },
         {
@@ -925,23 +927,13 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 17,
-          "delta": 0
-        },
-        {
-          "driver_id": "ricciardo",
-          "driver": "Daniel Ricciardo",
-          "team": "RB F1 Team",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
           "pos": 18,
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
-          "team": "Sauber",
+          "driver_id": "hulkenberg",
+          "driver": "Nico Hülkenberg",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -949,9 +941,9 @@
           "delta": 0
         },
         {
-          "driver_id": "hulkenberg",
-          "driver": "Nico Hülkenberg",
-          "team": "Haas F1 Team",
+          "driver_id": "ricciardo",
+          "driver": "Daniel Ricciardo",
+          "team": "RB F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -985,14 +977,6 @@
           "msk_time": "20:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2024-03-08T13:30:00+00:00",
-          "utc_end": "2024-03-08T14:30:00+00:00",
-          "msk_date": "08.03.2024",
-          "msk_time": "16:30"
-        },
-        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2024-03-08T17:00:00+00:00",
@@ -1001,12 +985,12 @@
           "msk_time": "20:00"
         },
         {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-03-09T17:00:00+00:00",
-          "utc_end": "2024-03-09T19:00:00+00:00",
-          "msk_date": "09.03.2024",
-          "msk_time": "20:00"
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2024-03-08T13:30:00+00:00",
+          "utc_end": "2024-03-08T14:30:00+00:00",
+          "msk_date": "08.03.2024",
+          "msk_time": "16:30"
         }
       ],
       "qualifying_results": [
@@ -1485,24 +1469,24 @@
           "delta": 12
         },
         {
-          "driver_id": "norris",
-          "driver": "Lando Norris",
-          "team": "McLaren",
-          "sprint_pts": null,
-          "race_pts": 4,
-          "total_after": 12,
-          "pos": 6,
-          "delta": 4
-        },
-        {
           "driver_id": "alonso",
           "driver": "Fernando Alonso",
           "team": "Aston Martin",
           "sprint_pts": null,
           "race_pts": 10,
           "total_after": 12,
-          "pos": 7,
+          "pos": 6,
           "delta": 10
+        },
+        {
+          "driver_id": "norris",
+          "driver": "Lando Norris",
+          "team": "McLaren",
+          "sprint_pts": null,
+          "race_pts": 4,
+          "total_after": 12,
+          "pos": 7,
+          "delta": 4
         },
         {
           "driver_id": "hamilton",
@@ -1525,43 +1509,33 @@
           "delta": 6
         },
         {
-          "driver_id": "stroll",
-          "driver": "Lance Stroll",
-          "team": "Aston Martin",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 1,
-          "pos": 10,
-          "delta": 0
-        },
-        {
           "driver_id": "hulkenberg",
           "driver": "Nico Hülkenberg",
           "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 1,
           "total_after": 1,
-          "pos": 11,
+          "pos": 10,
           "delta": 1
         },
         {
-          "driver_id": "tsunoda",
-          "driver": "Yuki Tsunoda",
-          "team": "RB F1 Team",
+          "driver_id": "stroll",
+          "driver": "Lance Stroll",
+          "team": "Aston Martin",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 1,
+          "pos": 11,
+          "delta": 0
+        },
+        {
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
           "pos": 12,
-          "delta": 0
-        },
-        {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
-          "team": "Sauber",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 13,
           "delta": 0
         },
         {
@@ -1571,13 +1545,23 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
+          "pos": 13,
+          "delta": 0
+        },
+        {
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Sauber",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
           "pos": 14,
           "delta": 0
         },
         {
-          "driver_id": "albon",
-          "driver": "Alexander Albon",
-          "team": "Williams",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -1595,13 +1579,23 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "tsunoda",
+          "driver": "Yuki Tsunoda",
+          "team": "RB F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
           "pos": 17,
+          "delta": 0
+        },
+        {
+          "driver_id": "albon",
+          "driver": "Alexander Albon",
+          "team": "Williams",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 18,
           "delta": 0
         },
         {
@@ -1611,23 +1605,13 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 18,
+          "pos": 19,
           "delta": 0
         },
         {
           "driver_id": "ricciardo",
           "driver": "Daniel Ricciardo",
           "team": "RB F1 Team",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 19,
-          "delta": 0
-        },
-        {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
-          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -1661,14 +1645,6 @@
           "msk_time": "08:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2024-03-23T01:30:00+00:00",
-          "utc_end": "2024-03-23T02:30:00+00:00",
-          "msk_date": "23.03.2024",
-          "msk_time": "04:30"
-        },
-        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2024-03-23T05:00:00+00:00",
@@ -1677,12 +1653,12 @@
           "msk_time": "08:00"
         },
         {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-03-24T04:00:00+00:00",
-          "utc_end": "2024-03-24T06:00:00+00:00",
-          "msk_date": "24.03.2024",
-          "msk_time": "07:00"
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2024-03-23T01:30:00+00:00",
+          "utc_end": "2024-03-23T02:30:00+00:00",
+          "msk_date": "23.03.2024",
+          "msk_time": "04:30"
         }
       ],
       "qualifying_results": [
@@ -2220,8 +2196,8 @@
           "delta": 1
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
@@ -2230,9 +2206,9 @@
           "delta": 0
         },
         {
-          "driver_id": "albon",
-          "driver": "Alexander Albon",
-          "team": "Williams",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -2250,9 +2226,9 @@
           "delta": 0
         },
         {
-          "driver_id": "gasly",
-          "driver": "Pierre Gasly",
-          "team": "Alpine F1 Team",
+          "driver_id": "albon",
+          "driver": "Alexander Albon",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -2260,9 +2236,9 @@
           "delta": 0
         },
         {
-          "driver_id": "ricciardo",
-          "driver": "Daniel Ricciardo",
-          "team": "RB F1 Team",
+          "driver_id": "gasly",
+          "driver": "Pierre Gasly",
+          "team": "Alpine F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -2270,9 +2246,9 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
-          "team": "Sauber",
+          "driver_id": "ricciardo",
+          "driver": "Daniel Ricciardo",
+          "team": "RB F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -2306,14 +2282,6 @@
           "msk_time": "09:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2024-04-06T02:30:00+00:00",
-          "utc_end": "2024-04-06T03:30:00+00:00",
-          "msk_date": "06.04.2024",
-          "msk_time": "05:30"
-        },
-        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2024-04-06T06:00:00+00:00",
@@ -2322,12 +2290,12 @@
           "msk_time": "09:00"
         },
         {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-04-07T05:00:00+00:00",
-          "utc_end": "2024-04-07T07:00:00+00:00",
-          "msk_date": "07.04.2024",
-          "msk_time": "08:00"
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2024-04-06T02:30:00+00:00",
+          "utc_end": "2024-04-06T03:30:00+00:00",
+          "msk_date": "06.04.2024",
+          "msk_time": "05:30"
         }
       ],
       "qualifying_results": [
@@ -2886,13 +2854,33 @@
           "delta": 0
         },
         {
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 14,
+          "delta": 0
+        },
+        {
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Sauber",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 15,
+          "delta": 0
+        },
+        {
           "driver_id": "bottas",
           "driver": "Valtteri Bottas",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 14,
+          "pos": 16,
           "delta": 0
         },
         {
@@ -2902,7 +2890,7 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 15,
+          "pos": 17,
           "delta": 0
         },
         {
@@ -2912,17 +2900,7 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 16,
-          "delta": 0
-        },
-        {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 17,
+          "pos": 18,
           "delta": 0
         },
         {
@@ -2932,23 +2910,13 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 18,
+          "pos": 19,
           "delta": 0
         },
         {
           "driver_id": "ricciardo",
           "driver": "Daniel Ricciardo",
           "team": "RB F1 Team",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 19,
-          "delta": 0
-        },
-        {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
-          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -2995,14 +2963,6 @@
           "utc_start": "2024-04-20T07:00:00+00:00",
           "utc_end": "2024-04-20T08:00:00+00:00",
           "msk_date": "20.04.2024",
-          "msk_time": "10:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-04-21T07:00:00+00:00",
-          "utc_end": "2024-04-21T09:00:00+00:00",
-          "msk_date": "21.04.2024",
           "msk_time": "10:00"
         }
       ],
@@ -3784,23 +3744,13 @@
           "delta": 0
         },
         {
-          "driver_id": "ocon",
-          "driver": "Esteban Ocon",
-          "team": "Alpine F1 Team",
-          "sprint_pts": 0,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 14,
-          "delta": 0
-        },
-        {
-          "driver_id": "albon",
-          "driver": "Alexander Albon",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
           "team": "Williams",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 15,
+          "pos": 14,
           "delta": 0
         },
         {
@@ -3810,7 +3760,7 @@
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 16,
+          "pos": 15,
           "delta": 0
         },
         {
@@ -3820,13 +3770,23 @@
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
+          "pos": 16,
+          "delta": 0
+        },
+        {
+          "driver_id": "albon",
+          "driver": "Alexander Albon",
+          "team": "Williams",
+          "sprint_pts": 0,
+          "race_pts": 0,
+          "total_after": 0,
           "pos": 17,
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "ricciardo",
+          "driver": "Daniel Ricciardo",
+          "team": "RB F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
@@ -3834,8 +3794,8 @@
           "delta": 0
         },
         {
-          "driver_id": "gasly",
-          "driver": "Pierre Gasly",
+          "driver_id": "ocon",
+          "driver": "Esteban Ocon",
           "team": "Alpine F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
@@ -3844,9 +3804,9 @@
           "delta": 0
         },
         {
-          "driver_id": "ricciardo",
-          "driver": "Daniel Ricciardo",
-          "team": "RB F1 Team",
+          "driver_id": "gasly",
+          "driver": "Pierre Gasly",
+          "team": "Alpine F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
@@ -3893,14 +3853,6 @@
           "utc_start": "2024-05-04T20:00:00+00:00",
           "utc_end": "2024-05-04T21:00:00+00:00",
           "msk_date": "04.05.2024",
-          "msk_time": "23:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-05-05T20:00:00+00:00",
-          "utc_end": "2024-05-05T22:00:00+00:00",
-          "msk_date": "05.05.2024",
           "msk_time": "23:00"
         }
       ],
@@ -4682,28 +4634,28 @@
           "delta": 5
         },
         {
-          "driver_id": "ocon",
-          "driver": "Esteban Ocon",
-          "team": "Alpine F1 Team",
-          "sprint_pts": 0,
-          "race_pts": 1,
-          "total_after": 1,
-          "pos": 14,
-          "delta": 1
-        },
-        {
           "driver_id": "kevin_magnussen",
           "driver": "Kevin Magnussen",
           "team": "Haas F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 1,
-          "pos": 15,
+          "pos": 14,
           "delta": 0
         },
         {
-          "driver_id": "albon",
-          "driver": "Alexander Albon",
+          "driver_id": "ocon",
+          "driver": "Esteban Ocon",
+          "team": "Alpine F1 Team",
+          "sprint_pts": 0,
+          "race_pts": 1,
+          "total_after": 1,
+          "pos": 15,
+          "delta": 1
+        },
+        {
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
           "team": "Williams",
           "sprint_pts": 0,
           "race_pts": 0,
@@ -4732,8 +4684,8 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
+          "driver_id": "albon",
+          "driver": "Alexander Albon",
           "team": "Williams",
           "sprint_pts": 0,
           "race_pts": 0,
@@ -4778,14 +4730,6 @@
           "msk_time": "18:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2024-05-18T10:30:00+00:00",
-          "utc_end": "2024-05-18T11:30:00+00:00",
-          "msk_date": "18.05.2024",
-          "msk_time": "13:30"
-        },
-        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2024-05-18T14:00:00+00:00",
@@ -4794,12 +4738,12 @@
           "msk_time": "17:00"
         },
         {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-05-19T13:00:00+00:00",
-          "utc_end": "2024-05-19T15:00:00+00:00",
-          "msk_date": "19.05.2024",
-          "msk_time": "16:00"
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2024-05-18T10:30:00+00:00",
+          "utc_end": "2024-05-18T11:30:00+00:00",
+          "msk_date": "18.05.2024",
+          "msk_time": "13:30"
         }
       ],
       "qualifying_results": [
@@ -5378,13 +5322,33 @@
           "delta": 0
         },
         {
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 16,
+          "delta": 0
+        },
+        {
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Sauber",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 17,
+          "delta": 0
+        },
+        {
           "driver_id": "bottas",
           "driver": "Valtteri Bottas",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 16,
+          "pos": 18,
           "delta": 0
         },
         {
@@ -5394,33 +5358,13 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 17,
-          "delta": 0
-        },
-        {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 18,
+          "pos": 19,
           "delta": 0
         },
         {
           "driver_id": "gasly",
           "driver": "Pierre Gasly",
           "team": "Alpine F1 Team",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 19,
-          "delta": 0
-        },
-        {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
-          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -5454,14 +5398,6 @@
           "msk_time": "18:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2024-05-25T10:30:00+00:00",
-          "utc_end": "2024-05-25T11:30:00+00:00",
-          "msk_date": "25.05.2024",
-          "msk_time": "13:30"
-        },
-        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2024-05-25T14:00:00+00:00",
@@ -5470,12 +5406,12 @@
           "msk_time": "17:00"
         },
         {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-05-26T13:00:00+00:00",
-          "utc_end": "2024-05-26T15:00:00+00:00",
-          "msk_date": "26.05.2024",
-          "msk_time": "16:00"
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2024-05-25T10:30:00+00:00",
+          "utc_end": "2024-05-25T11:30:00+00:00",
+          "msk_date": "25.05.2024",
+          "msk_time": "13:30"
         }
       ],
       "qualifying_results": [
@@ -6074,9 +6010,9 @@
           "delta": 1
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
-          "team": "Sauber",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -6084,9 +6020,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -6094,8 +6030,8 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
@@ -6130,14 +6066,6 @@
           "msk_time": "00:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2024-06-08T16:30:00+00:00",
-          "utc_end": "2024-06-08T17:30:00+00:00",
-          "msk_date": "08.06.2024",
-          "msk_time": "19:30"
-        },
-        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2024-06-08T20:00:00+00:00",
@@ -6146,12 +6074,12 @@
           "msk_time": "23:00"
         },
         {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-06-09T18:00:00+00:00",
-          "utc_end": "2024-06-09T20:00:00+00:00",
-          "msk_date": "09.06.2024",
-          "msk_time": "21:00"
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2024-06-08T16:30:00+00:00",
+          "utc_end": "2024-06-08T17:30:00+00:00",
+          "msk_date": "08.06.2024",
+          "msk_time": "19:30"
         }
       ],
       "qualifying_results": [
@@ -6750,9 +6678,9 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
-          "team": "Sauber",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -6760,9 +6688,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -6770,8 +6698,8 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
@@ -6806,14 +6734,6 @@
           "msk_time": "18:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2024-06-22T10:30:00+00:00",
-          "utc_end": "2024-06-22T11:30:00+00:00",
-          "msk_date": "22.06.2024",
-          "msk_time": "13:30"
-        },
-        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2024-06-22T14:00:00+00:00",
@@ -6822,12 +6742,12 @@
           "msk_time": "17:00"
         },
         {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-06-23T13:00:00+00:00",
-          "utc_end": "2024-06-23T15:00:00+00:00",
-          "msk_date": "23.06.2024",
-          "msk_time": "16:00"
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2024-06-22T10:30:00+00:00",
+          "utc_end": "2024-06-22T11:30:00+00:00",
+          "msk_date": "22.06.2024",
+          "msk_time": "13:30"
         }
       ],
       "qualifying_results": [
@@ -7426,9 +7346,9 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
-          "team": "Sauber",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -7436,9 +7356,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -7446,8 +7366,8 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
@@ -7496,14 +7416,6 @@
           "utc_end": "2024-06-29T15:00:00+00:00",
           "msk_date": "29.06.2024",
           "msk_time": "17:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-06-30T13:00:00+00:00",
-          "utc_end": "2024-06-30T15:00:00+00:00",
-          "msk_date": "30.06.2024",
-          "msk_time": "16:00"
         }
       ],
       "qualifying_results": [
@@ -8324,9 +8236,9 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
-          "team": "Sauber",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
@@ -8334,8 +8246,8 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
           "team": "Sauber",
           "sprint_pts": 0,
           "race_pts": 0,
@@ -8344,9 +8256,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
+          "team": "Sauber",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
@@ -8380,14 +8292,6 @@
           "msk_time": "18:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2024-07-06T10:30:00+00:00",
-          "utc_end": "2024-07-06T11:30:00+00:00",
-          "msk_date": "06.07.2024",
-          "msk_time": "13:30"
-        },
-        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2024-07-06T14:00:00+00:00",
@@ -8396,12 +8300,12 @@
           "msk_time": "17:00"
         },
         {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-07-07T14:00:00+00:00",
-          "utc_end": "2024-07-07T16:00:00+00:00",
-          "msk_date": "07.07.2024",
-          "msk_time": "17:00"
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2024-07-06T10:30:00+00:00",
+          "utc_end": "2024-07-06T11:30:00+00:00",
+          "msk_date": "06.07.2024",
+          "msk_time": "13:30"
         }
       ],
       "qualifying_results": [
@@ -9000,9 +8904,9 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
-          "team": "Sauber",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -9010,9 +8914,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -9020,8 +8924,8 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
@@ -9056,14 +8960,6 @@
           "msk_time": "18:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2024-07-20T10:30:00+00:00",
-          "utc_end": "2024-07-20T11:30:00+00:00",
-          "msk_date": "20.07.2024",
-          "msk_time": "13:30"
-        },
-        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2024-07-20T14:00:00+00:00",
@@ -9072,12 +8968,12 @@
           "msk_time": "17:00"
         },
         {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-07-21T13:00:00+00:00",
-          "utc_end": "2024-07-21T15:00:00+00:00",
-          "msk_date": "21.07.2024",
-          "msk_time": "16:00"
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2024-07-20T10:30:00+00:00",
+          "utc_end": "2024-07-20T11:30:00+00:00",
+          "msk_date": "20.07.2024",
+          "msk_time": "13:30"
         }
       ],
       "qualifying_results": [
@@ -9676,9 +9572,9 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
-          "team": "Sauber",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -9686,9 +9582,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -9696,8 +9592,8 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
@@ -9732,14 +9628,6 @@
           "msk_time": "18:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2024-07-27T10:30:00+00:00",
-          "utc_end": "2024-07-27T11:30:00+00:00",
-          "msk_date": "27.07.2024",
-          "msk_time": "13:30"
-        },
-        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2024-07-27T14:00:00+00:00",
@@ -9748,12 +9636,12 @@
           "msk_time": "17:00"
         },
         {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-07-28T13:00:00+00:00",
-          "utc_end": "2024-07-28T15:00:00+00:00",
-          "msk_date": "28.07.2024",
-          "msk_time": "16:00"
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2024-07-27T10:30:00+00:00",
+          "utc_end": "2024-07-27T11:30:00+00:00",
+          "msk_date": "27.07.2024",
+          "msk_time": "13:30"
         }
       ],
       "qualifying_results": [
@@ -10352,9 +10240,9 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
-          "team": "Sauber",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -10362,9 +10250,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -10372,8 +10260,8 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
@@ -10408,14 +10296,6 @@
           "msk_time": "17:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2024-08-24T09:30:00+00:00",
-          "utc_end": "2024-08-24T10:30:00+00:00",
-          "msk_date": "24.08.2024",
-          "msk_time": "12:30"
-        },
-        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2024-08-24T13:00:00+00:00",
@@ -10424,12 +10304,12 @@
           "msk_time": "16:00"
         },
         {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-08-25T13:00:00+00:00",
-          "utc_end": "2024-08-25T15:00:00+00:00",
-          "msk_date": "25.08.2024",
-          "msk_time": "16:00"
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2024-08-24T09:30:00+00:00",
+          "utc_end": "2024-08-24T10:30:00+00:00",
+          "msk_date": "24.08.2024",
+          "msk_time": "12:30"
         }
       ],
       "qualifying_results": [
@@ -11028,9 +10908,9 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
-          "team": "Sauber",
+          "driver_id": "sargeant",
+          "driver": "Logan Sargeant",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -11038,9 +10918,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sargeant",
-          "driver": "Logan Sargeant",
-          "team": "Williams",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -11048,8 +10928,8 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
@@ -11084,14 +10964,6 @@
           "msk_time": "18:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2024-08-31T10:30:00+00:00",
-          "utc_end": "2024-08-31T11:30:00+00:00",
-          "msk_date": "31.08.2024",
-          "msk_time": "13:30"
-        },
-        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2024-08-31T14:00:00+00:00",
@@ -11100,12 +10972,12 @@
           "msk_time": "17:00"
         },
         {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-09-01T13:00:00+00:00",
-          "utc_end": "2024-09-01T15:00:00+00:00",
-          "msk_date": "01.09.2024",
-          "msk_time": "16:00"
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2024-08-31T10:30:00+00:00",
+          "utc_end": "2024-08-31T11:30:00+00:00",
+          "msk_date": "31.08.2024",
+          "msk_time": "13:30"
         }
       ],
       "qualifying_results": [
@@ -11704,8 +11576,8 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
@@ -11724,8 +11596,8 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
@@ -11760,14 +11632,6 @@
           "msk_time": "16:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2024-09-14T08:30:00+00:00",
-          "utc_end": "2024-09-14T09:30:00+00:00",
-          "msk_date": "14.09.2024",
-          "msk_time": "11:30"
-        },
-        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2024-09-14T12:00:00+00:00",
@@ -11776,12 +11640,12 @@
           "msk_time": "15:00"
         },
         {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-09-15T11:00:00+00:00",
-          "utc_end": "2024-09-15T13:00:00+00:00",
-          "msk_date": "15.09.2024",
-          "msk_time": "14:00"
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2024-09-14T08:30:00+00:00",
+          "utc_end": "2024-09-14T09:30:00+00:00",
+          "msk_date": "14.09.2024",
+          "msk_time": "11:30"
         }
       ],
       "qualifying_results": [
@@ -12390,8 +12254,8 @@
           "delta": 4
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
@@ -12400,8 +12264,8 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
@@ -12436,14 +12300,6 @@
           "msk_time": "16:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2024-09-21T09:30:00+00:00",
-          "utc_end": "2024-09-21T10:30:00+00:00",
-          "msk_date": "21.09.2024",
-          "msk_time": "12:30"
-        },
-        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2024-09-21T13:00:00+00:00",
@@ -12452,12 +12308,12 @@
           "msk_time": "16:00"
         },
         {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-09-22T12:00:00+00:00",
-          "utc_end": "2024-09-22T14:00:00+00:00",
-          "msk_date": "22.09.2024",
-          "msk_time": "15:00"
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2024-09-21T09:30:00+00:00",
+          "utc_end": "2024-09-21T10:30:00+00:00",
+          "msk_date": "21.09.2024",
+          "msk_time": "12:30"
         }
       ],
       "qualifying_results": [
@@ -12976,24 +12832,24 @@
           "delta": 4
         },
         {
-          "driver_id": "stroll",
-          "driver": "Lance Stroll",
-          "team": "Aston Martin",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 24,
-          "pos": 10,
-          "delta": 0
-        },
-        {
           "driver_id": "hulkenberg",
           "driver": "Nico Hülkenberg",
           "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 2,
           "total_after": 24,
-          "pos": 11,
+          "pos": 10,
           "delta": 2
+        },
+        {
+          "driver_id": "stroll",
+          "driver": "Lance Stroll",
+          "team": "Aston Martin",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 24,
+          "pos": 11,
+          "delta": 0
         },
         {
           "driver_id": "tsunoda",
@@ -13066,8 +12922,8 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
@@ -13076,8 +12932,8 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
@@ -13126,14 +12982,6 @@
           "utc_end": "2024-10-19T23:00:00+00:00",
           "msk_date": "20.10.2024",
           "msk_time": "01:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-10-20T19:00:00+00:00",
-          "utc_end": "2024-10-20T21:00:00+00:00",
-          "msk_date": "20.10.2024",
-          "msk_time": "22:00"
         }
       ],
       "qualifying_results": [
@@ -13934,24 +13782,24 @@
           "delta": 0
         },
         {
-          "driver_id": "ocon",
-          "driver": "Esteban Ocon",
-          "team": "Alpine F1 Team",
-          "sprint_pts": 0,
-          "race_pts": 0,
-          "total_after": 5,
-          "pos": 16,
-          "delta": 0
-        },
-        {
           "driver_id": "colapinto",
           "driver": "Franco Colapinto",
           "team": "Williams",
           "sprint_pts": 0,
           "race_pts": 1,
           "total_after": 5,
-          "pos": 17,
+          "pos": 16,
           "delta": 1
+        },
+        {
+          "driver_id": "ocon",
+          "driver": "Esteban Ocon",
+          "team": "Alpine F1 Team",
+          "sprint_pts": 0,
+          "race_pts": 0,
+          "total_after": 5,
+          "pos": 17,
+          "delta": 0
         },
         {
           "driver_id": "lawson",
@@ -14010,14 +13858,6 @@
           "msk_time": "01:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2024-10-26T17:30:00+00:00",
-          "utc_end": "2024-10-26T18:30:00+00:00",
-          "msk_date": "26.10.2024",
-          "msk_time": "20:30"
-        },
-        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2024-10-26T21:00:00+00:00",
@@ -14026,12 +13866,12 @@
           "msk_time": "00:00"
         },
         {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-10-27T20:00:00+00:00",
-          "utc_end": "2024-10-27T22:00:00+00:00",
-          "msk_date": "27.10.2024",
-          "msk_time": "23:00"
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2024-10-26T17:30:00+00:00",
+          "utc_end": "2024-10-26T18:30:00+00:00",
+          "msk_date": "26.10.2024",
+          "msk_time": "20:30"
         }
       ],
       "qualifying_results": [
@@ -14610,9 +14450,9 @@
           "delta": 1
         },
         {
-          "driver_id": "ocon",
-          "driver": "Esteban Ocon",
-          "team": "Alpine F1 Team",
+          "driver_id": "colapinto",
+          "driver": "Franco Colapinto",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 5,
@@ -14620,9 +14460,9 @@
           "delta": 0
         },
         {
-          "driver_id": "colapinto",
-          "driver": "Franco Colapinto",
-          "team": "Williams",
+          "driver_id": "ocon",
+          "driver": "Esteban Ocon",
+          "team": "Alpine F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 5,
@@ -14640,8 +14480,8 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
@@ -14650,8 +14490,8 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
@@ -14700,14 +14540,6 @@
           "utc_end": "2024-11-02T19:00:00+00:00",
           "msk_date": "02.11.2024",
           "msk_time": "21:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-11-03T17:00:00+00:00",
-          "utc_end": "2024-11-03T19:00:00+00:00",
-          "msk_date": "03.11.2024",
-          "msk_time": "20:00"
         }
       ],
       "qualifying_results": [
@@ -15584,14 +15416,6 @@
           "msk_time": "09:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2024-11-22T02:30:00+00:00",
-          "utc_end": "2024-11-22T03:30:00+00:00",
-          "msk_date": "22.11.2024",
-          "msk_time": "05:30"
-        },
-        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2024-11-22T06:00:00+00:00",
@@ -15600,12 +15424,12 @@
           "msk_time": "09:00"
         },
         {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-11-23T06:00:00+00:00",
-          "utc_end": "2024-11-23T08:00:00+00:00",
-          "msk_date": "23.11.2024",
-          "msk_time": "09:00"
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2024-11-22T02:30:00+00:00",
+          "utc_end": "2024-11-22T03:30:00+00:00",
+          "msk_date": "22.11.2024",
+          "msk_time": "05:30"
         }
       ],
       "qualifying_results": [
@@ -16214,8 +16038,8 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
@@ -16224,8 +16048,8 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
           "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
@@ -16274,14 +16098,6 @@
           "utc_end": "2024-11-30T19:00:00+00:00",
           "msk_date": "30.11.2024",
           "msk_time": "21:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-12-01T16:00:00+00:00",
-          "utc_end": "2024-12-01T18:00:00+00:00",
-          "msk_date": "01.12.2024",
-          "msk_time": "19:00"
         }
       ],
       "qualifying_results": [
@@ -17158,14 +16974,6 @@
           "msk_time": "16:00"
         },
         {
-          "name": "ThirdPractice",
-          "name_ru": "Свободная практика 3",
-          "utc_start": "2024-12-07T10:30:00+00:00",
-          "utc_end": "2024-12-07T11:30:00+00:00",
-          "msk_date": "07.12.2024",
-          "msk_time": "13:30"
-        },
-        {
           "name": "Qualifying",
           "name_ru": "Квалификация",
           "utc_start": "2024-12-07T14:00:00+00:00",
@@ -17174,12 +16982,12 @@
           "msk_time": "17:00"
         },
         {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2024-12-08T13:00:00+00:00",
-          "utc_end": "2024-12-08T15:00:00+00:00",
-          "msk_date": "08.12.2024",
-          "msk_time": "16:00"
+          "name": "ThirdPractice",
+          "name_ru": "Свободная практика 3",
+          "utc_start": "2024-12-07T10:30:00+00:00",
+          "utc_end": "2024-12-07T11:30:00+00:00",
+          "msk_date": "07.12.2024",
+          "msk_time": "13:30"
         }
       ],
       "qualifying_results": [
@@ -17768,9 +17576,9 @@
           "delta": 0
         },
         {
-          "driver_id": "lawson",
-          "driver": "Liam Lawson",
-          "team": "RB F1 Team",
+          "driver_id": "zhou",
+          "driver": "Guanyu Zhou",
+          "team": "Sauber",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 4,
@@ -17778,9 +17586,9 @@
           "delta": 0
         },
         {
-          "driver_id": "zhou",
-          "driver": "Guanyu Zhou",
-          "team": "Sauber",
+          "driver_id": "lawson",
+          "driver": "Liam Lawson",
+          "team": "RB F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 4,

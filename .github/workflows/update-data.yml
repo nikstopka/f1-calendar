@@ -38,6 +38,10 @@ jobs:
             python scripts/update_f1_data.py
           fi
 
+      - name: Build Live View data (OpenF1)
+        continue-on-error: true
+        run: python scripts/update_live_data.py
+
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"

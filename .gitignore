@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+Thumbs.db
+_site/
+# live-service
+live-service/.ffcache/
+live-service/svc.*

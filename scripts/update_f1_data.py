@@ -52,6 +52,24 @@ SESSION_DUR = {
     "Qualifying": 60, "Race": 120,
 }
 
+# Напоминание за сколько минут до старта сессии (ICS TRIGGER)
+SESSION_ALARM_MIN = {
+    "FirstPractice": 10, "SecondPractice": 10, "ThirdPractice": 10,
+    "SprintQualifying": 20,
+    "Qualifying": 30,
+    "Sprint": 60,   # спринт — полноценная гонка
+    "Race": 60,
+}
+DEFAULT_ALARM_MIN = 30
+
+
+def alarm_text(minutes):
+    """Человекочитаемая формулировка напоминания на русском."""
+    if minutes % 60 == 0:
+        h = minutes // 60
+        return f"Через {h} час" if h == 1 else f"Через {h} часа"
+    return f"Через {minutes} минут"
+
 
 # ─── API helpers ───
 def api_get(path, retries=3):
@@ -432,6 +450,32 @@ def escape_ics(text):
     return text.replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
 
 
+def fold_ics_line(line, limit=75):
+    """Fold a content line to <= limit octets per RFC 5545 §3.1.
+
+    Long lines are split into multiple representations joined by CRLF + a single
+    space. Folding is measured in octets (not characters) and never breaks a
+    UTF-8 multi-byte sequence, which matters here because the text is Russian.
+    Continuation lines lose one octet to the leading space.
+    """
+    raw = line.encode("utf-8")
+    if len(raw) <= limit:
+        return line
+
+    segments = []
+    start = 0
+    budget = limit
+    while start < len(raw):
+        end = min(start + budget, len(raw))
+        # A UTF-8 continuation byte is 0b10xxxxxx — back off to a char boundary
+        while end > start and end < len(raw) and (raw[end] & 0xC0) == 0x80:
+            end -= 1
+        segments.append(raw[start:end].decode("utf-8"))
+        start = end
+        budget = limit - 1  # leading space of the continuation line
+    return "\r\n ".join(segments)
+
+
 def format_ics_dt(dt):
     return dt.strftime("%Y%m%dT%H%M%SZ")
 
@@ -502,7 +546,8 @@ def generate_ics(season_data):
 
             description = "\n".join(desc_parts)
             summary = f"F1: {race['gp']} — {session['name_ru']}"
-            alarm = f"Через 30 минут: {race['gp']} — {session['name_ru']}"
+            alarm_min = SESSION_ALARM_MIN.get(session["name"], DEFAULT_ALARM_MIN)
+            alarm = f"{alarm_text(alarm_min)}: {race['gp']} — {session['name_ru']}"
 
             lines.extend([
                 "BEGIN:VEVENT",
@@ -515,7 +560,7 @@ def generate_ics(season_data):
                 f"LOCATION:{escape_ics(race['location'])}",
                 "STATUS:CONFIRMED",
                 "BEGIN:VALARM",
-                "TRIGGER:-PT30M",
+                f"TRIGGER:-PT{alarm_min}M",
                 "ACTION:DISPLAY",
                 f"DESCRIPTION:{escape_ics(alarm)}",
                 "END:VALARM",
@@ -523,7 +568,8 @@ def generate_ics(season_data):
             ])
 
     lines.append("END:VCALENDAR")
-    return "\r\n".join(lines) + "\r\n"
+    folded = [fold_ics_line(l) for l in lines]
+    return "\r\n".join(folded) + "\r\n"
 
 
 # ─── Main ───

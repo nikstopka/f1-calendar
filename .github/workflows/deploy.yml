@@ -35,10 +35,16 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      - name: Stage site files
+        run: |
+          mkdir -p _site
+          cp -r index.html favicon.svg favicon.ico apple-touch-icon.png \
+                icon-192.png icon-512.png f1-calendar.ics data _site/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "."
+          path: "_site"
 
       - name: Deploy
         id: deployment

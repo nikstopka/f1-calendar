@@ -1,6 +1,6 @@
 {
   "season": 2020,
-  "updated": "2026-09-16T14:35:20.599089+00:00",
+  "updated": "2026-09-15T22:05:01.365834+00:00",
   "current_round": 17,
   "has_sprint": false,
   "driver_standings": [
@@ -314,14 +314,6 @@
           "utc_end": "2020-07-04T01:00:00+00:00",
           "msk_date": "04.07.2020",
           "msk_time": "03:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2020-07-05T13:10:00+00:00",
-          "utc_end": "2020-07-05T15:10:00+00:00",
-          "msk_date": "05.07.2020",
-          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [
@@ -850,23 +842,13 @@
           "delta": 1
         },
         {
-          "driver_id": "latifi",
-          "driver": "Nicholas Latifi",
-          "team": "Williams",
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
           "pos": 11,
-          "delta": 0
-        },
-        {
-          "driver_id": "kvyat",
-          "driver": "Daniil Kvyat",
-          "team": "AlphaTauri",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 12,
           "delta": 0
         },
         {
@@ -876,7 +858,47 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
+          "pos": 12,
+          "delta": 0
+        },
+        {
+          "driver_id": "latifi",
+          "driver": "Nicholas Latifi",
+          "team": "Williams",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
           "pos": 13,
+          "delta": 0
+        },
+        {
+          "driver_id": "max_verstappen",
+          "driver": "Max Verstappen",
+          "team": "Red Bull",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 14,
+          "delta": 0
+        },
+        {
+          "driver_id": "kvyat",
+          "driver": "Daniil Kvyat",
+          "team": "AlphaTauri",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 15,
+          "delta": 0
+        },
+        {
+          "driver_id": "russell",
+          "driver": "George Russell",
+          "team": "Williams",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 16,
           "delta": 0
         },
         {
@@ -886,43 +908,13 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 14,
+          "pos": 17,
           "delta": 0
         },
         {
           "driver_id": "albon",
           "driver": "Alexander Albon",
           "team": "Red Bull",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 15,
-          "delta": 0
-        },
-        {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 16,
-          "delta": 0
-        },
-        {
-          "driver_id": "stroll",
-          "driver": "Lance Stroll",
-          "team": "Racing Point",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 17,
-          "delta": 0
-        },
-        {
-          "driver_id": "russell",
-          "driver": "George Russell",
-          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -940,9 +932,9 @@
           "delta": 0
         },
         {
-          "driver_id": "max_verstappen",
-          "driver": "Max Verstappen",
-          "team": "Red Bull",
+          "driver_id": "stroll",
+          "driver": "Lance Stroll",
+          "team": "Racing Point",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -990,14 +982,6 @@
           "utc_end": "2020-07-11T01:00:00+00:00",
           "msk_date": "11.07.2020",
           "msk_time": "03:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2020-07-12T13:10:00+00:00",
-          "utc_end": "2020-07-12T15:10:00+00:00",
-          "msk_date": "12.07.2020",
-          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [
@@ -1506,24 +1490,24 @@
           "delta": 12
         },
         {
-          "driver_id": "stroll",
-          "driver": "Lance Stroll",
-          "team": "Racing Point",
-          "sprint_pts": null,
-          "race_pts": 6,
-          "total_after": 6,
-          "pos": 9,
-          "delta": 6
-        },
-        {
           "driver_id": "gasly",
           "driver": "Pierre Gasly",
           "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 6,
-          "pos": 10,
+          "pos": 9,
           "delta": 0
+        },
+        {
+          "driver_id": "stroll",
+          "driver": "Lance Stroll",
+          "team": "Racing Point",
+          "sprint_pts": null,
+          "race_pts": 6,
+          "total_after": 6,
+          "pos": 10,
+          "delta": 6
         },
         {
           "driver_id": "ocon",
@@ -1556,29 +1540,29 @@
           "delta": 0
         },
         {
-          "driver_id": "kvyat",
-          "driver": "Daniil Kvyat",
-          "team": "AlphaTauri",
-          "sprint_pts": null,
-          "race_pts": 1,
-          "total_after": 1,
-          "pos": 14,
-          "delta": 1
-        },
-        {
           "driver_id": "vettel",
           "driver": "Sebastian Vettel",
           "team": "Ferrari",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 1,
-          "pos": 15,
+          "pos": 14,
           "delta": 0
         },
         {
-          "driver_id": "latifi",
-          "driver": "Nicholas Latifi",
-          "team": "Williams",
+          "driver_id": "kvyat",
+          "driver": "Daniil Kvyat",
+          "team": "AlphaTauri",
+          "sprint_pts": null,
+          "race_pts": 1,
+          "total_after": 1,
+          "pos": 15,
+          "delta": 1
+        },
+        {
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -1596,9 +1580,9 @@
           "delta": 0
         },
         {
-          "driver_id": "raikkonen",
-          "driver": "Kimi Räikkönen",
-          "team": "Alfa Romeo",
+          "driver_id": "latifi",
+          "driver": "Nicholas Latifi",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -1606,9 +1590,9 @@
           "delta": 0
         },
         {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
+          "driver_id": "russell",
+          "driver": "George Russell",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -1616,9 +1600,9 @@
           "delta": 0
         },
         {
-          "driver_id": "russell",
-          "driver": "George Russell",
-          "team": "Williams",
+          "driver_id": "raikkonen",
+          "driver": "Kimi Räikkönen",
+          "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -1666,14 +1650,6 @@
           "utc_end": "2020-07-18T01:00:00+00:00",
           "msk_date": "18.07.2020",
           "msk_time": "03:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2020-07-19T13:10:00+00:00",
-          "utc_end": "2020-07-19T15:10:00+00:00",
-          "msk_date": "19.07.2020",
-          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [
@@ -2142,24 +2118,24 @@
           "delta": 0
         },
         {
-          "driver_id": "albon",
-          "driver": "Alexander Albon",
-          "team": "Red Bull",
-          "sprint_pts": null,
-          "race_pts": 10,
-          "total_after": 22,
-          "pos": 5,
-          "delta": 10
-        },
-        {
           "driver_id": "perez",
           "driver": "Sergio Pérez",
           "team": "Racing Point",
           "sprint_pts": null,
           "race_pts": 6,
           "total_after": 22,
-          "pos": 6,
+          "pos": 5,
           "delta": 6
+        },
+        {
+          "driver_id": "albon",
+          "driver": "Alexander Albon",
+          "team": "Red Bull",
+          "sprint_pts": null,
+          "race_pts": 10,
+          "total_after": 22,
+          "pos": 6,
+          "delta": 10
         },
         {
           "driver_id": "stroll",
@@ -2242,43 +2218,23 @@
           "delta": 0
         },
         {
-          "driver_id": "kvyat",
-          "driver": "Daniil Kvyat",
-          "team": "AlphaTauri",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 1,
-          "pos": 15,
-          "delta": 0
-        },
-        {
           "driver_id": "kevin_magnussen",
           "driver": "Kevin Magnussen",
           "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 1,
           "total_after": 1,
-          "pos": 16,
+          "pos": 15,
           "delta": 1
         },
         {
-          "driver_id": "latifi",
-          "driver": "Nicholas Latifi",
-          "team": "Williams",
+          "driver_id": "kvyat",
+          "driver": "Daniil Kvyat",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
-          "total_after": 0,
-          "pos": 17,
-          "delta": 0
-        },
-        {
-          "driver_id": "raikkonen",
-          "driver": "Kimi Räikkönen",
-          "team": "Alfa Romeo",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 18,
+          "total_after": 1,
+          "pos": 16,
           "delta": 0
         },
         {
@@ -2288,12 +2244,32 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 19,
+          "pos": 17,
           "delta": 0
         },
         {
           "driver_id": "russell",
           "driver": "George Russell",
+          "team": "Williams",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 18,
+          "delta": 0
+        },
+        {
+          "driver_id": "raikkonen",
+          "driver": "Kimi Räikkönen",
+          "team": "Alfa Romeo",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 19,
+          "delta": 0
+        },
+        {
+          "driver_id": "latifi",
+          "driver": "Nicholas Latifi",
           "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
@@ -2342,14 +2318,6 @@
           "utc_end": "2020-08-01T01:00:00+00:00",
           "msk_date": "01.08.2020",
           "msk_time": "03:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2020-08-02T13:10:00+00:00",
-          "utc_end": "2020-08-02T15:10:00+00:00",
-          "msk_date": "02.08.2020",
-          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [
@@ -2908,9 +2876,9 @@
           "delta": 0
         },
         {
-          "driver_id": "kvyat",
-          "driver": "Daniil Kvyat",
-          "team": "AlphaTauri",
+          "driver_id": "kevin_magnussen",
+          "driver": "Kevin Magnussen",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 1,
@@ -2918,23 +2886,13 @@
           "delta": 0
         },
         {
-          "driver_id": "kevin_magnussen",
-          "driver": "Kevin Magnussen",
-          "team": "Haas F1 Team",
+          "driver_id": "kvyat",
+          "driver": "Daniil Kvyat",
+          "team": "AlphaTauri",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 1,
           "pos": 15,
-          "delta": 0
-        },
-        {
-          "driver_id": "raikkonen",
-          "driver": "Kimi Räikkönen",
-          "team": "Alfa Romeo",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 16,
           "delta": 0
         },
         {
@@ -2944,7 +2902,7 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 17,
+          "pos": 16,
           "delta": 0
         },
         {
@@ -2954,13 +2912,23 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
+          "pos": 17,
+          "delta": 0
+        },
+        {
+          "driver_id": "raikkonen",
+          "driver": "Kimi Räikkönen",
+          "team": "Alfa Romeo",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
           "pos": 18,
           "delta": 0
         },
         {
-          "driver_id": "latifi",
-          "driver": "Nicholas Latifi",
-          "team": "Williams",
+          "driver_id": "hulkenberg",
+          "driver": "Nico Hülkenberg",
+          "team": "Racing Point",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -2968,9 +2936,9 @@
           "delta": 0
         },
         {
-          "driver_id": "hulkenberg",
-          "driver": "Nico Hülkenberg",
-          "team": "Racing Point",
+          "driver_id": "latifi",
+          "driver": "Nicholas Latifi",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -3018,14 +2986,6 @@
           "utc_end": "2020-08-08T01:00:00+00:00",
           "msk_date": "08.08.2020",
           "msk_time": "03:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2020-08-09T13:10:00+00:00",
-          "utc_end": "2020-08-09T15:10:00+00:00",
-          "msk_date": "09.08.2020",
-          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [
@@ -3614,9 +3574,9 @@
           "delta": 0
         },
         {
-          "driver_id": "raikkonen",
-          "driver": "Kimi Räikkönen",
-          "team": "Alfa Romeo",
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -3624,9 +3584,9 @@
           "delta": 0
         },
         {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
+          "driver_id": "russell",
+          "driver": "George Russell",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -3634,9 +3594,9 @@
           "delta": 0
         },
         {
-          "driver_id": "russell",
-          "driver": "George Russell",
-          "team": "Williams",
+          "driver_id": "raikkonen",
+          "driver": "Kimi Räikkönen",
+          "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -3694,14 +3654,6 @@
           "utc_end": "2020-08-15T01:00:00+00:00",
           "msk_date": "15.08.2020",
           "msk_time": "03:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2020-08-16T13:10:00+00:00",
-          "utc_end": "2020-08-16T15:10:00+00:00",
-          "msk_date": "16.08.2020",
-          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [
@@ -4290,9 +4242,9 @@
           "delta": 0
         },
         {
-          "driver_id": "latifi",
-          "driver": "Nicholas Latifi",
-          "team": "Williams",
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -4300,9 +4252,9 @@
           "delta": 0
         },
         {
-          "driver_id": "raikkonen",
-          "driver": "Kimi Räikkönen",
-          "team": "Alfa Romeo",
+          "driver_id": "latifi",
+          "driver": "Nicholas Latifi",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -4310,9 +4262,9 @@
           "delta": 0
         },
         {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
+          "driver_id": "russell",
+          "driver": "George Russell",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -4320,9 +4272,9 @@
           "delta": 0
         },
         {
-          "driver_id": "russell",
-          "driver": "George Russell",
-          "team": "Williams",
+          "driver_id": "raikkonen",
+          "driver": "Kimi Räikkönen",
+          "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -4370,14 +4322,6 @@
           "utc_end": "2020-08-29T01:00:00+00:00",
           "msk_date": "29.08.2020",
           "msk_time": "03:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2020-08-30T13:10:00+00:00",
-          "utc_end": "2020-08-30T15:10:00+00:00",
-          "msk_date": "30.08.2020",
-          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [
@@ -4876,24 +4820,24 @@
           "delta": 2
         },
         {
-          "driver_id": "ricciardo",
-          "driver": "Daniel Ricciardo",
-          "team": "Renault",
-          "sprint_pts": null,
-          "race_pts": 13,
-          "total_after": 33,
-          "pos": 8,
-          "delta": 13
-        },
-        {
           "driver_id": "perez",
           "driver": "Sergio Pérez",
           "team": "Racing Point",
           "sprint_pts": null,
           "race_pts": 1,
           "total_after": 33,
-          "pos": 9,
+          "pos": 8,
           "delta": 1
+        },
+        {
+          "driver_id": "ricciardo",
+          "driver": "Daniel Ricciardo",
+          "team": "Renault",
+          "sprint_pts": null,
+          "race_pts": 13,
+          "total_after": 33,
+          "pos": 9,
+          "delta": 13
         },
         {
           "driver_id": "ocon",
@@ -4966,13 +4910,23 @@
           "delta": 0
         },
         {
-          "driver_id": "latifi",
-          "driver": "Nicholas Latifi",
-          "team": "Williams",
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
           "pos": 17,
+          "delta": 0
+        },
+        {
+          "driver_id": "russell",
+          "driver": "George Russell",
+          "team": "Williams",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 18,
           "delta": 0
         },
         {
@@ -4982,22 +4936,12 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 18,
-          "delta": 0
-        },
-        {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
           "pos": 19,
           "delta": 0
         },
         {
-          "driver_id": "russell",
-          "driver": "George Russell",
+          "driver_id": "latifi",
+          "driver": "Nicholas Latifi",
           "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
@@ -5046,14 +4990,6 @@
           "utc_end": "2020-09-05T01:00:00+00:00",
           "msk_date": "05.09.2020",
           "msk_time": "03:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2020-09-06T13:10:00+00:00",
-          "utc_end": "2020-09-06T15:10:00+00:00",
-          "msk_date": "06.09.2020",
-          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [
@@ -5512,24 +5448,24 @@
           "delta": 0
         },
         {
-          "driver_id": "norris",
-          "driver": "Lando Norris",
-          "team": "McLaren",
-          "sprint_pts": null,
-          "race_pts": 12,
-          "total_after": 57,
-          "pos": 4,
-          "delta": 12
-        },
-        {
           "driver_id": "stroll",
           "driver": "Lance Stroll",
           "team": "Racing Point",
           "sprint_pts": null,
           "race_pts": 15,
           "total_after": 57,
-          "pos": 5,
+          "pos": 4,
           "delta": 15
+        },
+        {
+          "driver_id": "norris",
+          "driver": "Lando Norris",
+          "team": "McLaren",
+          "sprint_pts": null,
+          "race_pts": 12,
+          "total_after": 57,
+          "pos": 5,
+          "delta": 12
         },
         {
           "driver_id": "albon",
@@ -5642,13 +5578,23 @@
           "delta": 0
         },
         {
-          "driver_id": "latifi",
-          "driver": "Nicholas Latifi",
-          "team": "Williams",
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
           "pos": 17,
+          "delta": 0
+        },
+        {
+          "driver_id": "russell",
+          "driver": "George Russell",
+          "team": "Williams",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 18,
           "delta": 0
         },
         {
@@ -5658,22 +5604,12 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 18,
-          "delta": 0
-        },
-        {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
           "pos": 19,
           "delta": 0
         },
         {
-          "driver_id": "russell",
-          "driver": "George Russell",
+          "driver_id": "latifi",
+          "driver": "Nicholas Latifi",
           "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
@@ -5722,14 +5658,6 @@
           "utc_end": "2020-09-12T01:00:00+00:00",
           "msk_date": "12.09.2020",
           "msk_time": "03:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2020-09-13T13:10:00+00:00",
-          "utc_end": "2020-09-13T15:10:00+00:00",
-          "msk_date": "13.09.2020",
-          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [
@@ -6298,24 +6226,24 @@
           "delta": 6
         },
         {
-          "driver_id": "raikkonen",
-          "driver": "Kimi Räikkönen",
-          "team": "Alfa Romeo",
-          "sprint_pts": null,
-          "race_pts": 2,
-          "total_after": 2,
-          "pos": 15,
-          "delta": 2
-        },
-        {
           "driver_id": "giovinazzi",
           "driver": "Antonio Giovinazzi",
           "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 2,
-          "pos": 16,
+          "pos": 15,
           "delta": 0
+        },
+        {
+          "driver_id": "raikkonen",
+          "driver": "Kimi Räikkönen",
+          "team": "Alfa Romeo",
+          "sprint_pts": null,
+          "race_pts": 2,
+          "total_after": 2,
+          "pos": 16,
+          "delta": 2
         },
         {
           "driver_id": "kevin_magnussen",
@@ -6328,9 +6256,9 @@
           "delta": 0
         },
         {
-          "driver_id": "latifi",
-          "driver": "Nicholas Latifi",
-          "team": "Williams",
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -6338,9 +6266,9 @@
           "delta": 0
         },
         {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
+          "driver_id": "latifi",
+          "driver": "Nicholas Latifi",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -6398,14 +6326,6 @@
           "utc_end": "2020-09-26T01:00:00+00:00",
           "msk_date": "26.09.2020",
           "msk_time": "03:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2020-09-27T11:10:00+00:00",
-          "utc_end": "2020-09-27T13:10:00+00:00",
-          "msk_date": "27.09.2020",
-          "msk_time": "14:10"
         }
       ],
       "qualifying_results": [
@@ -6974,8 +6894,8 @@
           "delta": 4
         },
         {
-          "driver_id": "raikkonen",
-          "driver": "Kimi Räikkönen",
+          "driver_id": "giovinazzi",
+          "driver": "Antonio Giovinazzi",
           "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
@@ -6984,8 +6904,8 @@
           "delta": 0
         },
         {
-          "driver_id": "giovinazzi",
-          "driver": "Antonio Giovinazzi",
+          "driver_id": "raikkonen",
+          "driver": "Kimi Räikkönen",
           "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
@@ -7004,9 +6924,9 @@
           "delta": 0
         },
         {
-          "driver_id": "latifi",
-          "driver": "Nicholas Latifi",
-          "team": "Williams",
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -7014,9 +6934,9 @@
           "delta": 0
         },
         {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
+          "driver_id": "russell",
+          "driver": "George Russell",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -7024,8 +6944,8 @@
           "delta": 0
         },
         {
-          "driver_id": "russell",
-          "driver": "George Russell",
+          "driver_id": "latifi",
+          "driver": "Nicholas Latifi",
           "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
@@ -7074,14 +6994,6 @@
           "utc_end": "2020-10-10T01:00:00+00:00",
           "msk_date": "10.10.2020",
           "msk_time": "03:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2020-10-11T13:10:00+00:00",
-          "utc_end": "2020-10-11T15:10:00+00:00",
-          "msk_date": "11.10.2020",
-          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [
@@ -7660,24 +7572,24 @@
           "delta": 1
         },
         {
-          "driver_id": "raikkonen",
-          "driver": "Kimi Räikkönen",
-          "team": "Alfa Romeo",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 2,
-          "pos": 16,
-          "delta": 0
-        },
-        {
           "driver_id": "grosjean",
           "driver": "Romain Grosjean",
           "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 2,
           "total_after": 2,
-          "pos": 17,
+          "pos": 16,
           "delta": 2
+        },
+        {
+          "driver_id": "raikkonen",
+          "driver": "Kimi Räikkönen",
+          "team": "Alfa Romeo",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 2,
+          "pos": 17,
+          "delta": 0
         },
         {
           "driver_id": "kevin_magnussen",
@@ -7690,8 +7602,8 @@
           "delta": 0
         },
         {
-          "driver_id": "latifi",
-          "driver": "Nicholas Latifi",
+          "driver_id": "russell",
+          "driver": "George Russell",
           "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
@@ -7700,8 +7612,8 @@
           "delta": 0
         },
         {
-          "driver_id": "russell",
-          "driver": "George Russell",
+          "driver_id": "latifi",
+          "driver": "Nicholas Latifi",
           "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
@@ -7750,14 +7662,6 @@
           "utc_end": "2020-10-24T01:00:00+00:00",
           "msk_date": "24.10.2020",
           "msk_time": "03:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2020-10-25T12:10:00+00:00",
-          "utc_end": "2020-10-25T14:10:00+00:00",
-          "msk_date": "25.10.2020",
-          "msk_time": "15:10"
         }
       ],
       "qualifying_results": [
@@ -8336,9 +8240,9 @@
           "delta": 0
         },
         {
-          "driver_id": "raikkonen",
-          "driver": "Kimi Räikkönen",
-          "team": "Alfa Romeo",
+          "driver_id": "grosjean",
+          "driver": "Romain Grosjean",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 2,
@@ -8346,9 +8250,9 @@
           "delta": 0
         },
         {
-          "driver_id": "grosjean",
-          "driver": "Romain Grosjean",
-          "team": "Haas F1 Team",
+          "driver_id": "raikkonen",
+          "driver": "Kimi Räikkönen",
+          "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 2,
@@ -8366,8 +8270,8 @@
           "delta": 0
         },
         {
-          "driver_id": "latifi",
-          "driver": "Nicholas Latifi",
+          "driver_id": "russell",
+          "driver": "George Russell",
           "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
@@ -8376,8 +8280,8 @@
           "delta": 0
         },
         {
-          "driver_id": "russell",
-          "driver": "George Russell",
+          "driver_id": "latifi",
+          "driver": "Nicholas Latifi",
           "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
@@ -8426,14 +8330,6 @@
           "utc_end": "2020-10-31T01:00:00+00:00",
           "msk_date": "31.10.2020",
           "msk_time": "03:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2020-11-01T12:10:00+00:00",
-          "utc_end": "2020-11-01T14:10:00+00:00",
-          "msk_date": "01.11.2020",
-          "msk_time": "15:10"
         }
       ],
       "qualifying_results": [
@@ -9002,24 +8898,24 @@
           "delta": 0
         },
         {
-          "driver_id": "raikkonen",
-          "driver": "Kimi Räikkönen",
-          "team": "Alfa Romeo",
-          "sprint_pts": null,
-          "race_pts": 2,
-          "total_after": 4,
-          "pos": 15,
-          "delta": 2
-        },
-        {
           "driver_id": "giovinazzi",
           "driver": "Antonio Giovinazzi",
           "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 1,
           "total_after": 4,
-          "pos": 16,
+          "pos": 15,
           "delta": 1
+        },
+        {
+          "driver_id": "raikkonen",
+          "driver": "Kimi Räikkönen",
+          "team": "Alfa Romeo",
+          "sprint_pts": null,
+          "race_pts": 2,
+          "total_after": 4,
+          "pos": 16,
+          "delta": 2
         },
         {
           "driver_id": "grosjean",
@@ -9102,14 +8998,6 @@
           "utc_end": "2020-11-14T01:00:00+00:00",
           "msk_date": "14.11.2020",
           "msk_time": "03:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2020-11-15T10:10:00+00:00",
-          "utc_end": "2020-11-15T12:10:00+00:00",
-          "msk_date": "15.11.2020",
-          "msk_time": "13:10"
         }
       ],
       "qualifying_results": [
@@ -9678,8 +9566,8 @@
           "delta": 0
         },
         {
-          "driver_id": "raikkonen",
-          "driver": "Kimi Räikkönen",
+          "driver_id": "giovinazzi",
+          "driver": "Antonio Giovinazzi",
           "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
@@ -9688,8 +9576,8 @@
           "delta": 0
         },
         {
-          "driver_id": "giovinazzi",
-          "driver": "Antonio Giovinazzi",
+          "driver_id": "raikkonen",
+          "driver": "Kimi Räikkönen",
           "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
@@ -9778,14 +9666,6 @@
           "utc_end": "2020-11-28T01:00:00+00:00",
           "msk_date": "28.11.2020",
           "msk_time": "03:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2020-11-29T14:10:00+00:00",
-          "utc_end": "2020-11-29T16:10:00+00:00",
-          "msk_date": "29.11.2020",
-          "msk_time": "17:10"
         }
       ],
       "qualifying_results": [
@@ -10354,8 +10234,8 @@
           "delta": 0
         },
         {
-          "driver_id": "raikkonen",
-          "driver": "Kimi Räikkönen",
+          "driver_id": "giovinazzi",
+          "driver": "Antonio Giovinazzi",
           "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
@@ -10364,8 +10244,8 @@
           "delta": 0
         },
         {
-          "driver_id": "giovinazzi",
-          "driver": "Antonio Giovinazzi",
+          "driver_id": "raikkonen",
+          "driver": "Kimi Räikkönen",
           "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
@@ -10394,8 +10274,8 @@
           "delta": 0
         },
         {
-          "driver_id": "russell",
-          "driver": "George Russell",
+          "driver_id": "latifi",
+          "driver": "Nicholas Latifi",
           "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
@@ -10404,8 +10284,8 @@
           "delta": 0
         },
         {
-          "driver_id": "latifi",
-          "driver": "Nicholas Latifi",
+          "driver_id": "russell",
+          "driver": "George Russell",
           "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
@@ -10454,14 +10334,6 @@
           "utc_end": "2020-12-05T01:00:00+00:00",
           "msk_date": "05.12.2020",
           "msk_time": "03:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2020-12-06T17:10:00+00:00",
-          "utc_end": "2020-12-06T19:10:00+00:00",
-          "msk_date": "06.12.2020",
-          "msk_time": "20:10"
         }
       ],
       "qualifying_results": [
@@ -11020,8 +10892,8 @@
           "delta": 6
         },
         {
-          "driver_id": "raikkonen",
-          "driver": "Kimi Räikkönen",
+          "driver_id": "giovinazzi",
+          "driver": "Antonio Giovinazzi",
           "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
@@ -11030,8 +10902,8 @@
           "delta": 0
         },
         {
-          "driver_id": "giovinazzi",
-          "driver": "Antonio Giovinazzi",
+          "driver_id": "raikkonen",
+          "driver": "Kimi Räikkönen",
           "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
@@ -11060,9 +10932,9 @@
           "delta": 0
         },
         {
-          "driver_id": "latifi",
-          "driver": "Nicholas Latifi",
-          "team": "Williams",
+          "driver_id": "pietro_fittipaldi",
+          "driver": "Pietro Fittipaldi",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -11080,9 +10952,9 @@
           "delta": 0
         },
         {
-          "driver_id": "pietro_fittipaldi",
-          "driver": "Pietro Fittipaldi",
-          "team": "Haas F1 Team",
+          "driver_id": "latifi",
+          "driver": "Nicholas Latifi",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -11130,14 +11002,6 @@
           "utc_end": "2020-12-12T01:00:00+00:00",
           "msk_date": "12.12.2020",
           "msk_time": "03:00"
-        },
-        {
-          "name": "Race",
-          "name_ru": "Гонка",
-          "utc_start": "2020-12-13T13:10:00+00:00",
-          "utc_end": "2020-12-13T15:10:00+00:00",
-          "msk_date": "13.12.2020",
-          "msk_time": "16:10"
         }
       ],
       "qualifying_results": [
@@ -11706,8 +11570,8 @@
           "delta": 0
         },
         {
-          "driver_id": "raikkonen",
-          "driver": "Kimi Räikkönen",
+          "driver_id": "giovinazzi",
+          "driver": "Antonio Giovinazzi",
           "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
@@ -11716,8 +11580,8 @@
           "delta": 0
         },
         {
-          "driver_id": "giovinazzi",
-          "driver": "Antonio Giovinazzi",
+          "driver_id": "raikkonen",
+          "driver": "Kimi Räikkönen",
           "team": "Alfa Romeo",
           "sprint_pts": null,
           "race_pts": 0,
@@ -11746,9 +11610,9 @@
           "delta": 0
         },
         {
-          "driver_id": "latifi",
-          "driver": "Nicholas Latifi",
-          "team": "Williams",
+          "driver_id": "pietro_fittipaldi",
+          "driver": "Pietro Fittipaldi",
+          "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -11756,9 +11620,9 @@
           "delta": 0
         },
         {
-          "driver_id": "pietro_fittipaldi",
-          "driver": "Pietro Fittipaldi",
-          "team": "Haas F1 Team",
+          "driver_id": "latifi",
+          "driver": "Nicholas Latifi",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,

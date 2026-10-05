@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Формула 1 — Календарь и зачёты</title>
+    <meta name="description" content="Календарь Формулы 1, все сессии по МСК, личный и командный зачёты, результаты квалификаций и гонок.">
+    <meta name="theme-color" content="#0a0a0f">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -142,6 +147,84 @@
 
         .loading { text-align: center; padding: 40px; color: var(--text-dim); }
 
+        /* ── Live View ── */
+        .live-page { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
+        .live-head { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+        .live-head h2 { font-size: 1.25rem; }
+        .live-head .sub { color: var(--text-dim); font-size: 0.82rem; }
+        .live-pickers { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+        .live-pickers select { background: var(--surface2); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 7px 10px; font-size: 0.82rem; max-width: 190px; }
+        .live-pickers label { color: var(--text-dim); font-size: 0.75rem; display: block; margin-bottom: 3px; }
+        .live-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 16px; }
+        @media (max-width: 860px) { .live-grid { grid-template-columns: 1fr; } }
+
+        .track-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 12px; padding: 14px; }
+        .track-svg { width: 100%; height: auto; display: block; background: #0d0d14; border-radius: 8px; }
+        .track-outline { fill: none; stroke: #3a3a4e; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+        .track-outline-inner { fill: none; stroke: #14141d; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+        .car { cursor: pointer; transition: none; }
+        .car-hit { cursor: pointer; }
+        .car circle.body { stroke: #0a0a0f; stroke-width: 1.5; }
+        .car text { font-size: 11px; font-weight: 800; fill: #0a0a0f; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+        .car.sel circle.body { stroke: #fff; stroke-width: 3; }
+        .car.sel circle.ring { fill: none; stroke: #fff; stroke-width: 1.5; opacity: .8; }
+
+        .playbar { display: flex; align-items: center; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+        .play-btn { background: var(--red); color: #fff; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1rem; flex-shrink: 0; }
+        .play-btn:hover { background: var(--red-dim); }
+        .scrub { flex: 1; min-width: 140px; accent-color: var(--red); }
+        .speed-sel { background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 5px 8px; font-size: 0.78rem; }
+        .clock { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 0.9rem; color: var(--red); min-width: 62px; text-align: right; }
+
+        .live-panel { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 13px 15px; margin-bottom: 12px; }
+        .live-panel h3 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-dim); margin-bottom: 10px; }
+        .live-row { display: flex; align-items: center; gap: 9px; padding: 5px 0; font-size: 0.82rem; border-bottom: 1px solid var(--border); }
+        .live-row:last-child { border-bottom: none; }
+        .live-row .p { width: 20px; font-weight: 800; color: var(--text-dim); font-variant-numeric: tabular-nums; }
+        .live-row .nm { flex: 1; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .live-row .stops { font-variant-numeric: tabular-nums; color: var(--yellow); font-weight: 700; min-width: 26px; text-align: right; }
+        .live-row .gap { font-variant-numeric: tabular-nums; color: var(--text-dim); font-size: 0.78rem; min-width: 58px; text-align: right; }
+        .live-row.head { font-size: 0.7rem; text-transform: uppercase; color: var(--text-dim); letter-spacing: 0.4px; }
+        .live-row.head .nm { font-weight: 700; }
+
+        .wx-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 9px; }
+        .wx-cell { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 9px 11px; text-align: center; }
+        .wx-cell .v { font-size: 1.15rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+        .wx-cell .k { font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 2px; }
+        .wx-chart { width: 100%; height: 56px; margin-top: 10px; display: block; }
+        .rain-on { color: var(--blue); }
+
+        .rc-list, .radio-list { max-height: 210px; overflow-y: auto; }
+        .rc-item { padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 0.78rem; display: flex; gap: 8px; }
+        .rc-item:last-child { border-bottom: none; }
+        .rc-item .t { color: var(--text-dim); font-variant-numeric: tabular-nums; flex-shrink: 0; font-size: 0.72rem; padding-top: 1px; }
+        .rc-item.flag-yellow .m { color: var(--yellow); }
+        .rc-item.flag-red .m { color: var(--red); font-weight: 700; }
+        .rc-item.sc .m { color: var(--green); font-weight: 700; }
+        .rc-item .m { color: var(--text); }
+
+        .radio-item { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 0.78rem; }
+        .radio-item:last-child { border-bottom: none; }
+        .radio-item audio { height: 30px; flex: 1; min-width: 0; }
+        .radio-item .t { color: var(--text-dim); font-variant-numeric: tabular-nums; font-size: 0.72rem; flex-shrink: 0; }
+        .radio-empty, .empty-note { color: var(--text-dim); font-size: 0.8rem; padding: 8px 0; }
+
+        .live-svc-banner { display: none; background: rgba(0,217,126,.08); border: 1px solid rgba(0,217,126,.3); border-radius: 8px; padding: 8px 13px; font-size: 0.78rem; color: var(--green); margin-bottom: 12px; font-variant-numeric: tabular-nums; }
+        .live-svc-banner.on { display: block; }
+        .live-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--green); margin-right: 6px; animation: pulse 1.6s ease-in-out infinite; }
+        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+
+        .live-note { background: rgba(225,6,0,.08); border: 1px solid rgba(225,6,0,.3); border-radius: 8px; padding: 10px 13px; font-size: 0.78rem; color: #ffb4b0; margin-bottom: 12px; }
+        .live-note.info { background: rgba(0,163,255,.07); border-color: rgba(0,163,255,.28); color: #a8d8ff; }
+        .drv-detail { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 11px 13px; margin-top: 12px; font-size: 0.8rem; }
+        .drv-detail .nm { font-weight: 700; font-size: 0.9rem; }
+        .drv-detail .kv { display: flex; justify-content: space-between; padding: 3px 0; color: var(--text-dim); }
+        .drv-detail .kv b { color: var(--text); font-variant-numeric: tabular-nums; }
+        .lap-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 4px; font-size: 0.78rem; }
+        .lap-list .r { display: flex; gap: 7px; padding: 3px 0; }
+        .lap-list .r .c { font-weight: 700; min-width: 34px; }
+        .lap-list .r .v { color: var(--text-dim); font-variant-numeric: tabular-nums; }
+
         footer { text-align: center; padding: 40px 0; color: var(--text-dim); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 40px; }
         footer a { color: var(--text-dim); text-decoration: underline; }
 
@@ -155,7 +238,7 @@
         }
     </style>
 </head>
-<body>
+<body data-live-service="">
     <header>
         <div class="container">
             <div class="header-top">
@@ -176,6 +259,7 @@
             <div class="tab" data-view="races" data-filter="upcoming">Предстоящие</div>
             <div class="tab" data-view="races" data-filter="completed">Завершённые</div>
             <div class="tab" data-view="standings">Зачёты</div>
+            <div class="tab" data-view="live">Live View</div>
             <button class="expand-toggle" id="expandToggle" onclick="toggleAllCards()">Развернуть все</button>
         </div>
         <div id="content"><div class="loading">Загрузка...</div></div>
@@ -191,8 +275,8 @@
 
     <footer>
         <div class="container">
-            <p>Данные: <a href="https://api.jolpi.ca/ergast/f1">Jolpica F1 API</a> (бесплатно, без ключа) · Время по МСК (UTC+3)</p>
-            <p style="margin-top:6px">Автоматическое обновление через GitHub Actions · Создано с помощью Perplexity Computer</p>
+            <p>Данные: <a href="https://api.jolpi.ca/ergast/f1">Jolpica F1 API</a> · <a href="https://openf1.org">OpenF1</a> (бесплатно, без ключа) · Время по МСК (UTC+3)</p>
+            <p style="margin-top:6px">Автоматическое обновление через GitHub Actions</p>
         </div>
     </footer>
 
@@ -225,6 +309,9 @@
         let currentYear = new Date().getFullYear();
         let currentView = 'races';
         let currentFilter = 'all';
+        let countdownTimer = null;      // единственный активный таймер обратного отсчёта
+        let seasonAbort = null;         // контроллер отмены текущей загрузки сезона
+        let seasonLoadToken = 0;        // защита от гонки: побеждает только последний запрос
 
         async function loadIndex() {
             try {
@@ -257,19 +344,32 @@
         }
 
         async function loadSeason(year) {
+            const token = ++seasonLoadToken;
+
+            // Отменяем предыдущий запрос: иначе запоздавший ответ перезапишет актуальный
+            if (seasonAbort) seasonAbort.abort();
+            seasonAbort = new AbortController();
+
             document.getElementById('content').innerHTML = '<div class="loading">Загрузка сезона ' + year + '...</div>';
             document.getElementById('yearBadge').textContent = 'Сезон ' + year;
 
             // Hide ICS download for non-current years
             document.getElementById('icsDownload').style.display = (year === (indexData?.current_year || new Date().getFullYear())) ? 'flex' : 'none';
 
+            let data;
             try {
-                const res = await fetch(`data/seasons/${year}.json`);
-                seasonData = await res.json();
+                const res = await fetch(`data/seasons/${year}.json`, { signal: seasonAbort.signal });
+                data = await res.json();
             } catch (e) {
+                // Запрос был отменён более свежим — молча уступаем ему
+                if (token !== seasonLoadToken || e.name === 'AbortError') return;
                 document.getElementById('content').innerHTML = '<div class="loading">Данные за ' + year + ' год недоступны</div>';
                 return;
             }
+
+            // Пока грузились, успели запросить другой сезон — этот результат уже неактуален
+            if (token !== seasonLoadToken) return;
+            seasonData = data;
 
             renderNextRace();
             renderContent();
@@ -284,7 +384,11 @@
                 const raceSession = r.sessions.find(s => s.name === 'Race');
                 return raceSession && new Date(raceSession.utc_start) > now;
             });
-            if (!upcoming) { banner.innerHTML = '<div class="next-race-info"><h3>Сезон завершён</h3></div>'; return; }
+            if (!upcoming) {
+                banner.innerHTML = '<div class="next-race-info"><h3>Сезон завершён</h3></div>';
+                banner.dataset.raceTime = '';   // не оставляем время прошлого сезона
+                return;
+            }
             const raceSession = upcoming.sessions.find(s => s.name === 'Race');
             const raceDate = new Date(raceSession.utc_start);
             banner.innerHTML = `
@@ -299,17 +403,28 @@
             banner.dataset.raceTime = raceDate.toISOString();
         }
 
+        function stopCountdown() {
+            if (countdownTimer !== null) {
+                clearInterval(countdownTimer);
+                countdownTimer = null;
+            }
+        }
+
         function startCountdown() {
+            // Гарантируем ровно один таймер: старый всегда снимается
+            stopCountdown();
             function update() {
                 const banner = document.getElementById('nextRaceBanner');
                 if (!banner || !banner.dataset.raceTime) return;
-                const diff = new Date(banner.dataset.raceTime) - new Date();
-                if (diff <= 0) return;
-                const d = Math.floor(diff / 86400000), h = Math.floor((diff % 86400000) / 3600000), m = Math.floor((diff % 3600000) / 60000), s = Math.floor((diff % 60000) / 1000);
                 const timer = document.getElementById('countdownTimer');
-                if (timer) timer.textContent = `${d}д ${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+                if (!timer) return;
+                const diff = new Date(banner.dataset.raceTime) - new Date();
+                if (diff <= 0) { timer.textContent = 'Гонка идёт'; return; }
+                const d = Math.floor(diff / 86400000), h = Math.floor((diff % 86400000) / 3600000), m = Math.floor((diff % 3600000) / 60000), s = Math.floor((diff % 60000) / 1000);
+                timer.textContent = `${d}д ${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
             }
-            update(); setInterval(update, 1000);
+            update();
+            countdownTimer = setInterval(update, 1000);
         }
 
         function renderContent() {
@@ -317,10 +432,671 @@
             if (currentView === 'standings') {
                 if (expandBtn) expandBtn.style.display = 'none';
                 renderStandingsPage();
+            } else if (currentView === 'live') {
+                if (expandBtn) expandBtn.style.display = 'none';
+                renderLiveView();
             } else {
-                if (expandBtn) expandBtn.style.display = '';
+                if (expandBtn) {
+                    expandBtn.style.display = '';
+                    expandBtn.textContent = 'Развернуть все';
+                }
                 renderRaces();
             }
+        }
+
+        // ─── Live View (precomputed from OpenF1 by scripts/update_live_data.py) ───
+        const SESSION_RU_LIVE = {
+            'Practice 1': 'Свободная практика 1', 'Practice 2': 'Свободная практика 2',
+            'Practice 3': 'Свободная практика 3', 'Qualifying': 'Квалификация',
+            'Sprint Qualifying': 'Спринт-квалификация', 'Sprint': 'Спринт', 'Race': 'Гонка',
+            'Day 1': 'День 1', 'Day 2': 'День 2', 'Day 3': 'День 3',
+        };
+        let liveIndex = null;
+        let liveSession = null;
+        let liveCircuit = null;
+        let liveFrame = 0;
+        let livePlaying = false;
+        let liveSpeed = 5;
+        let liveRaf = null;
+        let liveLastTs = 0;
+        let liveSelDriver = null;
+        let liveSnap = null;        // latest snapshot from the live service
+        let liveIsLive = false;     // current session is running right now
+
+        function fmtLap(sec) {
+            if (sec == null) return '—';
+            const m = Math.floor(sec / 60), s = sec - m * 60;
+            return `${m}:${s.toFixed(3).padStart(6, '0')}`;
+        }
+        function escapeHtml(s) {
+            return String(s).replace(/[&<>"']/g, c =>
+                ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+        }
+        function mskTime(iso) {
+            if (!iso) return '—';
+            return new Date(iso).toLocaleTimeString('ru-RU', {
+                timeZone: 'Europe/Moscow', hour: '2-digit', minute: '2-digit',
+            });
+        }
+
+        // ─── Live service (optional, real-time via FastF1 proxy) ───
+        // When live-service is running, the Live View polls it for genuine
+        // real-time data. If it is absent or failing, the tab silently falls
+        // back to the precomputed OpenF1 data (~30 min delay).
+        // Optional real-time service. Configure it by filling the data-live-service
+        // attribute on <body>, e.g. data-live-service="https://f1-live.fly.dev".
+        // Empty means "static OpenF1 data only".
+        function liveSvcUrl() {
+            const v = document.body.dataset.liveService;
+            return v ? v.replace(/\/+$/, '') : null;
+        }
+        let liveSvcTimer = null;
+        let liveSvcFail = 0;
+
+        async function fetchLiveSnapshot() {
+            if (!liveSvcUrl()) return null;
+            try {
+                const res = await fetch(liveSvcUrl() + '/api/snapshot', { cache: 'no-store' });
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                liveSnap = await res.json();
+                liveIsLive = !!liveSnap.is_live;
+                liveSvcFail = 0;
+                return liveSnap;
+            } catch (e) {
+                if (++liveSvcFail === 3) {
+                    console.warn('Live View: сервис недоступен, работаем на статических данных', e);
+                    stopLiveService();
+                }
+                return null;
+            }
+        }
+
+        // Build a session object straight from the live snapshot, for the case
+        // where the running session has no precomputed file yet (it only lands
+        // in data/live/sessions/ ~30 min after the flag).
+        function synthSession(snap) {
+            const drivers = (snap.drivers || []).map(d => ({
+                n: d.n, code: d.code, name: d.name, team: d.team,
+                team_color: d.team_color, color: d.color || d.team_color,
+            }));
+            return {
+                session_key: snap.session_key,
+                session_name: snap.session_name,
+                is_live_session: true,
+                sample_seconds: 3,
+                has_positions: false,
+                drivers,
+                frame_times: [],
+                frames: [],
+                position_events: [],
+                stints: [],
+                final_tyres: snap.tyres || {},
+                session_result: [],
+                best_laps: Object.entries(snap.best_laps || {}).map(([n, v]) => ({
+                    n: +n, lap: v.lap, time: v.time, s1: null, s2: null, s3: null,
+                })),
+                pit: [], pit_counts: {}, radio: [], race_control: snap.race_control || [],
+                weather: snap.weather ? [snap.weather] : [],
+            };
+        }
+
+        function startLiveService() {
+            if (!liveSvcUrl()) return;
+            stopLiveService();
+            fetchLiveSnapshot();
+            liveSvcTimer = setInterval(async () => {
+                const snap = await fetchLiveSnapshot();
+                if (snap) applyLiveSnapshot(snap);
+            }, 3000);
+        }
+        function stopLiveService() {
+            if (liveSvcTimer) { clearInterval(liveSvcTimer); liveSvcTimer = null; }
+        }
+
+        function rawToGrid(x, y, bounds) {
+            // Same transform the static pipeline uses, driven by the circuit
+            // file's padded bounds so live and replay cars land identically.
+            const [x0, y0, x1, y1] = bounds;
+            const w = Math.max(x1 - x0, 1), h = Math.max(y1 - y0, 1);
+            return [
+                Math.max(0, Math.min(1000, Math.round((x - x0) / w * 1000))),
+                Math.max(0, Math.min(1000, Math.round((y1 - y) / h * 1000))),
+            ];
+        }
+
+        function applyLiveSnapshot(snap) {
+            const s = liveSession;
+            if (!s || !liveCircuit) return;
+            if (String(snap.session_key) !== String(s.session_key)) return;  // different session
+
+            // Merge live values onto the existing driver list / panels.
+            const pos = {}, tyre = {};
+            Object.entries(snap.positions || {}).forEach(([n, p]) => pos[n] = p);
+            Object.entries(snap.tyres || {}).forEach(([n, c]) => tyre[n] = c);
+            s.livePositions = pos;
+            s.liveTyres = tyre;
+            s.liveGaps = snap.gaps || {};
+            s.liveSpeed = {};
+
+            const g = document.getElementById('lvCars');
+            if (g) {
+                (snap.cars || []).forEach(c => {
+                    const di = s.drivers.findIndex(d => d.n === c.n);
+                    if (di < 0) return;
+                    s.liveSpeed[di] = c;
+                    const el = g.querySelector(`.car[data-i="${di}"]`);
+                    if (!el) return;
+                    const [gx, gy] = rawToGrid(c.x, c.y, liveCircuit.bounds);
+                    el.style.display = '';
+                    el.setAttribute('transform', `translate(${gx},${gy})`);
+                });
+            }
+
+            const banner = document.getElementById('lvLiveBanner');
+            if (banner) {
+                banner.classList.add('on');
+                const on = document.getElementById('lvPlay');
+                banner.innerHTML = `<span class="live-dot"></span> Реальное время · ` +
+                    `обновлено ${new Date(snap.generated).toLocaleTimeString('ru-RU', {
+                        timeZone: 'Europe/Moscow', hour: '2-digit', minute: '2-digit', second: '2-digit' })}` +
+                    (snap.track_status ? ` · трасса: ${snap.track_status}` : '') +
+                    (snap.is_live ? '' : ' <span style="opacity:.7">(сессия завершилась)</span>');
+            }
+            if (typeof updateLiveOrder === 'function') updateLiveOrder(liveFrame);
+        }
+
+        async function renderLiveView() {
+            const box = document.getElementById('content');
+            stopLivePlayback();
+            box.innerHTML = '<div class="loading">Загрузка Live View…</div>';
+
+            try {
+                if (!liveIndex) {
+                    const r = await fetch('data/live/index.json');
+                    liveIndex = await r.json();
+                }
+            } catch (e) {
+                box.innerHTML = `<div class="live-page">
+                    <div class="live-note">Данные Live View ещё не собраны. Файл
+                    <code>data/live/index.json</code> создаёт GitHub Actions
+                    (скрипт <code>scripts/update_live_data.py</code>) — обычно в течение
+                    часа после первого запуска.</div>
+                    <div class="loading">Нет данных</div></div>`;
+                return;
+            }
+
+            const withDetail = liveIndex.sessions.filter(s => s.detail);
+            if (withDetail.length === 0) {
+                box.innerHTML = `<div class="live-page">
+                    <div class="live-note info">Индекс содержит
+                    ${liveIndex.sessions.length} сессий с ${liveIndex.min_year} года, но
+                    детальные файлы ещё не собраны. Они появляются автоматически.</div>
+                    <div class="loading">Подробных сессий пока нет</div></div>`;
+                return;
+            }
+
+            box.innerHTML = `
+                <div class="live-page" >
+                    <div class="live-head">
+                        <div>
+                            <h2 id="lvTitle">Live View</h2>
+                            <div class="sub" id="lvSub"></div>
+                        </div>
+                        <div class="live-pickers">
+                            <div><label for="lvYear">Сезон</label><select id="lvYear"></select></div>
+                            <div><label for="lvEvent">Этап</label><select id="lvEvent"></select></div>
+                            <div><label for="lvSession">Сессия</label><select id="lvSession"></select></div>
+                        </div>
+                    </div>
+                    <div class="live-svc-banner" id="lvLiveBanner"></div>
+                    <div class="live-note info">
+                        Данные: <a href="https://openf1.org" style="color:#8ecbff">OpenF1</a>
+                        (бесплатно, без ключа). Бесплатный тариф отдаёт сессию через ~30&nbsp;минут
+                        после её окончания, поэтому это ретроспектива, а не прямой эфир.
+                        Данные обновляются каждые 30&nbsp;минут.
+                    </div>
+                    <div id="lvBody"><div class="loading">Загрузка сессии…</div></div>
+                </div>`;
+
+            // A session that is running right now has no precomputed file yet,
+            // so inject it as a synthetic entry the user can select.
+            const snap = await fetchLiveSnapshot();
+            if (snap && snap.session_key) {
+                if (!withDetail.some(s => String(s.key) === String(snap.session_key))) {
+                    withDetail.unshift({
+                        key: snap.session_key,
+                        name: snap.session_name || 'Live',
+                        start: snap.date_start,
+                        end: null,
+                        year: new Date(snap.date_start || Date.now()).getFullYear(),
+                        circuit_key: snap.circuit_key,
+                        circuit: snap.event || 'Live',
+                        country: '',
+                        detail: true,
+                        isLiveSession: true,
+                    });
+                }
+            }
+
+            const years = [...new Set(withDetail.map(s => s.year))].sort((a, b) => b - a);
+            const ySel = document.getElementById('lvYear');
+            ySel.innerHTML = years.map(y => `<option value="${y}">${y}</option>`).join('');
+            ySel.onchange = () => { fillEvents(); fillSessions(); loadLiveSession(+ySel.value); };
+
+            function fillEvents() {
+                const y = +ySel.value;
+                const evs = [];
+                withDetail.filter(s => s.year === y).forEach(s => {
+                    const k = s.circuit_key + '|' + s.circuit;
+                    if (!evs.find(e => e.k === k)) evs.push({ k, circuit: s.circuit, country: s.country });
+                });
+                const eSel = document.getElementById('lvEvent');
+                eSel.innerHTML = evs.map(e => `<option value="${e.k}">${e.circuit} ${e.country}</option>`).join('');
+                eSel.onchange = () => { fillSessions(); loadLiveSession(+ySel.value); };
+            }
+
+            function fillSessions() {
+                const y = +ySel.value;
+                const ek = document.getElementById('lvEvent').value;
+                const ck = ek.split('|')[0];
+                const list = withDetail.filter(s => s.year === y && s.circuit_key == ck);
+                const sSel = document.getElementById('lvSession');
+                sSel.innerHTML = list.map(s =>
+                    `<option value="${s.key}">${SESSION_RU_LIVE[s.name] || s.name} · ${mskTime(s.start)}</option>`
+                ).join('');
+                sSel.onchange = () => loadLiveSession(+ySel.value);
+            }
+
+            fillEvents(); fillSessions();
+            await loadLiveSession(+ySel.value);
+        }
+
+        async function loadLiveSession(year) {
+            const key = document.getElementById('lvSession').value;
+            const meta = liveIndex.sessions.find(s => s.key == key)
+                || (liveSnap && String(liveSnap.session_key) === String(key)
+                        ? { key, name: liveSnap.session_name, circuit: liveSnap.event,
+                            circuit_key: liveSnap.circuit_key, start: liveSnap.date_start,
+                            isLiveSession: true }
+                        : null);
+            if (!meta) return;
+            const body = document.getElementById('lvBody');
+            body.innerHTML = '<div class="loading">Загрузка сессии…</div>';
+            stopLivePlayback();
+
+            try {
+                let sr, cr;
+                if (meta.isLiveSession && liveSnap) {
+                    sr = synthSession(liveSnap);
+                    const cr2 = await fetch(`data/live/circuits/${meta.circuit_key}.json`)
+                        .then(r => r.ok ? r.json() : null).catch(() => null);
+                    cr = cr2;
+                } else {
+                    [sr, cr] = await Promise.all([
+                        fetch(`data/live/sessions/${key}.json`).then(r => r.json()),
+                        fetch(`data/live/circuits/${meta.circuit_key}.json`)
+                            .then(r => r.ok ? r.json() : null).catch(() => null),
+                    ]);
+                }
+                liveSession = sr;
+                liveCircuit = cr;
+                liveFrame = 0;
+                liveSelDriver = null;
+                document.getElementById('lvTitle').textContent =
+                    `${meta.circuit} — ${SESSION_RU_LIVE[meta.name] || meta.name}` +
+                    (meta.isLiveSession ? ' · LIVE' : '');
+                document.getElementById('lvSub').textContent =
+                    `${new Date(meta.start).toLocaleDateString('ru-RU', { timeZone: 'Europe/Moscow' })} · ` +
+                    `данные ${meta.isLiveSession ? 'F1 live timing (FastF1)' : 'OpenF1'}`;
+                renderLiveBody();
+                startLiveService();
+            } catch (e) {
+                console.error('Live View: не удалось построить сессию', e);
+                body.innerHTML = '<div class="loading">Не удалось загрузить сессию</div>';
+            }
+        }
+
+        function renderLiveBody() {
+            const s = liveSession;
+            const box = document.getElementById('lvBody');
+            const nFrames = s.frames.length;
+            const isLiveOnly = !nFrames;
+
+            box.innerHTML = `
+                <div class="live-grid">
+                    <div>
+                        <div class="track-card">
+                            <svg class="track-svg" id="lvTrack" viewBox="0 0 1000 1000"></svg>
+                            ${isLiveOnly ? '' : `
+                            <div class="playbar">
+                                <button class="play-btn" id="lvPlay" title="Пуск / пауза">▶</button>
+                                <input type="range" class="scrub" id="lvScrub" min="0" max="${Math.max(0, nFrames - 1)}" value="0">
+                                <span class="clock" id="lvClock">—</span>
+                                <select class="speed-sel" id="lvSpeed">
+                                    <option value="1">1×</option>
+                                    <option value="5" selected>5×</option>
+                                    <option value="20">20×</option>
+                                    <option value="60">60×</option>
+                                </select>
+                            </div>`}
+                            <div id="lvDrvDetail"></div>
+                        </div>
+                    </div>
+                    <div>
+                        ${renderLiveOrder(s)}
+                        ${renderLiveResult(s)}
+                        ${renderLiveWeather(s)}
+                        ${renderLivePit(s)}
+                        ${renderLiveRC(s)}
+                        ${renderLiveRadio(s)}
+                    </div>
+                </div>`;
+
+            drawTrackOutline();
+            createCars();
+            bindLiveControls();
+            if (nFrames) setLiveFrame(0); else updateLiveOrder(0);
+        }
+
+        function svgPath(pts) {
+            return pts.map((p, i) => (i ? 'L' : 'M') + p[0] + ' ' + p[1]).join(' ');
+        }
+
+        function drawTrackOutline() {
+            const svg = document.getElementById('lvTrack');
+            if (!svg || !liveCircuit) { svg.innerHTML = '<text x="500" y="500" fill="#666" text-anchor="middle">Контур трассы недоступен</text>'; return; }
+            const d = svgPath(liveCircuit.outline);
+            svg.innerHTML =
+                `<path class="track-outline" d="${d}"/>` +
+                `<path class="track-outline-inner" d="${d}"/>` +
+                `<g id="lvCars"></g>`;
+        }
+
+        function createCars() {
+            const g = document.getElementById('lvCars');
+            if (!g) return;
+            g.innerHTML = liveSession.drivers.map((d, i) => `
+                <g class="car" data-i="${i}" style="display:none">
+                    <circle class="ring" r="15"></circle>
+                    <circle class="body" r="11" fill="${d.color}"></circle>
+                    <text y="0.5">${escapeHtml(String(d.code || d.n)).slice(0, 3)}</text>
+                </g>`).join('');
+            g.querySelectorAll('.car').forEach(el => {
+                el.addEventListener('click', () => {
+                    const i = +el.dataset.i;
+                    liveSelDriver = liveSelDriver === i ? null : i;
+                    g.querySelectorAll('.car').forEach(c => c.classList.remove('sel'));
+                    if (liveSelDriver !== null) el.classList.add('sel');
+                    renderDrvDetail();
+                });
+            });
+        }
+
+        function bindLiveControls() {
+            const play = document.getElementById('lvPlay');
+            const scrub = document.getElementById('lvScrub');
+            const speed = document.getElementById('lvSpeed');
+            if (play) play.onclick = () => livePlaying ? stopLivePlayback() : startLivePlayback();
+            if (scrub) scrub.oninput = () => { stopLivePlayback(); setLiveFrame(+scrub.value); };
+            if (speed) { liveSpeed = +speed.value; speed.onchange = () => { liveSpeed = +speed.value; }; }
+        }
+
+        function startLivePlayback() {
+            if (liveRaf) return;
+            const s = liveSession;
+            if (liveFrame >= s.frames.length - 1) liveFrame = 0;
+            livePlaying = true;
+            document.getElementById('lvPlay').textContent = '❚❚';
+            liveLastTs = 0;
+            const tick = (ts) => {
+                if (!livePlaying) return;
+                if (liveLastTs) {
+                    const stepMs = (s.sample_seconds / liveSpeed) * 1000;
+                    const elapsed = ts - liveLastTs;
+                    if (elapsed >= stepMs) {
+                        const jump = Math.floor(elapsed / stepMs);
+                        liveLastTs = ts;
+                        setLiveFrame(liveFrame + jump);
+                    }
+                } else liveLastTs = ts;
+                liveRaf = requestAnimationFrame(tick);
+            };
+            liveRaf = requestAnimationFrame(tick);
+        }
+
+        function stopLivePlayback() {
+            livePlaying = false;
+            if (liveRaf) { cancelAnimationFrame(liveRaf); liveRaf = null; }
+            const b = document.getElementById('lvPlay');
+            if (b) b.textContent = '▶';
+        }
+
+        function setLiveFrame(i) {
+            const s = liveSession;
+            if (!s || !s.frames.length) return;
+            const max = s.frames.length - 1;
+            if (i >= max) { i = max; stopLivePlayback(); }
+            if (i < 0) i = 0;
+            liveFrame = i;
+
+            const frame = s.frames[i];
+            s.drivers.forEach((d, di) => {
+                const g = document.querySelector(`.car[data-i="${di}"]`);
+                if (!g) return;
+                const x = frame[di * 2], y = frame[di * 2 + 1];
+                if (x == null || x < 0) { g.style.display = 'none'; return; }
+                g.style.display = '';
+                g.setAttribute('transform', `translate(${x},${y})`);
+            });
+
+            const scrub = document.getElementById('lvScrub');
+            if (scrub) scrub.value = i;
+            const clock = document.getElementById('lvClock');
+            if (clock) clock.textContent = mskTime(s.frame_times[i]);
+            updateLiveOrder(i);
+        }
+
+        function renderLiveOrder(s) {
+            return `<div class="live-panel">
+                <h3>Позиции на трассе</h3>
+                <div class="live-row head"><span class="p">#</span><span class="nm">Пилот</span>
+                    <span class="stops">Шины</span><span class="gap">Пит</span></div>
+                <div id="lvOrder"></div>
+            </div>`;
+        }
+
+        const TYRE_RU = { SOFT: 'софт', MEDIUM: 'медиум', HARD: 'хард',
+                          INTERMEDIATE: 'инт', WET: 'дождь', UNKNOWN: '—' };
+
+        function positionsAt(i) {
+            // Prefer live positions from the service when they exist for this
+            // session; otherwise replay the sparse `position_events` from
+            // OpenF1 (which records only changes, so carry the last value).
+            const s = liveSession;
+            if (s.livePositions && Object.keys(s.livePositions).length) {
+                const out = new Array(s.drivers.length).fill(0);
+                s.drivers.forEach((d, di) => { out[di] = s.livePositions[d.n] || 0; });
+                return out;
+            }
+            const out = new Array(s.drivers.length).fill(0);
+            const ev = s.position_events || [];
+            for (let k = 0; k < ev.length; k++) {
+                if (ev[k][0] > i) break;
+                out[ev[k][1]] = ev[k][2];
+            }
+            return out;
+        }
+
+        function updateLiveOrder(i) {
+            const host = document.getElementById('lvOrder');
+            if (!host) return;
+            const s = liveSession;
+            const frame = s.frames.length ? s.frames[i] : null;
+            const liveCars = {};
+            (liveSnap && liveSnap.cars || []).forEach(c => { liveCars[c.n] = c; });
+            const pos = positionsAt(i);
+            const rows = s.drivers.map((d, di) => ({
+                d, di,
+                onTrack: frame
+                    ? (frame[di * 2] != null && frame[di * 2] >= 0)
+                    : !!liveCars[d.n],
+                pos: pos[di] || 0,
+                tyre: (s.liveTyres && s.liveTyres[d.n]) ||
+                      (s.final_tyres && s.final_tyres[d.n]) || null,
+                stops: s.pit_counts[String(d.n)] || 0,
+                speed: liveCars[d.n] ? liveCars[d.n].speed : null,
+            }));
+            rows.sort((a, b) => (a.pos - b.pos) || (b.onTrack - a.onTrack) || (a.d.n - b.d.n));
+            const gaps = s.liveGaps || {};
+            const live = !!(s.livePositions && Object.keys(s.livePositions).length);
+            host.innerHTML = rows.map(r => `
+                <div class="live-row" style="${r.onTrack ? '' : 'opacity:.45'}">
+                    <span class="p">${r.pos ? r.pos : '·'}</span>
+                    <span class="nm"><span class="driver-color" style="background:${r.d.team_color}"></span>${r.d.name}</span>
+                    <span class="stops">${TYRE_RU[r.tyre] || '—'}</span>
+                    <span class="gap">${
+                        live && r.pos > 1 && gaps[r.d.n] != null
+                            ? fmtLiveGap(gaps[r.d.n])
+                            : (r.stops || '—')}</span>
+                </div>`).join('');
+        }
+
+        function fmtLiveGap(v) {
+            if (typeof v !== 'number') return String(v);
+            if (v > 60) return `+${Math.floor(v / 60)}:${(v % 60).toFixed(1).padStart(4, '0')}`;
+            return `+${v.toFixed(3)}`;
+        }
+
+        function renderLiveResult(s) {
+            const r = s.session_result || [];
+            if (!r.length) return '';
+            const byNum = {};
+            s.drivers.forEach(d => byNum[d.n] = d);
+            const rows = r.slice().sort((a, b) => (a.pos || 99) - (b.pos || 99)).slice(0, 10);
+            return `<div class="live-panel">
+                <h3>Итоговая классификация</h3>
+                ${rows.map(x => {
+                    const d = byNum[x.n] || { code: '#' + x.n, name: '#' + x.n, team_color: '#666' };
+                    const gap = x.pos === 1 ? 'победитель'
+                        : typeof x.gap === 'number' ? '+' + x.gap.toFixed(3)
+                        : (x.gap || '—');
+                    return `<div class="live-row">
+                        <span class="p">${x.pos || '—'}</span>
+                        <span class="nm"><span class="driver-color" style="background:${d.team_color}"></span>${d.name}
+                            <span style="color:var(--text-dim);font-weight:400">· ${x.laps || '—'} кр.</span></span>
+                        <span class="stops"></span>
+                        <span class="gap">${gap}${x.dnf ? ' DNF' : ''}${x.dsq ? ' DSQ' : ''}</span>
+                    </div>`;
+                }).join('')}
+            </div>`;
+        }
+
+        function renderDrvDetail() {
+            const host = document.getElementById('lvDrvDetail');
+            if (!host) return;
+            if (liveSelDriver === null) { host.innerHTML = ''; return; }
+            const d = liveSession.drivers[liveSelDriver];
+            const bl = liveSession.best_laps.find(l => l.n === d.n);
+            const pitStops = liveSession.pit.filter(p => p.n === d.n);
+            const myStints = (liveSession.stints || []).filter(s => s.n === d.n);
+            const tyre = (liveSession.final_tyres || {})[d.n];
+            const resPos = (liveSession.session_result || []).find(r => r.n === d.n);
+            const avgStop = pitStops.filter(p => p.dur).length
+                ? pitStops.filter(p => p.dur).reduce((a, p) => a + p.dur, 0) / pitStops.filter(p => p.dur).length
+                : null;
+            host.innerHTML = `<div class="drv-detail">
+                <div class="nm"><span class="driver-color" style="background:${d.team_color}"></span>${d.name} <span style="color:var(--text-dim);font-weight:400">· ${d.team}</span></div>
+                <div class="kv"><span>Позиция</span><b>${resPos || '—'}</b></div>
+                <div class="kv"><span>Шины на финише</span><b>${TYRE_RU[tyre] || '—'}</b></div>
+                <div class="kv"><span>Лучший круг</span><b>${fmtLap(bl && bl.time)}</b></div>
+                <div class="kv"><span>Секторы S1 / S2 / S3</span><b>${fmtLap(bl && bl.s1)} / ${fmtLap(bl && bl.s2)} / ${fmtLap(bl && bl.s3)}</b></div>
+                <div class="kv"><span>Пит-стопов</span><b>${pitStops.length || 0}</b></div>
+                <div class="kv"><span>Средний стоп</span><b>${avgStop ? avgStop.toFixed(1) + ' с' : '—'}</b></div>
+                <div class="kv"><span>Круги на питах</span><b>${pitStops.map(p => p.lap == null ? '—' : p.lap).join(', ') || '—'}</b></div>
+                ${myStints.length ? `<div class="kv"><span>Стинты</span><b>${myStints.map(s =>
+                    `${TYRE_RU[s.compound] || s.compound || '—'} ${s.from}–${s.to == null ? '…' : s.to}`).join(', ')}</b></div>` : ''}
+            </div>`;
+        }
+
+        function renderLiveWeather(s) {
+            const w = s.weather[s.weather.length - 1] || {};
+            const cell = (v, k, cls) => `<div class="wx-cell"><div class="v ${cls || ''}">${v}</div><div class="k">${k}</div></div>`;
+            return `<div class="live-panel">
+                <h3>Погода на трассе</h3>
+                <div class="wx-grid">
+                    ${cell(w.air != null ? w.air + '°' : '—', 'Воздух')}
+                    ${cell(w.track != null ? w.track + '°' : '—', 'Асфальт')}
+                    ${cell(w.humidity != null ? w.humidity + '%' : '—', 'Влажность')}
+                    ${cell(w.wind_speed != null ? w.wind_speed + ' км/ч' : '—', 'Ветер')}
+                    ${cell(w.rainfall > 0 ? 'Да' : 'Нет', 'Дождь', w.rainfall > 0 ? 'rain-on' : '')}
+                    ${cell(w.pressure != null ? Math.round(w.pressure) + '' : '—', 'мм рт.ст.')}
+                </div>
+                ${renderTempChart(s.weather)}
+            </div>`;
+        }
+
+        function renderTempChart(weather) {
+            const pts = weather.filter(w => w.air != null);
+            if (pts.length < 2) return '';
+            const xs = pts.map(p => new Date(p.t).getTime());
+            const x0 = Math.min(...xs), x1 = Math.max(...xs);
+            const all = pts.flatMap(p => [p.air, p.track]).filter(v => v != null);
+            const lo = Math.min(...all) - 2, hi = Math.max(...all) + 2;
+            const px = t => ((t - x0) / Math.max(x1 - x0, 1)) * 280;
+            const py = v => 50 - ((v - lo) / Math.max(hi - lo, 1)) * 46;
+            const line = key => pts.map((p, i) => `${i ? 'L' : 'M'}${px(xs[i]).toFixed(1)} ${py(p[key]).toFixed(1)}`).join(' ');
+            return `<svg class="wx-chart" viewBox="0 0 280 56" preserveAspectRatio="none">
+                <path d="${line('air')}" fill="none" stroke="#00a3ff" stroke-width="1.6"/>
+                <path d="${line('track')}" fill="none" stroke="#e10600" stroke-width="1.6"/>
+            </svg>
+            <div style="font-size:.68rem;color:var(--text-dim);margin-top:2px">
+                <span style="color:#00a3ff">■</span> воздух &nbsp; <span style="color:#e10600">■</span> асфальт
+            </div>`;
+        }
+
+        function renderLivePit(s) {
+            const rows = s.drivers.map(d => ({ d, c: s.pit_counts[String(d.n)] || 0 }))
+                .sort((a, b) => b.c - a.c).slice(0, 8);
+            if (!rows.some(r => r.c > 0)) return `<div class="live-panel"><h3>Пит-стопы</h3>
+                <div class="radio-empty">Пит-стопов не зафиксировано</div></div>`;
+            return `<div class="live-panel"><h3>Пит-стопы</h3>
+                ${rows.map(r => `<div class="live-row">
+                    <span class="p"></span>
+                    <span class="nm"><span class="driver-color" style="background:${r.d.team_color}"></span>${r.d.name}</span>
+                    <span class="stops">${r.c || '—'}</span><span class="gap"></span>
+                </div>`).join('')}</div>`;
+        }
+
+        function renderLiveRC(s) {
+            const items = s.race_control.slice(-40).reverse();
+            if (!items.length) return `<div class="live-panel"><h3>Дирекция гонки</h3>
+                <div class="radio-empty">Сообщений нет</div></div>`;
+            return `<div class="live-panel"><h3>Дирекция гонки</h3><div class="rc-list">
+                ${items.map(r => {
+                    const msg = (r.msg || '').toUpperCase();
+                    let cls = '';
+                    if (r.flag === 'YELLOW' || msg.includes('YELLOW')) cls = 'flag-yellow';
+                    else if (r.flag === 'RED' || msg.includes('RED FLAG')) cls = 'flag-red';
+                    else if (msg.includes('SAFETY CAR') || msg.includes('VIRTUAL')) cls = 'sc';
+                    return `<div class="rc-item ${cls}"><span class="t">${mskTime(r.t)}</span><span class="m">${r.msg || r.flag || ''}</span></div>`;
+                }).join('')}</div></div>`;
+        }
+
+        function renderLiveRadio(s) {
+            if (!s.radio.length) return `<div class="live-panel"><h3>Радио команды</h3>
+                <div class="radio-empty">Переговоров нет</div></div>`;
+            const byNum = {};
+            s.drivers.forEach(d => byNum[d.n] = d);
+            return `<div class="live-panel"><h3>Радио команды (${s.radio.length})</h3><div class="radio-list">
+                ${s.radio.slice().reverse().map(r => {
+                    const d = byNum[r.n] || { code: '#' + r.n, team_color: '#666' };
+                    return `<div class="radio-item">
+                        <span class="driver-color" style="background:${d.team_color}"></span>
+                        <span class="t" style="min-width:38px">${d.code}</span>
+                        <span class="t">${mskTime(r.t)}</span>
+                        <audio controls preload="none" src="${r.url}"></audio>
+                    </div>`;
+                }).join('')}</div></div>`;
         }
 
         function renderStandingsPage() {
@@ -503,7 +1279,28 @@
 
         function toggleCard(round) {
             const card = document.getElementById('card-' + round);
-            if (card) card.classList.toggle('collapsed');
+            if (card) {
+                card.classList.toggle('collapsed');
+                syncExpandToggle();
+            }
+        }
+
+        function toggleAllCards() {
+            const cards = document.querySelectorAll('.race-card');
+            if (cards.length === 0) return;
+            // If at least one card is collapsed -> expand all, otherwise collapse all
+            const shouldExpand = Array.from(cards).some(c => c.classList.contains('collapsed'));
+            cards.forEach(c => c.classList.toggle('collapsed', !shouldExpand));
+            syncExpandToggle();
+        }
+
+        // Keep the toggle button label in sync with the actual card state
+        function syncExpandToggle() {
+            const btn = document.getElementById('expandToggle');
+            if (!btn) return;
+            const cards = document.querySelectorAll('.race-card');
+            const anyCollapsed = Array.from(cards).some(c => c.classList.contains('collapsed'));
+            btn.textContent = anyCollapsed ? 'Развернуть все' : 'Свернуть все';
         }
 
         function toggleDetails(round, btn) {
