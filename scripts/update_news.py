@@ -242,7 +242,16 @@ _BODY_P_RE = re.compile(
 _ANY_P_RE = re.compile(r"<p[^>]*>(.*?)</p>", re.S | re.I)
 _TAG_RE = re.compile(r"<[^>]+>")
 _SKIP_PREFIXES = ("Image", "Getty", "©", "All images", "Read next", "Sign In",
-                  "Live like an F1 insider", "Follow us", "Download the F1 app")
+                  "Live like an F1 insider", "Follow us", "Download the F1 app",
+                  "Membership", "Member benefits", "Curated insider")
+
+# Site chrome sometimes lands inside <p> tags. A prefix check was not enough:
+# the menu paragraph begins with "(opens in a new tab)Sign In…", and the fallback
+# "any <p>" matcher grabbed that instead of the article, producing two
+# paragraphs of navigation where the story should have been.
+_JUNK_RE = re.compile(
+    r"opens in a new tab|ScheduleResultsStandings|Open menu|Search website|"
+    r"Cookie|Accept all|Sign InSubscribe|F1 Unlocked", re.I)
 
 TYPE_RU = {
     "News": "Новость", "Opinion": "Мнение", "Feature": "Фича",
@@ -270,6 +279,8 @@ def fetch_body(entry: dict) -> bool:
             text = _TAG_RE.sub("", raw)
             text = html.unescape(text).replace("’", "'").strip()
             if len(text) < 40 or text.startswith(_SKIP_PREFIXES):
+                continue
+            if _JUNK_RE.search(text):
                 continue
             if text in paras:                 # mobile + desktop copies
                 continue
