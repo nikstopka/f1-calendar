@@ -1,0 +1,28 @@
+name: Update F1 Data (extra slot)
+
+# GitHub does not honour the cron interval literally. With "*/30 * * * *" the
+# measured gap between runs was about seven hours, not thirty minutes — the
+# scheduler batches and delays cron jobs on public repositories. The only lever
+# left from inside the repository is a second slot at a different offset.
+#
+# Whether it actually doubles the rate is not something I can promise: GitHub
+# may throttle the repository as a whole. It costs nothing to keep both — if a
+# run finds nothing new it has nothing to commit, and the update job is
+# idempotent.
+
+on:
+  schedule:
+    - cron: "13,43 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    # The whole job lives in update-data.yml. Only the trigger lives here, so
+    # there is one implementation to maintain rather than two that drift.
+    uses: ./.github/workflows/update-data.yml

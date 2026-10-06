@@ -7,6 +7,10 @@ on:
   workflow_run:
     workflows:
       - Update F1 Data
+      # The extra cron slot commits under its own workflow name. Without this
+      # entry its commits would sit in the repository unpublished, and the site
+      # would only pick them up on the next unrelated push.
+      - Update F1 Data (extra slot)
     types:
       - completed
 

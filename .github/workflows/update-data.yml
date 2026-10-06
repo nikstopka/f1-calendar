@@ -10,9 +10,18 @@ on:
         description: "Refresh historical seasons too"
         type: boolean
         default: false
+  # Also callable from another workflow, so the extra schedule slot below runs
+  # this same job instead of a second copy that could drift apart from it.
+  workflow_call:
 
 permissions:
   contents: write
+
+concurrency:
+  group: update-data
+  # Queue rather than cancel: a half-finished run must not push over a
+  # complete one, and two runs committing at once would race on git push.
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -32,7 +41,9 @@ jobs:
 
       - name: Fetch F1 data and generate files
         run: |
-          if [ "${{ github.event.inputs.refresh_history }}" = "true" ]; then
+          # `inputs` covers both workflow_dispatch and workflow_call, unlike
+          # github.event.inputs, which is empty when called from another file.
+          if [ "${{ inputs.refresh_history }}" = "true" ]; then
             python scripts/update_f1_data.py --refresh-history
           else
             python scripts/update_f1_data.py
