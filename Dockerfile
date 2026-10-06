@@ -42,7 +42,14 @@ EXPOSE 8080
 # Порт берётся из $PORT, потому что Render задаёт его через окружение (по
 # умолчанию 10000) и проверяет здоровье именно там. На Railway переменная не
 # задана, поэтому подставляется 8080 — настройки хостов не нужны.
-HEALTHCHECK --interval=30s --timeout=10s --start-period=20s --retries=3 \
-    CMD python -c "import os,urllib.request,sys; p=os.environ.get('PORT','8080'); sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:'+p+'/health', timeout=8).status==200 else 1)"
+#
+# HEALTHCHECK намеренно НЕ задан. Замер показал, что с ним контейнер на Render
+# не засыпает: и Docker сам ходит в /health каждые 30 секунд, и платформа
+# опрашивает сервис, а такого входящего трафика достаточно, чтобы бесплатный
+# инстанс никогда не простаивал. Здесь засыпание важнее проверки готовности:
+# если контейнер упал, фронтенд и так молча откатится на статические данные.
+# Включить обратно — раскомментировать строки ниже.
+# HEALTHCHECK --interval=30s --timeout=10s --start-period=20s --retries=3 \
+#     CMD python -c "import os,urllib.request,sys; p=os.environ.get('PORT','8080'); sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:'+p+'/health', timeout=8).status==200 else 1)"
 
 CMD ["sh", "-c", "exec uvicorn app:app --host 0.0.0.0 --port ${PORT:-8080} --workers 1"]

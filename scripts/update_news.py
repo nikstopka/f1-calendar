@@ -54,9 +54,19 @@ SOURCE_URL = "https://www.formula1.com/en/latest"
 TRANSLATE_URL = "https://api.mymemory.translated.net/get"
 UA = "F1-Calendar-Bot/1.2 (+github pages static site; personal, non-commercial)"
 
-MAX_ARTICLES = 24
+MAX_ARTICLES = 60
+# formula1.com serves 16 articles per page and the archive runs to at least
+# 40 pages. Fetching all of it on every run would be rude and pointless: news
+# older than a few days is never read here. Five pages keeps each run at ten
+# requests, and the extra pages only matter right after a weekend.
+PAGES_TO_FETCH = 5
+# MyMemory's anonymous quota is a few thousand words per day. A cold backfill of
+# 60 titles plus a dozen descriptions lands around 1 400 words, which fits; and
+# because translations are cached, later runs only pay for genuinely new text.
+DESC_TRANSLATE_LIMIT = 12
 TRANSLATE_TIMEOUT = 20
 PAUSE_BETWEEN_TRANSLATIONS = 0.35
+PAUSE_BETWEEN_PAGES = 1.5
 
 
 def log(msg: str) -> None:
@@ -141,42 +151,56 @@ def article_url(slug: str, article_id: str) -> str:
 
 
 def scrape_articles() -> list:
-    html = fetch(SOURCE_URL, timeout=60)
-    log(f"страница получена: {len(html)} Б")
-    objects = _extract_objects(html, MAX_ARTICLES * 2)
-
+    """Walk the paginated list and collect unique articles."""
     seen = set()
     out = []
-    for o in objects:
-        slug = o.get("slug") or ""
-        title = clean_text(o.get("title"))
-        if not slug or not title or slug in seen:
-            continue
-        seen.add(slug)
-        thumb = o.get("thumbnail") or {}
-        image = thumb.get("image") or {}
-        # The article object carries a ready-made transformed image URL. Building
-        # one from `path` does not work: the Cloudinary-style transform string
-        # differs per image, and a guessed prefix 404s.
-        image_url = image.get("url") or ""
-        aid = o.get("id") or ""
-        out.append({
-            "id": aid,
-            "title": title,
-            "title_ru": "",
-            "description": clean_text(o.get("metaDescription"))[:400],
-            "description_ru": "",
-            "type": (o.get("articleType") or "News").strip(),
-            "published": o.get("realUpdatedAt") or o.get("updatedAt") or "",
-            "url": article_url(slug, aid),
-            "image": image_url,
-            "image_alt": clean_text(image.get("title"))[:200],
-        })
-        if len(out) >= MAX_ARTICLES:
+    for page in range(1, PAGES_TO_FETCH + 1):
+        url = SOURCE_URL if page == 1 else f"{SOURCE_URL}?page={page}"
+        try:
+            html = fetch(url, timeout=60)
+        except Exception as exc:
+            log(f"страница {page} не получена ({type(exc).__name__}), "
+                f"останавливаюсь на {len(out)} статьях")
             break
+        objects = _extract_objects(html, MAX_ARTICLES * 2)
+        added = 0
+        for o in objects:
+            slug = o.get("slug") or ""
+            title = clean_text(o.get("title"))
+            if not slug or not title or slug in seen:
+                continue
+            seen.add(slug)
+            thumb = o.get("thumbnail") or {}
+            image = thumb.get("image") or {}
+            # The article object carries a ready-made transformed image URL.
+            # Building one from `path` does not work: the Cloudinary-style
+            # transform differs per image, and a guessed prefix 404s.
+            image_url = image.get("url") or ""
+            aid = o.get("id") or ""
+            out.append({
+                "id": aid,
+                "title": title,
+                "title_ru": "",
+                "description": clean_text(o.get("metaDescription"))[:300],
+                "description_ru": "",
+                "type": (o.get("articleType") or "News").strip(),
+                "published": o.get("realUpdatedAt") or o.get("updatedAt") or "",
+                "url": article_url(slug, aid),
+                "image": image_url,
+                "image_alt": clean_text(image.get("title"))[:160],
+            })
+            added += 1
+            if len(out) >= MAX_ARTICLES * 2:
+                break
+        log(f"страница {page}: объектов {len(objects)}, добавлено {added}")
+        if added == 0:
+            break
+        if page < PAGES_TO_FETCH:
+            time.sleep(PAUSE_BETWEEN_PAGES)
 
     out.sort(key=lambda a: a["published"], reverse=True)
-    log(f"статей разобрано: {len(out)}")
+    out = out[:MAX_ARTICLES]
+    log(f"статей уникальных: {len(seen)}, сохранено: {len(out)}")
     return out
 
 
@@ -203,15 +227,24 @@ def translate(text: str) -> str:
 
 
 def apply_translations(articles: list, cache: dict) -> dict:
-    """Fill in Russian text, reusing the cache so only new strings are sent."""
+    """Fill in Russian text, reusing the cache so only new strings are sent.
+
+    Titles are translated for every article because they are short and they are
+    what the tab shows. Descriptions run to ~40 words each, so only the newest
+    few are sent — that keeps a cold backfill inside the free daily quota while
+    still giving the top cards a lead paragraph.
+    """
     cache = dict(cache or {})
     hits = 0
     misses = 0
-    for a in articles:
-        for field, key in (("title", "title"), ("description", "description")):
+    for index, a in enumerate(articles):
+        wanted = [("title", True)]
+        if index < DESC_TRANSLATE_LIMIT:
+            wanted.append(("description", True))
+        for field, _ in wanted:
             src = a.get(field) or ""
             dst_field = field + "_ru"
-            cached = cache.get(key + "::" + src)
+            cached = cache.get(field + "::" + src)
             if cached:
                 a[dst_field] = cached
                 hits += 1
@@ -222,7 +255,7 @@ def apply_translations(articles: list, cache: dict) -> dict:
             ru = translate(src)
             if ru:
                 a[dst_field] = ru
-                cache[key + "::" + src] = ru
+                cache[field + "::" + src] = ru
                 misses += 1
                 time.sleep(PAUSE_BETWEEN_TRANSLATIONS)
             else:
