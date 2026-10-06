@@ -90,6 +90,8 @@ MAX_NEW_PER_RUN = 40
 # Article bodies are a second request per article, so only a few are fetched per
 # run. The newest articles are the ones worth opening.
 BODY_FETCH_PER_RUN = 8
+# Ceiling on stored blocks per article (paragraphs plus photos and videos).
+BLOCKS_LIMIT = 60
 # Rough ceiling on the stored archive; oldest entries fall off the end.
 MAX_STORED = 500
 
@@ -308,24 +310,23 @@ def _flight_text(page_html: str) -> str:
         pos = end
 
 
-def _rsc_paragraphs(page_html: str) -> list:
-    """Article paragraphs read from the React payload instead of the DOM.
+def _clean_text(raw: str) -> str:
+    """One payload string -> plain prose, paragraph breaks preserved."""
+    body = raw.replace("\\_", "_").replace("\\`", "`")
+    body = re.sub(r"(?:\\n)+", "\n\n", body)
+    body = _MD_LINK_RE.sub(r"\1", body)
+    return re.sub(r"[*_`>#]", "", body)
 
-    The server-rendered HTML only carries the opening paragraphs; the rest of
-    the story is streamed as React text nodes. Reading those nodes returns the
-    article in full, which is what a reader sees in the app — no account needed.
-    Several nodes repeat the opening, so paragraphs are deduplicated by prefix.
-    """
-    flight = _flight_text(page_html)
-    if not flight:
-        return []
+
+def _flight_text_nodes(flight: str) -> list:
+    """Every `\"text\":\"…\"` value with its offset in the stream."""
     decoder = json.JSONDecoder()
     nodes = []
     pos = 0
     while True:
         i = flight.find('"text"', pos)
         if i < 0:
-            break
+            return nodes
         pos = i + 6
         colon = flight.find(":", i, i + 12)
         if colon == -1:
@@ -342,43 +343,119 @@ def _rsc_paragraphs(page_html: str) -> list:
         pos = end
         if isinstance(value, str) and value.strip():
             nodes.append((j, value))
-    if not nodes:
+
+
+def _article_blocks(page_html: str) -> list:
+    """Article as an ordered list of text, photo and video blocks.
+
+    Order is the point: the payload streams the body in the sequence the page
+    renders it, so sorting every node by its offset reproduces the original
+    layout — a photo appears between the two paragraphs it separates.
+
+    Media is confined to the span of the article's own text nodes. The stream
+    also carries navigation logos and related-article cards, which live outside
+    that span and would otherwise end up inside the story.
+    """
+    flight = _flight_text(page_html)
+    if not flight:
         return []
-    nodes.sort()
-    body = "\n\n".join(value for _, value in nodes)
-    body = body.replace("\\_", "_").replace("\\`", "`")
-    body = re.sub(r"(?:\\n)+", "\n\n", body)
-    body = _MD_LINK_RE.sub(r"\1", body)
-    body = re.sub(r"[*_`>#]", "", body)
-    paras = []
+    text_nodes = _flight_text_nodes(flight)
+    if not text_nodes:
+        return []
+    lo = min(at for at, _ in text_nodes)
+    hi = max(at for at, _ in text_nodes)
+
+    found = []            # (offset, sequence, kind, payload)
+
+    for at, raw in text_nodes:
+        seq = 0
+        for chunk in _clean_text(raw).split("\n\n"):
+            text = re.sub(r"\s+", " ", chunk).strip()
+            if not text:
+                continue
+            found.append((at, seq, "text", text))
+            seq += 1
+
+    # Inline photographs arrive as ImageCard blocks: the file in "src", the
+    # description in "alt", and the written caption in the card footer.
+    for m in re.finditer(r"ImageCard-module_imagecard", flight):
+        if not (lo <= m.start() <= hi):
+            continue
+        seg = flight[m.start():m.start() + 1600]
+        src = re.search(r'"src":"(https://media\.formula1\.com[^"]+)"', seg)
+        if not src:
+            continue
+        alt = re.search(r'"alt":"([^"]{3,300})"', seg)
+        cap = re.search(r'ImageCard-module_footer__[^"]*","children":'
+                        r'"([^"]{3,300})"', seg)
+        found.append((m.start(), 0, "image", {
+            "kind": "image",
+            "url": src.group(1),
+            "alt": alt.group(1) if alt else "",
+            "caption": cap.group(1) if cap else "",
+        }))
+
+    # Videos and other embeds: a caption plus a CloudFront still. The site runs
+    # no JavaScript, so the still is shown and the link opens the original —
+    # embedding X's own player would mean shipping a third-party script.
+    for m in re.finditer(r'"contentType":"(atomVideo|atomWidget)"', flight):
+        if not (lo <= m.start() <= hi):
+            continue
+        seg = flight[m.start():m.start() + 1800]
+        cap = re.search(r'"caption":"([^"]{3,300})"', seg)
+        thumb = re.search(r'"thumbnail":\{.*?"(?:path|url)":"(https://[^"]+)"', seg)
+        vid = re.search(r'"videoId":"([^"]+)"', seg)
+        if not thumb and not vid:
+            continue
+        found.append((m.start(), 0, "video", {
+            "kind": "video",
+            "url": thumb.group(1) if thumb else "",
+            "caption": cap.group(1) if cap else "",
+            "video_id": vid.group(1) if vid else "",
+        }))
+
+    found.sort(key=lambda item: (item[0], item[1]))
+
+    blocks = []
     seen = set()
-    for chunk in body.split("\n\n"):
-        text = re.sub(r"\s+", " ", chunk).strip()
-        if len(text) < 40 or _JUNK_RE.search(text):
-            continue
-        if text.startswith(_SKIP_PREFIXES):
-            continue
-        key = text[:80].lower()
-        if key in seen:
-            continue
-        seen.add(key)
-        paras.append(text)
-    return paras
+    for _, _, kind, payload in found:
+        if kind == "text":
+            if len(payload) < 40 or _JUNK_RE.search(payload):
+                continue
+            if payload.startswith(_SKIP_PREFIXES):
+                continue
+            key = payload[:80].lower()
+            if key in seen:        # several nodes repeat the opening
+                continue
+            seen.add(key)
+            blocks.append({"kind": "text", "en": payload})
+        else:
+            if not payload.get("caption") and not payload.get("url"):
+                continue
+            blocks.append(payload)
+    return blocks
+
+
+def _rsc_paragraphs(page_html: str) -> list:
+    """Article paragraphs only — the text blocks of _article_blocks()."""
+    return [b["en"] for b in _article_blocks(page_html) if b["kind"] == "text"]
 
 
 def fetch_body(entry: dict) -> bool:
-    """Download the article text and store it as a list of paragraphs."""
+    """Download the article as ordered blocks: text, photos, videos."""
     try:
         page_html = fetch(entry["url"], timeout=60)
     except Exception as exc:
         log(f"тело не получено ({type(exc).__name__}): {entry['title'][:40]}")
         return False
-    # The payload holds the complete story; the DOM holds only its opening.
-    paras = _rsc_paragraphs(page_html)
+    # The payload holds the complete story with its media; the DOM holds only
+    # the opening paragraphs.
+    blocks = _article_blocks(page_html)
     # Fall back to the DOM only when the payload yielded nothing, so a change
     # of Next.js internals degrades to a partial article instead of none.
-    if not paras:
+    if not blocks:
         for matcher in (_BODY_P_RE, _ANY_P_RE):
+            paras = []
             for raw in matcher.findall(page_html):
                 text = _TAG_RE.sub("", raw)
                 text = html.unescape(text).replace("’", "'").strip()
@@ -390,14 +467,34 @@ def fetch_body(entry: dict) -> bool:
                     continue
                 paras.append(text)
             if paras:
+                blocks = [{"kind": "text", "en": p} for p in paras]
                 break
-    if not paras:
+    if not blocks:
         return False
-    entry["body"] = paras[:40]
-    # Same length as body from the start: the translator writes into it by
-    # index, and a shorter list would raise once a run runs out of budget.
-    entry["body_ru"] = [""] * len(entry["body"])
+    entry["blocks"] = blocks[:BLOCKS_LIMIT]
+    # Same length as blocks from the start: the translator writes into it by
+    # index, and a shorter list would leave the tail untranslatable.
+    entry["blocks_ru"] = [""] * len(entry["blocks"])
     entry["fetched_body"] = True
+    entry["media_done"] = True
+    return True
+
+
+def blocks_from_old(entry: dict) -> bool:
+    """Migrate the pre-media body/body_ru pair into blocks.
+
+    Articles fetched before media support have a paragraph list and no blocks.
+    Converting them keeps their Russian text; the next fetch adds the photos and
+    videos, and the translation cache restores the paragraphs for free.
+    """
+    body = entry.get("body") or []
+    if not body or entry.get("blocks"):
+        return False
+    ru = entry.get("body_ru") or []
+    blocks = [{"kind": "text", "en": p} for p in body]
+    blocks_ru = [ru[i] if i < len(ru) else "" for i in range(len(blocks))]
+    entry["blocks"] = blocks
+    entry["blocks_ru"] = blocks_ru
     return True
 
 
@@ -543,11 +640,15 @@ def translate_articles(articles: list, cache: dict) -> dict:
                 else:
                     fails += 1
 
-        if index >= BODY_TRANSLATE_LIMIT or not a.get("body"):
+        if index >= BODY_TRANSLATE_LIMIT or not a.get("blocks"):
             continue
-        dst_list = a.get("body_ru") or []
-        for si, src in enumerate(a["body"]):
-            src = src.strip()
+        blocks = a["blocks"]
+        dst_list = a.get("blocks_ru") or []
+        for si, block in enumerate(blocks):
+            # A text block is translated whole; a photo or a video contributes
+            # its written caption, and without one there is nothing to translate.
+            src = (block["en"] if block["kind"] == "text"
+                   else (block.get("caption") or "")).strip()
             if not src or si >= len(dst_list):
                 continue
             key = "body::" + src
@@ -596,6 +697,13 @@ h1{font-size:1.7rem;line-height:1.25;margin:12px 0 6px}
 padding-left:12px;margin:10px 0 18px}
 img{width:100%;border-radius:10px;margin:6px 0 18px;display:block}
 .body p{margin:0 0 14px}
+/* Photos and videos sit between the paragraphs they separate, so the figure
+   keeps the article's own rhythm: full width, caption underneath. */
+.body figure{margin:20px 0}
+.body figure img{width:100%;border-radius:8px;display:block;margin:0}
+.body figcaption{margin-top:7px;color:var(--dim);font-size:.82rem;line-height:1.4}
+.body figure.video img{border:1px solid var(--border)}
+.body details.orig figure{margin:16px 0}
 .note{margin-top:28px;padding-top:14px;border-top:1px solid var(--border);
 color:var(--dim);font-size:.82rem}
 /* The original is hidden by default — the Russian text is the reason this page
@@ -678,26 +786,97 @@ def write_feed(articles: list, limit: int = 40) -> int:
     return len(items)
 
 
+_IMG_W_RE = re.compile(r"w_\d+")
+
+
+def _img_sources(url: str) -> tuple:
+    """(src, srcset) with a smaller rendition for narrow screens.
+
+    The CDN encodes the requested width in the path, and the payload always
+    asks for the full 3392px width — about 550 KB per photo, which is a lot for
+    a phone. The same transformation with a smaller width costs roughly a fifth
+    of that. If the URL carries no width, it is used as-is.
+    """
+    m = _IMG_W_RE.search(url)
+    if not m:
+        return url, ""
+    wide = int(m.group(0)[2:])
+    if wide <= 1200:
+        return url, ""
+    small = url[:m.start()] + "w_1200" + url[m.end():]
+    return small, f"{small} 1200w, {url} {wide}w"
+
+
+def _render_blocks(blocks: list, ru_list: list, article_url: str) -> str:
+    """Render blocks in article order, optionally with their Russian text.
+
+    Photos and videos appear between the paragraphs they sit between, exactly
+    where the original page places them. A block with no Russian text falls back
+    to the English one rather than leaving a hole in the article.
+
+    A video is shown as its still with a link to the article, because what the
+    payload carries is a JPEG frame and the player itself lives in X's own
+    embed — bringing that in would mean shipping a third-party script.
+    """
+    out = []
+    for i, b in enumerate(blocks):
+        ru = ru_list[i] if i < len(ru_list) else ""
+        if b["kind"] == "text":
+            text = ru or b.get("en") or ""
+            if text:
+                out.append(f"<p>{html.escape(text)}</p>")
+            continue
+        caption = html.escape(ru or b.get("caption") or "")
+        if b["kind"] == "image":
+            src, srcset = _img_sources(b["url"])
+            extra = (f' srcset="{html.escape(srcset)}" '
+                     'sizes="(max-width: 800px) 100vw, 760px"'
+                     if srcset else "")
+            out.append(
+                f'<figure><img loading="lazy" src="{html.escape(src)}"{extra} '
+                f'alt="{html.escape(b.get("alt") or caption)}">'
+                + (f"<figcaption>{caption}</figcaption>" if caption else "")
+                + "</figure>")
+            continue
+        link = html.escape(article_url)
+        src, srcset = _img_sources(b["url"]) if b.get("url") else ("", "")
+        extra = (f' srcset="{html.escape(srcset)}" '
+                 'sizes="(max-width: 800px) 100vw, 760px"' if srcset else "")
+        still = (f'<a href="{link}" target="_blank" rel="noopener">'
+                 f'<img loading="lazy" src="{html.escape(src)}"{extra} '
+                 f'alt="{caption}"></a>' if b.get("url") else "")
+        note = (f'Видео: {caption} — <a href="{link}" target="_blank" '
+                f'rel="noopener">смотреть на formula1.com</a>' if caption
+                else 'Видео — <a href="{link}" target="_blank" rel="noopener">'
+                     'смотреть на formula1.com</a>'.format(link=link))
+        out.append('<figure class="video">' + still +
+                   f"<figcaption>{note}</figcaption></figure>")
+    return "".join(out)
+
+
 def write_pages(articles: list) -> int:
     """One standalone HTML file per article that has body text."""
     PAGES_DIR.mkdir(parents=True, exist_ok=True)
     written = 0
     for a in articles:
-        # The body text is no longer kept in index.json, so on most runs only
+        # The block text is no longer kept in index.json, so on most runs only
         # the articles fetched in this run are in memory. Rewriting their pages
-        # from an absent body would publish an empty page over a good one.
-        if not a.get("fetched_body") or not a.get("page") or not a.get("body"):
+        # from absent blocks would publish an empty page over a good one.
+        if not a.get("fetched_body") or not a.get("page") or not a.get("blocks"):
             continue
-        ru = [p for p in (a.get("body_ru") or []) if p]
-        paras = ""
+        blocks = a["blocks"]
+        ru_list = a.get("blocks_ru") or []
+        has_ru = any((ru_list[i] if i < len(ru_list) else "")
+                     for i, b in enumerate(blocks) if b["kind"] == "text")
         ru_block = ""
-        if ru:
+        if has_ru:
             # Only render the Russian block when something was actually
             # translated: an empty container just looks like a missing section.
-            paras = ('<div class="body" lang="ru">' +
-                     "".join(f"<p>{html.escape(p)}</p>" for p in ru) + "</div>")
-            ru_block = paras
-        orig_body = "".join(f"<p>{html.escape(p)}</p>" for p in a["body"])
+            ru_block = ('<div class="body" lang="ru">' +
+                        _render_blocks(blocks, ru_list, a["url"]) + "</div>")
+        else:
+            ru_list = []
+        orig = _render_blocks(blocks, ru_list, a["url"])
         stamp = (a.get("published") or "")[:16].replace("T", " ")
         type_ru = TYPE_RU.get(a.get("type") or "", a.get("type") or "News")
         page = f"""<!DOCTYPE html>
@@ -717,7 +896,7 @@ def write_pages(articles: list) -> int:
 <h1>{html.escape(a['title'])}</h1>
 {f'<h1 lang="ru" style="font-size:1.25rem;color:#fff;margin:0 0 4px">{html.escape(a["title_ru"])}</h1>' if a.get('title_ru') else ''}
 {ru_block}
-<div class="body" lang="en">{'<details class="orig"><summary><span class="lbl-open">Показать оригинал</span><span class="lbl-closed">Скрыть оригинал</span></summary>' + orig_body + '</details>' if ru_block else orig_body}</div>
+<div class="body" lang="en">{'<details class="orig"><summary><span class="lbl-open">Показать оригинал</span><span class="lbl-closed">Скрыть оригинал</span></summary>' + orig + '</details>' if ru_block else orig}</div>
 <a href="{html.escape(a['url'])}" target="_blank" rel="noopener">Читать оригинал на formula1.com →</a>
 <div class="note">Русский текст — машинный перевод, оригинал приведён рядом.
 Источник: formula1.com. Некоммерческое личное использование.</div>
@@ -752,11 +931,21 @@ def main() -> int:
             saved = json.loads(BODIES_PATH.read_text(encoding="utf-8"))
             for a in stored:
                 kept = saved.get(a.get("id") or "")
-                if kept:
+                if not kept:
+                    continue
+                blocks = kept.get("blocks")
+                if blocks:
+                    a["blocks"] = blocks
+                    a["blocks_ru"] = kept.get("blocks_ru") or [""] * len(blocks)
+                else:
                     a["body"] = kept.get("body") or []
                     a["body_ru"] = kept.get("body_ru") or []
         except Exception as exc:
             log(f"файл тел не читается ({type(exc).__name__})")
+    # Archive written before media support: paragraph lists become text blocks.
+    migrated = sum(1 for a in stored if blocks_from_old(a))
+    if migrated:
+        log(f"перенесено в блоки: {migrated}")
     try:
         fresh = harvest(known)
     except Exception as exc:
@@ -776,8 +965,12 @@ def main() -> int:
     # again, and the archive stayed headline-only forever. The text itself is
     # checked as well, so an article flagged as fetched but left without a body
     # is retried instead of being trusted forever.
+    #
+    # Articles migrated from the old paragraph-only format are refetched too:
+    # their Russian text survives in blocks_ru and in the translation cache, and
+    # only a fresh fetch can add the photos and videos between the paragraphs.
     need_body = [a for a in articles
-                 if not (a.get("fetched_body") and a.get("body"))]
+                 if not (a.get("fetched_body") and a.get("blocks") and a.get("media_done"))]
     need_body = need_body[:BODY_FETCH_PER_RUN]
     got = 0
     for a in need_body:
@@ -813,11 +1006,15 @@ def main() -> int:
     listing = []
     bodies = {}
     for a in articles:
-        item = {k: v for k, v in a.items() if k not in ("body", "body_ru")}
-        item["body_paras"] = len(a.get("body") or [])
+        item = {k: v for k, v in a.items()
+                if k not in ("body", "body_ru", "blocks", "blocks_ru")}
+        blocks = a.get("blocks") or []
+        item["body_paras"] = sum(1 for b in blocks if b["kind"] == "text")
+        item["media"] = sum(1 for b in blocks if b["kind"] != "text")
         listing.append(item)
-        if a.get("body"):
-            bodies[a["id"]] = {"body": a["body"], "body_ru": a.get("body_ru") or []}
+        if blocks:
+            bodies[a["id"]] = {"blocks": blocks,
+                               "blocks_ru": a.get("blocks_ru") or [""] * len(blocks)}
     BODIES_PATH.write_text(json.dumps(bodies, ensure_ascii=False),
                            encoding="utf-8", newline="\n")
 

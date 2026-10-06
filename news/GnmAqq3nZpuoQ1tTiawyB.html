@@ -26,6 +26,13 @@ h1{font-size:1.7rem;line-height:1.25;margin:12px 0 6px}
 padding-left:12px;margin:10px 0 18px}
 img{width:100%;border-radius:10px;margin:6px 0 18px;display:block}
 .body p{margin:0 0 14px}
+/* Photos and videos sit between the paragraphs they separate, so the figure
+   keeps the article's own rhythm: full width, caption underneath. */
+.body figure{margin:20px 0}
+.body figure img{width:100%;border-radius:8px;display:block;margin:0}
+.body figcaption{margin-top:7px;color:var(--dim);font-size:.82rem;line-height:1.4}
+.body figure.video img{border:1px solid var(--border)}
+.body details.orig figure{margin:16px 0}
 .note{margin-top:28px;padding-top:14px;border-top:1px solid var(--border);
 color:var(--dim);font-size:.82rem}
 /* The original is hidden by default — the Russian text is the reason this page
@@ -52,7 +59,7 @@ details.orig[open] .lbl-closed{display:inline}
 <h1>AS IT HAPPENED: Verstappen wins epic Bahrain GP in Malaysia</h1>
 <h1 lang="ru" style="font-size:1.25rem;color:#fff;margin:0 0 4px">КАК ЭТО СЛУЧИЛОСЬ: Ферстаппен выиграл эпический Гран-при Бахрейна в Малайзии</h1>
 <div class="body" lang="ru"><p>Следите за нашей прямой трансляцией воскресного Гран-при Формулы 1 Gulf Air Bahrain в Малайзии 2026 года.</p></div>
-<div class="body" lang="en"><details class="orig"><summary><span class="lbl-open">Показать оригинал</span><span class="lbl-closed">Скрыть оригинал</span></summary><p>Follow our live coverage of Sunday&#x27;s Formula 1 Gulf Air Bahrain Grand Prix in Malaysia 2026.</p></details></div>
+<div class="body" lang="en"><details class="orig"><summary><span class="lbl-open">Показать оригинал</span><span class="lbl-closed">Скрыть оригинал</span></summary><p>Следите за нашей прямой трансляцией воскресного Гран-при Формулы 1 Gulf Air Bahrain в Малайзии 2026 года.</p></details></div>
 <a href="https://www.formula1.com/en/latest/article/live-coverage-formula-1-gulf-air-bahrain-grand-prix-in-malaysia-2026.GnmAqq3nZpuoQ1tTiawyB" target="_blank" rel="noopener">Читать оригинал на formula1.com →</a>
 <div class="note">Русский текст — машинный перевод, оригинал приведён рядом.
 Источник: formula1.com. Некоммерческое личное использование.</div>
