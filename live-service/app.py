@@ -590,7 +590,7 @@ def _waiting_snapshot() -> dict:
         "feed": feed.status(),
         "drivers": [], "cars": [], "positions": {}, "gaps": {},
         "best_laps": {}, "tyres": {}, "stints": {},
-        "weather": {}, "race_control": [],
+        "weather": {}, "race_control": [], "radio": [],
     }
 
 
@@ -605,7 +605,12 @@ async def poll_loop():
                      and (st["idle_seconds"] or 999) < 90)
             if fresh and feed.state.cars:
                 sk = feed.state.session_info.get("key")
-                circuit_key = _circuit_key_for(str(sk)) if sk else None
+                # SessionInfo carries Meeting.Circuit.Key directly, which is the
+                # same number space OpenF1 uses for circuit_key. Only fall back
+                # to the OpenF1 lookup when that field is missing.
+                circuit_key = feed.state.session_info.get("circuit_key")
+                if circuit_key is None and sk:
+                    circuit_key = _circuit_key_for(str(sk))
                 snap = feed.state.snapshot(circuit_key=circuit_key, is_live=True)
                 _state["session_key"] = str(sk) if sk else _state["session_key"]
                 _state["snapshot"] = snap

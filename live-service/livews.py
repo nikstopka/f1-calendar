@@ -42,6 +42,7 @@ TOPICS = [
     "TimingData",
     "TimingAppData",          # единственный топик со стинтами
     "RaceControlMessages",
+    "TeamRadio",              # ключ "Captures", по одной записи на сообщение
     "TimingStats",
 ]
 

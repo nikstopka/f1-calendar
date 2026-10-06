@@ -517,6 +517,18 @@
                 n: d.n, code: d.code, name: d.name, team: d.team,
                 team_color: d.team_color, color: d.color || d.team_color,
             }));
+            // The service already sends stint numbers and team radio; wiring them
+            // in here is what makes the "Пит-стопы" and "Радио команды" cards
+            // show anything at all while a session is live.
+            const stintMap = snap.stints || {};
+            const pitCounts = {};
+            Object.entries(stintMap).forEach(([n, v]) => {
+                const stops = (v || 0) - 1;      // stint 1 = still on first set
+                if (stops > 0) pitCounts[n] = stops;
+            });
+            const stints = Object.entries(stintMap)
+                .filter(([, v]) => v > 0)
+                .map(([n, v]) => ({ n: +n, number: v, compound: (snap.tyres || {})[n] }));
             return {
                 session_key: snap.session_key,
                 session_name: snap.session_name,
@@ -527,13 +539,14 @@
                 frame_times: [],
                 frames: [],
                 position_events: [],
-                stints: [],
+                stints,
                 final_tyres: snap.tyres || {},
                 session_result: [],
                 best_laps: Object.entries(snap.best_laps || {}).map(([n, v]) => ({
                     n: +n, lap: v.lap, time: v.time, s1: null, s2: null, s3: null,
                 })),
-                pit: [], pit_counts: {}, radio: [], race_control: snap.race_control || [],
+                pit: [], pit_counts: pitCounts, radio: snap.radio || [],
+                race_control: snap.race_control || [],
                 weather: snap.weather ? [snap.weather] : [],
             };
         }

@@ -192,6 +192,10 @@ class LiveState:
         self.track_status: str | None = None
         self.lap_count: dict = {}
         self.race_control: list = []
+        # Team radio captures: {t, n, path}. The audio URL is assembled at
+        # snapshot time because SessionInfo.Path can arrive after the first
+        # radio message.
+        self.radio: list = []
         self.session_info: dict = {}
         self.updated: str | None = None
 
@@ -210,6 +214,7 @@ class LiveState:
             "TrackStatus": self._on_track,
             "LapCount": self._on_lapcount,
             "RaceControlMessages": self._on_rc,
+            "TeamRadio": self._on_team_radio,
             "DriverList": self._on_drivers,
             "SessionInfo": self._on_session_info,
         }.get(topic)
@@ -348,6 +353,34 @@ class LiveState:
                 continue
             self.lap_count = {"current": e.get("CurrentLap"), "total": e.get("TotalLaps")}
 
+    def _on_team_radio(self, data):
+        """Team radio, for the "Радио команды" panel.
+
+        The topic is keyed "Captures", not "Messages" like RaceControlMessages —
+        one entry per line:
+            {"Captures": [{"Utc": "...", "RacingNumber": "6",
+                           "Path": "TeamRadio/HAD_6_20260926_141221.mp3"}]}
+
+        Only the path is stored. The playable URL needs SessionInfo.Path, which
+        on a live feed regularly arrives *after* the first few radio messages, so
+        the URL is built in snapshot() instead.
+        """
+        caps = data.get("Captures") if isinstance(data, dict) else None
+        for c in _as_list(caps):
+            if not isinstance(c, dict):
+                continue
+            path = c.get("Path")
+            if not path:
+                continue
+            try:
+                num = int(c.get("RacingNumber"))
+            except (TypeError, ValueError):
+                continue
+            self.radio.append({"t": c.get("Utc"), "n": num, "path": str(path)})
+        # Baku 2026 had 31 captures in a race. A cap keeps memory flat and is far
+        # above what the panel shows anyway.
+        self.radio = self.radio[-60:]
+
     def _on_rc(self, data):
         for e in _as_list(data.get("Messages") if isinstance(data, dict) else None):
             if not isinstance(e, dict):
@@ -393,16 +426,46 @@ class LiveState:
             }
 
     def _on_session_info(self, data):
-        for e in _as_list(data.get("Entries") if isinstance(data, dict) else None):
+        """Read the session identity.
+
+        SessionInfo is a bare object with no wrapper — verified against the 2026
+        Baku archive, where the payload is
+            {"Meeting": {...}, "Key": 11377, "Type": "Race", "Name": "Race",
+             "StartDate": ..., "Path": "2026/.../2026-09-26_Race/", ...}
+        Some variants nest the same data under "Entries", and an older shape puts
+        the key inside "Gaming". All three are accepted.
+
+        This matters more than it looks: `Key` is the session key OpenF1 uses
+        (so circuit_key can be resolved), and `Path` is what turns a team-radio
+        capture path into a playable audio URL.
+        """
+        if not isinstance(data, dict):
+            return
+        entries = _as_list(data.get("Entries"))
+        if not entries and ("Key" in data or "Gaming" in data or "Path" in data):
+            entries = [data]
+        for e in entries:
+            if not isinstance(e, dict):
+                continue
             gi = e.get("Gaming") or {}
+            meeting = e.get("Meeting") or gi.get("Meeting") or {}
+            key = e.get("Key") or gi.get("Key")
+            name = e.get("Name") or gi.get("Name")
+            path = e.get("Path")
+            if key is None and path is None and name is None:
+                continue
             self.session_info = {
-                "meeting": gi.get("Meeting") or e.get("Meeting"),
+                "meeting": (meeting or {}).get("Key") or gi.get("Meeting"),
                 "session": e.get("Session") or gi.get("Session"),
-                "key": gi.get("Key"),
-                "name": e.get("Name"),
-                "path": e.get("Path"),
+                "key": key,
+                "name": name,
+                "type": e.get("Type"),
+                "status": e.get("SessionStatus"),
+                "path": path,
+                "circuit_key": (meeting or {}).get("Circuit", {}).get("Key"),
             }
-            self.updated = e.get("Utc")
+            if e.get("StartDate"):
+                self.updated = e["StartDate"]
 
     # ── snapshot in the API shape the frontend already consumes ───────────
     def snapshot(self, *, circuit_key=None, is_live=False, extra_drivers=None):
@@ -453,4 +516,26 @@ class LiveState:
             "stints": dict(self.stint),
             "weather": self.weather,
             "race_control": list(reversed(self.race_control)),
+            "radio": self._radio_for_frontend(),
         }
+
+    def _radio_for_frontend(self) -> list:
+        """Turn stored radio paths into playable URLs.
+
+        Captures arrive with a path relative to the session directory
+        ("TeamRadio/XXX_6_20260926_141221.mp3"); SessionInfo.Path supplies the
+        rest. Until that arrives the entries are dropped rather than returned
+        with a broken src, which would make the audio player show an error.
+        """
+        base = self.session_info.get("path")
+        if not base:
+            return []
+        base = str(base).strip("/") + "/"
+        out = []
+        for r in self.radio:
+            out.append({
+                "t": r["t"],
+                "n": r["n"],
+                "url": "https://livetiming.formula1.com/static/" + base + r["path"],
+            })
+        return list(reversed(out))

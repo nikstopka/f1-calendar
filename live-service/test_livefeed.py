@@ -24,7 +24,7 @@ from livefeed import LiveState
 ARCHIVE = "https://livetiming.formula1.com/static/2026/2026-09-26_Azerbaijan_Grand_Prix/2026-09-26_Race/"
 TOPICS = ["Position.z", "CarData.z", "TimingData", "TimingAppData",
           "WeatherData", "TrackStatus", "LapCount", "RaceControlMessages",
-          "DriverList"]
+          "TeamRadio", "SessionInfo", "DriverList"]
 
 failures = []
 
@@ -161,12 +161,37 @@ def main():
     check(f"driver {num} резина", (state.tyre.get(num) or "").upper(),
           ref_compound)
 
-    # --- радио-переговоры ---
+    # --- радио команд ---
     rc_ref = sess.race_control_messages
     print(f"  дирекция: в трекере {len(state.race_control)}, "
           f"в load() {len(rc_ref)}")
     if state.race_control and len(rc_ref):
         print(f"    пример: {state.race_control[0]['msg']}")
+
+    snap_radio = state.snapshot()["radio"]
+    print(f"  радио: {len(snap_radio)} записей с готовым URL")
+    if snap_radio:
+        r = snap_radio[0]
+        print(f"    пример: пилот #{r['n']} {r['t']}")
+        print(f"    url: {r['url'][:96]}")
+    check("радио собрано", len(snap_radio) > 0, True)
+    check("в url радио есть хост F1",
+          bool(snap_radio) and snap_radio[0]["url"].startswith(
+              "https://livetiming.formula1.com/static/"), True)
+
+# --- SessionInfo ---
+    # Этот топик приходит без обёртки Entries. Раньше трекер искал именно её и
+    # молча не заполнял ни ключ сессии, ни Path, а отсюда не работали ни
+    # circuit_key, ни ссылки на аудио радио.
+    si = state.session_info
+    ref_key = getattr(sess, "session_info", {}).get("Key") \
+        if isinstance(getattr(sess, "session_info", None), dict) else None
+    print(f"  сессия: key={si.get('key')} имя={si.get('name')!r} "
+          f"тип={si.get('type')!r} circuit_key={si.get('circuit_key')}")
+    print(f"  path: {si.get('path')}")
+    check("ключ сессии извлечён", si.get("key"), ref_key)
+    check("путь сессии извлечён", bool(si.get("path")), True)
+    check("имя сессии извлечено", si.get("name"), "Race")
 
     # --- память ---
     import tracemalloc
