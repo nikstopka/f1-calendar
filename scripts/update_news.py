@@ -267,8 +267,11 @@ def main() -> int:
         "articles": articles,
         "translation_cache": cache,
     }
+    # newline="" keeps the output LF everywhere. On Windows the default would
+    # write CRLF, so every local run would show a diff against the committed file
+    # even when nothing changed.
     INDEX_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=1),
-                         encoding="utf-8")
+                          encoding="utf-8", newline="\n")
     log(f"записано {INDEX_PATH.relative_to(PROJECT_DIR)}: {len(articles)} статей")
 
     first = articles[0]
