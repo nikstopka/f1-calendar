@@ -631,6 +631,11 @@ async def poll_loop():
                     _state["error"] = None
                     _state["updated"] = now().isoformat()
                     _state["snapshot"] = _waiting_snapshot()
+                else:
+                    # Заглушка создаётся один раз, а сокет переподключается сам,
+                    # поэтому его статус нужно освежать — иначе в ответе остаётся
+                    # connected: false, хотя связь есть.
+                    _state["snapshot"]["feed"] = feed.status()
                 await asyncio.sleep(POLL_SECONDS)
                 continue
 

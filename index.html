@@ -238,7 +238,7 @@
         }
     </style>
 </head>
-<body data-live-service="">
+<body data-live-service="https://f1-calendar-production.up.railway.app">
     <header>
         <div class="container">
             <div class="header-top">
@@ -479,13 +479,11 @@
             });
         }
 
-        // ─── Live service (optional, real-time via FastF1 proxy) ───
-        // When live-service is running, the Live View polls it for genuine
-        // real-time data. If it is absent or failing, the tab silently falls
-        // back to the precomputed OpenF1 data (~30 min delay).
-        // Optional real-time service. Configure it by filling the data-live-service
-        // attribute on <body>, e.g. data-live-service="https://f1-live.fly.dev".
-        // Empty means "static OpenF1 data only".
+        // ─── Live service (optional, real-time) ───
+        // Configure the address in the data-live-service attribute on <body>.
+        // When the service is up, the Live View polls it for genuine real-time
+        // data. If it is absent or failing, the tab silently falls back to the
+        // precomputed OpenF1 data (~30 min delay). Empty means static data only.
         function liveSvcUrl() {
             const v = document.body.dataset.liveService;
             return v ? v.replace(/\/+$/, '') : null;
