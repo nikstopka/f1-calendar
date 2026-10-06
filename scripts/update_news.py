@@ -64,7 +64,8 @@ INDEX_PATH = NEWS_DIR / "index.json"
 PAGES_DIR = PROJECT_DIR / "news"
 
 SOURCE_URL = "https://www.formula1.com/en/latest"
-TRANSLATE_URL = "https://api.mymemory.translated.net/get"
+GOOGLE_URL = "https://translate.googleapis.com/translate_a/single"
+MYMEMORY_URL = "https://api.mymemory.translated.net/get"
 UA = "F1-Calendar-Bot/1.3 (+github pages static site; personal, non-commercial)"
 
 # ── harvest limits ──────────────────────────────────────────────────────────
@@ -288,16 +289,37 @@ def fetch_body(entry: dict) -> bool:
 # ── translation ─────────────────────────────────────────────────────────────
 
 def translate(text: str) -> str:
-    """Machine-translate en->ru. Returns '' on any failure, never a guess."""
+    """Machine-translate en->ru, Google first and MyMemory as a fallback.
+
+    Google is markedly better on F1 wording — on the same headline it produces
+    "победы Ферстаппена в Сепанге" where MyMemory produced "победы Сепанга
+    Ферстаппена", which reads as if Sepang won. The endpoint needs no key.
+
+    It is an undocumented internal endpoint, so treat it as best-effort: if it
+    stops answering, the fallback takes over, and if both fail the article keeps
+    its English text.
+    """
     if not text:
         return ""
-    url = (f"{TRANSLATE_URL}?q={urllib.parse.quote(text)}"
-           f"&langpair=en|ru")
+    quoted = urllib.parse.quote(text)
+
+    # 1) Google, no key.
     try:
-        data = json.loads(fetch(url, timeout=TRANSLATE_TIMEOUT,
-                                referer="https://www.formula1.com/"))
-    except Exception as exc:
-        log(f"перевод не удался ({type(exc).__name__})")
+        raw = fetch(f"{GOOGLE_URL}?client=gtx&sl=en&tl=ru&dt=t&q={quoted}",
+                    timeout=TRANSLATE_TIMEOUT)
+        data = json.loads(raw)
+        out = "".join(part[0] for part in (data[0] or []) if part and part[0])
+        if out.strip():
+            return out.strip()
+    except Exception:
+        pass
+
+    # 2) MyMemory fallback.
+    try:
+        raw = fetch(f"{MYMEMORY_URL}?q={quoted}&langpair=en|ru",
+                    timeout=TRANSLATE_TIMEOUT, referer="https://www.formula1.com/")
+        data = json.loads(raw)
+    except Exception:
         return ""
     if str(data.get("responseStatus")) not in ("200", "200.0"):
         return ""
