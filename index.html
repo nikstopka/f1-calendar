@@ -429,6 +429,10 @@
 
         function renderContent() {
             const expandBtn = document.getElementById('expandToggle');
+            // Polling the live service is what keeps the Render container awake.
+            // Leaving the Live View tab must stop it, otherwise the instance never
+            // spins down and the free tier stops being free.
+            if (currentView !== 'live') stopLiveService();
             if (currentView === 'standings') {
                 if (expandBtn) expandBtn.style.display = 'none';
                 renderStandingsPage();
@@ -1457,6 +1461,16 @@
             await loadIndex();
             await loadSeason(currentYear);
         })();
+
+        // A backgrounded browser tab has no use for live telemetry, and keeping
+        // the poll running there would hold the container awake. Resume on return.
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                stopLiveService();
+            } else if (currentView === 'live' && liveSession) {
+                startLiveService();
+            }
+        });
     </script>
 </body>
 </html>
