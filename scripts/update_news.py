@@ -50,6 +50,7 @@ Personal, non-commercial use, same terms as the rest of this project.
 import gzip
 import html
 import json
+import os
 import re
 import time
 import urllib.error
@@ -65,7 +66,35 @@ PAGES_DIR = PROJECT_DIR / "news"
 
 SOURCE_URL = "https://www.formula1.com/en/latest"
 GOOGLE_URL = "https://translate.googleapis.com/translate_a/single"
+YANDEX_URL = "https://translate.api.cloud.yandex.net/translate/v2/translate"
 MYMEMORY_URL = "https://api.mymemory.translated.net/get"
+
+# Yandex Cloud Translate needs an API key, so it can only be used when one is
+# supplied. It is read from the environment and never from the repository: add
+# it as a GitHub Actions secret (Settings -> Secrets and variables -> Actions ->
+# New secret) rather than committing a file. With no key the script falls back
+# to Google, which needs none.
+YANDEX_API_KEY = os.environ.get("YANDEX_API_KEY", "").strip()
+YANDEX_FOLDER_ID = os.environ.get("YANDEX_FOLDER_ID", "").strip()
+
+
+def _yandex(text: str) -> str:
+    """Translate through Yandex Cloud. Returns '' unless a key is configured."""
+    if not YANDEX_API_KEY or not YANDEX_FOLDER_ID:
+        return ""
+    body = json.dumps({"texts": [text],
+                       "targetLanguageCode": "ru"}).encode("utf-8")
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": "Api-Key " + YANDEX_API_KEY,
+        "x-folder-id": YANDEX_FOLDER_ID,
+        "User-Agent": UA,
+    }
+    req = urllib.request.Request(YANDEX_URL, data=body, headers=headers)
+    with urllib.request.urlopen(req, timeout=TRANSLATE_TIMEOUT) as resp:
+        data = json.loads(resp.read().decode("utf-8", "replace"))
+    items = data.get("translations") or []
+    return (items[0].get("text") or "").strip() if items else ""
 UA = "F1-Calendar-Bot/1.3 (+github pages static site; personal, non-commercial)"
 
 # ── harvest limits ──────────────────────────────────────────────────────────
@@ -317,7 +346,28 @@ def translate(text: str) -> str:
         return ""
     quoted = urllib.parse.quote(text)
 
-    # 1) Google, no key.
+    # 1) Yandex, if a key is configured. Its Russian reads more naturally than
+    #    Google's on sports prose, which is why it is preferred when available.
+    if YANDEX_API_KEY and YANDEX_FOLDER_ID:
+        try:
+            out = _yandex(text)
+            if out:
+                return out
+        except Exception:
+            pass
+
+    # 2) Google, no key needed.
+    try:
+        raw = fetch(f"{GOOGLE_URL}?client=gtx&sl=en&tl=ru&dt=t&q={quoted}",
+                    timeout=TRANSLATE_TIMEOUT)
+        data = json.loads(raw)
+        out = "".join(part[0] for part in (data[0] or []) if part and part[0])
+        if out.strip():
+            return out.strip()
+    except Exception:
+        pass
+
+    # 3) MyMemory last resort.
     try:
         raw = fetch(f"{GOOGLE_URL}?client=gtx&sl=en&tl=ru&dt=t&q={quoted}",
                     timeout=TRANSLATE_TIMEOUT)
