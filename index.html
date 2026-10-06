@@ -633,6 +633,19 @@
                 return;
             }
 
+            // The note must not claim "not a live broadcast" while the live
+            // service is actually connected — that would be false during a race.
+            const srcNote = liveSvcUrl()
+                ? `Завершённые сессии — <a href="https://openf1.org" style="color:#8ecbff">OpenF1</a>
+                   (бесплатно, без ключа), обновление каждые 30&nbsp;минут.
+                   Когда идёт трансляция, вкладка переключается на live-service:
+                   данные идут напрямую с официальной ленты F1, задержка около
+                   3&nbsp;секунд.`
+                : `Данные: <a href="https://openf1.org" style="color:#8ecbff">OpenF1</a>
+                   (бесплатно, без ключа). Бесплатный тариф отдаёт сессию через ~30&nbsp;минут
+                   после её окончания, поэтому это ретроспектива, а не прямой эфир.
+                   Данные обновляются каждые 30&nbsp;минут.`;
+
             box.innerHTML = `
                 <div class="live-page" >
                     <div class="live-head">
@@ -647,12 +660,7 @@
                         </div>
                     </div>
                     <div class="live-svc-banner" id="lvLiveBanner"></div>
-                    <div class="live-note info">
-                        Данные: <a href="https://openf1.org" style="color:#8ecbff">OpenF1</a>
-                        (бесплатно, без ключа). Бесплатный тариф отдаёт сессию через ~30&nbsp;минут
-                        после её окончания, поэтому это ретроспектива, а не прямой эфир.
-                        Данные обновляются каждые 30&nbsp;минут.
-                    </div>
+                    <div class="live-note info">${srcNote}</div>
                     <div id="lvBody"><div class="loading">Загрузка сессии…</div></div>
                 </div>`;
 
