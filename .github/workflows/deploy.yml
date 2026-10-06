@@ -38,8 +38,13 @@ jobs:
       - name: Stage site files
         run: |
           mkdir -p _site
+          # Explicit list on purpose: the repository also holds the live-timing
+          # service and its logs, which have no business being published. Anything
+          # added to the site must be named here or it silently never deploys —
+          # that is how news/ and feed.xml stayed off the site until now.
           cp -r index.html favicon.svg favicon.ico apple-touch-icon.png \
-                icon-192.png icon-512.png f1-calendar.ics data _site/
+                icon-192.png icon-512.png f1-calendar.ics feed.xml \
+                data news _site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
