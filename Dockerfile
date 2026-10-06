@@ -38,7 +38,11 @@ COPY live-service/app.py live-service/livefeed.py live-service/livews.py ./
 EXPOSE 8080
 
 # Один воркер: состояние живёт в памяти процесса, делить нечего.
+#
+# Порт берётся из $PORT, потому что Render задаёт его через окружение (по
+# умолчанию 10000) и проверяет здоровье именно там. На Railway переменная не
+# задана, поэтому подставляется 8080 — настройки хостов не нужны.
 HEALTHCHECK --interval=30s --timeout=10s --start-period=20s --retries=3 \
-    CMD python -c "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=8).status==200 else 1)"
+    CMD python -c "import os,urllib.request,sys; p=os.environ.get('PORT','8080'); sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:'+p+'/health', timeout=8).status==200 else 1)"
 
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080", "--workers", "1"]
+CMD ["sh", "-c", "exec uvicorn app:app --host 0.0.0.0 --port ${PORT:-8080} --workers 1"]
