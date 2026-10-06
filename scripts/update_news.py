@@ -85,8 +85,11 @@ MAX_STORED = 500
 # ── translation limits ──────────────────────────────────────────────────────
 # Anonymous MyMemory access allows a few thousand words a day. A run spends at
 # most this many translation calls, headlines before bodies.
-TRANSLATE_CALLS_PER_RUN = 25
-BODY_TRANSLATE_LIMIT = 3
+# The cap existed because MyMemory's anonymous tier allows only a few thousand
+# words a day. Google, tried first, has no such quota, so this is now a guard
+# against runaway loops rather than a quota limit.
+TRANSLATE_CALLS_PER_RUN = 150
+BODY_TRANSLATE_LIMIT = 12
 # MyMemory answers with HTTP 429 once the anonymous day quota is gone. Hammering
 # it for the rest of the run achieves nothing, so three failures in a row stop
 # translation for this run and the next one picks up where this left off.
@@ -430,6 +433,20 @@ img{width:100%;border-radius:10px;margin:6px 0 18px;display:block}
 .body p{margin:0 0 14px}
 .note{margin-top:28px;padding-top:14px;border-top:1px solid var(--border);
 color:var(--dim);font-size:.82rem}
+/* The original is hidden by default — the Russian text is the reason this page
+   exists. <details> supplies the toggle with no JavaScript at all, and it works
+   from the keyboard. */
+details.orig{margin-top:22px;border-left:3px solid var(--border);padding-left:14px}
+details.orig>summary{cursor:pointer;color:#8ecbff;font-size:.88rem;
+list-style:none;user-select:none}
+details.orig>summary::-webkit-details-marker{display:none}
+details.orig>summary::before{content:"\\25B8 ";color:var(--dim)}
+details.orig[open]>summary::before{content:"\\25BE "}
+details.orig[open]>summary{margin-bottom:12px}
+.lbl-open{display:inline}
+details.orig[open] .lbl-open{display:none}
+.lbl-closed{display:none}
+details.orig[open] .lbl-closed{display:inline}
 """
 
 
@@ -440,14 +457,15 @@ def write_pages(articles: list) -> int:
     for a in articles:
         if not a.get("fetched_body") or not a.get("page"):
             continue
-        ru = a.get("body_ru") or []
-        paras = "".join(f"<p>{html.escape(p)}</p>" for p in (ru or a["body"]))
+        ru = [p for p in (a.get("body_ru") or []) if p]
+        paras = ""
         ru_block = ""
         if ru:
-            ru_block = (
-                '<div class="body" lang="ru">' +
-                "".join(f"<p>{html.escape(p)}</p>" for p in ru if p) +
-                "</div>")
+            # Only render the Russian block when something was actually
+            # translated: an empty container just looks like a missing section.
+            paras = ('<div class="body" lang="ru">' +
+                     "".join(f"<p>{html.escape(p)}</p>" for p in ru) + "</div>")
+            ru_block = paras
         orig_body = "".join(f"<p>{html.escape(p)}</p>" for p in a["body"])
         stamp = (a.get("published") or "")[:16].replace("T", " ")
         type_ru = TYPE_RU.get(a.get("type") or "", a.get("type") or "News")
@@ -468,7 +486,7 @@ def write_pages(articles: list) -> int:
 <h1>{html.escape(a['title'])}</h1>
 {f'<h1 lang="ru" style="font-size:1.25rem;color:#fff;margin:0 0 4px">{html.escape(a["title_ru"])}</h1>' if a.get('title_ru') else ''}
 {ru_block}
-{('<div class="orig" lang="en">' + orig_body + "</div>") if ru_block else ('<div class="body">' + orig_body + "</div>")}
+<div class="body" lang="en">{'<details class="orig"><summary><span class="lbl-open">Показать оригинал</span><span class="lbl-closed">Скрыть оригинал</span></summary>' + orig_body + '</details>' if ru_block else orig_body}</div>
 <a href="{html.escape(a['url'])}" target="_blank" rel="noopener">Читать оригинал на formula1.com →</a>
 <div class="note">Русский текст — машинный перевод, оригинал приведён рядом.
 Источник: formula1.com. Некоммерческое личное использование.</div>

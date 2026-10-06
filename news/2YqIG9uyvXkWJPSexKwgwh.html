@@ -28,6 +28,20 @@ img{width:100%;border-radius:10px;margin:6px 0 18px;display:block}
 .body p{margin:0 0 14px}
 .note{margin-top:28px;padding-top:14px;border-top:1px solid var(--border);
 color:var(--dim);font-size:.82rem}
+/* The original is hidden by default — the Russian text is the reason this page
+   exists. <details> supplies the toggle with no JavaScript at all, and it works
+   from the keyboard. */
+details.orig{margin-top:22px;border-left:3px solid var(--border);padding-left:14px}
+details.orig>summary{cursor:pointer;color:#8ecbff;font-size:.88rem;
+list-style:none;user-select:none}
+details.orig>summary::-webkit-details-marker{display:none}
+details.orig>summary::before{content:"\25B8 ";color:var(--dim)}
+details.orig[open]>summary::before{content:"\25BE "}
+details.orig[open]>summary{margin-bottom:12px}
+.lbl-open{display:inline}
+details.orig[open] .lbl-open{display:none}
+.lbl-closed{display:none}
+details.orig[open] .lbl-closed{display:inline}
 </style>
 </head>
 <body>
@@ -37,8 +51,8 @@ color:var(--dim);font-size:.82rem}
 <span class="date">2026-10-06 16:30</span></div>
 <h1>Can Red Bull keep up their momentum after Verstappen&#x27;s Sepang win?</h1>
 <h1 lang="ru" style="font-size:1.25rem;color:#fff;margin:0 0 4px">Сможет ли Red Bull сохранить темп после победы Ферстаппена в Сепанге?</h1>
-<div class="body" lang="ru"></div>
-<div class="orig" lang="en"><p>Max Verstappen finally netted a 2026 victory with a dominant drive in Sepang. With the way that he&#x27;s been driving this year it seemed inevitable that the Dutchman would hit the top step at some point this season, but I didn&#x27;t expect it to come in as dominant fashion as we eventually saw.</p><p>Max had such a stranglehold on Qualifying, topping each part of it before posting two laps good enough for pole. His dominance on Saturday was enough that some of his nearest competitors at the front expected him to runaway and hide in the Grand Prix.</p><p>This performance begs the question: where has Red Bull&#x27;s pace come from?</p></div>
+<div class="body" lang="ru"><p>Макс Ферстаппен, наконец, одержал победу в 2026 году, продемонстрировав доминирующую динамику в Сепанге. Учитывая то, как он вел машину в этом году, казалось неизбежным, что голландец в какой-то момент сезона достигнет высшей ступеньки, но я не ожидал, что это произойдет настолько доминирующим образом, как мы в конечном итоге увидели.</p><p>Макс держал квалификацию такой мертвой хваткой, лидируя на каждой ее части, прежде чем показать два хороших круга, достаточные для поула. Его доминирования в субботу было достаточно, что некоторые из его ближайших конкурентов на передовой ожидали, что он сбежит и спрячется на Гран-при.</p><p>Такое выступление вызывает вопрос: откуда взялся темп Red Bull?</p></div>
+<div class="body" lang="en"><details class="orig"><summary><span class="lbl-open">Показать оригинал</span><span class="lbl-closed">Скрыть оригинал</span></summary><p>Max Verstappen finally netted a 2026 victory with a dominant drive in Sepang. With the way that he&#x27;s been driving this year it seemed inevitable that the Dutchman would hit the top step at some point this season, but I didn&#x27;t expect it to come in as dominant fashion as we eventually saw.</p><p>Max had such a stranglehold on Qualifying, topping each part of it before posting two laps good enough for pole. His dominance on Saturday was enough that some of his nearest competitors at the front expected him to runaway and hide in the Grand Prix.</p><p>This performance begs the question: where has Red Bull&#x27;s pace come from?</p></details></div>
 <a href="https://www.formula1.com/en/latest/article/can-red-bull-keep-up-their-momentum-after-verstappens-sepang-win.2YqIG9uyvXkWJPSexKwgwh" target="_blank" rel="noopener">Читать оригинал на formula1.com →</a>
 <div class="note">Русский текст — машинный перевод, оригинал приведён рядом.
 Источник: formula1.com. Некоммерческое личное использование.</div>

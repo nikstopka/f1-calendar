@@ -28,6 +28,20 @@ img{width:100%;border-radius:10px;margin:6px 0 18px;display:block}
 .body p{margin:0 0 14px}
 .note{margin-top:28px;padding-top:14px;border-top:1px solid var(--border);
 color:var(--dim);font-size:.82rem}
+/* The original is hidden by default — the Russian text is the reason this page
+   exists. <details> supplies the toggle with no JavaScript at all, and it works
+   from the keyboard. */
+details.orig{margin-top:22px;border-left:3px solid var(--border);padding-left:14px}
+details.orig>summary{cursor:pointer;color:#8ecbff;font-size:.88rem;
+list-style:none;user-select:none}
+details.orig>summary::-webkit-details-marker{display:none}
+details.orig>summary::before{content:"\25B8 ";color:var(--dim)}
+details.orig[open]>summary::before{content:"\25BE "}
+details.orig[open]>summary{margin-bottom:12px}
+.lbl-open{display:inline}
+details.orig[open] .lbl-open{display:none}
+.lbl-closed{display:none}
+details.orig[open] .lbl-closed{display:inline}
 </style>
 </head>
 <body>
@@ -37,8 +51,8 @@ color:var(--dim);font-size:.82rem}
 <span class="date">2026-10-06 12:22</span></div>
 <h1>Why didn&#x27;t Mercedes&#x27; upgrades provide a boost in Malaysia?</h1>
 <h1 lang="ru" style="font-size:1.25rem;color:#fff;margin:0 0 4px">Почему модернизация Mercedes не дала импульс развитию Малайзии?</h1>
-<div class="body" lang="ru"></div>
-<div class="orig" lang="en"><p>Mercedes&#x27; first big upgrade since the Canadian Grand Prix over three months ago did not bring the hoped-for boost in performance around Sepang and the team are currently deep-diving into the data to understand why.</p><p>The specification change was targeted at improving medium-high speed downforce, where the car had fallen steadily further behind its rivals in recent races. To achieve this aim, the whole mass of the bodywork has been brought forwards to create more free volume ahead of the rear wheels. This has entailed moving the cooling channels to create ‘cannons&#x27; between the sidepods and engine cover.</p></div>
+<div class="body" lang="ru"><p>Первое большое обновление Mercedes после Гран-при Канады более трех месяцев назад не принесло ожидаемого прироста производительности в Сепанге, и в настоящее время команда глубоко изучает данные, чтобы понять, почему.</p><p>Изменение спецификации было направлено на улучшение прижимной силы на средних и высоких скоростях, где в последних гонках автомобиль постоянно отставал от своих соперников. Для достижения этой цели вся масса кузова была перенесена вперед, чтобы создать больше свободного пространства перед задними колесами. Это повлекло за собой перемещение каналов охлаждения для создания «пушек» между боковыми подвесками и крышкой двигателя.</p></div>
+<div class="body" lang="en"><details class="orig"><summary><span class="lbl-open">Показать оригинал</span><span class="lbl-closed">Скрыть оригинал</span></summary><p>Mercedes&#x27; first big upgrade since the Canadian Grand Prix over three months ago did not bring the hoped-for boost in performance around Sepang and the team are currently deep-diving into the data to understand why.</p><p>The specification change was targeted at improving medium-high speed downforce, where the car had fallen steadily further behind its rivals in recent races. To achieve this aim, the whole mass of the bodywork has been brought forwards to create more free volume ahead of the rear wheels. This has entailed moving the cooling channels to create ‘cannons&#x27; between the sidepods and engine cover.</p></details></div>
 <a href="https://www.formula1.com/en/latest/article/why-didnt-mercedes-upgrades-provide-the-boost-they-needed-in-malaysia.318cgHrdJJMfqbDdznI2PP" target="_blank" rel="noopener">Читать оригинал на formula1.com →</a>
 <div class="note">Русский текст — машинный перевод, оригинал приведён рядом.
 Источник: formula1.com. Некоммерческое личное использование.</div>
