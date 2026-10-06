@@ -529,16 +529,21 @@
                     ${arts.map(a => {
                         const type = NEWS_TYPE_RU[a.type] || a.type || '';
                         const ru = a.title_ru || '';
+                        // Local page when the body was fetched: there the Russian
+                        // text sits above the original. Otherwise straight to F1.
+                        const href = a.page || a.url;
                         return `<article class="news-card">
-                            ${a.image ? `<a href="${escapeHtml(a.url)}" target="_blank" rel="noopener">
-                                <img loading="lazy" src="${escapeHtml(a.image)}"
-                                     alt="${escapeHtml(a.image_alt || a.title)}"></a>` : ''}
+                            <a href="${escapeHtml(href)}" target="_blank" rel="noopener">
+                                ${a.image ? `<img loading="lazy" src="${escapeHtml(a.image)}"
+                                     alt="${escapeHtml(a.image_alt || a.title)}">` : ''}
+                            </a>
                             <div class="news-body">
                                 <div class="news-tags">
                                     ${type ? `<span class="news-tag">${escapeHtml(type)}</span>` : ''}
                                     <span class="news-date">${escapeHtml(mskTime(a.published))}</span>
+                                    ${a.page ? '' : '<span class="news-date" title="Тело статьи ещё не собрано">· только заголовок</span>'}
                                 </div>
-                                <h3><a href="${escapeHtml(a.url)}" target="_blank" rel="noopener">${escapeHtml(a.title)}</a></h3>
+                                <h3><a href="${escapeHtml(href)}" target="_blank" rel="noopener">${escapeHtml(a.title)}</a></h3>
                                 ${ru ? `<p class="news-ru" lang="ru">${escapeHtml(ru)}</p>
                                         <p class="news-en" lang="en">${escapeHtml(a.title)}</p>`
                                       : `<p class="news-en" lang="en">${escapeHtml(a.title)}</p>`}
