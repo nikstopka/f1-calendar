@@ -47,6 +47,8 @@ English original rather than showing a blank.
 Personal, non-commercial use, same terms as the rest of this project.
 """
 
+import datetime
+import email.utils
 import gzip
 import html
 import json
@@ -61,7 +63,16 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_DIR = SCRIPT_DIR.parent
 NEWS_DIR = PROJECT_DIR / "data" / "news"
 INDEX_PATH = NEWS_DIR / "index.json"
+# Article text lives beside the listing, not inside it. index.json is what every
+# visitor downloads to draw the news grid, and it needs headlines only. bodies.json
+# is the bot's own working copy: keeping it separate is what allows translation to
+# resume across runs instead of restarting on the freshly fetched articles.
+BODIES_PATH = NEWS_DIR / "bodies.json"
 PAGES_DIR = PROJECT_DIR / "news"
+FEED_PATH = PROJECT_DIR / "feed.xml"
+# Absolute base for the feed: readers resolve relative links against the feed's
+# own location, so the link has to be the public address, not a local path.
+SITE_URL = "https://nikstopka.github.io/f1-calendar/"
 
 SOURCE_URL = "https://www.formula1.com/en/latest"
 GOOGLE_URL = "https://translate.googleapis.com/translate_a/single"
@@ -78,7 +89,7 @@ STOP_AFTER_EMPTY_PAGES = 2
 MAX_NEW_PER_RUN = 40
 # Article bodies are a second request per article, so only a few are fetched per
 # run. The newest articles are the ones worth opening.
-BODY_FETCH_PER_RUN = 6
+BODY_FETCH_PER_RUN = 8
 # Rough ceiling on the stored archive; oldest entries fall off the end.
 MAX_STORED = 500
 
@@ -89,7 +100,10 @@ MAX_STORED = 500
 # words a day. Google, tried first, has no such quota, so this is now a guard
 # against runaway loops rather than a quota limit.
 TRANSLATE_CALLS_PER_RUN = 150
-BODY_TRANSLATE_LIMIT = 12
+# Paragraphs translated per run. Bodies are no longer three-paragraph stubs —
+# a full article runs 20-35 paragraphs — so 12 would leave the archive half
+# translated for days. 40 paragraphs at the pause below costs about a minute.
+BODY_TRANSLATE_LIMIT = 40
 # MyMemory answers with HTTP 429 once the anonymous day quota is gone. Hammering
 # it for the rest of the run achieves nothing, so three failures in a row stop
 # translation for this run and the next one picks up where this left off.
@@ -267,6 +281,91 @@ TYPE_RU = {
 }
 
 
+_FLIGHT_PUSH = "self.__next_f.push([1,"
+# The article body carries markdown-ish inline links: [Name](https://url).
+_MD_LINK_RE = re.compile(r"\[([^\]]{1,120})\]\([^)]*\)")
+
+
+def _flight_text(page_html: str) -> str:
+    """Join every decoded Next.js RSC flight chunk, in order."""
+    decoder = json.JSONDecoder()
+    chunks = []
+    pos = 0
+    while True:
+        i = page_html.find(_FLIGHT_PUSH, pos)
+        if i < 0:
+            return "".join(chunks)
+        j = i + len(_FLIGHT_PUSH)
+        while j < len(page_html) and page_html[j] in " \t":
+            j += 1
+        try:
+            chunk, end = decoder.raw_decode(page_html, j)
+        except ValueError:
+            pos = i + 1          # malformed chunk: skip and keep scanning
+            continue
+        if isinstance(chunk, str):
+            chunks.append(chunk)
+        pos = end
+
+
+def _rsc_paragraphs(page_html: str) -> list:
+    """Article paragraphs read from the React payload instead of the DOM.
+
+    The server-rendered HTML only carries the opening paragraphs; the rest of
+    the story is streamed as React text nodes. Reading those nodes returns the
+    article in full, which is what a reader sees in the app — no account needed.
+    Several nodes repeat the opening, so paragraphs are deduplicated by prefix.
+    """
+    flight = _flight_text(page_html)
+    if not flight:
+        return []
+    decoder = json.JSONDecoder()
+    nodes = []
+    pos = 0
+    while True:
+        i = flight.find('"text"', pos)
+        if i < 0:
+            break
+        pos = i + 6
+        colon = flight.find(":", i, i + 12)
+        if colon == -1:
+            continue
+        j = colon + 1
+        while j < len(flight) and flight[j] in " \t":
+            j += 1
+        if flight[j] != '"':
+            continue
+        try:
+            value, end = decoder.raw_decode(flight, j)
+        except ValueError:
+            continue
+        pos = end
+        if isinstance(value, str) and value.strip():
+            nodes.append((j, value))
+    if not nodes:
+        return []
+    nodes.sort()
+    body = "\n\n".join(value for _, value in nodes)
+    body = body.replace("\\_", "_").replace("\\`", "`")
+    body = re.sub(r"(?:\\n)+", "\n\n", body)
+    body = _MD_LINK_RE.sub(r"\1", body)
+    body = re.sub(r"[*_`>#]", "", body)
+    paras = []
+    seen = set()
+    for chunk in body.split("\n\n"):
+        text = re.sub(r"\s+", " ", chunk).strip()
+        if len(text) < 40 or _JUNK_RE.search(text):
+            continue
+        if text.startswith(_SKIP_PREFIXES):
+            continue
+        key = text[:80].lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        paras.append(text)
+    return paras
+
+
 def fetch_body(entry: dict) -> bool:
     """Download the article text and store it as a list of paragraphs."""
     try:
@@ -274,22 +373,24 @@ def fetch_body(entry: dict) -> bool:
     except Exception as exc:
         log(f"тело не получено ({type(exc).__name__}): {entry['title'][:40]}")
         return False
-    paras = []
-    # Prefer the article's own paragraphs; fall back to any <p> only if that
-    # finds nothing, so a class rename degrades instead of losing the text.
-    for matcher in (_BODY_P_RE, _ANY_P_RE):
-        for raw in matcher.findall(page_html):
-            text = _TAG_RE.sub("", raw)
-            text = html.unescape(text).replace("’", "'").strip()
-            if len(text) < 40 or text.startswith(_SKIP_PREFIXES):
-                continue
-            if _JUNK_RE.search(text):
-                continue
-            if text in paras:                 # mobile + desktop copies
-                continue
-            paras.append(text)
-        if paras:
-            break
+    # The payload holds the complete story; the DOM holds only its opening.
+    paras = _rsc_paragraphs(page_html)
+    # Fall back to the DOM only when the payload yielded nothing, so a change
+    # of Next.js internals degrades to a partial article instead of none.
+    if not paras:
+        for matcher in (_BODY_P_RE, _ANY_P_RE):
+            for raw in matcher.findall(page_html):
+                text = _TAG_RE.sub("", raw)
+                text = html.unescape(text).replace("’", "'").strip()
+                if len(text) < 40 or text.startswith(_SKIP_PREFIXES):
+                    continue
+                if _JUNK_RE.search(text):
+                    continue
+                if text in paras:                 # mobile + desktop copies
+                    continue
+                paras.append(text)
+            if paras:
+                break
     if not paras:
         return False
     entry["body"] = paras[:40]
@@ -375,18 +476,8 @@ def translate(text: str) -> str:
     except Exception:
         pass
 
-    # 2) MyMemory last resort.
-    try:
-        raw = fetch(f"{GOOGLE_URL}?client=gtx&sl=en&tl=ru&dt=t&q={quoted}",
-                    timeout=TRANSLATE_TIMEOUT)
-        data = json.loads(raw)
-        out = "".join(part[0] for part in (data[0] or []) if part and part[0])
-        if out.strip():
-            return out.strip()
-    except Exception:
-        pass
-
-    # 2) MyMemory fallback.
+    # 2) MyMemory fallback. Free and quota-limited, so it only runs when Google
+    #    is unreachable; its quota is routinely exhausted, hence the tolerance.
     try:
         raw = fetch(f"{MYMEMORY_URL}?q={quoted}&langpair=en|ru",
                     timeout=TRANSLATE_TIMEOUT, referer="https://www.formula1.com/")
@@ -508,12 +599,78 @@ details.orig[open] .lbl-closed{display:inline}
 """
 
 
+def _rfc822(stamp: str) -> str:
+    """'2026-10-04T09:00:00Z' -> 'Sun, 04 Oct 2026 09:00:00 +0000'."""
+    try:
+        when = datetime.datetime.strptime(stamp[:19], "%Y-%m-%dT%H:%M:%S")
+    except ValueError:
+        return ""
+    return email.utils.format_datetime(
+        when.replace(tzinfo=datetime.timezone.utc), usegmt=False)
+
+
+def write_feed(articles: list, limit: int = 40) -> int:
+    """RSS of the headlines, Russian first, so a reader can follow in a reader app.
+
+    This is the point of the news tab: F1 headlines go unread because there is
+    no feed to subscribe to. Generated from data already collected, at no extra
+    request to formula1.com.
+    """
+    items = []
+    for a in articles[:limit]:
+        ru = (a.get("title_ru") or "").strip()
+        en = (a.get("title") or "").strip()
+        if not ru and not en:
+            continue
+        link = SITE_URL + a["page"] if a.get("page") else a.get("url") or SITE_URL
+        title = f"{ru} — {en}" if ru and en and ru != en else (ru or en)
+        desc = (a.get("description_ru") or a.get("description") or "").strip()
+        desc_ru = (a.get("description_ru") or "").strip()
+        if desc_ru and a.get("description"):
+            desc = f"{desc_ru} ({a['description']})"
+        body = (f"<p><b>{html.escape(en)}</b></p>" if ru and en else "")
+        if desc:
+            body += f"<p>{html.escape(desc)}</p>"
+        pub = _rfc822(a.get("published") or "")
+        cat = TYPE_RU.get(a.get("type") or "", a.get("type") or "")
+        items.append(
+            "<item>"
+            f"<title>{html.escape(title)}</title>"
+            f"<link>{html.escape(link)}</link>"
+            f"<guid isPermaLink=\"true\">{html.escape(link)}</guid>"
+            + (f"<pubDate>{pub}</pubDate>" if pub else "")
+            + (f"<category>{html.escape(cat)}</category>" if cat else "")
+            + f"<description>{body}</description>"
+            "</item>")
+
+    build = _rfc822(time.strftime("%Y-%m-%dT%H:%M:%S", time.gmtime()))
+    feed = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
+        "<channel>"
+        "<title>Новости F1</title>"
+        f"<link>{SITE_URL}</link>"
+        "<description>Заголовки новостей Formula 1, переведённые на русский. "
+        "Источник: formula1.com.</description>"
+        "<language>ru</language>"
+        + (f"<lastBuildDate>{build}</lastBuildDate>" if build else "")
+        + f'<atom:link href="{SITE_URL}feed.xml" rel="self" '
+          'type="application/rss+xml"/>'
+        + "".join(items)
+        + "</channel></rss>\n")
+    FEED_PATH.write_text(feed, encoding="utf-8", newline="\n")
+    return len(items)
+
+
 def write_pages(articles: list) -> int:
     """One standalone HTML file per article that has body text."""
     PAGES_DIR.mkdir(parents=True, exist_ok=True)
     written = 0
     for a in articles:
-        if not a.get("fetched_body") or not a.get("page"):
+        # The body text is no longer kept in index.json, so on most runs only
+        # the articles fetched in this run are in memory. Rewriting their pages
+        # from an absent body would publish an empty page over a good one.
+        if not a.get("fetched_body") or not a.get("page") or not a.get("body"):
             continue
         ru = [p for p in (a.get("body_ru") or []) if p]
         paras = ""
@@ -572,6 +729,18 @@ def main() -> int:
             log(f"старый файл не читается ({type(exc).__name__})")
 
     known = {a["id"] for a in stored if a.get("id")}
+    # Re-attach the article text saved by earlier runs so translation can pick up
+    # where it stopped instead of redoing the newest articles every time.
+    if BODIES_PATH.exists():
+        try:
+            saved = json.loads(BODIES_PATH.read_text(encoding="utf-8"))
+            for a in stored:
+                kept = saved.get(a.get("id") or "")
+                if kept:
+                    a["body"] = kept.get("body") or []
+                    a["body_ru"] = kept.get("body_ru") or []
+        except Exception as exc:
+            log(f"файл тел не читается ({type(exc).__name__})")
     try:
         fresh = harvest(known)
     except Exception as exc:
@@ -579,33 +748,68 @@ def main() -> int:
         return 1
     log(f"новых статей: {len(fresh)}")
 
-    # Bodies first, so they are available for translation in the same run.
-    need_body = [a for a in fresh][:BODY_FETCH_PER_RUN]
-    got = 0
-    for a in need_body:
-        if fetch_body(a):
-            got += 1
-            time.sleep(PAUSE_BETWEEN_ARTICLES)
-    log(f"тела получены для {got} из {len(need_body)}")
-
     merged = fresh + stored
     merged.sort(key=lambda a: a.get("published") or "", reverse=True)
     if len(merged) > MAX_STORED:
         merged = merged[:MAX_STORED]
     articles = merged
 
+    # Bodies before translation, so they can be translated in the same run.
+    # The list must consider stored articles too: selecting only from `fresh`
+    # meant that once an article was archived its body was never requested
+    # again, and the archive stayed headline-only forever. The text itself is
+    # checked as well, so an article flagged as fetched but left without a body
+    # is retried instead of being trusted forever.
+    need_body = [a for a in articles
+                 if not (a.get("fetched_body") and a.get("body"))]
+    need_body = need_body[:BODY_FETCH_PER_RUN]
+    got = 0
+    for a in need_body:
+        if fetch_body(a):
+            got += 1
+        time.sleep(PAUSE_BETWEEN_ARTICLES)
+    log(f"тела получены для {got} из {len(need_body)}")
+
     cache = translate_articles(articles, cache)
-    if len(cache) > 600:
-        cache = dict(list(cache.items())[-600:])
+    # Full bodies mean ~25 strings per article, so 40 articles need well over
+    # a thousand entries; a 600 cap would evict translations that are still
+    # needed and translate the same paragraphs again every run.
+    if len(cache) > 2500:
+        cache = dict(list(cache.items())[-2500:])
 
     pages = write_pages(articles)
     log(f"страниц записано: {pages}")
+
+    # The page path is assigned at harvest time, before the text is fetched, so
+    # it can point at a file that was never written. Clear it in that case: the
+    # card then falls back to formula1.com and says so, instead of a 404.
+    for a in articles:
+        if a.get("page") and not (PROJECT_DIR / a["page"]).exists():
+            a["page"] = ""
+
+    feed = write_feed(articles)
+    log(f"записей в RSS: {feed}")
+
+    # The listing needs only the headline fields; full bodies live in the
+    # standalone pages written just above. Keeping them here as well would
+    # roughly quintuple index.json, which every visitor downloads to draw the
+    # news grid. `fetched_body` stays so the text is not fetched twice.
+    listing = []
+    bodies = {}
+    for a in articles:
+        item = {k: v for k, v in a.items() if k not in ("body", "body_ru")}
+        item["body_paras"] = len(a.get("body") or [])
+        listing.append(item)
+        if a.get("body"):
+            bodies[a["id"]] = {"body": a["body"], "body_ru": a.get("body_ru") or []}
+    BODIES_PATH.write_text(json.dumps(bodies, ensure_ascii=False),
+                           encoding="utf-8", newline="\n")
 
     payload = {
         "generated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "source": SOURCE_URL,
         "translation": "Google (free, no key) + словарик терминов F1",
-        "articles": articles,
+        "articles": listing,
         "translation_cache": cache,
     }
     INDEX_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=1),

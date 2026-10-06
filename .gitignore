@@ -7,3 +7,4 @@ _site/
 # live-service
 live-service/.ffcache/
 live-service/svc.*
+srv.err

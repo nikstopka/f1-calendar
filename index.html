@@ -9,6 +9,7 @@
     <link rel="icon" href="favicon.ico" sizes="32x32">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="alternate" type="application/rss+xml" title="Новости F1" href="feed.xml">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -213,6 +214,8 @@
         .news-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 14px; }
         .news-head h2 { margin: 0; font-size: 1.5rem; }
         .news-meta { color: var(--text-dim); font-size: 0.82rem; }
+        .news-meta a { color: var(--text-dim); text-decoration: underline; }
+        .news-meta a:hover { color: #fff; }
         .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
         .news-card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
         .news-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: var(--surface-2, #1a1a1a); }
@@ -523,7 +526,8 @@
                 <div class="news-head">
                     <h2>Новости F1</h2>
                     <div class="news-meta">Обновлено ${escapeHtml(gen)} ·
-                        перевод машинный${newsData.translation ? ' · ' + escapeHtml(newsData.translation) : ''}</div>
+                        перевод машинный${newsData.translation ? ' · ' + escapeHtml(newsData.translation) : ''} ·
+                        <a href="feed.xml">RSS</a></div>
                 </div>
                 <div class="news-grid">
                     ${arts.map(a => {
