@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-06T21:13:31Z",
+ "generated": "2026-10-06T23:50:46Z",
  "source": "https://www.formula1.com/en/latest",
  "translation": "Google (free, no key) + словарик терминов F1",
  "articles": [
@@ -594,7 +594,8 @@
    "page": "news/6q0XGAriyl5ps2CLy1yiGm.html",
    "fetched_body": true,
    "body_paras": 11,
-   "media": 0
+   "media": 2,
+   "media_done": true
   },
   {
    "id": "UNBeXLZ0wQtbUF23iSj9J",
@@ -611,7 +612,8 @@
    "page": "news/UNBeXLZ0wQtbUF23iSj9J.html",
    "fetched_body": true,
    "body_paras": 4,
-   "media": 0
+   "media": 1,
+   "media_done": true
   },
   {
    "id": "6qfpIHPch8mIVj2YgfHdCp",
@@ -628,7 +630,8 @@
    "page": "news/6qfpIHPch8mIVj2YgfHdCp.html",
    "fetched_body": true,
    "body_paras": 11,
-   "media": 0
+   "media": 13,
+   "media_done": true
   },
   {
    "id": "2OZA62x5JUuoxlociRPAxb",
@@ -645,7 +648,8 @@
    "page": "news/2OZA62x5JUuoxlociRPAxb.html",
    "fetched_body": true,
    "body_paras": 6,
-   "media": 0
+   "media": 1,
+   "media_done": true
   },
   {
    "id": "1dVSsWlJ2cJdgDnYdfRojh",
@@ -662,7 +666,8 @@
    "page": "news/1dVSsWlJ2cJdgDnYdfRojh.html",
    "fetched_body": true,
    "body_paras": 8,
-   "media": 0
+   "media": 3,
+   "media_done": true
   },
   {
    "id": "4JA0f3Nea6tz5hqQW8ia4C",
@@ -679,7 +684,8 @@
    "page": "news/4JA0f3Nea6tz5hqQW8ia4C.html",
    "fetched_body": true,
    "body_paras": 24,
-   "media": 0
+   "media": 5,
+   "media_done": true
   },
   {
    "id": "7HAxpuKocXghJCDmRL0dAD",
@@ -696,7 +702,8 @@
    "page": "news/7HAxpuKocXghJCDmRL0dAD.html",
    "fetched_body": true,
    "body_paras": 20,
-   "media": 0
+   "media": 4,
+   "media_done": true
   },
   {
    "id": "4SD3W4TIvmAVQj1i1rZ4Oa",
@@ -713,7 +720,8 @@
    "page": "news/4SD3W4TIvmAVQj1i1rZ4Oa.html",
    "fetched_body": true,
    "body_paras": 19,
-   "media": 0
+   "media": 4,
+   "media_done": true
   },
   {
    "id": "3PGUwV77YbdWsGaQDkDOXp",
@@ -2192,6 +2200,25 @@
   "description::George Russell had to settle for P8 in Saturday's Qualifying session for the Bahrain Grand Prix in Malaysia, meaning he will start seventh in Sunday's race.": "Джорджу Расселу пришлось довольствоваться восьмым местом в субботней квалификации Гран-при Бахрейна в Малайзии, а это означает, что в воскресной гонке он стартует седьмым.",
   "description::Kimi Antonelli will line up in P3 for the Bahrain Grand Prix in Malaysia, but the Mercedes driver felt that he could have achieved a higher position had it not been for an earlier error.": "Кими Антонелли выйдет на третье место на Гран-при Бахрейна в Малайзии, но пилот Mercedes считает, что мог бы занять более высокую позицию, если бы не допущенная ранее ошибка.",
   "description::Red Bull's Isack Hadjar was third quickest in Qualifying but will start P8 in the Bahrain Grand Prix in Malaysia following a grid penalty.": "Исак Хаджар из Red Bull был третьим по скорости в квалификации, но стартует с восьмой позиции на Гран-при Бахрейна в Малайзии из-за штрафа на стартовой решетке.",
-  "description::Max Verstappen secured his first pole position of 2026 during Qualifying for the Bahrain Grand Prix in Malaysia, an achievement that the Red Bull driver felt was an \"amazing moment\".": "Макс Ферстаппен завоевал свою первую первое местою в 2026 году во время квалификации Гран-при Бахрейна в Малайзии. Это достижение, по мнению гонщика Red Bull, было «удивительным моментом»."
+  "description::Max Verstappen secured his first pole position of 2026 during Qualifying for the Bahrain Grand Prix in Malaysia, an achievement that the Red Bull driver felt was an \"amazing moment\".": "Макс Ферстаппен завоевал свою первую первое местою в 2026 году во время квалификации Гран-при Бахрейна в Малайзии. Это достижение, по мнению гонщика Red Bull, было «удивительным моментом».",
+  "body::Verstappen claimed a 72nd career victory at the Bahrain Grand Prix in Malaysia": "Ферстаппен одержал 72-ю в карьере победу на Гран-при Бахрейна в Малайзии",
+  "body::The Bahrain Grand Prix in Malaysia saw action from start to finish": "Гран-при Бахрейна в Малайзии прошел от начала до конца",
+  "body::Verstappen and Red Bull claimed pole for the first time in 2026 at Sepang": "Ферстаппен и Ред Булл впервые завоевали поул в 2026 году в Сепанге",
+  "body::Rain poured down ahead of the race start in Malaysia": "Дождь пролился перед стартом гонки в Малайзии",
+  "body::The initial start procedure was suspended when several drivers hit trouble": "Первоначальная процедура запуска была приостановлена, когда несколько водителей столкнулись с проблемой",
+  "body::Drivers and fans waited patiently after the first start procedure was suspended": "Водители и вентиляторы терпеливо ждали после приостановки процедуры первого запуска",
+  "body::Verstappen fought back and reclaimed positions from the Mercedes drivers": "Ферстаппен отбился и отвоевал позиции у пилотов Mercedes",
+  "body::2026 Bahrain Grand Prix: Verstappen reakes the lead on the Safety Car restart": "Гран-при Бахрейна 2026 года: Ферстаппен лидирует в перезапуске автомобиля безопасности",
+  "body::There were overtakes left, right and centre throughout the race": "На протяжении всей гонки были обгоны слева, справа и в центре",
+  "body::Hamilton and Leclerc recovered well after losing lots of ground at the start": "Хэмилтон и Леклерк хорошо восстановились после потери многих позиций на старте",
+  "body::Russell could not believe his luck as he stopped out on track in the closing laps": "Рассел не мог поверить в свою удачу, поскольку он остановился на трассе на заключительных кругах",
+  "body::Sunday at Sepang belonged to Verstappen and Red Bull": "Воскресенье в Сепанге принадлежало Ферстаппену и Red Bull",
+  "body::Max Verstappen is the favourite to win the Bahrain Grand Prix, which would be his first win of the 2026 season": "Макс Ферстаппен - фаворит Гран-при Бахрейна, который станет его первой победой в сезоне 2026 года",
+  "body::It has been nine years since F1 last raced at Sepang, with Lewis Hamilton finishing second to Max Verstappen that day too": "Прошло девять лет с тех пор, как Формула-1 в последний раз выступала в Сепанге, и Льюис Хэмилтон финишировал вторым после Макса Ферстаппена в тот же день",
+  "body::Pierre Gasly will be one to watch closely during Sunday's Bahrain Grand Prix": "Пьер Гасли будет одним из тех, за кем стоит внимательно наблюдать во время воскресного Гран-при Бахрейна",
+  "body::Max Verstappen will start on pole in Malaysia, with Ferrari's Lewis Hamilton alongside him on the front row in second": "Макс Ферстаппен стартует на поуле в Малайзии, а Льюис Хэмилтон из Ferrari рядом с ним на первом ряду через секунду",
+  "body::Isack Hadjar qualified third in Sepang, but will start in eighth due to a grid penalty": "Исаак Хаджар квалифицировался третьим в Сепанге, но стартует восьмым из-за штрафа на стартовой решетке",
+  "body::Max Verstappen will start the 2026 Bahrain Grand Prix on pole ahead of Ferrari's Lewis Hamilton in second": "Макс Ферстаппен начнет Гран-при Бахрейна 2026 года на поуле, опередив Льюиса Хэмилтона из Ferrari на второй",
+  "body::We've picked Isack Hadjar, who finished narrowly behind Max Verstappen in third in Baku, for another podium finish this weekend": "Мы выбрали Исаака Хаджара, который финишировал чуть позади Макса Ферстаппена на третьем месте в Баку, для еще одного подиумного финиша в эти выходные"
  }
 }
