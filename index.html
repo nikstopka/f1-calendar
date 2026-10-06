@@ -491,6 +491,92 @@
         let liveSvcTimer = null;
         let liveSvcFail = 0;
 
+        // Rolling history of live snapshots.
+        //
+        // A live feed has no archive, so playback, rewind and position-change
+        // events have to be built from the snapshots as they arrive. Each poll
+        // appends one frame; the buffer is capped, which bounds both memory and
+        // how far back the scrubber can go.
+        const LIVE_FRAMES_MAX = 240;      // 240 x 3 s = 12 minutes
+        let liveHist = { frames: [], times: [], events: [], pit: [], stints: {} };
+        let liveHistSession = null;
+
+        function resetLiveHistory() {
+            liveHist = { frames: [], times: [], events: [], pit: [], stints: {} };
+            liveHistSession = null;
+        }
+
+        function pushLiveHistory(snap) {
+            const sk = String(snap.session_key || '');
+            if (sk && liveHistSession && sk !== liveHistSession) resetLiveHistory();
+            if (sk) liveHistSession = sk;
+
+            const order = (snap.drivers || []).map(d => d.n);
+            const byNum = {};
+            (snap.cars || []).forEach(c => { byNum[c.n] = c; });
+
+            // A frame is a flat [x1,y1,x2,y2,...] list in driver order, the same
+            // shape the precomputed session files use.
+            const flat = [];
+            order.forEach(n => {
+                const c = byNum[n];
+                flat.push(c && c.x != null ? c.x : 0, c && c.y != null ? c.y : 0);
+            });
+            if (!flat.length) return;
+            liveHist.frames.push(flat);
+            liveHist.times.push(snap.generated || new Date().toISOString());
+            if (liveHist.frames.length > LIVE_FRAMES_MAX) {
+                liveHist.frames.shift();
+                liveHist.times.shift();
+            }
+
+            // Position changes, as [epochMs, fromPos, toPos].
+            const nowMs = Date.parse(snap.generated || '') || Date.now();
+            const pos = snap.positions || {};
+            const prev = liveHist.events.length ? liveHist.lastPos || {} : {};
+            const lastPos = {};
+            Object.entries(pos).forEach(([n, p]) => {
+                const key = String(n);
+                lastPos[key] = p;
+                if (prev[key] != null && prev[key] !== p) {
+                    liveHist.events.push([nowMs, prev[key], p]);
+                }
+            });
+            if (liveHist.events.length > 500) liveHist.events.splice(0, 200);
+            liveHist.lastPos = lastPos;
+
+            // Pit stops come straight from F1's NumberOfPitStops counter, which
+            // the service turns into one event per increment. `dur` is null
+            // because the live feed carries no stationary stop time — better an
+            // honest "—" than a made-up average.
+            const pitFromSvc = snap.pit || [];
+            if (pitFromSvc.length) {
+                const seen = new Set(liveHist.pitKeys || []);
+                pitFromSvc.forEach(p => {
+                    const key = String(p.n) + '@' + p.lap + '@' + (p.t || '');
+                    if (!seen.has(key)) {
+                        seen.add(key);
+                        liveHist.pit.push({ n: p.n, lap: p.lap ?? null,
+                                            t: p.t || null, dur: p.dur ?? null,
+                                            lane: p.lane ?? null });
+                    }
+                });
+                liveHist.pitKeys = [...seen];
+            }
+            if (liveHist.pit.length > 200) liveHist.pit.splice(0, 100);
+        }
+
+        function liveHistorySession(drivers) {
+            return {
+                frames: liveHist.frames,
+                frame_times: liveHist.times,
+                position_events: liveHist.events,
+                pit: liveHist.pit,
+                has_positions: liveHist.frames.length >= 2,
+                drivers,
+            };
+        }
+
         async function fetchLiveSnapshot() {
             if (!liveSvcUrl()) return null;
             try {
@@ -499,6 +585,7 @@
                 liveSnap = await res.json();
                 liveIsLive = !!liveSnap.is_live;
                 liveSvcFail = 0;
+                pushLiveHistory(liveSnap);
                 return liveSnap;
             } catch (e) {
                 if (++liveSvcFail === 3) {
@@ -517,35 +604,58 @@
                 n: d.n, code: d.code, name: d.name, team: d.team,
                 team_color: d.team_color, color: d.color || d.team_color,
             }));
-            // The service already sends stint numbers and team radio; wiring them
-            // in here is what makes the "Пит-стопы" and "Радио команды" cards
-            // show anything at all while a session is live.
+            // The service already sends stint numbers, team radio and per-driver laps;
+            // wiring them in here is what makes the "Пит-стопы", "Радио команды"
+            // and classification cards show anything at all while a session runs.
             const stintMap = snap.stints || {};
+            // pit_stops is F1's own counter and wins over counting stints, which
+            // would be off by one on the first stop.
             const pitCounts = {};
-            Object.entries(stintMap).forEach(([n, v]) => {
-                const stops = (v || 0) - 1;      // stint 1 = still on first set
-                if (stops > 0) pitCounts[n] = stops;
-            });
+            const svcStops = snap.pit_stops || {};
+            if (Object.keys(svcStops).length) {
+                Object.entries(svcStops).forEach(([n, v]) => {
+                    if (v > 0) pitCounts[n] = v;
+                });
+            } else {
+                Object.entries(stintMap).forEach(([n, v]) => {
+                    const stops = (v || 0) - 1;  // stint 1 = still on first set
+                    if (stops > 0) pitCounts[n] = stops;
+                });
+            }
             const stints = Object.entries(stintMap)
                 .filter(([, v]) => v > 0)
                 .map(([n, v]) => ({ n: +n, number: v, compound: (snap.tyres || {})[n] }));
+
+            // Live standings stand in for the final classification. Same shape,
+            // real data: position from TimingData, laps from LapNumber, gap text
+            // as F1 sends it.
+            const laps = snap.laps || {};
+            const gaps = snap.gaps || {};
+            const sessionResult = Object.entries(snap.positions || {})
+                .map(([n, pos]) => ({
+                    n: +n, pos, laps: laps[n] ?? null,
+                    gap: gaps[n] ?? null, dnf: false, dsq: false,
+                }))
+                .sort((a, b) => a.pos - b.pos);
+
+            const hist = liveHistorySession(drivers);
             return {
                 session_key: snap.session_key,
                 session_name: snap.session_name,
                 is_live_session: true,
                 sample_seconds: 3,
-                has_positions: false,
                 drivers,
-                frame_times: [],
-                frames: [],
-                position_events: [],
+                has_positions: hist.has_positions,
+                frame_times: hist.frame_times,
+                frames: hist.frames,
+                position_events: hist.position_events,
                 stints,
                 final_tyres: snap.tyres || {},
-                session_result: [],
+                session_result: sessionResult,
                 best_laps: Object.entries(snap.best_laps || {}).map(([n, v]) => ({
                     n: +n, lap: v.lap, time: v.time, s1: null, s2: null, s3: null,
                 })),
-                pit: [], pit_counts: pitCounts, radio: snap.radio || [],
+                pit: hist.pit, pit_counts: pitCounts, radio: snap.radio || [],
                 race_control: snap.race_control || [],
                 weather: snap.weather ? [snap.weather] : [],
             };
@@ -562,6 +672,9 @@
         }
         function stopLiveService() {
             if (liveSvcTimer) { clearInterval(liveSvcTimer); liveSvcTimer = null; }
+            // Frames collected so far belong to a feed that is no longer
+            // reachable; keeping them would let the scrubber show a stale race.
+            resetLiveHistory();
         }
 
         function rawToGrid(x, y, bounds) {
@@ -992,8 +1105,11 @@
             const byNum = {};
             s.drivers.forEach(d => byNum[d.n] = d);
             const rows = r.slice().sort((a, b) => (a.pos || 99) - (b.pos || 99)).slice(0, 10);
+            // While the session is running this is the current order, not a final
+            // classification — calling it "итоговая" would be wrong.
+            const title = s.is_live_session ? 'Текущий зачёт' : 'Итоговая классификация';
             return `<div class="live-panel">
-                <h3>Итоговая классификация</h3>
+                <h3>${title}</h3>
                 ${rows.map(x => {
                     const d = byNum[x.n] || { code: '#' + x.n, name: '#' + x.n, team_color: '#666' };
                     const gap = x.pos === 1 ? 'победитель'
@@ -1025,7 +1141,7 @@
                 : null;
             host.innerHTML = `<div class="drv-detail">
                 <div class="nm"><span class="driver-color" style="background:${d.team_color}"></span>${d.name} <span style="color:var(--text-dim);font-weight:400">· ${d.team}</span></div>
-                <div class="kv"><span>Позиция</span><b>${resPos || '—'}</b></div>
+                <div class="kv"><span>Позиция</span><b>${resPos && resPos.pos ? resPos.pos : '—'}</b></div>
                 <div class="kv"><span>Шины на финише</span><b>${TYRE_RU[tyre] || '—'}</b></div>
                 <div class="kv"><span>Лучший круг</span><b>${fmtLap(bl && bl.time)}</b></div>
                 <div class="kv"><span>Секторы S1 / S2 / S3</span><b>${fmtLap(bl && bl.s1)} / ${fmtLap(bl && bl.s2)} / ${fmtLap(bl && bl.s3)}</b></div>

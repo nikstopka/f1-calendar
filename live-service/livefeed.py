@@ -187,6 +187,8 @@ class LiveState:
         self.best_lap: dict[int, dict] = {}
         self.tyre: dict[int, str] = {}
         self.stint: dict[int, int] = {}
+        self.pit_stops: dict[int, int] = {}   # NumberOfPitStops, straight from F1
+        self.pit: list = []                   # one event per counter increase
         self.drivers: dict[int, dict] = {}
         self.weather: dict = {}
         self.track_status: str | None = None
@@ -255,8 +257,32 @@ class LiveState:
                     if v is not None:
                         car[name] = _num(v)
 
+    def _record_pit_stop(self, n, new_count):
+        """Append a pit event each time F1 raises a driver's stop counter.
+
+        The `InPit`/`PitOut` flags look tempting but are not usable: over the
+        Baku race they toggle on approach (InPit true/false/true...) and only the
+        `NumberOfPitStops` counter moves exactly once per real stop. So the
+        counter is the signal, and the event is written at that moment.
+
+        `dur` stays None: the live feed has no stationary stop time, and the UI
+        shows "—" rather than an invented number. `t` is the feed's own update
+        stamp, so it is the session clock and not the host clock.
+        """
+        self.pit.append({
+            "n": n,
+            "lap": self.lap.get(n),
+            "t": self.updated,
+            "dur": None,
+            "lane": None,
+        })
+        # NB: `del lst[-200:]` on a shorter list would wipe it entirely, so trim
+        # by slicing assignment like the race-control list does.
+        if len(self.pit) > 200:
+            self.pit = self.pit[-200:]
+
     def _on_timing(self, data):
-        # {"Lines": {num: {"Position": n, "LapNumber": n, "GapToLeader": "...", ...}}}
+        # {"Lines": {num: {"Position": n, "NumberOfLaps": n, "GapToLeader": "...", ...}}}
         lines = data.get("Lines") if isinstance(data, dict) else None
         for num, l in (lines or {}).items():
             if not isinstance(l, dict):
@@ -268,12 +294,30 @@ class LiveState:
                     self.positions[n] = int(pos)
                 except (TypeError, ValueError):
                     pass
+            # The 2026 feed calls the current lap "NumberOfLaps"; older seasons
+            # used "LapNumber". Verified by scanning the Baku archive: NumberOfLaps
+            # appears 976 times, LapNumber never appears at all.
             lapno = l.get("LapNumber")
+            if lapno is None:
+                lapno = l.get("NumberOfLaps")
             if lapno is not None:
                 try:
                     self.lap[n] = int(lapno)
                 except (TypeError, ValueError):
                     pass
+            # F1 also reports the pit-stop count directly, which is better than
+            # counting stints: it only moves on an actual stop.
+            npit = l.get("NumberOfPitStops")
+            if npit is not None:
+                try:
+                    count = int(npit)
+                except (TypeError, ValueError):
+                    count = None
+                if count is not None:
+                    was = self.pit_stops.get(n, 0)
+                    self.pit_stops[n] = count
+                    for _ in range(count - was):
+                        self._record_pit_stop(n, count)
             g = l.get("GapToLeader")
             if g is not None:
                 self.gap[n] = g
@@ -510,7 +554,10 @@ class LiveState:
             "drivers": drivers,
             "cars": cars,
             "positions": dict(self.positions),
+            "laps": dict(self.lap),
             "gaps": dict(self.gap),
+            "pit": list(self.pit),
+            "pit_stops": dict(self.pit_stops),
             "best_laps": dict(self.best_lap),
             "tyres": dict(self.tyre),
             "stints": dict(self.stint),

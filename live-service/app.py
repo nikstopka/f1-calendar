@@ -32,6 +32,11 @@ import time
 from datetime import datetime, timedelta, timezone
 from typing import Any
 
+# Uptime reference for /health. On a host that spins idle instances down, a
+# reset of this value proves the container was stopped and restarted; a value
+# that keeps growing means it never slept.
+_PROCESS_STARTED = time.time()
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
@@ -588,7 +593,7 @@ def _waiting_snapshot() -> dict:
         "message": "Ожидание активной сессии F1 — данные появятся здесь "
                    "во время трансляции",
         "feed": feed.status(),
-        "drivers": [], "cars": [], "positions": {}, "gaps": {},
+        "drivers": [], "cars": [], "positions": {}, "laps": {}, "gaps": {},
         "best_laps": {}, "tyres": {}, "stints": {},
         "weather": {}, "race_control": [], "radio": [],
     }
@@ -739,6 +744,10 @@ async def health():
         "feed": feed.status(),
         "grid": GRID,
         "polling": POLL_SECONDS,
+        # Seconds since this process started. On a host that spins idle
+        # instances down, a reset here proves the container was stopped and
+        # restarted; a value that keeps growing means it never slept.
+        "uptime_seconds": int(time.time() - _PROCESS_STARTED),
     }
 
 
