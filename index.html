@@ -209,6 +209,28 @@
         .radio-item .t { color: var(--text-dim); font-variant-numeric: tabular-nums; font-size: 0.72rem; flex-shrink: 0; }
         .radio-empty, .empty-note { color: var(--text-dim); font-size: 0.8rem; padding: 8px 0; }
 
+        /* ── News tab ── */
+        .news-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 14px; }
+        .news-head h2 { margin: 0; font-size: 1.5rem; }
+        .news-meta { color: var(--text-dim); font-size: 0.82rem; }
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+        .news-card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+        .news-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: var(--surface-2, #1a1a1a); }
+        .news-body { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 6px; }
+        .news-tags { display: flex; align-items: center; gap: 8px; }
+        .news-tag { background: rgba(225, 6, 30, 0.15); color: var(--red); border: 1px solid rgba(225, 6, 30, 0.35); border-radius: 4px; padding: 1px 7px; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+        .news-date { color: var(--text-dim); font-size: 0.75rem; font-variant-numeric: tabular-nums; }
+        .news-card h3 { margin: 0; font-size: 0.98rem; line-height: 1.3; }
+        .news-card h3 a { color: inherit; text-decoration: none; }
+        .news-card h3 a:hover { color: var(--red); }
+        /* The Russian line is the primary read; the original stays directly under
+           it because machine translation of F1 jargon is not reliable. */
+        .news-ru { margin: 0; font-size: 0.92rem; font-weight: 600; line-height: 1.35; }
+        .news-en { margin: 0; font-size: 0.8rem; color: var(--text-dim); line-height: 1.3; }
+        .news-desc { margin: 2px 0 0; font-size: 0.82rem; color: var(--text-dim); line-height: 1.4; }
+        .news-foot { margin-top: 16px; color: var(--text-dim); font-size: 0.78rem; }
+        .news-foot a { color: #8ecbff; }
+
         .live-svc-banner { display: none; background: rgba(0,217,126,.08); border: 1px solid rgba(0,217,126,.3); border-radius: 8px; padding: 8px 13px; font-size: 0.78rem; color: var(--green); margin-bottom: 12px; font-variant-numeric: tabular-nums; }
         .live-svc-banner.on { display: block; }
         .live-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--green); margin-right: 6px; animation: pulse 1.6s ease-in-out infinite; }
@@ -260,6 +282,7 @@
             <div class="tab" data-view="races" data-filter="completed">Завершённые</div>
             <div class="tab" data-view="standings">Зачёты</div>
             <div class="tab" data-view="live">Live View</div>
+            <div class="tab" data-view="news">News</div>
             <button class="expand-toggle" id="expandToggle" onclick="toggleAllCards()">Развернуть все</button>
         </div>
         <div id="content"><div class="loading">Загрузка...</div></div>
@@ -436,6 +459,9 @@
             if (currentView === 'standings') {
                 if (expandBtn) expandBtn.style.display = 'none';
                 renderStandingsPage();
+            } else if (currentView === 'news') {
+                if (expandBtn) expandBtn.style.display = 'none';
+                renderNewsPage();
             } else if (currentView === 'live') {
                 if (expandBtn) expandBtn.style.display = 'none';
                 renderLiveView();
@@ -446,6 +472,83 @@
                 }
                 renderRaces();
             }
+        }
+
+        // ─── News ────────────────────────────────────────────────────────────
+        // Articles scraped from formula1.com by scripts/update_news.py. The file
+        // is committed to the repo, so this tab is pure static data with no
+        // third-party request from the browser.
+        let newsData = null;
+
+        const NEWS_TYPE_RU = {
+            'News': 'Новость', 'Opinion': 'Мнение', 'Feature': 'Фича',
+            'Technical': 'Технический', 'Technical Article': 'Технический',
+            'Interview': 'Интервью', 'Video': 'Видео', 'Gallery': 'Галерея',
+            'Podcast': 'Подкаст', 'Quiz': 'Викторина', 'Live': 'Эфир',
+        };
+
+        async function renderNewsPage() {
+            const box = document.getElementById('content');
+            if (!newsData) {
+                box.innerHTML = '<div class="loading">Загрузка новостей…</div>';
+                try {
+                    const r = await fetch('data/news/index.json', { cache: 'no-cache' });
+                    if (!r.ok) throw new Error('HTTP ' + r.status);
+                    newsData = await r.json();
+                } catch (e) {
+                    box.innerHTML = `<div class="live-note">Новости ещё не собраны.
+                        Файл <code>data/news/index.json</code> создаёт GitHub Actions
+                        (скрипт <code>scripts/update_news.py</code>) — обычно в течение
+                        получаса после первого запуска.</div>`;
+                    return;
+                }
+            }
+
+            const arts = newsData.articles || [];
+            if (!arts.length) {
+                box.innerHTML = '<div class="live-note">Список новостей пуст.</div>';
+                return;
+            }
+
+            const gen = newsData.generated
+                ? new Date(newsData.generated).toLocaleString('ru-RU', {
+                    timeZone: 'Europe/Moscow', day: '2-digit', month: 'long',
+                    hour: '2-digit', minute: '2-digit' })
+                : '';
+
+            box.innerHTML = `
+                <div class="news-head">
+                    <h2>Новости F1</h2>
+                    <div class="news-meta">Обновлено ${escapeHtml(gen)} ·
+                        перевод машинный${newsData.translation ? ', ' + escapeHtml(newsData.translation.split('(')[0].trim()) : ''}</div>
+                </div>
+                <div class="news-grid">
+                    ${arts.map(a => {
+                        const type = NEWS_TYPE_RU[a.type] || a.type || '';
+                        const ru = a.title_ru || '';
+                        return `<article class="news-card">
+                            ${a.image ? `<a href="${escapeHtml(a.url)}" target="_blank" rel="noopener">
+                                <img loading="lazy" src="${escapeHtml(a.image)}"
+                                     alt="${escapeHtml(a.image_alt || a.title)}"></a>` : ''}
+                            <div class="news-body">
+                                <div class="news-tags">
+                                    ${type ? `<span class="news-tag">${escapeHtml(type)}</span>` : ''}
+                                    <span class="news-date">${escapeHtml(mskTime(a.published))}</span>
+                                </div>
+                                <h3><a href="${escapeHtml(a.url)}" target="_blank" rel="noopener">${escapeHtml(a.title)}</a></h3>
+                                ${ru ? `<p class="news-ru" lang="ru">${escapeHtml(ru)}</p>
+                                        <p class="news-en" lang="en">${escapeHtml(a.title)}</p>`
+                                      : `<p class="news-en" lang="en">${escapeHtml(a.title)}</p>`}
+                                ${a.description_ru ? `<p class="news-desc" lang="ru">${escapeHtml(a.description_ru)}</p>`
+                                                  : (a.description ? `<p class="news-desc" lang="en">${escapeHtml(a.description)}</p>` : '')}
+                            </div>
+                        </article>`;
+                    }).join('')}
+                </div>
+                <div class="news-foot">
+                    Источник: <a href="https://www.formula1.com/en/latest" target="_blank" rel="noopener">formula1.com</a>.
+                    Русский текст — машинный перевод, рядом всегда оригинал.
+                </div>`;
         }
 
         // ─── Live View (precomputed from OpenF1 by scripts/update_live_data.py) ───

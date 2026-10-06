@@ -42,6 +42,13 @@ jobs:
         continue-on-error: true
         run: python scripts/update_live_data.py
 
+      - name: Build News data (formula1.com)
+        # Scraping the rendered page is the only route to the same headlines the
+        # F1 app shows. continue-on-error keeps a layout change from blocking
+        # the calendar update — the News tab shows its "not built yet" note.
+        continue-on-error: true
+        run: python scripts/update_news.py
+
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
