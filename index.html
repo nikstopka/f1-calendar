@@ -523,7 +523,7 @@
                 <div class="news-head">
                     <h2>Новости F1</h2>
                     <div class="news-meta">Обновлено ${escapeHtml(gen)} ·
-                        перевод машинный${newsData.translation ? ', ' + escapeHtml(newsData.translation.split('(')[0].trim()) : ''}</div>
+                        перевод машинный${newsData.translation ? ' · ' + escapeHtml(newsData.translation) : ''}</div>
                 </div>
                 <div class="news-grid">
                     ${arts.map(a => {
