@@ -17,9 +17,10 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: update-data
-  cancel-in-progress: false
+# No concurrency group here on purpose. update-data.yml declares one, and a
+# caller holding the same group while the callee waits for it would deadlock:
+# the run would sit pending forever. Serialising the actual work belongs to the
+# callee, which both this file and workflow_dispatch go through.
 
 jobs:
   update:
