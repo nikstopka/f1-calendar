@@ -522,36 +522,52 @@ def translate_articles(articles: list, cache: dict) -> dict:
 
     # Descriptions for the newest few, then bodies for the newest few.
     for index, a in enumerate(articles):
-        for field, cap in (("description", BODY_TRANSLATE_LIMIT + 8),
-                           ("body", BODY_TRANSLATE_LIMIT)):
-            if field == "description" and index >= cap:
-                continue
-            if field == "body" and (index >= cap or not a.get("body")):
-                continue
-            srcs = [a.get(field) or ""] if field == "description" else a.get(field) or []
-            dst_list = a.get(field + "_ru") or []
-            for si, src in enumerate(srcs):
-                src = src.strip()
-                if not src or si >= len(dst_list):
-                    continue
-                key = field + "::" + src
-                if cache.get(key):
-                    dst_list[si] = cache[key]
-                    reused += 1
-                    continue
-                if spent >= TRANSLATE_CALLS_PER_RUN or out_of_quota():
-                    log("бюджет или квота исчерпаны, остальное — в следующий запуск")
-                    log(f"переводов: новых {spent}, из кэша {reused}")
-                    return cache
-                ru = translate(src)
+        # A description is one string, a body is a list of paragraphs. Handling
+        # both as lists meant the length check `si >= len(dst_list)` always
+        # skipped descriptions: their target is a string, so len() was 0 and no
+        # description was ever translated.
+        desc = (a.get("description") or "").strip()
+        if desc and index < BODY_TRANSLATE_LIMIT + 8 and not a.get("description_ru"):
+            key = "description::" + desc
+            if cache.get(key):
+                a["description_ru"] = cache[key]
+                reused += 1
+            elif spent < TRANSLATE_CALLS_PER_RUN and not out_of_quota():
+                ru = translate(desc)
                 spent += 1
                 if ru:
                     fails = 0
                     cache[key] = ru
-                    dst_list[si] = ru
+                    a["description_ru"] = ru
                     time.sleep(PAUSE_BETWEEN_TRANSLATIONS)
                 else:
                     fails += 1
+
+        if index >= BODY_TRANSLATE_LIMIT or not a.get("body"):
+            continue
+        dst_list = a.get("body_ru") or []
+        for si, src in enumerate(a["body"]):
+            src = src.strip()
+            if not src or si >= len(dst_list):
+                continue
+            key = "body::" + src
+            if cache.get(key):
+                dst_list[si] = cache[key]
+                reused += 1
+                continue
+            if spent >= TRANSLATE_CALLS_PER_RUN or out_of_quota():
+                log("бюджет или квота исчерпаны, остальное — в следующий запуск")
+                log(f"переводов: новых {spent}, из кэша {reused}")
+                return cache
+            ru = translate(src)
+            spent += 1
+            if ru:
+                fails = 0
+                cache[key] = ru
+                dst_list[si] = ru
+                time.sleep(PAUSE_BETWEEN_TRANSLATIONS)
+            else:
+                fails += 1
 
     log(f"переводов: новых {spent}, из кэша {reused}")
     return cache
