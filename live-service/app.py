@@ -34,6 +34,7 @@ from typing import Any
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 
 from livews import LiveFeed
 
@@ -94,6 +95,13 @@ app.add_middleware(
     allow_methods=["GET", "OPTIONS"],
     allow_headers=["*"],
 )
+
+# The snapshot is ~10 KB of JSON and the frontend polls it every 3 seconds, so
+# a single viewer of a two-hour race pulls roughly 0.6 GB. Both hosts bill
+# outbound traffic at $0.05/GB, and JSON of this shape compresses about 7-10x.
+# Gzip is therefore not a micro-optimisation: it cuts the egress bill by nearly
+# an order of magnitude and makes the tab noticeably faster.
+app.add_middleware(GZipMiddleware, minimum_size=500)
 
 _state: dict[str, Any] = {
     "session": None,
