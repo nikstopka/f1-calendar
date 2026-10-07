@@ -152,11 +152,28 @@ def load_circuit(circuit_key):
 
 
 def build_circuit(circuit_key, session, loc_rows):
-    """Derive the track outline from one driver's real trajectory."""
+    """Derive the track outline from one driver's real trajectory.
+
+    Two traps here, both of which shipped a broken map before:
+
+    - OpenF1 reports (0, 0) for a car that is not on the circuit. Keeping those
+      rows collapses the bounding box to a degenerate square around the origin
+      and every outline point onto its centre — Monza came out as one repeated
+      point, with bounds [-200, -200, 200, 200].
+    - Nothing checked the result. A bad outline was written to disk and
+      load_circuit() never rebuilds it, so the map stayed wrong for good.
+
+    So the points are filtered and the outcome is validated before returning.
+    """
     if not loc_rows:
         return None
-    pts = [(r["x"], r["y"]) for r in loc_rows if r.get("x") is not None]
+    pts = [(r["x"], r["y"]) for r in loc_rows
+           if r.get("x") is not None and r.get("y") is not None
+           and not (r["x"] == 0 and r["y"] == 0)]
     if len(pts) < 50:
+        return None
+
+    if not outline_is_sane(pts):
         return None
 
     bounds = compute_bounds(pts)
@@ -170,6 +187,62 @@ def build_circuit(circuit_key, session, loc_rows):
         "outline": [list(p) for p in quantise(path, bounds)],
         "built": datetime.now(timezone.utc).isoformat(),
     }
+
+
+# A real circuit outline covers a decent area and repeats few points. These are
+# the thresholds that caught Monza (one unique point) and Madring (two).
+MIN_UNIQUE_POINTS = 200
+MIN_SPAN_M = 300
+# How many drivers to try before giving up. The first one is not reliable: a
+# driver who never got on track reports (0, 0) throughout.
+OUTLINE_DRIVER_TRIES = 4
+
+
+def outline_is_sane(pts) -> bool:
+    """Reject trajectories that cannot be a track shape."""
+    if len(set(pts)) < MIN_UNIQUE_POINTS:
+        return False
+    xs = [p[0] for p in pts]
+    ys = [p[1] for p in pts]
+    return (max(xs) - min(xs)) > MIN_SPAN_M and (max(ys) - min(ys)) > MIN_SPAN_M
+
+
+def circuit_is_usable(circuit) -> bool:
+    """True when a stored outline is good enough to map positions with."""
+    if not circuit:
+        return False
+    outline = circuit.get("outline") or []
+    if len(set(map(tuple, outline))) < MIN_UNIQUE_POINTS:
+        return False
+    xs = [p[0] for p in outline]
+    ys = [p[1] for p in outline]
+    if len(outline) > 1 and len(set(xs)) <= 1 and len(set(ys)) <= 1:
+        return False
+    # A span under a fifth of the canvas means the shape collapsed.
+    return (max(xs) - min(xs)) > GRID * 0.2 or (max(ys) - min(ys)) > GRID * 0.2
+
+
+def build_outline_from_any_driver(circuit_key, session, session_key, driver_list, scan_start):
+    """Try a few drivers until one yields a usable outline.
+
+    The single reference driver the code used before was arbitrary, and one bad
+    choice was written to disk permanently. Now a driver that never got on track
+    simply loses: its trajectory is rejected and the next one is tried.
+    """
+    window_end = scan_start + timedelta(seconds=CHUNK_SECONDS)
+    for n, driver_number in enumerate(driver_list[:OUTLINE_DRIVER_TRIES]):
+        if n:
+            time.sleep(API_PAUSE)
+        rows = of1_get(f"location?session_key={session_key}"
+                       f"&driver_number={driver_number}"
+                       f"&date%3E{scan_start.isoformat()}"
+                       f"&date%3C{window_end.isoformat()}")
+        circuit = build_circuit(circuit_key, session, rows)
+        if circuit:
+            log(f"контур построен по пилоту №{driver_number}")
+            return circuit
+        log(f"пилот №{driver_number}: траектория не годится")
+    return None
 
 
 # ─── Session detail ───
@@ -328,18 +401,18 @@ def build_session(session):
         scan_start = min(stamps) - timedelta(minutes=2)
 
     # --- car coordinates (heaviest) ---
-    ref = of1_get(f"location?session_key={sk}&driver_number={driver_list[0]}"
-                  f"&date%3E{scan_start.isoformat()}"
-                  f"&date%3C{(scan_start + timedelta(seconds=CHUNK_SECONDS)).isoformat()}")
-    time.sleep(API_PAUSE)
     circuit = load_circuit(session["circuit_key"])
-    if circuit is None:
-        circuit = build_circuit(session["circuit_key"], session, ref)
+    if circuit is None or not circuit_is_usable(circuit):
+        circuit = build_outline_from_any_driver(session["circuit_key"], session, sk,
+                                               driver_list, scan_start)
         if circuit:
             CIRCUITS_DIR.mkdir(parents=True, exist_ok=True)
             (CIRCUITS_DIR / f"{session['circuit_key']}.json").write_text(
                 json.dumps(circuit, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
             log(f"built circuit outline for {session['circuit_short_name']}")
+        else:
+            log(f"нет пригодного контура для {session['circuit_short_name']} — "
+                "карта будет пустой, попробуем позже")
     bounds = tuple(circuit["bounds"]) if circuit else None
 
     times, frames = [], []
