@@ -311,11 +311,16 @@ def _flight_text(page_html: str) -> str:
 
 
 def _clean_text(raw: str) -> str:
-    """One payload string -> plain prose, paragraph breaks preserved."""
+    """One payload string -> plain prose, paragraph breaks preserved.
+
+    The '#' is deliberately left in place: it marks an in-article sub-heading
+    ("### Title"), and stripping it here would hide the heading from the code
+    that recognises it further down.
+    """
     body = raw.replace("\\_", "_").replace("\\`", "`")
     body = re.sub(r"(?:\\n)+", "\n\n", body)
     body = _MD_LINK_RE.sub(r"\1", body)
-    return re.sub(r"[*_`>#]", "", body)
+    return re.sub(r"[*_`>]", "", body)
 
 
 def _flight_text_nodes(flight: str) -> list:
@@ -345,6 +350,53 @@ def _flight_text_nodes(flight: str) -> list:
             nodes.append((j, value))
 
 
+def _dom_gallery(page_html: str) -> dict:
+    """Photos from a mid-article carousel, with the captions written for them.
+
+    The carousel is not in the React payload at all — it is server-rendered in
+    the DOM, so it has to be read from there. Every slide pairs an image with a
+    figcaption written by F1's editors; the alt text is mostly a filename, so
+    the caption is the part worth showing and translating.
+
+    The anchor is the body paragraph the carousel follows, which is how the
+    gallery gets its place among the blocks.
+    """
+    first = page_html.find("carousel-child")
+    if first < 0:
+        return None
+    last = page_html.rfind("carousel-child")
+    seg = page_html[first:last + 2000]
+    srcs = re.findall(r'<img[^>]*src="([^"]+)"[^>]*alt="([^"]*)"', seg)
+    caps = [html.unescape(_TAG_RE.sub("", c)).strip()
+            for c in re.findall(r'<figcaption[^>]*>(.*?)</figcaption>', seg, re.S)]
+    items = []
+    for i, (src, alt) in enumerate(srcs):
+        if not src.startswith("http"):
+            continue
+        items.append({"url": src,
+                      "alt": html.unescape(alt).strip(),
+                      "caption": caps[i] if i < len(caps) else ""})
+    if len(items) < 2:
+        return None
+    before = page_html[:first]
+    prev_ps = _BODY_P_RE.findall(before)
+    anchor = ""
+    if prev_ps:
+        anchor = html.unescape(_TAG_RE.sub("", prev_ps[-1])).strip()[:60]
+
+    # The paragraph before the carousel is often rendered only in the DOM and
+    # never reaches the payload, so it cannot be looked up among the blocks.
+    # The paragraphs after it usually do, so the gallery is placed before the
+    # first of those that is recognised.
+    after_ps = _BODY_P_RE.findall(page_html[last:])
+    after = []
+    for p in after_ps:
+        text = html.unescape(_TAG_RE.sub("", p)).strip()[:60]
+        if text:
+            after.append(text)
+    return {"anchor": anchor, "after": after, "items": items}
+
+
 def _article_blocks(page_html: str) -> list:
     """Article as an ordered list of text, photo and video blocks.
 
@@ -367,13 +419,22 @@ def _article_blocks(page_html: str) -> list:
 
     found = []            # (offset, sequence, kind, payload)
 
+    # In-article sub-headings arrive as a markdown "### Title" inside the very
+    # same text node as the prose that follows it. They used to be thrown away:
+    # the blank line splits the heading off as its own chunk, and then the
+    # 40-character minimum for a paragraph threw it out — a heading is short by
+    # nature. Six articles in fourteen were losing their headings this way.
     for at, raw in text_nodes:
         seq = 0
         for chunk in _clean_text(raw).split("\n\n"):
             text = re.sub(r"\s+", " ", chunk).strip()
             if not text:
                 continue
-            found.append((at, seq, "text", text))
+            heading = re.match(r"#{1,4}\s*(\S.*)$", text)
+            if heading:
+                found.append((at, seq, "heading", heading.group(1).strip()))
+            else:
+                found.append((at, seq, "text", text))
             seq += 1
 
     # Inline photographs arrive as ImageCard blocks: the file in "src", the
@@ -414,26 +475,6 @@ def _article_blocks(page_html: str) -> list:
             "video_id": vid.group(1) if vid else "",
         }))
 
-    # Mid-article cards that link to another F1 piece. They read like
-    # sub-headings in the app, but they are links — a heading would be a lie
-    # and the text would not be the article's own.
-    for m in re.finditer(r"FeaturedButtonCard-module", flight):
-        if not (lo <= m.start() <= hi):
-            continue
-        seg = flight[max(0, m.start() - 600):m.start() + 900]
-        href = re.search(r'"href":"(https://www\.formula1\.com[^"]+)"', seg)
-        title = re.search(r'FeaturedButtonCard-module_content__[^"]*","children":'
-                          r'"([^"]{4,200})"', seg)
-        if not href or not title:
-            continue
-        found.append((m.start(), 0, "link", {
-            "kind": "link",
-            "url": href.group(1),
-            "caption": title.group(1),
-            "alt": "",
-            "video_id": "",
-        }))
-
     found.sort(key=lambda item: (item[0], item[1]))
 
     blocks = []
@@ -450,6 +491,15 @@ def _article_blocks(page_html: str) -> list:
                 continue
             seen.add(key)
             blocks.append({"kind": "text", "en": payload})
+        elif kind == "heading":
+            # Short by nature, so the paragraph minimum must not apply.
+            if len(payload) < 4:
+                continue
+            key = "h:" + payload[:60].lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            blocks.append({"kind": "heading", "en": payload})
         else:
             if not payload.get("caption") and not payload.get("url"):
                 continue
@@ -460,6 +510,35 @@ def _article_blocks(page_html: str) -> list:
                 continue
             seen_media.add(media_key)
             blocks.append(payload)
+
+    gallery = _dom_gallery(page_html)
+    if gallery:
+        node = {"kind": "gallery", "items": gallery["items"],
+                "alt": "", "caption": "", "video_id": ""}
+        anchor = gallery["anchor"].lower()
+        after = [t.lower() for t in gallery["after"]]
+        at = None
+        # Preferred: straight after the paragraph the carousel follows.
+        for i, blk in enumerate(blocks):
+            if (blk["kind"] == "text" and anchor
+                    and blk["en"][:len(anchor)].lower() == anchor):
+                at = i + 1
+                break
+        if at is None and after:
+            # Otherwise before the first paragraph after it, stepping back over
+            # the heading of the next section: a heading opens what follows it,
+            # so the carousel has to land before that heading, not after it.
+            for i, blk in enumerate(blocks):
+                if blk["kind"] == "text" and blk["en"][:len(after[0])].lower() in after:
+                    at = i
+                    break
+            while at is not None and at > 0 and blocks[at - 1]["kind"] == "heading":
+                at -= 1
+        if at is None:
+            # Neither anchor matched — the photos still belong on the page, so
+            # they go to the end rather than being dropped.
+            at = len(blocks)
+        blocks.insert(at, node)
     return blocks
 
 
@@ -671,10 +750,45 @@ def translate_articles(articles: list, cache: dict) -> dict:
             continue
         blocks = a["blocks"]
         dst_list = a.get("blocks_ru") or []
+
+        # A gallery holds many captions in one block, so its translations are a
+        # list parallel to the items rather than a single string.
         for si, block in enumerate(blocks):
-            # A text block is translated whole; a photo or a video contributes
-            # its written caption, and without one there is nothing to translate.
-            src = (block["en"] if block["kind"] == "text"
+            if block["kind"] != "gallery" or si >= len(dst_list):
+                continue
+            items = block.get("items") or []
+            ru_caps = dst_list[si] if isinstance(dst_list[si], list) else []
+            ru_caps = list(ru_caps) + [""] * (len(items) - len(ru_caps))
+            for ii, it in enumerate(items):
+                src = (it.get("caption") or "").strip()
+                if not src:
+                    continue
+                key = "body::" + src
+                if cache.get(key):
+                    ru_caps[ii] = cache[key]
+                    reused += 1
+                    continue
+                if spent >= TRANSLATE_CALLS_PER_RUN or out_of_quota():
+                    log("бюджет или квота исчерпаны, остальное — в следующий запуск")
+                    log(f"переводов: новых {spent}, из кэша {reused}")
+                    dst_list[si] = ru_caps
+                    return cache
+                ru = translate(src)
+                spent += 1
+                if ru:
+                    fails = 0
+                    cache[key] = ru
+                    ru_caps[ii] = ru
+                    time.sleep(PAUSE_BETWEEN_TRANSLATIONS)
+                else:
+                    fails += 1
+            dst_list[si] = ru_caps
+
+        for si, block in enumerate(blocks):
+            # A text or heading block is translated whole; a photo or a video
+            # contributes its written caption, and without one there is
+            # nothing to translate.
+            src = (block["en"] if block["kind"] in ("text", "heading")
                    else (block.get("caption") or "")).strip()
             if not src or si >= len(dst_list):
                 continue
@@ -730,11 +844,20 @@ img{width:100%;border-radius:10px;margin:6px 0 18px;display:block}
 .body figure img{width:100%;border-radius:8px;display:block;margin:0}
 .body figcaption{margin-top:7px;color:var(--dim);font-size:.82rem;line-height:1.4}
 .body figure.video img{border:1px solid var(--border)}
-/* Cross-links to other F1 pieces. In the app they read like sub-headings, so
-   they are set apart from the running text to avoid that impression. */
-.body .crosslink{margin:20px 0;padding:10px 12px;border:1px solid var(--border);
-border-radius:6px;color:var(--dim);font-size:.9rem;background:var(--surface)}
-.body .crosslink a{color:#8ecbff}
+/* In-article sub-headings. The source marks them with "###" inside the same
+   text node as the prose, and they used to be discarded. */
+.body h2{margin:30px 0 12px;font-size:1.12rem;line-height:1.3;font-weight:700;
+text-transform:uppercase;letter-spacing:.03em;color:#fff}
+/* Gallery strip. Scroll-snap gives the "carousel" feel on touch devices with no
+   JavaScript at all — the page just scrolls sideways. */
+.body .strip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+-webkit-overflow-scrolling:touch;padding-bottom:10px;margin:22px -18px;padding-left:18px;
+padding-right:18px}
+.body .strip figure{flex:0 0 78%;margin:0;scroll-snap-align:center}
+/* No fixed aspect ratio: F1 galleries mix landscape and portrait shots, and a
+   forced 16:9 crops portrait ones through the middle. */
+.body .strip img{width:100%;border-radius:8px;display:block;background:#1c1c22}
+.body .strip figcaption{margin-top:8px}
 .note{margin-top:28px;padding-top:14px;border-top:1px solid var(--border);
 color:var(--dim);font-size:.82rem}
 .source{display:inline-block;margin-top:22px;padding:9px 14px;border:1px solid var(--border);
@@ -846,16 +969,35 @@ def _render_blocks(blocks: list, ru_list: list, article_url: str) -> str:
             if text:
                 out.append(f"<p>{html.escape(text)}</p>")
             continue
-        caption = html.escape(ru or b.get("caption") or "")
-        if b["kind"] == "link":
-            # A cross-link to another F1 piece, not a heading of this one.
-            out.append('<div class="crosslink">'
-                       + (f'Читайте также: <a href="{html.escape(b["url"])}" '
-                          f'target="_blank" rel="noopener">{caption}</a>'
-                          if caption else "")
-                       + "</div>")
+        if b["kind"] == "gallery":
+            # `ru` for a gallery is a list parallel to the items, so it must not
+            # reach html.escape(), which expects a string and calls .replace().
+            items = b.get("items") or []
+            ru_caps = ru if isinstance(ru, list) else []
+            items = b.get("items") or []
+            ru_caps = ru if isinstance(ru, list) else []
+            cards = []
+            for n, it in enumerate(items):
+                cap = html.escape((ru_caps[n] if n < len(ru_caps) else "")
+                                  or it.get("caption") or "")
+                src, srcset = _img_sources(it["url"])
+                extra = (f' srcset="{html.escape(srcset)}" sizes="320px"'
+                         if srcset else "")
+                cards.append('<figure class="shot">'
+                             f'<img loading="lazy" src="{html.escape(src)}"{extra} '
+                             f'alt="{html.escape(it.get("alt") or cap)}">'
+                             + (f"<figcaption>{cap}</figcaption>" if cap else "")
+                             + "</figure>")
+            # Swipeable without a line of JavaScript: the strip simply scrolls.
+            out.append('<div class="strip">' + "".join(cards) + "</div>")
+            continue
+        if b["kind"] == "heading":
+            text = ru or b.get("en") or ""
+            if text:
+                out.append(f"<h2>{html.escape(text)}</h2>")
             continue
         if b["kind"] == "image":
+            caption = html.escape(ru if isinstance(ru, str) else "")
             src, srcset = _img_sources(b["url"])
             extra = (f' srcset="{html.escape(srcset)}" '
                      'sizes="(max-width: 800px) 100vw, 760px"'
@@ -867,6 +1009,7 @@ def _render_blocks(blocks: list, ru_list: list, article_url: str) -> str:
                 + "</figure>")
             continue
         link = html.escape(article_url)
+        caption = html.escape(ru if isinstance(ru, str) else "")
         src, srcset = _img_sources(b["url"]) if b.get("url") else ("", "")
         extra = (f' srcset="{html.escape(srcset)}" '
                  'sizes="(max-width: 800px) 100vw, 760px"' if srcset else "")

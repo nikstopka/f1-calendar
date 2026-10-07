@@ -32,11 +32,20 @@ img{width:100%;border-radius:10px;margin:6px 0 18px;display:block}
 .body figure img{width:100%;border-radius:8px;display:block;margin:0}
 .body figcaption{margin-top:7px;color:var(--dim);font-size:.82rem;line-height:1.4}
 .body figure.video img{border:1px solid var(--border)}
-/* Cross-links to other F1 pieces. In the app they read like sub-headings, so
-   they are set apart from the running text to avoid that impression. */
-.body .crosslink{margin:20px 0;padding:10px 12px;border:1px solid var(--border);
-border-radius:6px;color:var(--dim);font-size:.9rem;background:var(--surface)}
-.body .crosslink a{color:#8ecbff}
+/* In-article sub-headings. The source marks them with "###" inside the same
+   text node as the prose, and they used to be discarded. */
+.body h2{margin:30px 0 12px;font-size:1.12rem;line-height:1.3;font-weight:700;
+text-transform:uppercase;letter-spacing:.03em;color:#fff}
+/* Gallery strip. Scroll-snap gives the "carousel" feel on touch devices with no
+   JavaScript at all — the page just scrolls sideways. */
+.body .strip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+-webkit-overflow-scrolling:touch;padding-bottom:10px;margin:22px -18px;padding-left:18px;
+padding-right:18px}
+.body .strip figure{flex:0 0 78%;margin:0;scroll-snap-align:center}
+/* No fixed aspect ratio: F1 galleries mix landscape and portrait shots, and a
+   forced 16:9 crops portrait ones through the middle. */
+.body .strip img{width:100%;border-radius:8px;display:block;background:#1c1c22}
+.body .strip figcaption{margin-top:8px}
 .note{margin-top:28px;padding-top:14px;border-top:1px solid var(--border);
 color:var(--dim);font-size:.82rem}
 .source{display:inline-block;margin-top:22px;padding:9px 14px;border:1px solid var(--border);

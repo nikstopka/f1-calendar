@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-07T13:17:53Z",
+ "generated": "2026-10-07T13:19:12Z",
  "source": "https://www.formula1.com/en/latest",
  "translation": "Google (free, no key) + словарик терминов F1",
  "articles": [
@@ -18,8 +18,8 @@
    "page": "news/1yu3dSkVOAvPULoMR9vn5Z.html",
    "fetched_body": true,
    "media_done": true,
-   "body_paras": 17,
-   "media": 7
+   "body_paras": 16,
+   "media": 9
   },
   {
    "id": "3dXFoedtzO5KQTREFXccop",
@@ -37,7 +37,7 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 16,
-   "media": 4
+   "media": 8
   },
   {
    "id": "4DFAwBl2esxhHp1mCv3VSF",
@@ -108,8 +108,8 @@
    "page": "news/Ftdqu1hwKlnLRDvy014Tr.html",
    "fetched_body": true,
    "media_done": true,
-   "body_paras": 24,
-   "media": 10
+   "body_paras": 23,
+   "media": 12
   },
   {
    "id": "24UKT2fsQl4GmC5DMrmYUy",
@@ -126,8 +126,8 @@
    "page": "news/24UKT2fsQl4GmC5DMrmYUy.html",
    "fetched_body": true,
    "media_done": true,
-   "body_paras": 7,
-   "media": 2
+   "body_paras": 6,
+   "media": 4
   },
   {
    "id": "4Wp0nfUrqdG5TvhD76T8mw",
@@ -163,7 +163,7 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 26,
-   "media": 7
+   "media": 10
   },
   {
    "id": "2YqIG9uyvXkWJPSexKwgwh",
@@ -181,7 +181,7 @@
    "fetched_body": true,
    "body_paras": 25,
    "media_done": true,
-   "media": 6
+   "media": 4
   },
   {
    "id": "26vUwPc8sNYNC4KJRyXzLC",
@@ -197,9 +197,9 @@
    "image_alt": "SINGAPORE, SINGAPORE - OCTOBER 05: George Russell of Great Britain driving the (63) Mercedes AMG",
    "page": "news/26vUwPc8sNYNC4KJRyXzLC.html",
    "fetched_body": true,
-   "body_paras": 14,
+   "body_paras": 11,
    "media_done": true,
-   "media": 3
+   "media": 6
   },
   {
    "id": "3glfiIapY6g66dnzoaySYr",
@@ -217,7 +217,7 @@
    "fetched_body": true,
    "body_paras": 14,
    "media_done": true,
-   "media": 11
+   "media": 13
   },
   {
    "id": "318cgHrdJJMfqbDdznI2PP",
@@ -253,7 +253,7 @@
    "fetched_body": true,
    "body_paras": 17,
    "media_done": true,
-   "media": 5
+   "media": 4
   },
   {
    "id": "6l8Eq8hJRvouCZTnnOk9U5",
@@ -289,7 +289,7 @@
    "fetched_body": true,
    "body_paras": 33,
    "media_done": true,
-   "media": 9
+   "media": 17
   },
   {
    "id": "ZcVMKm6k8IYRaVcLSrmSs",
@@ -307,7 +307,7 @@
    "fetched_body": true,
    "body_paras": 18,
    "media_done": true,
-   "media": 4
+   "media": 5
   },
   {
    "id": "7IToHJjbGez7YrJpMiihyH",
@@ -342,7 +342,7 @@
    "page": "news/ndcQ6Uza4pKcTHsLnvJoH.html",
    "fetched_body": true,
    "body_paras": 30,
-   "media": 9,
+   "media": 15,
    "media_done": true
   },
   {
@@ -360,7 +360,7 @@
    "page": "news/4v0pYbPzbMliaDbxtRYrH0.html",
    "fetched_body": true,
    "body_paras": 25,
-   "media": 6,
+   "media": 5,
    "media_done": true
   },
   {
@@ -396,7 +396,7 @@
    "page": "news/5Z07QWFA7vVqCPC1jb6AIq.html",
    "fetched_body": true,
    "body_paras": 8,
-   "media": 0,
+   "media": 1,
    "media_done": true
   },
   {
@@ -414,7 +414,7 @@
    "page": "news/D8AYcVEPGOs8OjIiVisZw.html",
    "fetched_body": true,
    "body_paras": 33,
-   "media": 11,
+   "media": 20,
    "media_done": true
   },
   {
@@ -504,7 +504,7 @@
    "page": "news/3IImAHC95xmYoRr8QDgQvy.html",
    "fetched_body": true,
    "body_paras": 22,
-   "media": 5,
+   "media": 3,
    "media_done": true
   },
   {
@@ -523,7 +523,7 @@
    "fetched_body": true,
    "body_paras": 13,
    "media": 3,
-   "media_done": false
+   "media_done": true
   },
   {
    "id": "1oz2f6p6qJsF3c58rtU8yd",
@@ -539,9 +539,9 @@
    "image_alt": "KUALA LUMPUR, MALAYSIA - OCTOBER 04: Race winner Max Verstappen of the Netherlands and Oracle Red",
    "page": "news/1oz2f6p6qJsF3c58rtU8yd.html",
    "fetched_body": true,
-   "body_paras": 19,
-   "media": 6,
-   "media_done": false
+   "body_paras": 17,
+   "media": 8,
+   "media_done": true
   },
   {
    "id": "2fYLsjB9qE4GOgoKO8wrlb",
@@ -557,9 +557,9 @@
    "image_alt": "KUALA LUMPUR, MALAYSIA - OCTOBER 04: Race winner Max Verstappen of the Netherlands and Oracle Red",
    "page": "news/2fYLsjB9qE4GOgoKO8wrlb.html",
    "fetched_body": true,
-   "body_paras": 21,
-   "media": 5,
-   "media_done": false
+   "body_paras": 20,
+   "media": 9,
+   "media_done": true
   },
   {
    "id": "31mD5xtSaBYdMAkMZNxCHQ",
@@ -577,7 +577,7 @@
    "fetched_body": true,
    "body_paras": 12,
    "media": 3,
-   "media_done": false
+   "media_done": true
   },
   {
    "id": "2pwbKbJ3dldp6qKJS7Hwad",
@@ -595,7 +595,7 @@
    "fetched_body": true,
    "body_paras": 8,
    "media": 3,
-   "media_done": false
+   "media_done": true
   },
   {
    "id": "lpydtOJ2CszTQCvhK4pDo",
@@ -612,8 +612,8 @@
    "page": "news/lpydtOJ2CszTQCvhK4pDo.html",
    "fetched_body": true,
    "body_paras": 4,
-   "media": 0,
-   "media_done": false
+   "media": 3,
+   "media_done": true
   },
   {
    "id": "1SAaxcY6OKwy8HwQkrNwen",
@@ -630,8 +630,8 @@
    "page": "news/1SAaxcY6OKwy8HwQkrNwen.html",
    "fetched_body": true,
    "body_paras": 11,
-   "media": 0,
-   "media_done": false
+   "media": 3,
+   "media_done": true
   },
   {
    "id": "4kwHL7ygJLqVlSMHhAj6ce",
@@ -648,8 +648,8 @@
    "page": "news/4kwHL7ygJLqVlSMHhAj6ce.html",
    "fetched_body": true,
    "body_paras": 1,
-   "media": 0,
-   "media_done": false
+   "media": 2,
+   "media_done": true
   },
   {
    "id": "65txlrZKsVDzVDMjhZiQ8m",
@@ -666,8 +666,8 @@
    "page": "news/65txlrZKsVDzVDMjhZiQ8m.html",
    "fetched_body": true,
    "body_paras": 9,
-   "media": 0,
-   "media_done": false
+   "media": 3,
+   "media_done": true
   },
   {
    "id": "1B0R4wN2ZtsIKYZ8covCZa",
@@ -684,8 +684,8 @@
    "page": "news/1B0R4wN2ZtsIKYZ8covCZa.html",
    "fetched_body": true,
    "body_paras": 9,
-   "media": 0,
-   "media_done": false
+   "media": 2,
+   "media_done": true
   },
   {
    "id": "GnmAqq3nZpuoQ1tTiawyB",
@@ -703,7 +703,7 @@
    "fetched_body": true,
    "body_paras": 1,
    "media": 0,
-   "media_done": false
+   "media_done": true
   },
   {
    "id": "77UEerhKRudnmGoMuJSq8b",
@@ -720,8 +720,8 @@
    "page": "news/77UEerhKRudnmGoMuJSq8b.html",
    "fetched_body": true,
    "body_paras": 7,
-   "media": 0,
-   "media_done": false
+   "media": 2,
+   "media_done": true
   },
   {
    "id": "6q0XGAriyl5ps2CLy1yiGm",
@@ -1747,29 +1747,121 @@
   "body::Piastri admits McLaren 'need to improve' after Malaysia P6": "Пиастри признает, что McLaren «нужно совершенствоваться» после шестого места в Малайзии",
   "body::Verstappen 'incredibly proud' after historic Bahrain GP win": "Ферстаппен «невероятно горд» после исторической победы на Гран-при Бахрейна",
   "body::All the key moments from the 2026 Bahrain GP in Malaysia": "Все ключевые моменты Гран-при Бахрейна 2026 года в Малайзии",
+  "body::Bright lights, bold designs": "Яркий свет, смелый дизайн",
+  "body::Post-race fireworks": "Фейерверк после гонки",
+  "body::Music meets motorsport": "Музыка встречается с автоспортом",
+  "body::Canada – Russell’s first DNF": "Канада – первый DNF Рассела",
+  "body::Hungary – A water leak and anti-stall": "Венгрия – Утечка воды и защита от срыва",
+  "body::What about Antonelli's reliability?": "А как насчет надежности Антонелли?",
+  "body::How many points are still up for grabs?": "Сколько очков еще осталось разыграть?",
+  "body::Max Verstappen (Red Bull)": "Макс Ферстаппен (Ред Булл)",
+  "body::Kimi Antonelli (Mercedes)": "Кими Антонелли (Мерседес)",
+  "body::Lando Norris (McLaren)": "Лэндо Норрис (McLaren)",
+  "body::Charles Leclerc (Ferrari)": "Шарль Леклерк (Феррари)",
+  "body::Lewis Hamilton (Ferrari)": "Льюис Хэмилтон (Феррари)",
+  "body::How it works": "Как это работает",
+  "body::Missing out": "Пропуск",
+  "body::2025 Qualifying top three": "2025 Тройка лучших в квалификации",
+  "body::2025 Grand Prix top three": "Тройка лучших на Гран-при 2025 года",
+  "body::What happened last year?": "Что произошло в прошлом году?",
+  "body::Grid position of last five winners": "Позиция последних пяти победителей в сетке",
+  "body::In-race advice": "Совет во время гонки",
+  "body::The winning habit": "Привычка побеждать",
+  "body::Podium potential": "Потенциал подиума",
+  "body::Points prospects": "Перспективы очков",
+  "body::Who are the favourites this year?": "Кто фавориты в этом году?",
+  "body::Key stats to consider before betting": "Ключевые статистические данные, которые следует учитывать перед тем, как делать ставки",
+  "body::Weather": "Погода",
+  "body::Teams cast eye towards 2027": "Команды рассчитывают на 2027 год",
+  "body::Hamilton eyes Singaporean success": "Хэмилтон ожидает успеха в Сингапуре",
+  "body::Winner: Max Verstappen": "Победитель: Макс Ферстаппен",
+  "body::Loser: George Russell": "Проигравший: Джордж Рассел",
+  "body::Winners: Red Bull": "Победители: Ред Булл",
+  "body::Losers: Williams": "Проигравшие: Уильямс",
+  "body::Winner: Lewis Hamilton": "Победитель: Льюис Хэмилтон",
+  "body::Losers: McLaren": "Проигравшие: Макларен",
+  "body::Winner: Fernando Alonso": "Победитель: Фернандо Алонсо",
+  "body::Losers: Alpine": "Проигравшие: Альпийский",
+  "body::Winners: Racing Bulls": "Победители: Racing Bulls",
+  "body::Losers: Audi": "Проигравшие: Ауди",
+  "body::Ferrari": "Феррари",
+  "body::McLaren": "Макларен",
+  "body::Racing Bulls": "Гоночные Быки",
+  "body::Alpine": "Альпийский",
+  "body::Haas": "Хаас",
+  "body::Audi": "Ауди",
+  "body::Williams": "Уильямс",
+  "body::Aston Martin": "Астон Мартин",
+  "body::Cadillac": "Кадиллак",
+  "body::Isack Hadjar was running in a podium position until he dropped down to P5 in the closing stages": "Исак Хаджар бежал на подиуме, пока на заключительном этапе не опустился на пятую позицию.",
+  "body::From last, Leclerc did well to recover to fourth at the flag in Sepang": "После последнего Леклерк преуспел, вернувшись на четвертое место на флаге в Сепанге.",
   "title::5 storylines we're excited about ahead of the Singapore GP": "5 сюжетных линий, которые нас волнуют в преддверии Гран-при Сингапура",
   "description::Chris Medland runs through the biggest talking points as F1 heads to Singapore for Round 17 of the 2026 season.": "Крис Медланд обсуждает самые важные темы для разговоров, когда Формула 1 направляется в Сингапур на 17-й этап сезона 2026 года.",
   "body::Chris Medland runs through the biggest talking points as F1 heads to Singapore for Round 17 of the 2026 season.": "Крис Медланд обсуждает самые важные темы для разговоров, когда Формула 1 направляется в Сингапур на 17-й этап сезона 2026 года.",
   "body::Last weekend’s Bahrain Grand Prix in Malaysia might have had delays but was worth the wait, and there’s not long to wait this time as the triple header wraps up in just a few days’ time. Max Verstappen is back on the top step and Mercedes have challenges to overcome as we look ahead to the final Sprint weekend of the season in Singapore.": "Гран-при Бахрейна в Малайзии на прошлых выходных, возможно, и имел задержки, но ожидание того стоило, и на этот раз ждать долго не придется, поскольку тройной заголовок завершится всего через несколько дней. Макс Ферстаппен снова на вершине, и Mercedes предстоит преодолеть трудности, поскольку мы предвкушаем заключительный спринтерский уик-энд сезона в Сингапуре.",
+  "body::Verstappen a threat once again": "Ферстаппен снова представляет угрозу",
   "body::The second half of the 2025 Formula 1 season saw Verstappen go on a remarkable run to pull himself back into championship contention, ultimately falling just short in his pursuit of the McLaren drivers at the final round.": "Во второй половине сезона Формулы 1 2025 года Ферстаппен совершил замечательную попытку вернуться в борьбу за чемпионство, но в конечном итоге потерпел неудачу в преследовании пилотов McLaren на финальном этапе.",
   "body::Could Verstappen build on the momentum from Malaysia to win again?": "Сможет ли Ферстаппен воспользоваться импульсом Малайзии и снова победить?",
   "body::Mercedes trying to understand their update": "Mercedes пытается понять свое обновление",
   "body::A week ago we were focused on the fact that Mercedes were bringing a new development package to Malaysia, but warned “the success of an update is never guaranteed”. And so it proved, as Mercedes found themselves scratching their heads as to why their new parts were not delivering the performance step they expected.": "Неделю назад мы сосредоточились на том факте, что Mercedes привозит в Малайзию новый пакет разработки, но предупредили, что «успех обновления никогда не гарантирован». Так оно и оказалось: в Mercedes ломали голову, почему их новые детали не обеспечивают ожидаемого уровня производительности.",
   "body::Team Principal Toto Wolff spoke of an expectation that the update would provide around 0.3s in terms of a lap time gain, but after Qualifying he felt it had actually set the team back by a similar amount.": "Руководитель команды Тото Вольф говорил, что ожидал, что обновление обеспечит увеличение времени круга примерно на 0,3 секунды, но после квалификации он почувствовал, что оно фактически отбросило команду назад на такую ​​​​же величину.",
-  "body::Wolff 'not in a happy place' after Russell Malaysia DNF": "Вольф «не в лучшем настроении» после Рассела Малайзии DNF",
   "body::It was hardly a disastrous race in terms of outright performance, with Mercedes still putting pressure on Verstappen at certain phases and looking set for a double podium, but there was more pain when Russell retired with a suspected power unit issue late on.": "Вряд ли это была катастрофическая гонка с точки зрения общих результатов: Mercedes все еще оказывал давление на Ферстаппена на определенных этапах и надеялся на двойной подиум, но боль стала еще сильнее, когда Рассел позже сошел с дистанции из-за подозрения на проблему с силовым агрегатом.",
-  "body::Reliability has been a weakness for Mercedes so far this season and the team have already confirmed Russell will take a penalty to consign him to the back of the grid in Singapore, so the impact will extend beyond his DNF on Sunday.": "Надежность была слабым местом Mercedes в этом сезоне, и команда уже подтвердила, что Рассел выполнит пенальти, отправив его в конец стартовой решетки в Сингапуре, так что влияние выйдет за пределы его DNF в воскресенье.",
+  "body::Reliability has been a weakness for Mercedes so far this season and the team have already confirmed Russell will take a penalty to consign him to the back of the grid in Singapore, so the impact will extend beyond his DNF on Sunday.": "Надежность была слабым местом Mercedes в этом сезоне, и команда уже подтвердила, что Рассел выполнит пенальти, чтобы отправить его в конец стартовой решетки в Сингапуре, так что влияние выйдет за пределы его DNF в воскресенье.",
   "body::Of similar concern will be identifying how to get the most out of the update package, with Mercedes having go try and find answers during the quick turnaround between races, and with only one practice session to try and prove out any solutions.": "Аналогичную озабоченность будет вызывать вопрос о том, как получить максимальную отдачу от пакета обновлений, поскольку Mercedes придется попытаться найти ответы во время быстрого перехода между гонками и провести всего одну тренировку, чтобы попытаться опробовать любые решения.",
   "body::A mechanical issue forced Russell to retire from the Bahrain Grand Prix in Malaysia": "Механическая проблема вынудила Рассела отказаться от участия в Гран-при Бахрейна в Малайзии.",
   "body::Could Antonelli further extend his advantage over Russell in Singapore?": "Сможет ли Антонелли еще больше расширить свое преимущество над Расселом в Сингапуре?",
+  "body::More Alonso magic?": "Больше магии Алонсо?",
   "body::There hasn’t been a huge amount for Aston Martin fans to get excited about this year, but the team have clearly made progress since introducing a new chassis in Hungary, with further gains coming from an updated Honda power unit in the Netherlands.": "Фанаты Aston Martin в этом году не особо волновались, но команда явно добилась прогресса с момента представления нового шасси в Венгрии, а дальнейшие успехи связаны с обновленным силовым агрегатом Honda в Нидерландах.",
   "body::And the high point of the season so far was delivered on Sunday, when Fernando Alonso secured a top-eight finish for his third point-scoring result of the year.": "А кульминация сезона на данный момент наступила в воскресенье, когда Фернандо Алонсо финишировал в восьмерке лучших, что стало его третьим результативным результатом в году.",
   "body::That result came despite starting on slick tyres for the race resumption that saw the intermediate runners pull out a huge advantage, and then with Alonso needing to hold off Lando Norris in the closing stages.": "Этот результат был достигнут несмотря на то, что перед возобновлением гонки стартовал на гладких шинах, в результате чего бегуны среднего уровня получили огромное преимущество, а затем Алонсо пришлось сдерживать Ландо Норриса на заключительном этапе.",
   "body::It was a weekend when both Aston Martin drivers were competitive, and came after a very challenging race in Azerbaijan. Alonso warns there will be big fluctuations in form throughout the rest of the season, with certain tracks suiting the Aston Martin package and others being far more problematic. But the good news is he has already highlighted Singapore as one of the weekends where the team have high hopes that they can be in the mix for points once again.": "Это был уик-энд, когда оба гонщика Aston Martin были конкурентоспособны и приехали после очень сложной гонки в Азербайджане. Алонсо предупреждает, что до конца сезона в форме будут большие колебания: некоторые трассы подходят для пакета Aston Martin, а другие окажутся гораздо более проблематичными. Но хорошая новость в том, что он уже выделил Сингапур как один из уик-эндов, где команда возлагает большие надежды на то, что они снова смогут побороться за очки.",
   "body::Alonso secured Aston Martin's best result of the season so far in Malaysia": "Алонсо обеспечил лучший результат Aston Martin в сезоне в Малайзии.",
+  "body::The final Sprint of the season": "Последний спринт сезона.",
   "body::As if racing under the lights in Singapore wasn’t going to be enough action, we’re going to be treated to the final Sprint weekend of the season, and with it a very different challenge.": "Как будто гонок под огнями Сингапура было недостаточно, нас ждет последний спринтерский уик-энд сезона, а вместе с ним и совсем другое испытание.",
   "body::While the Singapore Grand Prix itself will start at 2000 local time and take place completely under floodlights, the Sprint will be at 1700, when the sun has yet to set. That is going to mean different track conditions, and an even greater chance of a different racing picture across both Saturday and Sunday.": "В то время как сам Гран-при Сингапура начнется в 20:00 по местному времени и пройдет полностью при свете прожекторов, спринт состоится в 17:00, когда солнце еще не зашло. Это будет означать разные условия трассы и еще большую вероятность того, что гоночная картина в субботу и воскресенье будет разной.",
   "body::This year’s Sprint events have so far seen a different winner of each of the two races during a weekend, with the last time a driver swept both the Sprint and the Grand Prix coming when Norris dominated in Sao Paulo last season.": "В спринте этого года до сих пор в каждой из двух гонок в течение выходных были разные победители, а в последний раз гонщик побеждал и в спринте, и в Гран-при, когда Норрис доминировал в Сан-Паулу в прошлом сезоне.",
-  "body::With just one practice session to get up to speed on a track that demands commitment and confidence around the city streets, the drivers are going to have their skills tested in multiple different ways across the weekend.": "Всего за одну тренировку, чтобы набрать скорость на трассе, требующей преданности и уверенности на городских улицах, гонщикам предстоит проверить свои навыки разными способами в течение выходных."
+  "body::With just one practice session to get up to speed on a track that demands commitment and confidence around the city streets, the drivers are going to have their skills tested in multiple different ways across the weekend.": "Всего за одну тренировку, чтобы набрать скорость на трассе, требующей преданности и уверенности на городских улицах, гонщикам предстоит проверить свои навыки разными способами в течение выходных.",
+  "body::Sebastian Vettel leaned into F1’s night race with motion-sensitive LED lights built into his helmet, designed to sparkle beneath Marina Bay’s floodlights": "Себастьян Феттель погрузился в ночную гонку Формулы 1 с помощью чувствительных к движению светодиодных фонарей, встроенных в его шлем, призванных сверкать под прожекторами Марина Бэй.",
+  "body::Jean-Eric Vergne took the night-race theme literally with a helmet designed specifically to glow in the dark": "Жан-Эрик Вернь буквально подхватил тему ночных гонок, создав шлем, специально созданный для того, чтобы светиться в темноте.",
+  "body::Charles Leclerc embraced the night-race setting with a metallic gold helmet, complete with glitter across the top": "Шарль Леклерк продемонстрировал атмосферу ночной гонки в золотом металлическом шлеме с блестками на верху.",
+  "body::Sergio Perez marked his 250th F1 start with a Singapore helmet celebrating his career, blending Mexican-inspired details with nods to key moments from his journey": "Серхио Перес отметил свой 250-й старт в Формуле 1 сингапурским шлемом в честь своей карьеры, сочетая детали в мексиканском стиле с отсылками к ключевым моментам своего путешествия.",
+  "body::Lando Norris swapped his usual fluorescent colours for an iridescent purple, blue and exposed-carbon Quadrant design": "Ландо Норрис поменял свои обычные флуоресцентные цвета на переливающийся фиолетовый, синий и дизайн Quadrant с открытым углем.",
+  "body::Alex Albon celebrated his Thai heritage with a helmet inspired by the Naga, created alongside Thai artist Gongkan": "Алекс Албон отпраздновал свое тайское наследие шлемом, вдохновленным нагами, созданным совместно с тайским художником Гонканом.",
+  "body::Oscar Piastri ditched his usual colours for a silver, prismatic helmet with black and orange detailing for Singapore": "Оскар Пиастри отказался от своих обычных цветов в пользу серебряного призматического шлема с черно-оранжевыми деталями для Сингапура.",
+  "body::Yuki Tsunoda went bold with a white helmet wrapped in a colourful dragon, its head stretching around the front": "Юки Цунода смело надел белый шлем, обернутый разноцветным драконом, голова которого вытянулась спереди.",
+  "body::Lewis Hamilton went all gold in Singapore, giving his iconic yellow Ferrari-era helmet a glittering chrome finish designed to shine beneath Marina Bay’s lights": "Льюис Хэмилтон стал чемпионом в Сингапуре, придав своему культовому желтому шлему эпохи Ferrari блестящую хромированную отделку, призванную сиять в огнях Марина Бэй.",
+  "body::George Russell switched to reflective electric blue for Singapore, creating the helmet in support of the Blue Marine Foundation": "Джордж Рассел перешел на светоотражающий электрический синий цвет для Сингапура, создав шлем в поддержку Blue Marine Foundation.",
+  "body::Fernando Alonso marked his 350th GP with a helmet celebrating his F1 journey, a world map and milestone message featured across the rear": "Фернандо Алонсо отметил свой 350-й Гран-при шлемом, посвященным его путешествию в Формуле 1, картой мира и знаковым сообщением на задней панели.",
+  "body::Alex Albon’s helmet was designed by children from the Wat Sakraeo orphanage in Thailand. The playful, child-like design featured elephants, smiling faces and colourful drawings": "Шлем Алекса Албона разработали дети из приюта Ват Сакраео в Таиланде. В игривом детском дизайне изображены слоны, улыбающиеся лица и красочные рисунки.",
+  "body::Max Verstappen is back": "Макс Ферстаппен вернулся",
+  "body::Racing Bulls are in the ascendancy": "Racing Bulls набирают популярность",
+  "body::Hadjar looks like the real deal": "Хаджар выглядит как настоящий",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Race winner Max Verstappen of the Netherlands and Oracle Red Bull Racing celebrates on the podium during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Rudy Carezzevoli/Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ - 04 ОКТЯБРЯ: Победитель гонки Макс Ферстаппен из Нидерландов и Oracle Red Bull Racing празднует победу на подиуме во время Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Руди Кареццеволи/Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Isack Hadjar of France driving the (6) Oracle Red Bull Racing RB22 Red Bull Ford Powertrains leads Lewis Hamilton of Great Britain driving the (44) Scuderia Ferrari SF-26 on track during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Clive Mason/Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ – 4 ОКТЯБРЯ: Исак Хаджар из Франции за рулем (6) Oracle Red Bull Racing RB22 Red Bull Ford Powertrains возглавляет Льюиса Хэмилтона из Великобритании за рулем (44) Scuderia Ferrari SF-26 на трассе во время Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Клайва Мейсона/Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Second placed Andrea Kimi Antonelli of Italy and Mercedes AMG Petronas F1 Team lifts his trophy on the podium during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Peter Fox/Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ - 04 ОКТЯБРЯ: Второе место Андреа Кими Антонелли из Италии и команды Mercedes AMG Petronas F1 поднимает свой трофей на подиум во время Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Питера Фокса/Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: George Russell of Great Britain and Mercedes AMG Petronas F1 Team is given a ride by a marshal after retiring from the race during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Clive Mason/Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ – 4 ОКТЯБРЯ: Джорджа Рассела из Великобритании и команды Mercedes AMG Petronas F1 подвозит маршал после схода с гонки во время Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Клайва Мейсона/Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04:  Max Verstappen of the Netherlands driving the (3) Oracle Red Bull Racing RB22 Red Bull Ford Powertrains overtakes Andrea Kimi Antonelli of Italy driving the (12) Mercedes AMG Petronas F1 Team W17 on track during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Rudy Carezzevoli/Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ – 4 ОКТЯБРЯ: Макс Ферстаппен из Нидерландов за рулем (3) Oracle Red Bull Racing RB22 Red Bull Ford Powertrains обгоняет Андреа Кими Антонелли из Италии за рулем (12) Mercedes AMG Petronas F1 Team W17 на трассе во время Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Руди Кареццеволи/Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Third placed Lewis Hamilton of Great Britain and Scuderia Ferrari celebrates in parc ferme during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Rudy Carezzevoli/Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ - 04 ОКТЯБРЯ: Льюис Хэмилтон из Великобритании и Scuderia Ferrari, занявший третье место, празднует победу в закрытом парке во время Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Руди Кареццеволи/Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Charles Leclerc of Monaco and Scuderia Ferrari walks underneath an umbrella as he shelters from the rain on the grid prior to the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Rudy Carezzevoli/Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ - 04 ОКТЯБРЯ: Шарль Леклерк из Монако и Скудерии Феррари идет под зонтиком, укрываясь от дождя на сетке перед Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Руди Кареццеволи/Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Lewis Hamilton of Great Britain driving the (44) Scuderia Ferrari SF-26 leads Fernando Alonso of Spain driving the (14) Aston Martin F1 Team AMR26 Honda on track during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Bryn Lennon - Formula 1/Formula 1 via Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ – 4 ОКТЯБРЯ: Льюис Хэмилтон из Великобритании за рулем (44) Scuderia Ferrari SF-26 возглавляет Фернандо Алонсо из Испании за рулем (14) Aston Martin F1 Team AMR26 Honda на трассе во время Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Брина Леннона — Формула 1/Формула 1 через Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Lando Norris of Great Britain driving the (1) McLaren MCL40 Mercedes in the rain during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Mark Sutton - Formula 1/Formula 1 via Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ - 04 ОКТЯБРЯ: Ландо Норрис из Великобритании за рулем (1) McLaren MCL40 Mercedes под дождем во время Гран-при Формулы 1 Бахрейна в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Марка Саттона — Формула 1/Формула 1 через Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Oscar Piastri of Australia driving the (81) McLaren MCL40 Mercedes leads Alexander Albon of Thailand driving the (23) Williams FW48 Mercedes and Gabriel Bortoleto of Brazil driving the (5) Audi F1 Team R26 on track during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Sam Bagnall/Sutton Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ - 4 ОКТЯБРЯ: Оскар Пиастри из Австралии за рулем (81) McLaren MCL40 Mercedes возглавляет Александра Албона из Таиланда за рулем (23) Williams FW48 Mercedes и Габриэля Бортолето из Бразилии за рулем (5) Audi F1 Team R26 на трассе во время Гран-при Бахрейна F1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Сэма Бэгналла/Sutton Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04:  Max Verstappen of the Netherlands driving the (3) Oracle Red Bull Racing RB22 Red Bull Ford Powertrains leads Liam Lawson of New Zealand driving the (30) Visa Cash App Racing Bulls VCARB 03 RB Ford on track during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Rudy Carezzevoli/Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ – 4 ОКТЯБРЯ: Макс Ферстаппен из Нидерландов за рулем (3) Oracle Red Bull Racing RB22 Red Bull Ford Powertrains возглавляет Лиама Лоусона из Новой Зеландии за рулем (30) Visa Cash App Racing Bulls VCARB 03 RB Ford на трассе во время Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Руди Кареццеволи/Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Arvid Lindblad of Great Britain driving the (41) Visa Cash App Racing Bulls VCARB 03 RB Ford and Lando Norris of Great Britain driving the (1) McLaren MCL40 Mercedes battle for track position during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Peter Fox/Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ – 4 ОКТЯБРЯ: Арвид Линдблад из Великобритании за рулем (41) Visa Cash App Racing Bulls VCARB 03 RB Ford и Ландо Норрис из Великобритании за рулем (1) McLaren MCL40 Mercedes сражаются за позицию на трассе во время Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Питера Фокса/Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Fernando Alonso of Spain driving the (14) Aston Martin F1 Team AMR26 Honda leads Carlos Sainz of Spain driving the (55) Williams FW48 Mercedes on track during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Clive Mason/Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ – 4 ОКТЯБРЯ: Фернандо Алонсо из Испании за рулем (14) Aston Martin F1 Team AMR26 Honda возглавляет Карлоса Сайнса из Испании за рулем (55) Williams FW48 Mercedes на трассе во время Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Клайва Мейсона/Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Lance Stroll of Canada driving the (18) Aston Martin F1 Team AMR26 Honda on track during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Rudy Carezzevoli/Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ - 04 ОКТЯБРЯ: Лэнс Стролл из Канады за рулем (18) Aston Martin F1 Team AMR26 Honda на трассе во время Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Руди Кареццеволи/Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Nico Hulkenberg of Germany driving the (27) Audi F1 Team R26 on track during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Rudy Carezzevoli/Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ - 04 ОКТЯБРЯ: Нико Хюлькенберг из Германии за рулем (27) Audi F1 Team R26 на трассе во время Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Руди Кареццеволи/Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Gabriel Bortoleto of Brazil driving the (5) Audi F1 Team R26 on track during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Clive Mason/Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ - 04 ОКТЯБРЯ: Габриэль Бортолето из Бразилии за рулем (5) Audi F1 Team R26 на трассе во время Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Клайва Мейсона/Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Pierre Gasly of France driving the (10) Alpine F1 A526 Mercedes on track during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Rudy Carezzevoli/Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ - 04 ОКТЯБРЯ: Пьер Гасли из Франции за рулем (10) Alpine F1 A526 Mercedes на трассе во время Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Руди Кареццеволи/Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Franco Colapinto of Argentina and Alpine F1 rides his scooter as he shelters from the rain underneath an umbrella on the grid prior to the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Alex Bierens de Haan/LAT Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ - 04 ОКТЯБРЯ: Франко Колапинто из Аргентины и Alpine F1 едет на своем скутере, прячась от дождя под зонтиком на сетке перед Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Алекса Биренса де Хаана/LAT Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Charles Leclerc of Monaco driving the (16) Scuderia Ferrari SF-26 and Esteban Ocon of France driving the (31) Haas F1 VF-26 Ferrari battle for track position at the race start during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Rudy Carezzevoli/Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ – 4 ОКТЯБРЯ: Шарль Леклерк из Монако за рулем (16) Scuderia Ferrari SF-26 и Эстебан Окон из Франции за рулем (31) Haas F1 VF-26 Ferrari сражаются за позицию на трассе на старте гонки во время Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Руди Кареццеволи/Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Oliver Bearman of Great Britain driving the (87) Haas F1 VF-26 Ferrari on track during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Mark Sutton - Formula 1/Formula 1 via Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ - 04 ОКТЯБРЯ: Оливер Бирман из Великобритании за рулем (87) Haas F1 VF-26 Ferrari на трассе во время Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Марка Саттона — Формула 1/Формула 1 через Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Carlos Sainz of Spain driving the (55) Williams FW48 Mercedes on track during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Rudy Carezzevoli/Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ - 04 ОКТЯБРЯ: Карлос Сайнс из Испании за рулем (55) Williams FW48 Mercedes на трассе во время Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Руди Кареццеволи/Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Alexander Albon of Thailand and Williams climbs out of his car after retiring from the race during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Clive Mason/Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ - 04 ОКТЯБРЯ: Александр Албон из Таиланда и Уильямс вылезают из своей машины после схода с гонки во время Гран-при Формулы 1 Бахрейна в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Клайва Мейсона/Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Valtteri Bottas of Finland and Cadillac F1 Team sits on the back of a scooter of a marschal during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Sona Maleterova/Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ - 04 ОКТЯБРЯ: Валттери Боттас из Финляндии и команда Cadillac F1 сидят на спине скутера маршала во время Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Соны Малетеровой/Getty Images)",
+  "body::KUALA LUMPUR, MALAYSIA - OCTOBER 04: Sergio Perez of Mexico driving the (11) Cadillac F1 Team MAC-26 Ferrari on track during the F1 Grand Prix of Bahrain in Malaysia at Sepang Circuit on October 04, 2026 in Kuala Lumpur, Malaysia. (Photo by Peter Fox/Getty Images)": "КУАЛА-ЛУМПУР, МАЛАЙЗИЯ - 04 ОКТЯБРЯ: Серхио Перес из Мексики за рулем (11) Cadillac F1 Team MAC-26 Ferrari на трассе во время Гран-при Бахрейна Формулы 1 в Малайзии на трассе Сепанг 4 октября 2026 года в Куала-Лумпуре, Малайзия. (Фото Питера Фокса/Getty Images)",
+  "body::Norris gambled on the medium tyres when the Bahrain Grand Prix in Malaysia got underway": "Норрис сделал ставку на шины среднего размера, когда стартовал Гран-при Бахрейна в Малайзии.",
+  "body::Norris admits he got ‘completely caught out’ with late near miss in Sepang": "Норрис признает, что его «полностью поймали» на позднем промахе в Сепанге",
+  "body::2026 Bahrain Grand Prix: Antonelli and Russell give Mercedes a 1-2 lead on the race start": "Гран-при Бахрейна-2026: Антонелли и Рассел выводят Mercedes вперед 1-2 на старте гонки"
  }
 }

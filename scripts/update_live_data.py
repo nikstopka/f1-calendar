@@ -46,7 +46,10 @@ WEATHER_SAMPLE_SECONDS = 300    # weather changes slowly
 GRID = 1000                     # coordinate quantisation grid
 CHUNK_SECONDS = 600             # API read window per request (10 min)
 OUTLINE_POINTS = 360            # resolution of the derived track outline
-MAX_NEW_SESSIONS_PER_RUN = 3    # keep API usage and commit size bounded
+MAX_NEW_SESSIONS_PER_RUN = 4    # keep API usage and commit size bounded
+# Circuit outlines cost one location query each, so a few per run is cheap; the
+# archive starts with every track missing one.
+MAX_CIRCUIT_BUILDS_PER_RUN = 6
 DETAIL_KEEP_RECENT = 60         # how many recent sessions keep a detail file
 API_PAUSE = 0.35                # stay well under 3 req/s
 
@@ -476,6 +479,10 @@ def build_session(session):
         "circuit_key": session["circuit_key"],
         "circuit_short_name": session.get("circuit_short_name", ""),
         "country_code": session.get("country_code", ""),
+        # The bounds the frames were mapped with. Without them a rebuilt circuit
+        # silently leaves the cars off the track: the positions are already
+        # quantised against the old box and cannot be corrected afterwards.
+        "bounds": [round(b) for b in bounds] if bounds else [],
         "sample_seconds": POS_SAMPLE_SECONDS,
         "has_positions": bool(frames),
         "drivers": drivers,
@@ -528,6 +535,61 @@ def build_session(session):
 
 
 # ─── Main ───
+def bounds_drift(detail, circuit) -> bool:
+    """True when a session's positions were mapped with different bounds."""
+    if not circuit:
+        return False
+    stored = detail.get("bounds")
+    if not stored:
+        return True          # built before bounds were recorded
+    return list(stored) != list(circuit["bounds"])
+
+
+def ensure_circuits(sessions) -> set:
+    """Give every circuit in the archive an outline, not just the recent ones.
+
+    Outlines used to be a by-product of building a session, so only the tracks
+    of the last few rounds had a map and older ones came up empty. Each
+    circuit is built from the telemetry of its own most recent session.
+    """
+    wanted = {}
+    for s in sessions:
+        key = s.get("circuit_key")
+        if key is None:
+            continue
+        cur = wanted.get(key)
+        if cur is None or (s.get("date_end") or "") > (cur.get("date_end") or ""):
+            wanted[key] = s
+    missing = [k for k in sorted(wanted) if not circuit_is_usable(load_circuit(k))]
+    log(f"трасс в архиве: {len(wanted)} | без пригодного контура: {len(missing)}")
+    if not missing:
+        return set()
+
+    CIRCUITS_DIR.mkdir(parents=True, exist_ok=True)
+    rebuilt = set()
+    for key in missing[:MAX_CIRCUIT_BUILDS_PER_RUN]:
+        ses = wanted[key]
+        sk = ses["session_key"]
+        drivers = of1_get(f"drivers?session_key={sk}") or []
+        nums = [d.get("driver_number") for d in drivers
+                if d.get("driver_number") is not None]
+        start = parse_dt(ses.get("date_start"))
+        if not nums or start is None:
+            continue
+        circuit = build_outline_from_any_driver(key, ses, sk, nums, start)
+        if circuit:
+            (CIRCUITS_DIR / f"{key}.json").write_text(
+                json.dumps(circuit, ensure_ascii=False, separators=(",", ":")),
+                encoding="utf-8")
+            rebuilt.add(key)
+            log(f"контур построен: {circuit['circuit_short_name']}")
+        time.sleep(API_PAUSE)
+    if missing:
+        log(f"осталось без контура: {len(missing) - len(rebuilt)} "
+            "(достроится в следующих запусках)")
+    return rebuilt
+
+
 def main():
     print("=" * 60)
     print("F1 Live View builder (OpenF1)")
@@ -550,10 +612,36 @@ def main():
     print(f"  {len(sessions)} sessions total | {len(eligible)} eligible (>= {MIN_YEAR}, finished)")
 
     existing = {int(p.stem) for p in SESSIONS_DIR.glob("*.json")} if SESSIONS_DIR.exists() else set()
+    rebuilt_circuits = ensure_circuits(eligible)
+
+    # A session whose circuit was rebuilt has frames mapped against the old
+    # bounds, so its cars sit off the new outline. Those are rebuilt as well.
+    stale = set()
+    if SESSIONS_DIR.exists():
+        for p in SESSIONS_DIR.glob("*.json"):
+            try:
+                detail = json.loads(p.read_text(encoding="utf-8"))
+            except Exception:
+                stale.add(int(p.stem))
+                continue
+            circuit = load_circuit(detail.get("circuit_key"))
+            if (detail.get("circuit_key") in rebuilt_circuits
+                    or bounds_drift(detail, circuit)):
+                stale.add(int(p.stem))
+    if stale:
+        log(f"сессий с устаревшими границами: {len(stale)} — будут пересобраны")
+
     # Only sessions inside the retention window are worth building detail for,
     # so a long gap never backfills hundreds of stale files.
     in_window = eligible[:DETAIL_KEEP_RECENT]
-    todo = [s for s in in_window if s["session_key"] not in existing][:MAX_NEW_SESSIONS_PER_RUN]
+    # Sessions whose positions were mapped against the wrong bounds come first.
+    # Ordering by date alone let them starve: new sessions kept taking the slots
+    # and the broken ones stayed broken, because they are the older ones.
+    urgent = [s for s in in_window
+              if s["session_key"] in stale or s["circuit_key"] in rebuilt_circuits]
+    fresh = [s for s in in_window if s["session_key"] not in existing
+             and s not in urgent]
+    todo = (urgent + fresh)[:MAX_NEW_SESSIONS_PER_RUN]
     log(f"in retention window: {len(in_window)} | already built: {len(existing)} "
         f"| building now: {len(todo)}")
 
