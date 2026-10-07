@@ -128,7 +128,14 @@ def main():
                 failed += 1
                 continue
             drivers = s.get("drivers") or []
-            numbers = [d.get("number") for d in drivers]
+            # The stored driver record carries its number as "n" — reading
+            # "number" yields None for every driver and the remap silently
+            # comes back empty.
+            numbers = [d.get("n") for d in drivers]
+            if not any(n is not None for n in numbers):
+                print("  %s в drivers нет номеров — пропускаю" % label)
+                failed += 1
+                continue
             fresh = ul.build_position_events(rows, numbers, times)
             if len(fresh) != len(ev) or fresh != ev:
                 print("  %s события %d -> %d, индексы пересчитаны по времени"
