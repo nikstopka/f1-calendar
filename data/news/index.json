@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-07T05:53:55Z",
+ "generated": "2026-10-07T07:05:00Z",
  "source": "https://www.formula1.com/en/latest",
  "translation": "Google (free, no key) + словарик терминов F1",
  "articles": [
@@ -1024,9 +1024,10 @@
    "image": "https://media.formula1.com/image/upload/t_16by9North/f_auto/q_auto/v1790932909/trackside-images/2026/F1_Grand_Prix_of_Bahrain_in_Malaysia___Practice/2298201924.jpg",
    "image_alt": "KUALA LUMPUR, MALAYSIA - OCTOBER 02: Esteban Ocon of France driving the (31) Haas F1 VF-26 Ferrari",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 1,
+   "media": 1,
+   "media_done": true
   },
   {
    "id": "2G9wLgsgXcns7GrEAlbUVQ",
@@ -1041,9 +1042,10 @@
    "image": "https://media.formula1.com/image/upload/f_auto/q_auto/v1790939403/fom-website/2026/Bahrain%20(Malaysia)/16x9%20single%20image%20-%202026-10-02T120849.123.png",
    "image_alt": "",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 7,
+   "media": 3,
+   "media_done": true
   },
   {
    "id": "6FNsYUfLmu6eTjCszeCMU5",
@@ -1058,9 +1060,10 @@
    "image": "https://media.formula1.com/image/upload/t_16by9North/f_auto/q_auto/v1790915453/trackside-images/2026/F1_Grand_Prix_of_Bahrain_in_Malaysia___Practice/2298164340.jpg",
    "image_alt": "KUALA LUMPUR, MALAYSIA - OCTOBER 02: Max Verstappen of the Netherlands and Oracle Red Bull Racing",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 13,
+   "media": 3,
+   "media_done": true
   },
   {
    "id": "49cB5B7TCBoAI4ar4zOJlZ",
@@ -1075,9 +1078,10 @@
    "image": "https://media.formula1.com/image/upload/t_16by9North/f_auto/q_auto/v1790843231/trackside-images/2026/F1_Grand_Prix_of_Bahrain_in_Malaysia___Previews/2298021908.jpg",
    "image_alt": "KUALA LUMPUR, MALAYSIA - OCTOBER 01: George Russell of Great Britain and Mercedes AMG Petronas F1",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 9,
+   "media": 3,
+   "media_done": true
   },
   {
    "id": "sDpGuLb4lFAQWOfgApwQR",
@@ -1092,9 +1096,10 @@
    "image": "https://media.formula1.com/image/upload/t_16by9North/f_auto/q_auto/v1790937052/fom-website/2026/Bahrain%20(Malaysia)/GettyImages-2298210625.jpg",
    "image_alt": "KUALA LUMPUR, MALAYSIA - OCTOBER 02: Oscar Piastri of Australia and McLaren is interviewed during",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 9,
+   "media": 3,
+   "media_done": true
   },
   {
    "id": "6OjmjNAxRiaFHYsr4vLHnJ",
@@ -1109,9 +1114,10 @@
    "image": "https://media.formula1.com/image/upload/t_16by9South/f_auto/q_auto/v1790931612/fom-website/2026/Bahrain%20(Malaysia)/GettyImages-2298175207.jpg",
    "image_alt": "KUALA LUMPUR, MALAYSIA - OCTOBER 02: Charles Leclerc of Monaco driving the (16) Scuderia Ferrari",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 1,
+   "media": 0,
+   "media_done": true
   },
   {
    "id": "3bf3CEVk3BxOfpkGM7S6fq",
@@ -1126,9 +1132,10 @@
    "image": "https://media.formula1.com/image/upload/t_16by9South/f_auto/q_auto/v1790930621/trackside-images/2026/F1_Grand_Prix_of_Bahrain_in_Malaysia___Practice/2298195232.jpg",
    "image_alt": "KUALA LUMPUR, MALAYSIA - OCTOBER 02: Charles Leclerc of Monaco driving the (16) Scuderia Ferrari",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 7,
+   "media": 2,
+   "media_done": true
   },
   {
    "id": "5QHjU3409p8KYncdqKANwm",
@@ -1143,9 +1150,10 @@
    "image": "https://media.formula1.com/image/upload/t_16by9North/f_auto/q_auto/v1790929767/trackside-images/2026/F1_Grand_Prix_of_Bahrain_in_Malaysia___Practice/2298193150.jpg",
    "image_alt": "KUALA LUMPUR, MALAYSIA - OCTOBER 02: Lewis Hamilton of Great Britain driving the (44) Scuderia",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 16,
+   "media": 4,
+   "media_done": true
   },
   {
    "id": "3eufcSTLQCJfXZ5kq3wYlt",
