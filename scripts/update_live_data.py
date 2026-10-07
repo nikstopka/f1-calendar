@@ -50,6 +50,8 @@ MAX_NEW_SESSIONS_PER_RUN = 4    # keep API usage and commit size bounded
 # Circuit outlines cost one location query each, so a few per run is cheap; the
 # archive starts with every track missing one.
 MAX_CIRCUIT_BUILDS_PER_RUN = 6
+# Sessions tried per circuit before giving up on its outline.
+CIRCUIT_SESSION_TRIES = 4
 DETAIL_KEEP_RECENT = 60         # how many recent sessions keep a detail file
 API_PAUSE = 0.35                # stay well under 3 req/s
 
@@ -199,6 +201,13 @@ MIN_SPAN_M = 300
 # How many drivers to try before giving up. The first one is not reliable: a
 # driver who never got on track reports (0, 0) throughout.
 OUTLINE_DRIVER_TRIES = 4
+# The outline needs a longer window than an API chunk, and it needs to be able
+# to move forward in time. At the nominal start of a session every car sits
+# stationary in the pit lane: Suzuka race returned 2278 rows over the first ten
+# minutes but only three distinct points, and all four drivers tried were stuck
+# in the same place. Starting half an hour later gave 4180 distinct points.
+OUTLINE_WINDOW_SECONDS = 1800
+OUTLINE_WINDOW_TRIES = 3
 
 
 def outline_is_sane(pts) -> bool:
@@ -226,25 +235,34 @@ def circuit_is_usable(circuit) -> bool:
 
 
 def build_outline_from_any_driver(circuit_key, session, session_key, driver_list, scan_start):
-    """Try a few drivers until one yields a usable outline.
+    """Try later windows and other drivers until one yields a usable outline.
 
-    The single reference driver the code used before was arbitrary, and one bad
-    choice was written to disk permanently. Now a driver that never got on track
-    simply loses: its trajectory is rejected and the next one is tried.
+    Two reasons a first attempt fails, and they need different fixes:
+
+    - the car never got on track, so its coordinates stay at the origin — another
+      driver helps there;
+    - the window is too early in the session, when every car is still stationary
+      in the pits — no driver helps, only a later window does.
+
+    So the search sweeps forward in time first and tries a driver inside each
+    window, rather than cycling through drivers at one fixed moment.
     """
-    window_end = scan_start + timedelta(seconds=CHUNK_SECONDS)
-    for n, driver_number in enumerate(driver_list[:OUTLINE_DRIVER_TRIES]):
-        if n:
-            time.sleep(API_PAUSE)
-        rows = of1_get(f"location?session_key={session_key}"
-                       f"&driver_number={driver_number}"
-                       f"&date%3E{scan_start.isoformat()}"
-                       f"&date%3C{window_end.isoformat()}")
-        circuit = build_circuit(circuit_key, session, rows)
-        if circuit:
-            log(f"контур построен по пилоту №{driver_number}")
-            return circuit
-        log(f"пилот №{driver_number}: траектория не годится")
+    for w in range(OUTLINE_WINDOW_TRIES):
+        w_start = scan_start + timedelta(seconds=w * OUTLINE_WINDOW_SECONDS)
+        w_end = w_start + timedelta(seconds=OUTLINE_WINDOW_SECONDS)
+        for n, driver_number in enumerate(driver_list[:OUTLINE_DRIVER_TRIES]):
+            if n or w:
+                time.sleep(API_PAUSE)
+            rows = of1_get(f"location?session_key={session_key}"
+                           f"&driver_number={driver_number}"
+                           f"&date%3E{w_start.isoformat()}"
+                           f"&date%3C{w_end.isoformat()}")
+            circuit = build_circuit(circuit_key, session, rows)
+            if circuit:
+                log(f"контур построен по пилоту №{driver_number} "
+                    f"(окно +{w * OUTLINE_WINDOW_SECONDS}s)")
+                return circuit
+        log(f"окно +{w * OUTLINE_WINDOW_SECONDS}s: траектории не годятся")
     return None
 
 
@@ -552,37 +570,42 @@ def ensure_circuits(sessions) -> set:
     of the last few rounds had a map and older ones came up empty. Each
     circuit is built from the telemetry of its own most recent session.
     """
-    wanted = {}
+    by_circuit = {}
     for s in sessions:
         key = s.get("circuit_key")
-        if key is None:
-            continue
-        cur = wanted.get(key)
-        if cur is None or (s.get("date_end") or "") > (cur.get("date_end") or ""):
-            wanted[key] = s
-    missing = [k for k in sorted(wanted) if not circuit_is_usable(load_circuit(k))]
-    log(f"трасс в архиве: {len(wanted)} | без пригодного контура: {len(missing)}")
+        if key is not None:
+            by_circuit.setdefault(key, []).append(s)
+    missing = [k for k in sorted(by_circuit) if not circuit_is_usable(load_circuit(k))]
+    log(f"трасс в архиве: {len(by_circuit)} | без пригодного контура: {len(missing)}")
     if not missing:
         return set()
 
     CIRCUITS_DIR.mkdir(parents=True, exist_ok=True)
     rebuilt = set()
     for key in missing[:MAX_CIRCUIT_BUILDS_PER_RUN]:
-        ses = wanted[key]
-        sk = ses["session_key"]
-        drivers = of1_get(f"drivers?session_key={sk}") or []
-        nums = [d.get("driver_number") for d in drivers
-                if d.get("driver_number") is not None]
-        start = parse_dt(ses.get("date_start"))
-        if not nums or start is None:
-            continue
-        circuit = build_outline_from_any_driver(key, ses, sk, nums, start)
-        if circuit:
-            (CIRCUITS_DIR / f"{key}.json").write_text(
-                json.dumps(circuit, ensure_ascii=False, separators=(",", ":")),
-                encoding="utf-8")
-            rebuilt.add(key)
-            log(f"контур построен: {circuit['circuit_short_name']}")
+        # Several sessions, newest first. Location data is not published
+        # uniformly: Bahrain has it for testing days but not for the race, and
+        # Jeddah has none at all for 2026 while 2025 is complete. The track is
+        # the same, so any session with telemetry will do.
+        for ses in sorted(by_circuit[key], key=lambda z: z.get("date_end") or "",
+                          reverse=True)[:CIRCUIT_SESSION_TRIES]:
+            sk = ses["session_key"]
+            start = parse_dt(ses.get("date_start"))
+            drivers = of1_get(f"drivers?session_key={sk}") or []
+            nums = [d.get("driver_number") for d in drivers
+                    if d.get("driver_number") is not None]
+            if not nums or start is None:
+                continue
+            circuit = build_outline_from_any_driver(key, ses, sk, nums, start)
+            if circuit:
+                (CIRCUITS_DIR / f"{key}.json").write_text(
+                    json.dumps(circuit, ensure_ascii=False, separators=(",", ":")),
+                    encoding="utf-8")
+                rebuilt.add(key)
+                log(f"контур построен: {circuit['circuit_short_name']} "
+                    f"по сессии {sk}")
+                break
+            time.sleep(API_PAUSE)
         time.sleep(API_PAUSE)
     if missing:
         log(f"осталось без контура: {len(missing) - len(rebuilt)} "
