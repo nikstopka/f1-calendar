@@ -46,6 +46,9 @@ POS_SAMPLE_SECONDS = 5          # keep one position frame every N seconds
 WEATHER_SAMPLE_SECONDS = 300    # weather changes slowly
 GRID = 1000                     # coordinate quantisation grid
 CHUNK_SECONDS = 600             # API read window per request (10 min)
+# Consecutive empty windows that mean the telemetry really has ended. One is
+# not enough — the gaps are real.
+EMPTY_WINDOW_STREAK = 3
 # v2: leading frames before the field reaches the racing line are dropped.
 FRAMES_VERSION = 2
 OUTLINE_POINTS = 360            # resolution of the derived track outline
@@ -64,7 +67,7 @@ def log(msg):
 
 
 # ─── API ───
-def of1_get(path, retries=3):
+def of1_get(path, retries=3, retry_429=False):
     url = f"{API_BASE}/{path}"
     for attempt in range(retries):
         try:
@@ -76,13 +79,25 @@ def of1_get(path, retries=3):
             if e.code == 422:          # payload too large — caller should chunk
                 log(f"422 too large for {path}")
                 return None
-            if e.code == 404:          # empty result set — not worth retrying
-                return None
+            if e.code == 404:
+                # OpenF1 answers a window with no rows with 404, so this is an
+                # empty result, not a failure. Returning None here made every
+                # session look broken the moment its telemetry ran out: the
+                # reader took None for a refused request and dropped the whole
+                # session instead of stopping cleanly.
+                return []
             if e.code == 429:
                 # OpenF1 allows 3 requests a second and 30 a minute. A quick
                 # retry makes it worse — the limit is per minute, so it has to
-                # be waited out. Give up after the first pause: continuing would
-                # burn the quota of every later request in the run too.
+                # be waited out.
+                #
+                # Bulk reads pass retry_429: a race is dozens of windows long,
+                # and failing the whole session on one refused window meant no
+                # progress at all. Single exploratory reads fail fast instead.
+                if retry_429:
+                    log("429 — ждём и повторяем окно")
+                    time.sleep(30)
+                    continue
                 log("429 — лимит запросов, ждём и прекращаем попытки")
                 time.sleep(30)
                 return None
@@ -291,11 +306,12 @@ def fetch_locations(session_key, start, end):
     """
     rows = []
     cur = start
+    empty_streak = 0
     while cur < end:
         nxt = min(cur + timedelta(seconds=CHUNK_SECONDS), end)
         q = (f"location?session_key={session_key}"
              f"&date%3E{cur.isoformat()}&date%3C{nxt.isoformat()}")
-        got = of1_get(q)
+        got = of1_get(q, retries=6, retry_429=True)
         if got is None:
             # A failed request is not the end of the data. Treating it as one
             # truncated a Sepang race from 2044 frames to 66: a single rate-limit
@@ -303,9 +319,15 @@ def fetch_locations(session_key, start, end):
             # dropped. Fail the session instead, so it is retried in full later.
             return rows, False
         if not got:
-            if rows:
-                return rows, True          # genuinely no more data
-            return rows, False             # no data at all for this session
+            # Telemetry is not continuous: a Monaco race had data at 13:00 and
+            # again at 14:00 with a quiet half hour between. Stopping at the
+            # first empty window cut the session at 16 of 120 minutes.
+            empty_streak += 1
+            if empty_streak >= EMPTY_WINDOW_STREAK:
+                return rows, bool(rows)
+            cur = nxt
+            continue
+        empty_streak = 0
         rows.extend(got)
         cur = nxt
         time.sleep(API_PAUSE)
