@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-07T00:59:16Z",
+ "generated": "2026-10-07T05:53:55Z",
  "source": "https://www.formula1.com/en/latest",
  "translation": "Google (free, no key) + словарик терминов F1",
  "articles": [
@@ -880,9 +880,10 @@
    "image": "https://media.formula1.com/image/upload/t_16by9North/f_auto/q_auto/v1791020041/trackside-images/2026/F1_Grand_Prix_of_Bahrain_in_Malaysia___Qualifying/2298355864.jpg",
    "image_alt": "KUALA LUMPUR, MALAYSIA - OCTOBER 03: Second placed qualifier Lewis Hamilton of Great Britain and",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 8,
+   "media": 3,
+   "media_done": true
   },
   {
    "id": "57ErMnDqFlXAvsR4xaK2kL",
@@ -897,9 +898,10 @@
    "image": "https://media.formula1.com/image/upload/t_16by9Centre/f_auto/q_auto/v1791017366/trackside-images/2026/F1_Grand_Prix_of_Bahrain_in_Malaysia___Qualifying/2298349745.jpg",
    "image_alt": "KUALA LUMPUR, MALAYSIA - OCTOBER 03: Max Verstappen of the Netherlands driving the (3) Oracle Red",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 1,
+   "media": 0,
+   "media_done": true
   },
   {
    "id": "3BW0zzYBLhG54bsQoNKFvP",
@@ -914,9 +916,10 @@
    "image": "https://media.formula1.com/image/upload/t_16by9North/f_auto/q_auto/v1791018378/trackside-images/2026/F1_Grand_Prix_of_Bahrain_in_Malaysia___Qualifying/2298353030.jpg",
    "image_alt": "KUALA LUMPUR, MALAYSIA - OCTOBER 03: Pole position qualifier Max Verstappen of the Netherlands and",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 16,
+   "media": 6,
+   "media_done": true
   },
   {
    "id": "3qqJsnpvMeTq5CDBeUwS6R",
@@ -931,9 +934,10 @@
    "image": "https://media.formula1.com/image/upload/t_16by9South/f_auto/q_auto/v1790936774/trackside-images/2026/F1_Grand_Prix_of_Bahrain_in_Malaysia___Practice/2298211592.jpg",
    "image_alt": "KUALA LUMPUR, MALAYSIA - OCTOBER 02: Andrea Kimi Antonelli of Italy driving the (12) Mercedes AMG",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 11,
+   "media": 2,
+   "media_done": true
   },
   {
    "id": "7iz1soIOiX2smjhDBzss3a",
@@ -948,9 +952,10 @@
    "image": "https://media.formula1.com/image/upload/t_16by9North/f_auto/q_auto/v1791004340/trackside-images/2026/F1_Grand_Prix_of_Bahrain_in_Malaysia___Qualifying/2298329700.jpg",
    "image_alt": "KUALA LUMPUR, MALAYSIA - OCTOBER 03: Andrea Kimi Antonelli of Italy driving the (12) Mercedes AMG",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 1,
+   "media": 0,
+   "media_done": true
   },
   {
    "id": "3m4ZZfFtaTecS1xC8UtAzr",
@@ -965,9 +970,10 @@
    "image": "https://media.formula1.com/image/upload/t_16by9South/f_auto/q_auto/v1790931399/trackside-images/2026/F1_Grand_Prix_of_Bahrain_in_Malaysia___Practice/2298197357.jpg",
    "image_alt": "KUALA LUMPUR, MALAYSIA - OCTOBER 02: Charles Leclerc of Monaco driving the (16) Scuderia Ferrari",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 15,
+   "media": 3,
+   "media_done": true
   },
   {
    "id": "jpv8msSmPmCJB0VDCfZcK",
@@ -982,9 +988,10 @@
    "image": "https://media.formula1.com/image/upload/t_16by9North/f_auto/q_auto/v1790929848/fom-website/2026/Bahrain%20(Malaysia)/GettyImages-2298178390.jpg",
    "image_alt": "KUALA LUMPUR, MALAYSIA - OCTOBER 02: Frederic Vasseur, Team Principal of Scuderia Ferrari in the",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 15,
+   "media": 4,
+   "media_done": true
   },
   {
    "id": "25uYeZqNuLN0xsE1RTT6jl",
@@ -999,9 +1006,10 @@
    "image": "https://media.formula1.com/image/upload/t_16by9South/f_auto/q_auto/v1790936938/trackside-images/2026/F1_Grand_Prix_of_Bahrain_in_Malaysia___Practice/2298211781.jpg",
    "image_alt": "KUALA LUMPUR, MALAYSIA - OCTOBER 02: Isack Hadjar of France driving the (6) Oracle Red Bull Racing",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 29,
+   "media": 3,
+   "media_done": true
   },
   {
    "id": "2x0uNJb99AWdDz6ezXbEDx",
