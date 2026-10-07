@@ -53,7 +53,7 @@ MAX_CIRCUIT_BUILDS_PER_RUN = 6
 # Sessions tried per circuit before giving up on its outline.
 CIRCUIT_SESSION_TRIES = 4
 DETAIL_KEEP_RECENT = 60         # how many recent sessions keep a detail file
-API_PAUSE = 0.35                # stay well under 3 req/s
+API_PAUSE = 0.45                # stay under the 3 requests/second limit
 
 
 def log(msg):
@@ -74,6 +74,14 @@ def of1_get(path, retries=3):
                 log(f"422 too large for {path}")
                 return None
             if e.code == 404:          # empty result set — not worth retrying
+                return None
+            if e.code == 429:
+                # OpenF1 allows 3 requests a second and 30 a minute. A quick
+                # retry makes it worse — the limit is per minute, so it has to
+                # be waited out. Give up after the first pause: continuing would
+                # burn the quota of every later request in the run too.
+                log("429 — лимит запросов, ждём и прекращаем попытки")
+                time.sleep(30)
                 return None
             log(f"HTTP {e.code} ({detail}) attempt {attempt+1}")
             time.sleep(2 + attempt * 2)
@@ -200,14 +208,17 @@ MIN_UNIQUE_POINTS = 200
 MIN_SPAN_M = 300
 # How many drivers to try before giving up. The first one is not reliable: a
 # driver who never got on track reports (0, 0) throughout.
-OUTLINE_DRIVER_TRIES = 4
+OUTLINE_DRIVER_TRIES = 3
 # The outline needs a longer window than an API chunk, and it needs to be able
 # to move forward in time. At the nominal start of a session every car sits
 # stationary in the pit lane: Suzuka race returned 2278 rows over the first ten
 # minutes but only three distinct points, and all four drivers tried were stuck
 # in the same place. Starting half an hour later gave 4180 distinct points.
+#
+# Two windows and three drivers is six requests per track. The earlier three by
+# four ran straight into OpenF1's 30-requests-a-minute cap.
 OUTLINE_WINDOW_SECONDS = 1800
-OUTLINE_WINDOW_TRIES = 3
+OUTLINE_WINDOW_TRIES = 2
 
 
 def outline_is_sane(pts) -> bool:

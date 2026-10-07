@@ -91,7 +91,7 @@ MAX_NEW_PER_RUN = 40
 # run. The newest articles are the ones worth opening.
 BODY_FETCH_PER_RUN = 8
 # Ceiling on stored blocks per article (paragraphs plus photos and videos).
-BLOCKS_LIMIT = 60
+BLOCKS_LIMIT = 90
 # Rough ceiling on the stored archive; oldest entries fall off the end.
 MAX_STORED = 500
 
@@ -102,10 +102,12 @@ MAX_STORED = 500
 # words a day. Google, tried first, has no such quota, so this is now a guard
 # against runaway loops rather than a quota limit.
 TRANSLATE_CALLS_PER_RUN = 150
-# Paragraphs translated per run. Bodies are no longer three-paragraph stubs —
-# a full article runs 20-35 paragraphs — so 12 would leave the archive half
-# translated for days. 40 paragraphs at the pause below costs about a minute.
-BODY_TRANSLATE_LIMIT = 40
+# How many of the newest articles get their body translated. It is an article
+# cap, not a paragraph budget — the comment above it once said the opposite, and
+# that is how the archive grew past it: with the limit at 40 and 52 articles on
+# file, the twelve oldest were silently never translated, block after block,
+# while every run reported success.
+BODY_TRANSLATE_LIMIT = 200
 # MyMemory answers with HTTP 429 once the anonymous day quota is gone. Hammering
 # it for the rest of the run achieves nothing, so three failures in a row stop
 # translation for this run and the next one picks up where this left off.
@@ -577,12 +579,35 @@ def fetch_body(entry: dict) -> bool:
                 break
     if not blocks:
         return False
-    entry["blocks"] = blocks[:BLOCKS_LIMIT]
+    if len(blocks) > BLOCKS_LIMIT:
+        log(f"блоков {len(blocks)}, обрезано до {BLOCKS_LIMIT}")
+        blocks = blocks[:BLOCKS_LIMIT]
+    entry["blocks"] = blocks
     # Same length as blocks from the start: the translator writes into it by
     # index, and a shorter list would leave the tail untranslatable.
     entry["blocks_ru"] = [""] * len(entry["blocks"])
     entry["fetched_body"] = True
     entry["media_done"] = True
+    # Say what was actually found. Every silent failure in this script has been
+    # the same shape: F1 changes its markup, a block type quietly comes back
+    # empty, and the run still reports success. A per-article line makes that
+    # visible in the bot log instead.
+    parts = {}
+    for b in entry["blocks"]:
+        parts[b["kind"]] = parts.get(b["kind"], 0) + 1
+    extra = []
+    if parts.get("gallery"):
+        extra.append("карусель %d фото" % len(entry["blocks"][
+            next(i for i, b in enumerate(entry["blocks"])
+                 if b["kind"] == "gallery")].get("items") or []))
+    if parts.get("heading"):
+        extra.append("подзаголовков %d" % parts["heading"])
+    if parts.get("video"):
+        extra.append("видео %d" % parts["video"])
+    if parts.get("image"):
+        extra.append("фото %d" % parts["image"])
+    log(f"  {entry['title'][:38]}: текст {parts.get('text', 0)}"
+        + (" + " + ", ".join(extra) if extra else ""))
     return True
 
 
@@ -1173,6 +1198,19 @@ def main() -> int:
 
     feed = write_feed(articles)
     log(f"записей в RSS: {feed}")
+
+    # Composition of the whole archive. If F1 changes its markup, the block
+    # types quietly stop appearing and every run still reports success — this
+    # line is what makes that obvious in the log.
+    shape = {}
+    galleries = 0
+    for a in articles:
+        for b in a.get("blocks") or []:
+            shape[b["kind"]] = shape.get(b["kind"], 0) + 1
+            if b["kind"] == "gallery":
+                galleries += 1
+    log("состав архива: " + ", ".join(f"{k} {v}" for k, v in sorted(shape.items()))
+        + f" | каруселей {galleries}")
 
     # The listing needs only the headline fields; full bodies live in the
     # standalone pages written just above. Keeping them here as well would
