@@ -985,7 +985,7 @@
                 }
                 liveSession = sr;
                 liveCircuit = cr;
-                liveFrame = 0;
+                liveFrame = firstFrameOnTrack();
                 liveSelDriver = null;
                 document.getElementById('lvTitle').textContent =
                     `${meta.circuit} — ${SESSION_RU_LIVE[meta.name] || meta.name}` +
@@ -1045,6 +1045,51 @@
 
         function svgPath(pts) {
             return pts.map((p, i) => (i ? 'L' : 'M') + p[0] + ' ' + p[1]).join(' ');
+        }
+
+        // Telemetry begins when the session begins, but the field is still in the
+        // pits then. Opening on frame 0 piles the whole grid at one point far
+        // from the track, which reads as a broken map. Start at the first frame
+        // where the cars are actually out on the racing line.
+        //
+        // The scan stops at the first good frame, so it only ever walks the
+        // short pre-session prefix, never the whole replay.
+        function firstFrameOnTrack() {
+            const s = liveSession, c = liveCircuit;
+            if (!s || !s.frames || !s.frames.length || !c || !c.outline) return 0;
+            const tr = c.outline;
+            if (tr.length < 3) return 0;
+            const seg = [];
+            for (let i = 0; i < tr.length; i++) {
+                const a = tr[i], b = tr[(i + 1) % tr.length];
+                const dx = b[0] - a[0], dy = b[1] - a[1];
+                seg.push([a[0], a[1], dx, dy, dx * dx + dy * dy]);
+            }
+            const medianDistance = (f) => {
+                const ds = [];
+                for (let k = 0; k + 1 < f.length; k += 2) {
+                    if (f[k] < 0 || f[k + 1] < 0) continue;
+                    let best = Infinity;
+                    for (let s2 = 0; s2 < seg.length; s2++) {
+                        const [x1, y1, dx, dy, L] = seg[s2];
+                        let t = L === 0 ? 0 : ((f[k] - x1) * dx + (f[k + 1] - y1) * dy) / L;
+                        t = t < 0 ? 0 : t > 1 ? 1 : t;
+                        const ex = f[k] - (x1 + t * dx), ey = f[k + 1] - (y1 + t * dy);
+                        const d = ex * ex + ey * ey;
+                        if (d < best) best = d;
+                    }
+                    ds.push(best);
+                }
+                if (!ds.length) return null;
+                ds.sort((a, b) => a - b);
+                return Math.sqrt(ds[ds.length >> 1]);
+            };
+            const cap = Math.min(s.frames.length, 400);
+            for (let i = 0; i < cap; i++) {
+                const d = medianDistance(s.frames[i]);
+                if (d !== null && d <= 25) return i;
+            }
+            return 0;      // never on track — keep frame 0 and say so
         }
 
         function drawTrackOutline() {

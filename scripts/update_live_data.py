@@ -23,6 +23,7 @@ Design notes
 """
 
 import json
+import math
 import time
 import urllib.error
 import urllib.request
@@ -45,6 +46,8 @@ POS_SAMPLE_SECONDS = 5          # keep one position frame every N seconds
 WEATHER_SAMPLE_SECONDS = 300    # weather changes slowly
 GRID = 1000                     # coordinate quantisation grid
 CHUNK_SECONDS = 600             # API read window per request (10 min)
+# v2: leading frames before the field reaches the racing line are dropped.
+FRAMES_VERSION = 2
 OUTLINE_POINTS = 360            # resolution of the derived track outline
 MAX_NEW_SESSIONS_PER_RUN = 4    # keep API usage and commit size bounded
 # Circuit outlines cost one location query each, so a few per run is cheap; the
@@ -294,8 +297,14 @@ def fetch_locations(session_key, start, end):
              f"&date%3E{cur.isoformat()}&date%3C{nxt.isoformat()}")
         got = of1_get(q)
         if got is None:
+            # A failed request is not the end of the data. Treating it as one
+            # truncated a Sepang race from 2044 frames to 66: a single rate-limit
+            # answer looked like an empty window, and everything after it was
+            # dropped. Fail the session instead, so it is retried in full later.
+            return rows, False
+        if not got:
             if rows:
-                return rows, True          # natural end of telemetry
+                return rows, True          # genuinely no more data
             return rows, False             # no data at all for this session
         rows.extend(got)
         cur = nxt
@@ -303,7 +312,7 @@ def fetch_locations(session_key, start, end):
     return rows, True
 
 
-def build_frames(loc_rows, driver_numbers, start, end, bounds):
+def build_frames(loc_rows, driver_numbers, start, end, bounds, outline=None):
     """Bucket raw 3.7 Hz samples into POS_SAMPLE_SECONDS frames.
 
     The frame range is taken from the actual telemetry timestamps, not from the
@@ -331,7 +340,68 @@ def build_frames(loc_rows, driver_numbers, start, end, bounds):
         frames[f][i * 2] = x
         frames[f][i * 2 + 1] = y
 
+    times, frames = trim_pre_session(times, frames, outline)
     return [[t.isoformat() for t in times], frames]
+
+
+# A car sitting in the pits sits far from the racing line. Median distance in
+# canvas units, out of GRID=1000.
+PRE_SESSION_DISTANCE = 25
+
+
+def _median(xs):
+    s = sorted(xs)
+    return s[len(s) // 2] if s else 0.0
+
+
+def trim_pre_session(times, frames, outline):
+    """Drop the frames before the cars are actually out on the track.
+
+    Telemetry starts when the session session starts, but the field does not
+    reach the racing line straight away. Those opening frames are real data —
+    and they are exactly what the Live View showed when it opened, with the
+    whole grid piled up in one spot well away from the track, which reads as a
+    broken map. Removing them costs nothing and makes the first frame honest.
+    """
+    if not outline or len(outline) < 3 or len(frames) < 10:
+        return times, frames
+
+    def field_distance(frame):
+        ds = [point_segment_distance((frame[k], frame[k + 1]), outline)
+              for k in range(0, len(frame) - 1, 2)
+              if frame[k] >= 0 and frame[k + 1] >= 0]
+        return _median(ds) if ds else None
+
+    start = 0
+    for i, frame in enumerate(frames):
+        d = field_distance(frame)
+        if d is None:
+            continue
+        if d <= PRE_SESSION_DISTANCE:
+            start = i
+            break
+        start = i + 1
+    else:
+        return times, frames            # never on track — keep everything
+    if start == 0:
+        return times, frames
+    dropped = start
+    return times[start:], frames[start:]
+
+
+def point_segment_distance(p, outline):
+    """Shortest distance from p to a closed polyline."""
+    best = 1e9
+    px, py = p
+    n = len(outline)
+    for i in range(n):
+        x1, y1 = outline[i]
+        x2, y2 = outline[(i + 1) % n]
+        dx, dy = x2 - x1, y2 - y1
+        L = dx * dx + dy * dy
+        t = 0 if L == 0 else max(0.0, min(1.0, ((px - x1) * dx + (py - y1) * dy) / L))
+        best = min(best, math.hypot(px - (x1 + t * dx), py - (y1 + t * dy)))
+    return best
 
 
 def frame_index(times, ts):
@@ -452,7 +522,8 @@ def build_session(session):
         loc_rows, complete = fetch_locations(sk, scan_start, end)
         log(f"location rows: {len(loc_rows)} (scan from {scan_start:%H:%M}Z)")
         if complete:
-            times, frames = build_frames(loc_rows, driver_list, start, end, bounds)
+            times, frames = build_frames(loc_rows, driver_list, start, end, bounds,
+                                 (circuit.get("outline") if circuit else None))
         else:
             log("positions incomplete — skipping session, will retry on a later run")
             return None, False
@@ -513,6 +584,10 @@ def build_session(session):
         # quantised against the old box and cannot be corrected afterwards.
         "bounds": [round(b) for b in bounds] if bounds else [],
         "sample_seconds": POS_SAMPLE_SECONDS,
+        # Bumped whenever the stored frames change meaning, so sessions written
+        # by an older builder are rebuilt instead of lingering. The pre-session
+        # frames were dropped in version 2.
+        "frames_version": FRAMES_VERSION,
         "has_positions": bool(frames),
         # OpenF1 has no telemetry for a handful of sessions: every car reports
         # one fixed coordinate for the whole session, which puts them all off
@@ -585,7 +660,9 @@ def positions_are_static(frames) -> bool:
 
 
 def bounds_drift(detail, circuit) -> bool:
-    """True when a session's positions were mapped with different bounds."""
+    """True when a session's stored frames need rebuilding."""
+    if detail.get("frames_version") != FRAMES_VERSION:
+        return True          # written by an older builder
     if not circuit:
         return False
     stored = detail.get("bounds")
