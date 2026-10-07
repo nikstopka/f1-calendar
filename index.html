@@ -946,8 +946,13 @@
                 const ck = ek.split('|')[0];
                 const list = withDetail.filter(s => s.year === y && s.circuit_key == ck);
                 const sSel = document.getElementById('lvSession');
+                // A running session is marked in the list, not just in the title.
+                // Its name and start time are otherwise indistinguishable from the
+                // same session replayed from OpenF1, so a user who opens the tab
+                // mid-session has no way to tell which entry is the live feed.
                 sSel.innerHTML = list.map(s =>
-                    `<option value="${s.key}">${SESSION_RU_LIVE[s.name] || s.name} · ${mskTime(s.start)}</option>`
+                    `<option value="${s.key}">${SESSION_RU_LIVE[s.name] || s.name} · ${mskTime(s.start)}` +
+                    `${s.isLiveSession ? ' · ● LIVE' : ''}</option>`
                 ).join('');
                 sSel.onchange = () => loadLiveSession(+ySel.value);
             }
