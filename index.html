@@ -1040,7 +1040,10 @@
             drawTrackOutline();
             createCars();
             bindLiveControls();
-            if (nFrames) setLiveFrame(0); else updateLiveOrder(0);
+            // liveFrame is already set by loadLiveSession(): opening on the frame
+            // where the cars are actually on track, not frame 0 with the whole
+            // field parked in the pits. Passing a literal 0 here undid that.
+            if (nFrames) setLiveFrame(liveFrame); else updateLiveOrder(0);
         }
 
         function svgPath(pts) {
