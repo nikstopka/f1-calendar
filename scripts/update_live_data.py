@@ -366,9 +366,19 @@ def build_frames(loc_rows, driver_numbers, start, end, bounds, outline=None):
     return [[t.isoformat() for t in times], frames]
 
 
-# A car sitting in the pits sits far from the racing line. Median distance in
-# canvas units, out of GRID=1000.
+# Two things say the field is out on track rather than queued in the pits: it is
+# near the racing line, and the cars are not all on one spot.
+#
+# The second condition is not optional. The pit exit is itself part of the
+# racing surface, so a parked grid can sit 10 units from the line — well inside
+# any sane distance threshold — with all 22 cars stacked. Distance alone kept
+# those frames and the Live View opened on a pile of cars.
+#
+# Distance is a median in canvas units, out of GRID=1000.
 PRE_SESSION_DISTANCE = 25
+# Share of cars that must sit on distinct coordinates. Quantised frames mean two
+# nearby cars can share a cell, so a spread field lands near 0.64, not 1.0.
+PRE_SESSION_SPREAD = 0.6
 
 
 def _median(xs):
@@ -388,18 +398,32 @@ def trim_pre_session(times, frames, outline):
     if not outline or len(outline) < 3 or len(frames) < 10:
         return times, frames
 
-    def field_distance(frame):
-        ds = [point_segment_distance((frame[k], frame[k + 1]), outline)
-              for k in range(0, len(frame) - 1, 2)
-              if frame[k] >= 0 and frame[k + 1] >= 0]
-        return _median(ds) if ds else None
+    def field_state(frame):
+        """(median distance to the outline, share of cars on distinct points).
+
+        Both are needed. The pit exit is part of the racing surface, so a parked
+        grid can sit only 10 units from the line and pass a distance test while
+        every car is still stacked on one spot — which is how a Spa race kept
+        150 opening frames showing the whole field piled up in the pits.
+        """
+        ds = []
+        at = set()
+        for k in range(0, len(frame) - 1, 2):
+            if frame[k] < 0 or frame[k + 1] < 0:
+                continue
+            at.add((frame[k], frame[k + 1]))
+            ds.append(point_segment_distance((frame[k], frame[k + 1]), outline))
+        if not ds:
+            return None
+        return _median(ds), len(at) / len(ds)
 
     start = 0
     for i, frame in enumerate(frames):
-        d = field_distance(frame)
-        if d is None:
+        st = field_state(frame)
+        if st is None:
             continue
-        if d <= PRE_SESSION_DISTANCE:
+        d, spread = st
+        if d <= PRE_SESSION_DISTANCE and spread >= PRE_SESSION_SPREAD:
             start = i
             break
         start = i + 1
