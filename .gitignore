@@ -10,4 +10,3 @@ live-service/svc.*
 srv.err
 # Личное напоминание, не часть сайта
 live-view-check.ics
-_*.py
