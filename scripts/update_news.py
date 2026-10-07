@@ -414,10 +414,31 @@ def _article_blocks(page_html: str) -> list:
             "video_id": vid.group(1) if vid else "",
         }))
 
+    # Mid-article cards that link to another F1 piece. They read like
+    # sub-headings in the app, but they are links — a heading would be a lie
+    # and the text would not be the article's own.
+    for m in re.finditer(r"FeaturedButtonCard-module", flight):
+        if not (lo <= m.start() <= hi):
+            continue
+        seg = flight[max(0, m.start() - 600):m.start() + 900]
+        href = re.search(r'"href":"(https://www\.formula1\.com[^"]+)"', seg)
+        title = re.search(r'FeaturedButtonCard-module_content__[^"]*","children":'
+                          r'"([^"]{4,200})"', seg)
+        if not href or not title:
+            continue
+        found.append((m.start(), 0, "link", {
+            "kind": "link",
+            "url": href.group(1),
+            "caption": title.group(1),
+            "alt": "",
+            "video_id": "",
+        }))
+
     found.sort(key=lambda item: (item[0], item[1]))
 
     blocks = []
     seen = set()
+    seen_media = set()
     for _, _, kind, payload in found:
         if kind == "text":
             if len(payload) < 40 or _JUNK_RE.search(payload):
@@ -432,6 +453,12 @@ def _article_blocks(page_html: str) -> list:
         else:
             if not payload.get("caption") and not payload.get("url"):
                 continue
+            # Media and cross-link cards are emitted once per responsive
+            # variant, so the same card arrives four times. Keep the first.
+            media_key = (payload.get("url"), payload.get("caption"))
+            if media_key in seen_media:
+                continue
+            seen_media.add(media_key)
             blocks.append(payload)
     return blocks
 
@@ -703,23 +730,16 @@ img{width:100%;border-radius:10px;margin:6px 0 18px;display:block}
 .body figure img{width:100%;border-radius:8px;display:block;margin:0}
 .body figcaption{margin-top:7px;color:var(--dim);font-size:.82rem;line-height:1.4}
 .body figure.video img{border:1px solid var(--border)}
-.body details.orig figure{margin:16px 0}
+/* Cross-links to other F1 pieces. In the app they read like sub-headings, so
+   they are set apart from the running text to avoid that impression. */
+.body .crosslink{margin:20px 0;padding:10px 12px;border:1px solid var(--border);
+border-radius:6px;color:var(--dim);font-size:.9rem;background:var(--surface)}
+.body .crosslink a{color:#8ecbff}
 .note{margin-top:28px;padding-top:14px;border-top:1px solid var(--border);
 color:var(--dim);font-size:.82rem}
-/* The original is hidden by default — the Russian text is the reason this page
-   exists. <details> supplies the toggle with no JavaScript at all, and it works
-   from the keyboard. */
-details.orig{margin-top:22px;border-left:3px solid var(--border);padding-left:14px}
-details.orig>summary{cursor:pointer;color:#8ecbff;font-size:.88rem;
-list-style:none;user-select:none}
-details.orig>summary::-webkit-details-marker{display:none}
-details.orig>summary::before{content:"\\25B8 ";color:var(--dim)}
-details.orig[open]>summary::before{content:"\\25BE "}
-details.orig[open]>summary{margin-bottom:12px}
-.lbl-open{display:inline}
-details.orig[open] .lbl-open{display:none}
-.lbl-closed{display:none}
-details.orig[open] .lbl-closed{display:inline}
+.source{display:inline-block;margin-top:22px;padding:9px 14px;border:1px solid var(--border);
+border-radius:6px;color:#8ecbff;text-decoration:none;font-size:.9rem}
+.source:hover{border-color:var(--red);color:var(--red)}
 """
 
 
@@ -827,6 +847,14 @@ def _render_blocks(blocks: list, ru_list: list, article_url: str) -> str:
                 out.append(f"<p>{html.escape(text)}</p>")
             continue
         caption = html.escape(ru or b.get("caption") or "")
+        if b["kind"] == "link":
+            # A cross-link to another F1 piece, not a heading of this one.
+            out.append('<div class="crosslink">'
+                       + (f'Читайте также: <a href="{html.escape(b["url"])}" '
+                          f'target="_blank" rel="noopener">{caption}</a>'
+                          if caption else "")
+                       + "</div>")
+            continue
         if b["kind"] == "image":
             src, srcset = _img_sources(b["url"])
             extra = (f' srcset="{html.escape(srcset)}" '
@@ -875,10 +903,15 @@ def write_pages(articles: list) -> int:
             ru_block = ('<div class="body" lang="ru">' +
                         _render_blocks(blocks, ru_list, a["url"]) + "</div>")
         else:
+            # Nothing translated yet, so show the English text once rather than
+            # an empty Russian section above a duplicated English copy.
             ru_list = []
-        orig = _render_blocks(blocks, ru_list, a["url"])
+            ru_block = ('<div class="body" lang="en">' +
+                        _render_blocks(blocks, ru_list, a["url"]) + "</div>")
         stamp = (a.get("published") or "")[:16].replace("T", " ")
         type_ru = TYPE_RU.get(a.get("type") or "", a.get("type") or "News")
+        # The English headline is not repeated: it is the title on the original
+        # page, one click away, and showing both made the page look double-headed.
         page = f"""<!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -893,12 +926,11 @@ def write_pages(articles: list) -> int:
 <a class="back" href="../index.html">← Ко всем новостям</a>
 <div><span class="tag">{html.escape(type_ru)}</span>
 <span class="date">{html.escape(stamp)}</span></div>
-<h1>{html.escape(a['title'])}</h1>
-{f'<h1 lang="ru" style="font-size:1.25rem;color:#fff;margin:0 0 4px">{html.escape(a["title_ru"])}</h1>' if a.get('title_ru') else ''}
+<h1>{html.escape(a['title_ru'] or a['title'])}</h1>
 {ru_block}
-<div class="body" lang="en">{'<details class="orig"><summary><span class="lbl-open">Показать оригинал</span><span class="lbl-closed">Скрыть оригинал</span></summary>' + orig + '</details>' if ru_block else orig}</div>
-<a href="{html.escape(a['url'])}" target="_blank" rel="noopener">Читать оригинал на formula1.com →</a>
-<div class="note">Русский текст — машинный перевод, оригинал приведён рядом.
+<a class="source" href="{html.escape(a['url'])}" target="_blank" rel="noopener">Оригинал на formula1.com →</a>
+<div class="note">Русский текст — машинный перевод. Оригинал на английском —
+<a href="{html.escape(a['url'])}" target="_blank" rel="noopener">по ссылке выше</a>.
 Источник: formula1.com. Некоммерческое личное использование.</div>
 </div>
 </body>

@@ -32,23 +32,16 @@ img{width:100%;border-radius:10px;margin:6px 0 18px;display:block}
 .body figure img{width:100%;border-radius:8px;display:block;margin:0}
 .body figcaption{margin-top:7px;color:var(--dim);font-size:.82rem;line-height:1.4}
 .body figure.video img{border:1px solid var(--border)}
-.body details.orig figure{margin:16px 0}
+/* Cross-links to other F1 pieces. In the app they read like sub-headings, so
+   they are set apart from the running text to avoid that impression. */
+.body .crosslink{margin:20px 0;padding:10px 12px;border:1px solid var(--border);
+border-radius:6px;color:var(--dim);font-size:.9rem;background:var(--surface)}
+.body .crosslink a{color:#8ecbff}
 .note{margin-top:28px;padding-top:14px;border-top:1px solid var(--border);
 color:var(--dim);font-size:.82rem}
-/* The original is hidden by default — the Russian text is the reason this page
-   exists. <details> supplies the toggle with no JavaScript at all, and it works
-   from the keyboard. */
-details.orig{margin-top:22px;border-left:3px solid var(--border);padding-left:14px}
-details.orig>summary{cursor:pointer;color:#8ecbff;font-size:.88rem;
-list-style:none;user-select:none}
-details.orig>summary::-webkit-details-marker{display:none}
-details.orig>summary::before{content:"\25B8 ";color:var(--dim)}
-details.orig[open]>summary::before{content:"\25BE "}
-details.orig[open]>summary{margin-bottom:12px}
-.lbl-open{display:inline}
-details.orig[open] .lbl-open{display:none}
-.lbl-closed{display:none}
-details.orig[open] .lbl-closed{display:inline}
+.source{display:inline-block;margin-top:22px;padding:9px 14px;border:1px solid var(--border);
+border-radius:6px;color:#8ecbff;text-decoration:none;font-size:.9rem}
+.source:hover{border-color:var(--red);color:var(--red)}
 </style>
 </head>
 <body>
@@ -56,12 +49,11 @@ details.orig[open] .lbl-closed{display:inline}
 <a class="back" href="../index.html">← Ко всем новостям</a>
 <div><span class="tag">Блог</span>
 <span class="date">2026-10-04 12:15</span></div>
-<h1>AS IT HAPPENED: Verstappen wins epic Bahrain GP in Malaysia</h1>
-<h1 lang="ru" style="font-size:1.25rem;color:#fff;margin:0 0 4px">КАК ЭТО СЛУЧИЛОСЬ: Ферстаппен выиграл эпический Гран-при Бахрейна в Малайзии</h1>
+<h1>КАК ЭТО СЛУЧИЛОСЬ: Ферстаппен выиграл эпический Гран-при Бахрейна в Малайзии</h1>
 <div class="body" lang="ru"><p>Следите за нашей прямой трансляцией воскресного Гран-при Формулы 1 Gulf Air Bahrain в Малайзии 2026 года.</p></div>
-<div class="body" lang="en"><details class="orig"><summary><span class="lbl-open">Показать оригинал</span><span class="lbl-closed">Скрыть оригинал</span></summary><p>Следите за нашей прямой трансляцией воскресного Гран-при Формулы 1 Gulf Air Bahrain в Малайзии 2026 года.</p></details></div>
-<a href="https://www.formula1.com/en/latest/article/live-coverage-formula-1-gulf-air-bahrain-grand-prix-in-malaysia-2026.GnmAqq3nZpuoQ1tTiawyB" target="_blank" rel="noopener">Читать оригинал на formula1.com →</a>
-<div class="note">Русский текст — машинный перевод, оригинал приведён рядом.
+<a class="source" href="https://www.formula1.com/en/latest/article/live-coverage-formula-1-gulf-air-bahrain-grand-prix-in-malaysia-2026.GnmAqq3nZpuoQ1tTiawyB" target="_blank" rel="noopener">Оригинал на formula1.com →</a>
+<div class="note">Русский текст — машинный перевод. Оригинал на английском —
+<a href="https://www.formula1.com/en/latest/article/live-coverage-formula-1-gulf-air-bahrain-grand-prix-in-malaysia-2026.GnmAqq3nZpuoQ1tTiawyB" target="_blank" rel="noopener">по ссылке выше</a>.
 Источник: formula1.com. Некоммерческое личное использование.</div>
 </div>
 </body>
