@@ -514,6 +514,11 @@ def build_session(session):
         "bounds": [round(b) for b in bounds] if bounds else [],
         "sample_seconds": POS_SAMPLE_SECONDS,
         "has_positions": bool(frames),
+        # OpenF1 has no telemetry for a handful of sessions: every car reports
+        # one fixed coordinate for the whole session, which puts them all off
+        # the racing line and looks like a broken map. Saying so is better than
+        # drawing it wrong — four sessions out of sixty were affected.
+        "positions_static": positions_are_static(frames),
         "drivers": drivers,
         "frame_times": times,
         "frames": frames,
@@ -564,6 +569,21 @@ def build_session(session):
 
 
 # ─── Main ───
+def positions_are_static(frames) -> bool:
+    """True when the cars never move — i.e. the source has no telemetry.
+
+    OpenF1 returns one fixed coordinate per car for sessions it did not record
+    properly. Drawn on the outline, that puts the whole field at a single point
+    well away from the track, which reads as a broken map rather than as a
+    missing one.
+    """
+    if len(frames) < 5:
+        return True
+    def signature(frame):
+        return tuple(frame[k] for k in range(0, min(len(frame), 20), 2))
+    return len({signature(f) for f in frames}) <= 1
+
+
 def bounds_drift(detail, circuit) -> bool:
     """True when a session's positions were mapped with different bounds."""
     if not circuit:

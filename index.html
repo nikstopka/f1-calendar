@@ -1060,6 +1060,16 @@
         function createCars() {
             const g = document.getElementById('lvCars');
             if (!g) return;
+            // OpenF1 has no telemetry for a few sessions: every car reports one
+            // fixed coordinate, which would pile the whole field at a single
+            // point away from the track. Saying so beats drawing it wrong.
+            if (liveSession.positions_static) {
+                g.innerHTML = '<text x="500" y="470" fill="#9a9aa5" text-anchor="middle" '
+                    + 'font-size="34">Позиции машин недоступны для этой сессии</text>'
+                    + '<text x="500" y="520" fill="#6a6a75" text-anchor="middle" '
+                    + 'font-size="26">OpenF1 не отдал телеметрию — карта и остальные данные ниже верны</text>';
+                return;
+            }
             g.innerHTML = liveSession.drivers.map((d, i) => `
                 <g class="car" data-i="${i}" style="display:none">
                     <circle class="ring" r="15"></circle>
