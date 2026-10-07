@@ -108,13 +108,21 @@ def main():
 
         # 2. Put every position event back on the grid it belongs to.
         #
-        # Any event pointing past the last frame, or sitting implausibly late in
-        # a session that should have overtakes from the first lap, is evidence of
-        # the old grid. Refetching is cheap and removes the guesswork.
+        # Where the stored grid and the stored indices disagree, the `position`
+        # rows are refetched. Each row carries its own timestamp, so every event
+        # lands on the frame it truly belongs to — no guessing how far the grid
+        # moved, which for an already-trimmed session is no longer recorded.
         n_frames = len(s["frames"])
         ev = s.get("position_events") or []
-        suspicious = bool(ev) and (max(e[0] for e in ev) >= n_frames
-                                   or min(e[0] for e in ev) > 20)
+        # Only an index past the last frame is provable damage: the browser drops
+        # those, so late-race overtakes go missing.
+        #
+        # A late first event is NOT damage and was a mistake to test for. OpenF1
+        # records position *changes*, and in a race the running order from
+        # qualifying holds for the opening laps — 24 healthy races here have their
+        # first change around frame 515 out of 1713. Flagging that meant refetching
+        # 24 sessions on every pass to prove nothing was wrong.
+        suspicious = bool(ev) and max(e[0] for e in ev) >= n_frames
         if suspicious:
             key = s.get("session_key")
             if key is None:
