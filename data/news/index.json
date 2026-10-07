@@ -1,8 +1,26 @@
 {
- "generated": "2026-10-07T12:29:55Z",
+ "generated": "2026-10-07T13:17:53Z",
  "source": "https://www.formula1.com/en/latest",
  "translation": "Google (free, no key) + словарик терминов F1",
  "articles": [
+  {
+   "id": "1yu3dSkVOAvPULoMR9vn5Z",
+   "slug": "its-race-week-5-storylines-were-excited-about-ahead-of-the-2026-singapore-grand-prix",
+   "title": "5 storylines we're excited about ahead of the Singapore GP",
+   "title_ru": "5 сюжетных линий, которые нас волнуют в преддверии Гран-при Сингапура",
+   "description": "Chris Medland runs through the biggest talking points as F1 heads to Singapore for Round 17 of the 2026 season.",
+   "description_ru": "Крис Медланд обсуждает самые важные темы для разговоров, когда Формула 1 направляется в Сингапур на 17-й этап сезона 2026 года.",
+   "type": "Feature",
+   "published": "2026-10-07T12:59:40.255Z",
+   "url": "https://www.formula1.com/en/latest/article/its-race-week-5-storylines-were-excited-about-ahead-of-the-2026-singapore-grand-prix.1yu3dSkVOAvPULoMR9vn5Z",
+   "image": "https://media.formula1.com/image/upload/t_16by9Centre/f_auto/q_auto/v1791377908/fom-website/2026/Singapore/16x9%20single%20image%20-%202026-10-07T135810.661.png",
+   "image_alt": "",
+   "page": "news/1yu3dSkVOAvPULoMR9vn5Z.html",
+   "fetched_body": true,
+   "media_done": true,
+   "body_paras": 17,
+   "media": 7
+  },
   {
    "id": "3dXFoedtzO5KQTREFXccop",
    "slug": "fireworks-special-helmets-and-superstar-concerts-how-singapore-changed-f1-as-the-sports-first-night-race",
@@ -361,7 +379,7 @@
    "fetched_body": true,
    "body_paras": 17,
    "media": 4,
-   "media_done": false
+   "media_done": true
   },
   {
    "id": "5Z07QWFA7vVqCPC1jb6AIq",
@@ -379,7 +397,7 @@
    "fetched_body": true,
    "body_paras": 8,
    "media": 0,
-   "media_done": false
+   "media_done": true
   },
   {
    "id": "D8AYcVEPGOs8OjIiVisZw",
@@ -397,7 +415,7 @@
    "fetched_body": true,
    "body_paras": 33,
    "media": 11,
-   "media_done": false
+   "media_done": true
   },
   {
    "id": "5Gl4kO0FOg77Dcr18hkabd",
@@ -415,7 +433,7 @@
    "fetched_body": true,
    "body_paras": 3,
    "media": 3,
-   "media_done": false
+   "media_done": true
   },
   {
    "id": "5UjynLy03wJSix8bDHhZhd",
@@ -433,7 +451,7 @@
    "fetched_body": true,
    "body_paras": 13,
    "media": 3,
-   "media_done": false
+   "media_done": true
   },
   {
    "id": "VfUQ0Vt8HaJIi0flQEaxH",
@@ -451,7 +469,7 @@
    "fetched_body": true,
    "body_paras": 4,
    "media": 4,
-   "media_done": false
+   "media_done": true
   },
   {
    "id": "6xn5ElSyF1kysf39dqwDGt",
@@ -469,7 +487,7 @@
    "fetched_body": true,
    "body_paras": 7,
    "media": 2,
-   "media_done": false
+   "media_done": true
   },
   {
    "id": "3IImAHC95xmYoRr8QDgQvy",
@@ -1728,6 +1746,30 @@
   "body::All the key Bahrain moments as Verstappen returns to the top and Russell’s race ends in heartbreak": "Все ключевые моменты Бахрейна, когда Ферстаппен возвращается на вершину, а гонка Рассела заканчивается горем.",
   "body::Piastri admits McLaren 'need to improve' after Malaysia P6": "Пиастри признает, что McLaren «нужно совершенствоваться» после шестого места в Малайзии",
   "body::Verstappen 'incredibly proud' after historic Bahrain GP win": "Ферстаппен «невероятно горд» после исторической победы на Гран-при Бахрейна",
-  "body::All the key moments from the 2026 Bahrain GP in Malaysia": "Все ключевые моменты Гран-при Бахрейна 2026 года в Малайзии"
+  "body::All the key moments from the 2026 Bahrain GP in Malaysia": "Все ключевые моменты Гран-при Бахрейна 2026 года в Малайзии",
+  "title::5 storylines we're excited about ahead of the Singapore GP": "5 сюжетных линий, которые нас волнуют в преддверии Гран-при Сингапура",
+  "description::Chris Medland runs through the biggest talking points as F1 heads to Singapore for Round 17 of the 2026 season.": "Крис Медланд обсуждает самые важные темы для разговоров, когда Формула 1 направляется в Сингапур на 17-й этап сезона 2026 года.",
+  "body::Chris Medland runs through the biggest talking points as F1 heads to Singapore for Round 17 of the 2026 season.": "Крис Медланд обсуждает самые важные темы для разговоров, когда Формула 1 направляется в Сингапур на 17-й этап сезона 2026 года.",
+  "body::Last weekend’s Bahrain Grand Prix in Malaysia might have had delays but was worth the wait, and there’s not long to wait this time as the triple header wraps up in just a few days’ time. Max Verstappen is back on the top step and Mercedes have challenges to overcome as we look ahead to the final Sprint weekend of the season in Singapore.": "Гран-при Бахрейна в Малайзии на прошлых выходных, возможно, и имел задержки, но ожидание того стоило, и на этот раз ждать долго не придется, поскольку тройной заголовок завершится всего через несколько дней. Макс Ферстаппен снова на вершине, и Mercedes предстоит преодолеть трудности, поскольку мы предвкушаем заключительный спринтерский уик-энд сезона в Сингапуре.",
+  "body::The second half of the 2025 Formula 1 season saw Verstappen go on a remarkable run to pull himself back into championship contention, ultimately falling just short in his pursuit of the McLaren drivers at the final round.": "Во второй половине сезона Формулы 1 2025 года Ферстаппен совершил замечательную попытку вернуться в борьбу за чемпионство, но в конечном итоге потерпел неудачу в преследовании пилотов McLaren на финальном этапе.",
+  "body::Could Verstappen build on the momentum from Malaysia to win again?": "Сможет ли Ферстаппен воспользоваться импульсом Малайзии и снова победить?",
+  "body::Mercedes trying to understand their update": "Mercedes пытается понять свое обновление",
+  "body::A week ago we were focused on the fact that Mercedes were bringing a new development package to Malaysia, but warned “the success of an update is never guaranteed”. And so it proved, as Mercedes found themselves scratching their heads as to why their new parts were not delivering the performance step they expected.": "Неделю назад мы сосредоточились на том факте, что Mercedes привозит в Малайзию новый пакет разработки, но предупредили, что «успех обновления никогда не гарантирован». Так оно и оказалось: в Mercedes ломали голову, почему их новые детали не обеспечивают ожидаемого уровня производительности.",
+  "body::Team Principal Toto Wolff spoke of an expectation that the update would provide around 0.3s in terms of a lap time gain, but after Qualifying he felt it had actually set the team back by a similar amount.": "Руководитель команды Тото Вольф говорил, что ожидал, что обновление обеспечит увеличение времени круга примерно на 0,3 секунды, но после квалификации он почувствовал, что оно фактически отбросило команду назад на такую ​​​​же величину.",
+  "body::Wolff 'not in a happy place' after Russell Malaysia DNF": "Вольф «не в лучшем настроении» после Рассела Малайзии DNF",
+  "body::It was hardly a disastrous race in terms of outright performance, with Mercedes still putting pressure on Verstappen at certain phases and looking set for a double podium, but there was more pain when Russell retired with a suspected power unit issue late on.": "Вряд ли это была катастрофическая гонка с точки зрения общих результатов: Mercedes все еще оказывал давление на Ферстаппена на определенных этапах и надеялся на двойной подиум, но боль стала еще сильнее, когда Рассел позже сошел с дистанции из-за подозрения на проблему с силовым агрегатом.",
+  "body::Reliability has been a weakness for Mercedes so far this season and the team have already confirmed Russell will take a penalty to consign him to the back of the grid in Singapore, so the impact will extend beyond his DNF on Sunday.": "Надежность была слабым местом Mercedes в этом сезоне, и команда уже подтвердила, что Рассел выполнит пенальти, отправив его в конец стартовой решетки в Сингапуре, так что влияние выйдет за пределы его DNF в воскресенье.",
+  "body::Of similar concern will be identifying how to get the most out of the update package, with Mercedes having go try and find answers during the quick turnaround between races, and with only one practice session to try and prove out any solutions.": "Аналогичную озабоченность будет вызывать вопрос о том, как получить максимальную отдачу от пакета обновлений, поскольку Mercedes придется попытаться найти ответы во время быстрого перехода между гонками и провести всего одну тренировку, чтобы попытаться опробовать любые решения.",
+  "body::A mechanical issue forced Russell to retire from the Bahrain Grand Prix in Malaysia": "Механическая проблема вынудила Рассела отказаться от участия в Гран-при Бахрейна в Малайзии.",
+  "body::Could Antonelli further extend his advantage over Russell in Singapore?": "Сможет ли Антонелли еще больше расширить свое преимущество над Расселом в Сингапуре?",
+  "body::There hasn’t been a huge amount for Aston Martin fans to get excited about this year, but the team have clearly made progress since introducing a new chassis in Hungary, with further gains coming from an updated Honda power unit in the Netherlands.": "Фанаты Aston Martin в этом году не особо волновались, но команда явно добилась прогресса с момента представления нового шасси в Венгрии, а дальнейшие успехи связаны с обновленным силовым агрегатом Honda в Нидерландах.",
+  "body::And the high point of the season so far was delivered on Sunday, when Fernando Alonso secured a top-eight finish for his third point-scoring result of the year.": "А кульминация сезона на данный момент наступила в воскресенье, когда Фернандо Алонсо финишировал в восьмерке лучших, что стало его третьим результативным результатом в году.",
+  "body::That result came despite starting on slick tyres for the race resumption that saw the intermediate runners pull out a huge advantage, and then with Alonso needing to hold off Lando Norris in the closing stages.": "Этот результат был достигнут несмотря на то, что перед возобновлением гонки стартовал на гладких шинах, в результате чего бегуны среднего уровня получили огромное преимущество, а затем Алонсо пришлось сдерживать Ландо Норриса на заключительном этапе.",
+  "body::It was a weekend when both Aston Martin drivers were competitive, and came after a very challenging race in Azerbaijan. Alonso warns there will be big fluctuations in form throughout the rest of the season, with certain tracks suiting the Aston Martin package and others being far more problematic. But the good news is he has already highlighted Singapore as one of the weekends where the team have high hopes that they can be in the mix for points once again.": "Это был уик-энд, когда оба гонщика Aston Martin были конкурентоспособны и приехали после очень сложной гонки в Азербайджане. Алонсо предупреждает, что до конца сезона в форме будут большие колебания: некоторые трассы подходят для пакета Aston Martin, а другие окажутся гораздо более проблематичными. Но хорошая новость в том, что он уже выделил Сингапур как один из уик-эндов, где команда возлагает большие надежды на то, что они снова смогут побороться за очки.",
+  "body::Alonso secured Aston Martin's best result of the season so far in Malaysia": "Алонсо обеспечил лучший результат Aston Martin в сезоне в Малайзии.",
+  "body::As if racing under the lights in Singapore wasn’t going to be enough action, we’re going to be treated to the final Sprint weekend of the season, and with it a very different challenge.": "Как будто гонок под огнями Сингапура было недостаточно, нас ждет последний спринтерский уик-энд сезона, а вместе с ним и совсем другое испытание.",
+  "body::While the Singapore Grand Prix itself will start at 2000 local time and take place completely under floodlights, the Sprint will be at 1700, when the sun has yet to set. That is going to mean different track conditions, and an even greater chance of a different racing picture across both Saturday and Sunday.": "В то время как сам Гран-при Сингапура начнется в 20:00 по местному времени и пройдет полностью при свете прожекторов, спринт состоится в 17:00, когда солнце еще не зашло. Это будет означать разные условия трассы и еще большую вероятность того, что гоночная картина в субботу и воскресенье будет разной.",
+  "body::This year’s Sprint events have so far seen a different winner of each of the two races during a weekend, with the last time a driver swept both the Sprint and the Grand Prix coming when Norris dominated in Sao Paulo last season.": "В спринте этого года до сих пор в каждой из двух гонок в течение выходных были разные победители, а в последний раз гонщик побеждал и в спринте, и в Гран-при, когда Норрис доминировал в Сан-Паулу в прошлом сезоне.",
+  "body::With just one practice session to get up to speed on a track that demands commitment and confidence around the city streets, the drivers are going to have their skills tested in multiple different ways across the weekend.": "Всего за одну тренировку, чтобы набрать скорость на трассе, требующей преданности и уверенности на городских улицах, гонщикам предстоит проверить свои навыки разными способами в течение выходных."
  }
 }
