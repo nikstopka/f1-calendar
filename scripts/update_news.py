@@ -108,6 +108,10 @@ TRANSLATE_CALLS_PER_RUN = 150
 # file, the twelve oldest were silently never translated, block after block,
 # while every run reported success.
 BODY_TRANSLATE_LIMIT = 200
+# Which extractor produced an article's stored blocks. Bump it whenever
+# _article_blocks() learns to read something new; every article whose stamp is
+# older is rebuilt on the next run.
+BLOCKS_VERSION = 2
 # MyMemory answers with HTTP 429 once the anonymous day quota is gone. Hammering
 # it for the rest of the run achieves nothing, so three failures in a row stop
 # translation for this run and the next one picks up where this left off.
@@ -667,6 +671,13 @@ def fetch_body(entry: dict) -> bool:
     entry["blocks_ru"] = [""] * len(entry["blocks"])
     entry["fetched_body"] = True
     entry["media_done"] = True
+    # Stamp the extractor that produced these blocks.
+    #
+    # Without it a fix to the extractor never reaches the articles already on
+    # disk: `need_body` skips everything that looks complete, so a run would
+    # report success while the 72 stored articles kept the old, broken output.
+    # Bumping this number is what makes every article be rebuilt once.
+    entry["blocks_version"] = BLOCKS_VERSION
     # Say what was actually found. Every silent failure in this script has been
     # the same shape: F1 changes its markup, a block type quietly comes back
     # empty, and the run still reports success. A per-article line makes that
@@ -1248,8 +1259,14 @@ def main() -> int:
     # Articles migrated from the old paragraph-only format are refetched too:
     # their Russian text survives in blocks_ru and in the translation cache, and
     # only a fresh fetch can add the photos and videos between the paragraphs.
+    # The version stamp does the same for the extractor itself: a fix to how
+    # blocks are read would otherwise never reach the articles already on disk,
+    # and the run would report success while every stored article kept the old
+    # output. Bumping BLOCKS_VERSION rebuilds each one once.
     need_body = [a for a in articles
-                 if not (a.get("fetched_body") and a.get("blocks") and a.get("media_done"))]
+                 if not (a.get("fetched_body") and a.get("blocks")
+                         and a.get("media_done")
+                         and a.get("blocks_version") == BLOCKS_VERSION)]
     need_body = need_body[:BODY_FETCH_PER_RUN]
     got = 0
     for a in need_body:
