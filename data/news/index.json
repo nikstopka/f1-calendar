@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-08T20:04:27Z",
+ "generated": "2026-10-08T21:25:02Z",
  "source": "https://www.formula1.com/en/latest",
  "translation": "Google (free, no key) + словарик терминов F1",
  "articles": [
@@ -19,7 +19,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 12,
-   "media": 5
+   "media": 5,
+   "blocks_version": 2
   },
   {
    "id": "PXuWVkeW8lPRh9BbJ4TDl",
@@ -37,7 +38,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 13,
-   "media": 5
+   "media": 5,
+   "blocks_version": 2
   },
   {
    "id": "44OonD5CF8Eg4yQ2w5REwh",
@@ -55,7 +57,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 7,
-   "media": 3
+   "media": 3,
+   "blocks_version": 2
   },
   {
    "id": "1YNfMFrWceFlnRbeodZ5iR",
@@ -73,7 +76,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 4,
-   "media": 1
+   "media": 1,
+   "blocks_version": 2
   },
   {
    "id": "6nzWl7doxY9SlrpgTm5hNH",
@@ -91,7 +95,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 7,
-   "media": 2
+   "media": 2,
+   "blocks_version": 2
   },
   {
    "id": "32IJkWTcOpZXZObCiSlHA6",
@@ -109,7 +114,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 4,
-   "media": 3
+   "media": 3,
+   "blocks_version": 2
   },
   {
    "id": "6wh8R3l6YtmHaT4J5M6W8T",
@@ -127,7 +133,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 10,
-   "media": 3
+   "media": 3,
+   "blocks_version": 2
   },
   {
    "id": "1Owe717iaaEqDioJZqUyaJ",
@@ -145,7 +152,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 10,
-   "media": 3
+   "media": 3,
+   "blocks_version": 2
   },
   {
    "id": "7GhQrU0cCJGpY9v8lxyTkp",
@@ -163,7 +171,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 5,
-   "media": 4
+   "media": 4,
+   "blocks_version": 2
   },
   {
    "id": "leLmjaR58k3DUJCjt231Q",
@@ -181,7 +190,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 22,
-   "media": 8
+   "media": 8,
+   "blocks_version": 2
   },
   {
    "id": "2ur2wfxGEjkiTDGvNRZtnj",
@@ -199,7 +209,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 20,
-   "media": 5
+   "media": 5,
+   "blocks_version": 2
   },
   {
    "id": "7lryQSYovPK8XGtBv7uIBV",
@@ -217,7 +228,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 27,
-   "media": 5
+   "media": 5,
+   "blocks_version": 2
   },
   {
    "id": "6tyhXjZuASosYgEMs1oTMv",
@@ -235,7 +247,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 19,
-   "media": 7
+   "media": 7,
+   "blocks_version": 2
   },
   {
    "id": "4rnoUwsRmfbNbScJF25NZF",
@@ -253,7 +266,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 36,
-   "media": 11
+   "media": 11,
+   "blocks_version": 2
   },
   {
    "id": "B1SYUo2x0CHUWLp3hZyw2",
@@ -271,7 +285,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 1,
-   "media": 0
+   "media": 0,
+   "blocks_version": 2
   },
   {
    "id": "6ga7KeqgQCKl9ypMUHjkvJ",
@@ -289,7 +304,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 19,
-   "media": 7
+   "media": 7,
+   "blocks_version": 2
   },
   {
    "id": "5p08TXZ8bFMtNos3fj8gAC",
@@ -307,7 +323,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 23,
-   "media": 10
+   "media": 10,
+   "blocks_version": 2
   },
   {
    "id": "2yF5JZuQTWUoUmbDH4niHv",
@@ -325,7 +342,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 5,
-   "media": 9
+   "media": 9,
+   "blocks_version": 2
   },
   {
    "id": "3d9yfiqIKoQhcMnRLESWbz",
@@ -343,7 +361,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 13,
-   "media": 9
+   "media": 9,
+   "blocks_version": 2
   },
   {
    "id": "1VI39x5GE7zaJY5aUMjQuk",
@@ -361,7 +380,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 18,
-   "media": 3
+   "media": 3,
+   "blocks_version": 2
   },
   {
    "id": "5hcVFIGmI8lG1LyPPzxvFR",
@@ -379,7 +399,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 22,
-   "media": 12
+   "media": 12,
+   "blocks_version": 2
   },
   {
    "id": "6ho5tWLUDl7rZVWaNDaigN",
@@ -397,7 +418,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 8,
-   "media": 1
+   "media": 1,
+   "blocks_version": 2
   },
   {
    "id": "1gFbCRqMArlD6KIhiYK5Xc",
@@ -415,7 +437,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 7,
-   "media": 1
+   "media": 1,
+   "blocks_version": 2
   },
   {
    "id": "1yu3dSkVOAvPULoMR9vn5Z",
@@ -433,7 +456,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 16,
-   "media": 9
+   "media": 9,
+   "blocks_version": 2
   },
   {
    "id": "3dXFoedtzO5KQTREFXccop",
@@ -451,7 +475,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 16,
-   "media": 8
+   "media": 8,
+   "blocks_version": 2
   },
   {
    "id": "4DFAwBl2esxhHp1mCv3VSF",
@@ -469,7 +494,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 5,
-   "media": 2
+   "media": 2,
+   "blocks_version": 2
   },
   {
    "id": "4rG7uAn2d6vveGmRlkE5RM",
@@ -487,7 +513,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 8,
-   "media": 3
+   "media": 3,
+   "blocks_version": 2
   },
   {
    "id": "7FC0y5aXoCjuhoUWyDNfnw",
@@ -505,7 +532,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 5,
-   "media": 3
+   "media": 3,
+   "blocks_version": 2
   },
   {
    "id": "Ftdqu1hwKlnLRDvy014Tr",
@@ -523,7 +551,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 23,
-   "media": 12
+   "media": 12,
+   "blocks_version": 2
   },
   {
    "id": "24UKT2fsQl4GmC5DMrmYUy",
@@ -541,7 +570,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 6,
-   "media": 4
+   "media": 4,
+   "blocks_version": 2
   },
   {
    "id": "4Wp0nfUrqdG5TvhD76T8mw",
@@ -559,7 +589,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 5,
-   "media": 3
+   "media": 3,
+   "blocks_version": 2
   },
   {
    "id": "5f1rjP6QXQ69LOmLDTGZ9H",
@@ -577,7 +608,8 @@
    "fetched_body": true,
    "media_done": true,
    "body_paras": 26,
-   "media": 10
+   "media": 10,
+   "blocks_version": 2
   },
   {
    "id": "2YqIG9uyvXkWJPSexKwgwh",
@@ -595,7 +627,8 @@
    "fetched_body": true,
    "body_paras": 25,
    "media_done": true,
-   "media": 4
+   "media": 4,
+   "blocks_version": 2
   },
   {
    "id": "26vUwPc8sNYNC4KJRyXzLC",
@@ -613,7 +646,8 @@
    "fetched_body": true,
    "body_paras": 11,
    "media_done": true,
-   "media": 6
+   "media": 6,
+   "blocks_version": 2
   },
   {
    "id": "3glfiIapY6g66dnzoaySYr",
@@ -629,9 +663,10 @@
    "image_alt": "",
    "page": "news/3glfiIapY6g66dnzoaySYr.html",
    "fetched_body": true,
-   "body_paras": 14,
+   "body_paras": 4,
    "media_done": true,
-   "media": 13
+   "media": 13,
+   "blocks_version": 2
   },
   {
    "id": "318cgHrdJJMfqbDdznI2PP",
@@ -649,7 +684,8 @@
    "fetched_body": true,
    "body_paras": 10,
    "media_done": true,
-   "media": 3
+   "media": 3,
+   "blocks_version": 2
   },
   {
    "id": "4sM1T9bjgyVGy4vUhYb9nv",
@@ -667,7 +703,8 @@
    "fetched_body": true,
    "body_paras": 17,
    "media_done": true,
-   "media": 4
+   "media": 4,
+   "blocks_version": 2
   },
   {
    "id": "6l8Eq8hJRvouCZTnnOk9U5",
@@ -685,7 +722,8 @@
    "fetched_body": true,
    "body_paras": 4,
    "media_done": true,
-   "media": 3
+   "media": 3,
+   "blocks_version": 2
   },
   {
    "id": "1PWegdO1Fh8biYWvscBo10",
@@ -703,7 +741,8 @@
    "fetched_body": true,
    "body_paras": 33,
    "media_done": true,
-   "media": 17
+   "media": 17,
+   "blocks_version": 2
   },
   {
    "id": "ZcVMKm6k8IYRaVcLSrmSs",
@@ -721,7 +760,8 @@
    "fetched_body": true,
    "body_paras": 18,
    "media_done": true,
-   "media": 5
+   "media": 5,
+   "blocks_version": 2
   },
   {
    "id": "7IToHJjbGez7YrJpMiihyH",
@@ -739,7 +779,8 @@
    "fetched_body": true,
    "body_paras": 16,
    "media": 2,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "ndcQ6Uza4pKcTHsLnvJoH",
@@ -757,7 +798,8 @@
    "fetched_body": true,
    "body_paras": 30,
    "media": 15,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "4v0pYbPzbMliaDbxtRYrH0",
@@ -775,7 +817,8 @@
    "fetched_body": true,
    "body_paras": 25,
    "media": 5,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "12TUUZbQJnGxaCmruB9vMR",
@@ -793,7 +836,8 @@
    "fetched_body": true,
    "body_paras": 17,
    "media": 4,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "5Z07QWFA7vVqCPC1jb6AIq",
@@ -811,7 +855,8 @@
    "fetched_body": true,
    "body_paras": 8,
    "media": 1,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "D8AYcVEPGOs8OjIiVisZw",
@@ -829,7 +874,8 @@
    "fetched_body": true,
    "body_paras": 33,
    "media": 20,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "5Gl4kO0FOg77Dcr18hkabd",
@@ -847,7 +893,8 @@
    "fetched_body": true,
    "body_paras": 3,
    "media": 3,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "5UjynLy03wJSix8bDHhZhd",
@@ -865,7 +912,8 @@
    "fetched_body": true,
    "body_paras": 13,
    "media": 3,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "VfUQ0Vt8HaJIi0flQEaxH",
@@ -883,7 +931,8 @@
    "fetched_body": true,
    "body_paras": 4,
    "media": 4,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "6xn5ElSyF1kysf39dqwDGt",
@@ -901,7 +950,8 @@
    "fetched_body": true,
    "body_paras": 7,
    "media": 2,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "3IImAHC95xmYoRr8QDgQvy",
@@ -919,7 +969,8 @@
    "fetched_body": true,
    "body_paras": 22,
    "media": 3,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "kacizmhSQaUfUkYHV5H47",
@@ -937,7 +988,8 @@
    "fetched_body": true,
    "body_paras": 13,
    "media": 3,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "1oz2f6p6qJsF3c58rtU8yd",
@@ -955,7 +1007,8 @@
    "fetched_body": true,
    "body_paras": 17,
    "media": 8,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "2fYLsjB9qE4GOgoKO8wrlb",
@@ -973,7 +1026,8 @@
    "fetched_body": true,
    "body_paras": 20,
    "media": 9,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "31mD5xtSaBYdMAkMZNxCHQ",
@@ -991,7 +1045,8 @@
    "fetched_body": true,
    "body_paras": 12,
    "media": 3,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "2pwbKbJ3dldp6qKJS7Hwad",
@@ -1009,7 +1064,8 @@
    "fetched_body": true,
    "body_paras": 8,
    "media": 3,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "lpydtOJ2CszTQCvhK4pDo",
@@ -1027,7 +1083,8 @@
    "fetched_body": true,
    "body_paras": 4,
    "media": 3,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "1SAaxcY6OKwy8HwQkrNwen",
@@ -1045,7 +1102,8 @@
    "fetched_body": true,
    "body_paras": 11,
    "media": 3,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "4kwHL7ygJLqVlSMHhAj6ce",
@@ -1063,7 +1121,8 @@
    "fetched_body": true,
    "body_paras": 1,
    "media": 2,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "65txlrZKsVDzVDMjhZiQ8m",
@@ -1081,7 +1140,8 @@
    "fetched_body": true,
    "body_paras": 9,
    "media": 3,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "1B0R4wN2ZtsIKYZ8covCZa",
@@ -1099,7 +1159,8 @@
    "fetched_body": true,
    "body_paras": 9,
    "media": 2,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "GnmAqq3nZpuoQ1tTiawyB",
@@ -1117,7 +1178,8 @@
    "fetched_body": true,
    "body_paras": 1,
    "media": 0,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "77UEerhKRudnmGoMuJSq8b",
@@ -1135,7 +1197,8 @@
    "fetched_body": true,
    "body_paras": 7,
    "media": 2,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "6q0XGAriyl5ps2CLy1yiGm",
@@ -1153,7 +1216,8 @@
    "fetched_body": true,
    "body_paras": 11,
    "media": 2,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "UNBeXLZ0wQtbUF23iSj9J",
@@ -1171,7 +1235,8 @@
    "fetched_body": true,
    "body_paras": 4,
    "media": 1,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "6qfpIHPch8mIVj2YgfHdCp",
@@ -1189,7 +1254,8 @@
    "fetched_body": true,
    "body_paras": 11,
    "media": 15,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "2OZA62x5JUuoxlociRPAxb",
@@ -1207,7 +1273,8 @@
    "fetched_body": true,
    "body_paras": 6,
    "media": 1,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "1dVSsWlJ2cJdgDnYdfRojh",
@@ -1225,7 +1292,8 @@
    "fetched_body": true,
    "body_paras": 7,
    "media": 5,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "4JA0f3Nea6tz5hqQW8ia4C",
@@ -1243,7 +1311,8 @@
    "fetched_body": true,
    "body_paras": 24,
    "media": 8,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "7HAxpuKocXghJCDmRL0dAD",
@@ -1261,7 +1330,8 @@
    "fetched_body": true,
    "body_paras": 17,
    "media": 7,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "4SD3W4TIvmAVQj1i1rZ4Oa",
@@ -1279,7 +1349,8 @@
    "fetched_body": true,
    "body_paras": 18,
    "media": 8,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   },
   {
    "id": "3PGUwV77YbdWsGaQDkDOXp",
@@ -1297,7 +1368,8 @@
    "fetched_body": true,
    "body_paras": 1,
    "media": 2,
-   "media_done": true
+   "media_done": true,
+   "blocks_version": 2
   }
  ],
  "translation_cache": {
@@ -2767,6 +2839,9 @@
   "body::“I've committed with the new package and I will commit for the whole weekend,” he said. “There's no way to go back to it because it's a big job for the team.": "«Я взял на себя обязательства по новому пакету и буду действовать на все выходные», — сказал он. «Нет возможности вернуться к этому, потому что это большая работа для команды.",
   "body::“We will try to do the best with what we have but I'm more confident coming to this weekend because I feel like hopefully we will have a better understanding of the package and we will be able to extract more of its potential.": "«Мы постараемся сделать все возможное, используя то, что у нас есть, но я более уверен, что приеду на эти выходные, потому что надеюсь, что мы лучше поймем пакет и сможем максимально раскрыть его потенциал.",
   "body::“We're going to try and win. That's the mindset and of course, George is starting at the back but it doesn't mean anything. On my side I just try to focus on what I can control and try to deliver the best performance as I can and if I can win the race, great.": "\"Мы собираемся попытаться победить. Таков настрой, и, конечно, Джордж стартует сзади, но это ничего не значит. Со своей стороны я просто стараюсь сосредоточиться на том, что могу контролировать, и стараюсь показать наилучшие результаты, насколько могу, и если я смогу выиграть гонку, отлично\".",
-  "body::“If I have to do a podium, I will do a podium. I'm really looking forward to the weekend and hopefully we can achieve a great result with the team.”": "\"Если мне придется подняться на подиум, я поднимусь на подиум. Я очень жду выходных и надеюсь, что мы сможем добиться с командой отличного результата\"."
+  "body::“If I have to do a podium, I will do a podium. I'm really looking forward to the weekend and hopefully we can achieve a great result with the team.”": "\"Если мне придется подняться на подиум, я поднимусь на подиум. Я очень жду выходных и надеюсь, что мы сможем добиться с командой отличного результата\".",
+  "body::Verstappen admits that Sprint weekends can be \"hectic\" when it comes to making the right choices": "Ферстаппен признает, что спринтерские выходные могут быть «беспокойными», когда нужно сделать правильный выбор",
+  "body::Albon has detailed how he expects to  \"build the weekend a little bit differently\" at Marina Bay": "Албон подробно рассказал, как он собирается «построить выходные немного по-другому» в Марина Бэй.",
+  "body::Hamilton finished third in Sepang after a \"gamble\" on soft tyres": "Хэмилтон финишировал третьим в Сепанге после «авантюры» на мягких шинах"
  }
 }
