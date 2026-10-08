@@ -77,10 +77,12 @@
 
         .sessions { padding: 14px 22px; display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
         .session { background: var(--surface2); border-radius: 8px; padding: 10px 14px; border: 1px solid var(--border); }
+        .session.practice { border-color: #ffffff; }
         .session.race { border-color: var(--red); }
         .session.qualifying { border-color: var(--yellow); }
         .session.sprint-session { border-color: var(--purple); }
         .session-name { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+        .session.practice .session-name { color: #ffffff; }
         .session.race .session-name { color: var(--red); }
         .session.qualifying .session-name { color: var(--yellow); }
         .session.sprint-session .session-name { color: var(--purple); }
@@ -1627,6 +1629,11 @@
                     if (s.name === 'Race') cls = 'race';
                     else if (s.name === 'Qualifying') cls = 'qualifying';
                     else if (s.name === 'Sprint' || s.name === 'SprintQualifying') cls = 'sprint-session';
+                    // Practice cards had no class at all, so they kept the
+                    // default grey border while the countdown already showed
+                    // white for them. Matching the class to the palette the
+                    // banner uses is what keeps the two in step.
+                    else if (/Practice/.test(s.name)) cls = 'practice';
                     return `<div class="session ${cls}"><div class="session-name">${s.name_ru}</div><div class="session-date">${s.msk_date}</div><div class="session-time">${s.msk_time} МСК</div></div>`;
                 }).join('');
 
