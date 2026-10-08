@@ -30,12 +30,13 @@
         .year-btn:hover { color: var(--text); border-color: var(--text-dim); }
         .year-btn.active { background: var(--red); color: #fff; border-color: var(--red); }
 
-        .next-race { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--red); border-radius: 12px; padding: 20px 24px; margin-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        .next-race { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--sess-color, var(--red)); border-radius: 12px; padding: 20px 24px; margin-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
         .next-race-info h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
         .next-race-info .meta { color: var(--text-dim); font-size: 0.85rem; }
         .countdown { text-align: center; min-width: 180px; }
         .countdown-label { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
-        .countdown-timer { font-size: 1.6rem; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--red); }
+        .countdown-timer { font-size: 1.6rem; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--sess-color, var(--red)); }
+.countdown-live { font-size: 0.7rem; color: var(--sess-color, var(--red)); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
 
         .expand-toggle { margin-left: auto; padding: 6px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; color: var(--text-dim); cursor: pointer; font-size: 0.8rem; font-weight: 600; transition: all 0.2s; }
         .expand-toggle:hover { color: var(--text); border-color: var(--text-dim); }
@@ -401,31 +402,66 @@
             if (currentView !== 'standings') startCountdown();
         }
 
+        // Session palette. The class names are the ones the race cards already
+        // use, and the colours are their CSS variables, so the banner and the
+        // cards cannot drift apart.
+        //
+        // Practice has no card class — those cards carry the default border — so
+        // white is given here on its own.
+        const SESSION_STYLE = {
+            FirstPractice:    { cls: 'practice',       color: '#ffffff', ru: 'Свободная практика' },
+            SecondPractice:   { cls: 'practice',       color: '#ffffff', ru: 'Свободная практика' },
+            ThirdPractice:    { cls: 'practice',       color: '#ffffff', ru: 'Свободная практика' },
+            SprintQualifying: { cls: 'sprint-session', color: '#9b59ff', ru: 'Спринт-квалификация' },
+            Sprint:           { cls: 'sprint-session', color: '#9b59ff', ru: 'Спринт' },
+            Qualifying:       { cls: 'qualifying',     color: '#ffb800', ru: 'Квалификация' },
+            Race:             { cls: 'race',           color: '#e10600', ru: 'Гонка' },
+        };
+
+        // The next session that has not finished yet.
+        //
+        // Counting down to the next session rather than to the Grand Prix is what
+        // the site on formula1.com does, and it is the only useful thing on a
+        // Thursday: with the old timer the banner said "Race in 3 days" while the
+        // first practice was in six hours.
+        //
+        // `end` is what decides "still to come": a session running right now is
+        // still the one to show, just as "идёт" instead of "через".
+        function nextSession(now) {
+            let best = null;
+            for (const race of (seasonData && seasonData.races) || []) {
+                for (const s of race.sessions || []) {
+                    const end = new Date(s.utc_end || s.utc_start);
+                    if (!(end > now)) continue;
+                    if (!best || end < best.end) best = { race, session: s, end };
+                }
+            }
+            return best;
+        }
+
         function renderNextRace() {
             const banner = document.getElementById('nextRaceBanner');
             if (!seasonData) return;
             const now = new Date();
-            const upcoming = seasonData.races.find(r => {
-                const raceSession = r.sessions.find(s => s.name === 'Race');
-                return raceSession && new Date(raceSession.utc_start) > now;
-            });
-            if (!upcoming) {
+            const next = nextSession(now);
+            if (!next) {
                 banner.innerHTML = '<div class="next-race-info"><h3>Сезон завершён</h3></div>';
-                banner.dataset.raceTime = '';   // не оставляем время прошлого сезона
+                banner.dataset.sessKey = '';
                 return;
             }
-            const raceSession = upcoming.sessions.find(s => s.name === 'Race');
-            const raceDate = new Date(raceSession.utc_start);
+            const { race, session } = next;
+            const style = SESSION_STYLE[session.name] || SESSION_STYLE.Race;
             banner.innerHTML = `
                 <div class="next-race-info">
-                    <h3>${upcoming.gp}</h3>
-                    <p class="meta">Этап ${upcoming.round} · ${upcoming.circuit} · ${upcoming.location}${upcoming.sprint ? ' <span class="sprint-badge" style="margin-left:8px">Спринт</span>' : ''}</p>
+                    <h3>${race.gp}</h3>
+                    <p class="meta">Этап ${race.round} · ${race.circuit} · ${race.location}${race.sprint ? ' <span class="sprint-badge" style="margin-left:8px">Спринт</span>' : ''}</p>
                 </div>
                 <div class="countdown">
-                    <div class="countdown-label">Гонка через</div>
+                    <div class="countdown-label" id="countdownLabel">${style.ru} через</div>
                     <div class="countdown-timer" id="countdownTimer">—</div>
                 </div>`;
-            banner.dataset.raceTime = raceDate.toISOString();
+            banner.style.setProperty('--sess-color', style.color);
+            banner.dataset.sessKey = `${race.round}:${session.name}`;
         }
 
         function stopCountdown() {
@@ -440,11 +476,42 @@
             stopCountdown();
             function update() {
                 const banner = document.getElementById('nextRaceBanner');
-                if (!banner || !banner.dataset.raceTime) return;
+                if (!banner || !seasonData) return;
                 const timer = document.getElementById('countdownTimer');
                 if (!timer) return;
-                const diff = new Date(banner.dataset.raceTime) - new Date();
-                if (diff <= 0) { timer.textContent = 'Гонка идёт'; return; }
+
+                // Re-read which session is next on every tick. That is what makes
+                // the banner move on by itself: when the session on the clock
+                // finishes, the next one takes over the label and the colour with
+                // no extra scheduling. Recomputing costs a few hundred string
+                // comparisons per second, which is nothing.
+                const next = nextSession(new Date());
+                if (!next) return;
+                const { race, session } = next;
+                const key = `${race.round}:${session.name}`;
+                if (banner.dataset.sessKey !== key) {
+                    const style = SESSION_STYLE[session.name] || SESSION_STYLE.Race;
+                    banner.style.setProperty('--sess-color', style.color);
+                    banner.dataset.sessKey = key;
+                    const label = document.getElementById('countdownLabel');
+                    if (label) {
+                        label.className = 'countdown-label';
+                        label.textContent = `${style.ru} через`;
+                    }
+                }
+
+                const start = new Date(session.utc_start);
+                const diff = start - new Date();
+                if (diff <= 0) {
+                    timer.textContent = 'Идёт';
+                    const label = document.getElementById('countdownLabel');
+                    if (label) {
+                        label.className = 'countdown-live';
+                        const style = SESSION_STYLE[session.name] || SESSION_STYLE.Race;
+                        label.textContent = `${style.ru} · идёт`;
+                    }
+                    return;
+                }
                 const d = Math.floor(diff / 86400000), h = Math.floor((diff % 86400000) / 3600000), m = Math.floor((diff % 3600000) / 60000), s = Math.floor((diff % 60000) / 1000);
                 timer.textContent = `${d}д ${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
             }
