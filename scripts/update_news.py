@@ -1100,7 +1100,7 @@ def _render_blocks(blocks: list, ru_list: list, article_url: str) -> str:
                          if srcset else "")
                 cards.append('<figure class="shot">'
                              f'<img loading="lazy" src="{html.escape(src)}"{extra} '
-                             f'alt="{html.escape(it.get("alt") or cap)}">'
+                             f'alt="{html.escape(it.get("alt") or "")}">'
                              + (f"<figcaption>{cap}</figcaption>" if cap else "")
                              + "</figure>")
             # Swipeable without a line of JavaScript: the strip simply scrolls.
@@ -1119,7 +1119,7 @@ def _render_blocks(blocks: list, ru_list: list, article_url: str) -> str:
                      if srcset else "")
             out.append(
                 f'<figure><img loading="lazy" src="{html.escape(src)}"{extra} '
-                f'alt="{html.escape(b.get("alt") or caption)}">'
+                f'alt="{html.escape(b.get("alt") or "")}">'
                 + (f"<figcaption>{caption}</figcaption>" if caption else "")
                 + "</figure>")
             continue
@@ -1130,7 +1130,7 @@ def _render_blocks(blocks: list, ru_list: list, article_url: str) -> str:
                  'sizes="(max-width: 800px) 100vw, 760px"' if srcset else "")
         still = (f'<a href="{link}" target="_blank" rel="noopener">'
                  f'<img loading="lazy" src="{html.escape(src)}"{extra} '
-                 f'alt="{caption}"></a>' if b.get("url") else "")
+                 f'alt="{html.escape(b.get("alt") or "")}"></a>' if b.get("url") else "")
         note = (f'Видео: {caption} — <a href="{link}" target="_blank" '
                 f'rel="noopener">смотреть на formula1.com</a>' if caption
                 else 'Видео — <a href="{link}" target="_blank" rel="noopener">'
