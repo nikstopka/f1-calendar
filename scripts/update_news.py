@@ -273,6 +273,9 @@ _SKIP_PREFIXES = ("Image", "Getty", "©", "All images", "Read next", "Sign In",
 _JUNK_RE = re.compile(
     r"opens in a new tab|ScheduleResultsStandings|Open menu|Search website|"
     r"Cookie|Accept all|Sign InSubscribe|F1 Unlocked", re.I)
+# A bare "$37" is the RSC protocol's way of pointing at another chunk. It looks
+# like text to a string scan but carries no words of its own.
+_FLIGHT_REF_RE = re.compile(r"^\$[0-9a-fA-F]{1,4}$")
 
 TYPE_RU = {
     "News": "Новость", "Opinion": "Мнение", "Feature": "Фича",
@@ -350,6 +353,33 @@ def _flight_text_nodes(flight: str) -> list:
         pos = end
         if isinstance(value, str) and value.strip():
             nodes.append((j, value))
+
+
+def _json_value(flight: str, key: str, start: int = 0) -> str:
+    """The string value of `key` at or after `start`, escapes decoded.
+
+    A regex like `"([^"]{3,300})"` cannot do this: the payload is JSON, so a
+    quote inside a caption arrives escaped as `\\"`, and the character class stops
+    at it. The regex consumes the backslash first and hands back a caption ending
+    in a stray `\\` — which is how three captions in the archive were cut off
+    mid-sentence.
+    """
+    k = flight.find('"' + key + '"', start)
+    if k < 0:
+        return ""
+    colon = flight.find(":", k + len(key) + 2)
+    if colon < 0:
+        return ""
+    j = colon + 1
+    while j < len(flight) and flight[j] in " \t":
+        j += 1
+    if j >= len(flight) or flight[j] != '"':
+        return ""
+    try:
+        value, _ = json.JSONDecoder().raw_decode(flight, j)
+    except ValueError:
+        return ""
+    return value if isinstance(value, str) else ""
 
 
 def _dom_gallery(page_html: str) -> dict:
@@ -448,14 +478,24 @@ def _article_blocks(page_html: str) -> list:
         src = re.search(r'"src":"(https://media\.formula1\.com[^"]+)"', seg)
         if not src:
             continue
-        alt = re.search(r'"alt":"([^"]{3,300})"', seg)
-        cap = re.search(r'ImageCard-module_footer__[^"]*","children":'
-                        r'"([^"]{3,300})"', seg)
+        # Two card variants are in use and both are live:
+        #   - one puts the written caption in a footer element inside the card;
+        #   - the other has no footer at all and the caption follows the card as
+        #     its next sibling.
+        # The footer is the reliable one, so it is read first and its presence
+        # stops the sibling fallback from mistaking the next paragraph — which
+        # in a feature article is often a pull quote, not a caption — for one.
+        foot = seg.find("ImageCard-module_footer")
+        cap = _json_value(seg, "children", foot) if foot >= 0 else ""
         found.append((m.start(), 0, "image", {
             "kind": "image",
             "url": src.group(1),
-            "alt": alt.group(1) if alt else "",
-            "caption": cap.group(1) if cap else "",
+            "alt": _json_value(seg, "alt"),
+            "caption": cap,
+            "has_footer": foot >= 0,
+            # The hero shot is followed by the article's opening paragraph, not by
+            # a caption, and the two are told apart only by this flag.
+            "hero": "f1-article-hero" in seg,
         }))
 
     # Videos and other embeds: a caption plus a CloudFront still. The site runs
@@ -465,7 +505,7 @@ def _article_blocks(page_html: str) -> list:
         if not (lo <= m.start() <= hi):
             continue
         seg = flight[m.start():m.start() + 1800]
-        cap = re.search(r'"caption":"([^"]{3,300})"', seg)
+        cap = _json_value(seg, "caption")
         thumb = re.search(r'"thumbnail":\{.*?"(?:path|url)":"(https://[^"]+)"', seg)
         vid = re.search(r'"videoId":"([^"]+)"', seg)
         if not thumb and not vid:
@@ -473,17 +513,56 @@ def _article_blocks(page_html: str) -> list:
         found.append((m.start(), 0, "video", {
             "kind": "video",
             "url": thumb.group(1) if thumb else "",
-            "caption": cap.group(1) if cap else "",
+            "caption": cap,
             "video_id": vid.group(1) if vid else "",
         }))
 
     found.sort(key=lambda item: (item[0], item[1]))
 
+    # Caption fallback for the card variant that has no footer.
+    #
+    # In that variant F1 renders the caption as the card's next sibling, in the
+    # same content-rich-text wrapper body paragraphs use — which is why 79 photos
+    # across 62 articles came out with an empty caption while their text sat in
+    # the article as an ordinary paragraph.
+    #
+    # Only used where the footer is absent, and with three guards, because in a
+    # feature article the paragraph after a photo is often a pull quote:
+    #   - the hero photo is followed by the article's opening paragraph;
+    #   - a caption is a direct sibling, so no Container-module boundary stands
+    #     between the card and its text;
+    #   - `"text":"$37"` points into another RSC chunk and carries no words.
+    drop_text = set()
+    for i, (at, _, kind, payload) in enumerate(found):
+        if kind != "image" or payload.get("hero") or payload.get("has_footer"):
+            continue
+        j = i + 1
+        while j < len(found) and j in drop_text:
+            j += 1
+        if j >= len(found) or found[j][2] != "text":
+            continue
+        if "Container-module" in flight[at:found[j][0]]:
+            continue
+            continue
+        cap = _clean_text(found[j][3]).strip()
+        # `"text":"$37"` is a link into another chunk of the RSC stream, not
+        # prose: the real string lives in a chunk this scanner never resolves.
+        # Taking one as a caption prints "$37" under the photo, which is how
+        # several captions came out as bare references.
+        if _FLIGHT_REF_RE.match(cap) or len(cap) < 20 or _JUNK_RE.search(cap):
+            continue
+        payload["caption"] = cap
+        drop_text.add(j)
+
     blocks = []
     seen = set()
     seen_media = set()
-    for _, _, kind, payload in found:
+    for idx, (_, _, kind, payload) in enumerate(found):
         if kind == "text":
+            if idx in drop_text:
+                # Already used as the caption of the photo above it; repeating it
+                # as body text would say the same thing twice.
+                continue
             if len(payload) < 40 or _JUNK_RE.search(payload):
                 continue
             if payload.startswith(_SKIP_PREFIXES):
