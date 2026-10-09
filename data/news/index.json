@@ -1,8 +1,28 @@
 {
- "generated": "2026-10-09T13:12:16Z",
+ "generated": "2026-10-09T14:36:04Z",
  "source": "https://www.formula1.com/en/latest",
  "translation": "Google (free, no key) + словарик терминов F1",
  "articles": [
+  {
+   "id": "4dvkvpkCXftdhX7sLI2dcQ",
+   "slug": "verstappen-clinches-pole-position-in-singapore-sprint-qualifying-ahead-of-russell",
+   "title": "Verstappen clinches pole position for Singapore Sprint",
+   "title_ru": "Ферстаппен занял первое место в спринте в Сингапуре",
+   "description": "Max Verstappen followed up on his first victory of the 2026 season by securing pole position for the Singapore Sprint.",
+   "description_ru": "Макс Ферстаппен продолжил свою первую победу в сезоне 2026 года, обеспечив первое местою в Сингапурском спринте.",
+   "type": "Report",
+   "published": "2026-10-09T14:23:55.948Z",
+   "url": "https://www.formula1.com/en/latest/article/verstappen-clinches-pole-position-in-singapore-sprint-qualifying-ahead-of-russell.4dvkvpkCXftdhX7sLI2dcQ",
+   "image": "https://media.formula1.com/image/upload/t_16by9North/f_auto/q_auto/v1791553693/trackside-images/2026/F1_Grand_Prix_Of_Singapore___Practice__Sprint_Qualifying/2299379373.jpg",
+   "image_alt": "SINGAPORE, SINGAPORE - OCTOBER 09: Sprint Pole qualifier Max Verstappen of the Netherlands and",
+   "page": "news/4dvkvpkCXftdhX7sLI2dcQ.html",
+   "fetched_body": true,
+   "blocks_trimmed": false,
+   "media_done": true,
+   "blocks_version": 3,
+   "body_paras": 31,
+   "media": 12
+  },
   {
    "id": "6RlXLHK9XVhWiiRCs1dCli",
    "slug": "live-coverage-sprint-qualifying-in-singapore-2026",
@@ -820,7 +840,8 @@
    "body_paras": 17,
    "media_done": true,
    "media": 3,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "1PWegdO1Fh8biYWvscBo10",
@@ -839,7 +860,8 @@
    "body_paras": 33,
    "media_done": true,
    "media": 17,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "ZcVMKm6k8IYRaVcLSrmSs",
@@ -858,7 +880,8 @@
    "body_paras": 18,
    "media_done": true,
    "media": 5,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "7IToHJjbGez7YrJpMiihyH",
@@ -877,7 +900,8 @@
    "body_paras": 16,
    "media": 2,
    "media_done": true,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "ndcQ6Uza4pKcTHsLnvJoH",
@@ -896,7 +920,8 @@
    "body_paras": 33,
    "media": 15,
    "media_done": true,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "4v0pYbPzbMliaDbxtRYrH0",
@@ -915,7 +940,8 @@
    "body_paras": 25,
    "media": 5,
    "media_done": true,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "12TUUZbQJnGxaCmruB9vMR",
@@ -934,7 +960,8 @@
    "body_paras": 23,
    "media": 4,
    "media_done": true,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "5Z07QWFA7vVqCPC1jb6AIq",
@@ -3606,6 +3633,49 @@
   "body::\"In the attempt to extract the maximum potential from the C4 immediately, the degradation generated on the compound meant that no genuinely competitive laps could be completed after the first flying lap today. At the same time, in yesterday’s running it demonstrated that it can maintain an acceptable level of consistency over race distances when it is brought gradually into its correct operating window over the opening laps. This characteristic could prove particularly important tomorrow, given the number of Soft sets retained by several teams.": "«В попытке немедленно извлечь максимальный потенциал из C4, деградация состава привела к тому, что ни один по-настоящему конкурентоспособный круг не мог быть пройден после первого круга сегодня. В то же время во вчерашнем забеге он продемонстрировал, что он может поддерживать приемлемый уровень стабильности на гоночных дистанциях, когда он постепенно выводится в правильное рабочее окно на первых кругах. Эта характеристика может оказаться особенно важной завтра, учитывая количество мягких наборов, сохраненных несколькими командами.",
   "body::\"Tomorrow’s Grand Prix looks especially interesting from a strategic perspective. Most drivers have two sets of Hard tyres available, which should provide a solid option for the longer stints thanks to their greater thermal resistance and lower degradation compared to the softer compounds. On paper, the Medium-Hard-Hard and Soft-Hard-Hard combinations appear to be among the most competitive.": "«Завтрашний Гран-при выглядит особенно интересным со стратегической точки зрения. У большинства гонщиков есть в наличии два комплекта шин Hard, которые должны стать надежным вариантом для более длительных отрезков благодаря их большей термостойкости и меньшей деградации по сравнению с более мягкими шинами. На бумаге комбинации Medium-Hard-Hard и Soft-Hard-Hard кажутся одними из наиболее конкурентоспособных.",
   "body::\"There are, however, some particular situations, such as those of Verstappen and Leclerc, who each have only one set of C2 tyres available and may therefore consider different approaches, making greater use of the Soft and Medium compounds or even evaluating three-stop strategies. In this scenario, the range of possibilities becomes much broader, with shorter stints and increased flexibility.": "«Однако существуют некоторые конкретные ситуации, такие как ситуация Ферстаппена и Леклера, каждый из которых имеет только один комплект шин C2 и поэтому может рассмотреть разные подходы, более широко использовать составы Soft и Medium или даже оценить стратегию трех пит-стопов. В этом сценарии диапазон возможностей становится намного шире, с более короткими отрезками и повышенной гибкостью.",
-  "body::\"By contrast, we are unlikely to see one-stop strategies, which on paper offer no advantage in terms of total race time at a circuit where overtaking remains possible at several points around the track. Finally, there remains an element of uncertainty related to the weather, with a chance of rain that could influence the teams’ strategic choices.”": "«Напротив, мы вряд ли увидим стратегию «одной остановки», которая на бумаге не дает никаких преимуществ с точки зрения общего времени гонки на трассе, где обгон остается возможным в нескольких точках трассы. Наконец, остается элемент неопределенности, связанный с погодой, с вероятностью дождя, который может повлиять на стратегический выбор команд»."
+  "body::\"By contrast, we are unlikely to see one-stop strategies, which on paper offer no advantage in terms of total race time at a circuit where overtaking remains possible at several points around the track. Finally, there remains an element of uncertainty related to the weather, with a chance of rain that could influence the teams’ strategic choices.”": "«Напротив, мы вряд ли увидим стратегию «одной остановки», которая на бумаге не дает никаких преимуществ с точки зрения общего времени гонки на трассе, где обгон остается возможным в нескольких точках трассы. Наконец, остается элемент неопределенности, связанный с погодой, с вероятностью дождя, который может повлиять на стратегический выбор команд».",
+  "title::Verstappen clinches pole position for Singapore Sprint": "Ферстаппен занял первое место в спринте в Сингапуре",
+  "description::Max Verstappen followed up on his first victory of the 2026 season by securing pole position for the Singapore Sprint.": "Макс Ферстаппен продолжил свою первую победу в сезоне 2026 года, обеспечив первое местою в Сингапурском спринте.",
+  "body::Max Verstappen followed up on his first victory of the 2026 season by securing pole position for the Singapore Sprint.": "Макс Ферстаппен продолжил свою первую победу в сезоне 2026 года, обеспечив первое местою в Сингапурском спринте.",
+  "body::Max Verstappen clinched pole position for the Singapore Sprint, beating Mercedes’ George Russell and Ferrari's Charles Leclerc in a busy session under the lights at the Marina Bay Circuit.": "Макс Ферстаппен занял первое место-позицию в спринте в Сингапуре, победив Джорджа Рассела из Mercedes и Чарльза Леклера из Ferrari в напряженной сессии под освещением трассы Марина-Бэй.",
+  "body::With four teams seemingly in the mix after a single hour of Free Practice, Verstappen timed his final lap to perfection to eclipse the efforts of each of his rivals, ending the session with a time of 1m 31.156s.": "Поскольку после одного часа свободной практики, по-видимому, смешались четыре команды, Ферстаппен идеально рассчитал свой последний круг, чтобы затмить усилия каждого из своих соперников, завершив сессию со временем 1 мин 31,156 с.",
+  "body::His lap on the soft tyres left him 0.120s clear of Russell, with Leclerc a further tenth back in P3, but the Dutchman’s result will not be confirmed until he has visited the stewards for a potential yellow flag infringement in SQ1.": "Его круг на мягких шинах позволил ему оторваться от Рассела на 0,120 секунды, а Леклерк отстал еще на десятую позицию на третьей позиции, но результат голландца не будет подтвержден до тех пор, пока он не посетит стюардов по поводу потенциального нарушения желтого флага в первом квартале.",
+  "body::The McLaren pair of Oscar Piastri and Lando Norris took P4 and P5 respectively, with the Aussie just 0.055s adrift of Leclerc’s time. Lewis Hamilton was sixth in the second Ferrari ahead of Kimi Antonelli – the leader of the Drivers’ Championship – and Racing Bull's Liam Lawson.": "Пара McLaren в составе Оскара Пиастри и Ландо Норриса заняла 4-е и 5-е места соответственно, при этом австралиец отставал от времени Леклера всего на 0,055 секунды. Льюис Хэмилтон был шестым на второй Ferrari, опередив Кими Антонелли – лидера чемпионата пилотов – и Лиама Лоусона из Racing Bull.",
+  "body::Isack Hadjar and Pierre Gasly completed the top 10 for Red Bull and Alpine with both having lap times deleted in SQ3.": "Исак Хаджар и Пьер Гасли вошли в топ-10 Red Bull и Alpine, причем оба они потеряли время круга в третьем квартале.",
+  "body::Alpine’s Franco Colapinto finished in P11 after a late lap from Russell knocked him out of the top 10, while the Audi of Nico Hulkenberg followed in P12. Ollie Bearman (Haas), Gabriel Bortoleto (Audi), Fernando Alonso (Aston Martin) and Esteban Ocon (Haas) occupied P13 to P16 on the timesheets.": "Франко Колапинто из Alpine финишировал на 11-м месте после того, как Рассел на позднем круге выбил его из первой десятки, а Audi Нико Хюлкенберга последовала за ним на 12-м месте. Олли Бирман (Haas), Габриэль Бортолето (Audi), Фернандо Алонсо (Aston Martin) и Эстебан Окон (Haas) заняли места с 13 по 16 в протоколе.",
+  "body::Arvid Lindblad, who previously hinted he would approach this weekend cautiously after crashing at other street circuits, narrowly missed out on a spot in SQ2 and settled for P17, just ahead of Aston Martin’s Lance Stroll.": "Арвид Линдблад, который ранее намекнул, что будет осторожно подходить к гонке в эти выходные после аварий на других уличных трассах, едва не упустил место во втором квартале и остановился на 17-м месте, опередив Лэнса Стролла из Aston Martin.",
+  "body::They enjoyed a margin of half a second over Williams and Cadillac, with Alex Albon leading the backmarkers in P19 as Valtteri Bottas tucked in just behind. Carlos Sainz will line up on the back row with Sergio Perez for Saturday’s 21-lap affair, the Mexican having caused a red flag after finding the barrier in the opening minutes.": "Они имели преимущество в полсекунды над Williams и Cadillac: Алекс Албон лидировал на 19-м месте, а Валттери Боттас шел чуть позади. Карлос Сайнс встанет в линию на заднем ряду вместе с Серхио Пересом в субботнем поединке на 21 круге, мексиканец вызвал красный флаг после того, как обнаружил барьер на первых минутах.",
+  "body::The drivers prepared to tackle Singapore's humid conditions in Sprint Qualifying": "Пилоты подготовились к борьбе с влажными условиями Сингапура в квалификации спринта",
+  "body::SQ1 – Verstappen sets the pace as Perez crashes": "SQ1 – Ферстаппен задает темп, когда Перес терпит крушение",
+  "body::The Marina Bay Circuit’s bumpy surface and humid weather make it one of the greatest tests on the calendar, and the addition of the Sprint creates an even greater challenge. It meant that after just one hour of Free Practice, it was time for Sprint Qualifying, with Russell heading into the session as the driver to beat.": "Неровное покрытие трассы Марина-Бэй и влажная погода делают ее одним из величайших испытаний в календаре, а добавление спринта создает еще большую проблему. Это означало, что всего лишь через час свободной практики настало время квалификации спринта, и Рассел отправился на сессию в качестве гонщика, которого нужно победить.",
+  "body::When SQ1 got underway under the lights – with everyone set to run the mandatory medium tyres – Cadillac led a long queue of cars out of the pit lane as the drivers prepared to tackle vastly different conditions compared to FP1.": "Когда SQ1 стартовал под светом огней – когда все были готовы использовать обязательные шины среднего размера – Cadillac вывел длинную очередь автомобилей с пит-лейна, поскольку гонщики готовились к работе в совершенно других условиях по сравнению с FP1.",
+  "body::It didn’t take long for the first yellow flag to be waved after Perez crashed into the tyre barrier at Turn 4, damaging his front wing. In an attempt to make it back to his garage, he dragged the component under his car and sent debris flying onto the racing line, resulting in a pause in the action with six minutes remaining.": "Вскоре был поднят первый желтый флаг после того, как Перес врезался в шинный барьер на четвертом повороте, повредив переднее крыло. Пытаясь вернуться в свой гараж, он затащил компонент под свою машину и отправил обломки на гоночную трассу, в результате чего действие было приостановлено за шесть минут до конца.",
+  "body::As everyone returned to the pits under the red flag, only a handful of drivers had set a representative time, suggesting that there would be a frenetic conclusion to the first segment of Sprint Qualifying. Of those, Hamilton led the timesheets with 1m 33.748s – around 1.5s adrift of Russell’s fastest lap in FP1.": "Когда все вернулись в боксы под красным флагом, лишь немногие гонщики установили репрезентативное время, что позволяет предположить, что первый сегмент квалификации спринта будет безумным. Из них Хэмилтон лидировал в протоколе с результатом 1 метр 33,748 секунды – примерно на 1,5 секунды отставая от самого быстрого круга Рассела в FP1.",
+  "body::Perez damaged his Cadillac as he drove into the barrier": "Перес повредил свой «Кадиллак», въехав в барьер",
+  "body::Replays also showed that Verstappen – one of the many yet to complete a competitive lap – seemed to overtake the Ferrari under yellow flags, which was noted by the stewards and will be investigated after the session.": "Повторы также показали, что Ферстаппен – один из многих, кто еще не завершил соревновательный круг – похоже, обогнал Ferrari под желтыми флагами, что было отмечено стюардами и будет расследовано после сессии.",
+  "body::With the clock rapidly ticking down, the majority opted for a single push, which unsurprisingly led to a flurry of improvements in the final minutes. Leclerc surged into P2 behind his team mate, followed by the Mercedes pair before Audi’s Hulkenberg snatched P4.": "Поскольку время быстро шло, большинство предпочло одиночный рывок, что неудивительно, что на последних минутах произошел шквал улучшений. Леклерк вырвался на второе место позади своего товарища по команде, за ним последовала пара Mercedes, прежде чем Хюлькенберг из Audi отобрал четвертое место.",
+  "body::Norris was the next to move into the top three, but the second McLaren of Piastri bailed out of his first effort and faced immense pressure to deliver as he lingered near the drop zone. Although the Red Bulls were in a similar situation, Verstappen was able to post the quickest time of 1m 33.477s, with Hadjar and Piastri also progressing.": "Норрис был следующим, кто вошел в тройку лидеров, но второй McLaren из Пиастри вылетел из своей первой попытки и столкнулся с огромным давлением, когда он задержался возле зоны падения. Хотя «Ред Буллз» оказались в аналогичной ситуации, Ферстаппен смог показать лучшее время - 1 минуту 33,477 секунды, при этом Хаджар и Пиастри также прогрессировали.",
+  "body::At the other end of the order, Lindblad was knocked out alongside Stroll and Williams’ Albon (P19), who reported that the car felt \"completely different to practice”, and Sainz (P22). It was another early exit for Cadillac too, Bottas in P20 while Perez wound up in P21.": "На другом конце очереди Линдблад был выбит вместе со Строллом и Элбоном из Williams (P19), который сообщил, что машина ощущалась «совершенно по-другому на тренировке», и Сайнсом (P22). Для Cadillac это был еще один ранний уход: Боттас занял 20-е место, а Перес - 21-е.",
+  "body::Knocked out: Lindblad, Stroll, Albon, Bottas, Perez, Sainz": "Вылетели: Линдблад, Стролл, Албон, Боттас, Перес, Сайнс.",
+  "body::Lindblad suffered a rare SQ1 exit in Singapore": "Lindblad потерпел редкий выход из SQ1 в Сингапуре",
+  "body::SQ2 – Ferrari fly as Russell delivers under pressure": "SQ2 – Ferrari летит, а Рассел действует под давлением",
+  "body::With every team bolting on the medium compound once again, Verstappen flirted with the walls on his way to setting an early benchmark of 1m 32.724s, making the most of the track evolution to significantly trim his earlier time.": "Поскольку каждая команда снова стремилась к среднему составу, Ферстаппен заигрывал со стенами на пути к установлению раннего ориентира в 1 метр 32,724 секунды, максимально используя эволюцию трассы и значительно сокращая свое прежнее время.",
+  "body::That was initially enough for him to clear Mercedes’ Antonelli and Russell, but Hamilton’s first attempt saw him overturn the Dutchman’s advantage before Leclerc went even faster, posting a 1m 32.457s.": "Первоначально этого было достаточно, чтобы обойти Антонелли и Рассела из Mercedes, но первая попытка Хэмилтона привела к тому, что он перевернул преимущество голландца, прежде чем Леклер пошел еще быстрее, показав 1 метр 32,457 секунды.",
+  "body::Hamilton reported that “a couple of big snaps” towards the end of the lap made him lose some time, suggesting that there was more performance for the Ferrari driver to find. Someone else chasing improvement was Russell, who suffered a lock-up and had no choice but to go again on his suboptimal tyres, hoping to move up the order from P8.": "Хэмилтон сообщил, что «пара сильных рывков» ближе к концу круга заставила его потерять некоторое время, предполагая, что гонщику Ferrari нужно было найти больше возможностей. Еще одним человеком, стремившимся к улучшению, был Рассел, который застрял, и у него не было другого выбора, кроме как снова ехать на своих неоптимальных шинах в надежде подняться с восьмой позиции.",
+  "body::Hadjar charged into fifth place as Lawson and Colapinto also advanced, demoting Russell into the elimination spots. However, he managed to wrestle his car into P4 when it mattered, sending the Alpine driver down to P11.": "Хаджар занял пятое место, а Лоусон и Колапинто также продвинулись вперед, понизив Рассела до места выбывания. Тем не менее, когда это было необходимо, ему удалось вывести свою машину на 4-е место, отправив гонщика Alpine на 11-е место.",
+  "body::Colapinto therefore missed the cut for the final segment of Sprint Qualifying, as did Hulkenberg, Bearman, Bortoleto, Alonso and Ocon.": "Таким образом, Колапинто не попал в финальный сегмент квалификации спринта, как и Хюлькенберг, Бирман, Бортолето, Алонсо и Окон.",
+  "body::Knocked out: Colapinto, Hulkenberg, Bearman, Bortoleto, Alonso, Ocon": "Выбыли: Колапинто, Хюлкенберг, Беарман, Бортолето, Алонсо, Окон.",
+  "body::Russell squeezed into SQ2 at the last moment": "Рассел втиснулся в SQ2 в последний момент",
+  "body::SQ3 – Verstappen secures pole with last-gasp lap": "SQ3 – Ферстаппен занял первое место на последнем круге",
+  "body::The light turned green at the end of the pit lane for the final shootout, but Ferrari, Red Bull and the remaining midfield stars of Lawson and Gasly elected to bide their time and wait in their respective garages for a little longer.": "В конце пит-лейна загорелся зеленый свет для финальной серии пенальти, но Ferrari, Red Bull и оставшиеся звезды полузащиты Лоусон и Гасли решили выждать время и подождать в своих гаражах еще немного.",
+  "body::That gave Norris the space he needed to push the soft tyres to their limit and take the top spot with a 1m 31.587s, with Piastri close behind in P2 as neither Mercedes could take the fight to McLaren.": "Это дало Норрису необходимое пространство, чтобы довести мягкие шины до предела и занять первое место с результатом 1 метр 31,587 секунды, а Пиастри отставал на второй позиции, поскольку ни один из Mercedes не смог конкурировать с McLaren.",
+  "body::Leclerc came through to beat Norris by just 0.019s, and despite Hamilton’s best efforts, the lap time fell away from him and he could only manage P3. There was still just about enough time for Red Bull to blow everyone out of the water, which is exactly what Verstappen did in the first sector.": "Леклер опередил Норриса всего на 0,019 секунды, и, несмотря на все усилия Хэмилтона, время круга у него отнялось, и он смог управлять только P3. У Red Bull еще было достаточно времени, чтобы выбить всех из воды, что и сделал Ферстаппен в первом секторе.",
+  "body::He carried that speed throughout the rest of the lap to seize pole position for the Sprint, with no one able to beat his final time of 1m 31.156s. Russell came closest for Mercedes and was followed by Leclerc, Piastri and Norris.": "Он сохранял эту скорость на протяжении оставшейся части круга и занял первое место-позицию в спринте, и никто не смог побить его последнее время - 1 минуту 31,156 секунды. Рассел был ближе всего к Mercedes, за ним следовали Леклер, Пиастри и Норрис.",
+  "body::Hamilton ended up half a second adrift in sixth ahead of Antonelli, while Lawson, Hadjar and Gasly rounded out the top 10.": "Хэмилтон отстал на полсекунды и занял шестое место, опередив Антонелли, а Лоусон, Хаджар и Гасли замыкают первую десятку.",
+  "body::Verstappen qualified on pole position for the Singapore Sprint": "Ферстаппен квалифицировался с первое местоей в спринте в Сингапуре",
+  "body::Key Quote": "Ключевая цитата",
+  "body::\"It’s always close here in Singapore,\" Verstappen said. \"Also your lap itself – you’re pushing as hard as you think is possible, close to the walls in places. For sure, once we bolted on the soft tyres, it felt like the car was coming alive a little bit more, but I did not expect this. Of course, very happy to be first.\"": "«Здесь, в Сингапуре, всегда близко», — сказал Ферстаппен. «А также сам круг – ты давишь настолько сильно, насколько это возможно, местами близко к стенкам. Конечно, когда мы прикрутили мягкие шины, было такое ощущение, что машина еще немного ожила, но я этого не ожидал. Конечно, очень рад быть первым».",
+  "body::What's next": "Что дальше",
+  "body::With the grid decided, the drivers will line up for the Sprint at 1700 local time on Saturday. Head to the RACE HUB to find out how you can catch the action.": "После определения стартовой сетки гонщики выстроятся в очередь на спринт в субботу в 17:00 по местному времени. Посетите RACE HUB, чтобы узнать, как можно поймать происходящее."
  }
 }
