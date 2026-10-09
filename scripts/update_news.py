@@ -91,7 +91,15 @@ MAX_NEW_PER_RUN = 40
 # run. The newest articles are the ones worth opening.
 BODY_FETCH_PER_RUN = 8
 # Ceiling on stored blocks per article (paragraphs plus photos and videos).
-BLOCKS_LIMIT = 90
+#
+# This was 90 when the extractor still dropped the paragraphs held in separate
+# RSC chunks, so it never bit. With those paragraphs recovered, the two "What the
+# teams said" articles turned out to hold 106 and 96 blocks — 7100 and 6300 words
+# — and the cap quietly cut 16 and 6 blocks off the ends.
+#
+# 200 leaves room for the longest round-up without inviting a runaway: blocks live
+# in bodies.json, which only the bot reads, and in the article's own page.
+BLOCKS_LIMIT = 200
 # Rough ceiling on the stored archive; oldest entries fall off the end.
 MAX_STORED = 500
 
@@ -718,6 +726,11 @@ def fetch_body(entry: dict) -> bool:
     if len(blocks) > BLOCKS_LIMIT:
         log(f"блоков {len(blocks)}, обрезано до {BLOCKS_LIMIT}")
         blocks = blocks[:BLOCKS_LIMIT]
+        # Remember that this article did not fit. Without it the truncation would
+        # be permanent: the article looks complete, so nothing ever retries it.
+        entry["blocks_trimmed"] = True
+    else:
+        entry["blocks_trimmed"] = False
     entry["blocks"] = blocks
     # Same length as blocks from the start: the translator writes into it by
     # index, and a shorter list would leave the tail untranslatable.
@@ -1319,6 +1332,7 @@ def main() -> int:
     need_body = [a for a in articles
                  if not (a.get("fetched_body") and a.get("blocks")
                          and a.get("media_done")
+                         and not a.get("blocks_trimmed")
                          and a.get("blocks_version") == BLOCKS_VERSION)]
     need_body = need_body[:BODY_FETCH_PER_RUN]
     got = 0
