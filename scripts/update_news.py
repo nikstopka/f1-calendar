@@ -950,7 +950,10 @@ def translate_articles(articles: list, cache: dict) -> dict:
                     reused += 1
                     continue
                 if spent >= TRANSLATE_CALLS_PER_RUN or out_of_quota():
-                    log("бюджет или квота исчерпаны, остальное — в следующий запуск")
+                    log(f"перевод остановлен: {spent} новых, {reused} из кэша; "
+                        f"причина — "
+                        + ("лимит за запуск" if spent >= TRANSLATE_CALLS_PER_RUN
+                           else "сбои подряд у обоих переводчиков"))
                     log(f"переводов: новых {spent}, из кэша {reused}")
                     dst_list[si] = ru_caps
                     return cache
@@ -979,7 +982,10 @@ def translate_articles(articles: list, cache: dict) -> dict:
                 reused += 1
                 continue
             if spent >= TRANSLATE_CALLS_PER_RUN or out_of_quota():
-                log("бюджет или квота исчерпаны, остальное — в следующий запуск")
+                log(f"перевод остановлен: {spent} новых, {reused} из кэша; "
+                        f"причина — "
+                        + ("лимит за запуск" if spent >= TRANSLATE_CALLS_PER_RUN
+                           else "сбои подряд у обоих переводчиков"))
                 log(f"переводов: новых {spent}, из кэша {reused}")
                 return cache
             ru = translate(src)
