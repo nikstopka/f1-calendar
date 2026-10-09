@@ -111,7 +111,7 @@ BODY_TRANSLATE_LIMIT = 200
 # Which extractor produced an article's stored blocks. Bump it whenever
 # _article_blocks() learns to read something new; every article whose stamp is
 # older is rebuilt on the next run.
-BLOCKS_VERSION = 2
+BLOCKS_VERSION = 3
 # MyMemory answers with HTTP 429 once the anonymous day quota is gone. Hammering
 # it for the rest of the run achieves nothing, so three failures in a row stop
 # translation for this run and the next one picks up where this left off.
@@ -280,6 +280,8 @@ _JUNK_RE = re.compile(
 # A bare "$37" is the RSC protocol's way of pointing at another chunk. It looks
 # like text to a string scan but carries no words of its own.
 _FLIGHT_REF_RE = re.compile(r"^\$[0-9a-fA-F]{1,4}$")
+# An RSC text record: `37:T4d2,` — id, the letter T, then the byte length in hex.
+_FLIGHT_TEXT_CHUNK_RE = re.compile(r'(?<![0-9a-zA-Z_$])([0-9a-f]{1,4}):T([0-9a-f]{1,6}),')
 
 TYPE_RU = {
     "News": "Новость", "Opinion": "Мнение", "Feature": "Фича",
@@ -332,9 +334,51 @@ def _clean_text(raw: str) -> str:
     return re.sub(r"[*_`>]", "", body)
 
 
+def _flight_chunks(flight: str) -> dict:
+    """The separate `<id>:T<byte-length>,<text>` records of the RSC stream.
+
+    A paragraph often arrives as `{"text":"$37"}` with the words themselves kept
+    apart as record `37:T4d2,…`. Reading only `"text"` values therefore dropped
+    every such paragraph silently: one article kept 2 of its 6 paragraphs and
+    looked simply truncated, with nothing in the output to say why.
+
+    The declared length counts bytes, not characters, so the text is cut on a
+    character boundary — slicing by the number directly would cut multibyte
+    Russian or curly quotes in half.
+    """
+    chunks = {}
+    for m in _FLIGHT_TEXT_CHUNK_RE.finditer(flight):
+        ident = m.group(1)
+        try:
+            want = int(m.group(2), 16)
+        except ValueError:
+            continue
+        rest = flight[m.end():m.end() + want + 16]
+        # Walk characters until the byte count matches, so a Cyrillic letter or
+        # an em dash cannot be cut in the middle.
+        take = 0
+        while take < len(rest):
+            try:
+                used = len(rest[:take + 1].encode("utf-8"))
+            except UnicodeEncodeError:
+                used = take + 1
+            if used > want:
+                break
+            take += 1
+        text = rest[:take]
+        if text:
+            chunks[ident] = text
+    return chunks
+
+
 def _flight_text_nodes(flight: str) -> list:
-    """Every `\"text\":\"…\"` value with its offset in the stream."""
+    """Every `\"text\":\"…\"` value with its offset in the stream.
+
+    References of the form `$37` are looked up in the chunk table and replaced by
+    the paragraph they stand for.
+    """
     decoder = json.JSONDecoder()
+    chunks = _flight_chunks(flight)
     nodes = []
     pos = 0
     while True:
@@ -355,7 +399,16 @@ def _flight_text_nodes(flight: str) -> list:
         except ValueError:
             continue
         pos = end
-        if isinstance(value, str) and value.strip():
+        if not isinstance(value, str):
+            continue
+        ref = _FLIGHT_REF_RE.match(value.strip())
+        if ref:
+            # One level of indirection, then one more for the rare chain.
+            value = chunks.get(ref.group(0)[1:], "")
+            ref2 = _FLIGHT_REF_RE.match(value.strip()) if value else None
+            if ref2:
+                value = chunks.get(ref2.group(0)[1:], "")
+        if value.strip():
             nodes.append((j, value))
 
 
