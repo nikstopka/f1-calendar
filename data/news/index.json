@@ -1,8 +1,28 @@
 {
- "generated": "2026-10-09T20:05:49Z",
+ "generated": "2026-10-09T23:16:28Z",
  "source": "https://www.formula1.com/en/latest",
  "translation": "Google (free, no key) + словарик терминов F1",
  "articles": [
+  {
+   "id": "0TS6DccooSF1duklRZ9yf",
+   "slug": "who-the-betting-markets-think-will-go-fastest-in-singapore-grand-prix-qualifying",
+   "title": "Who will go fastest in Singapore Grand Prix Qualifying?",
+   "title_ru": "Кто быстрее всех пройдёт в квалификации Гран-при Сингапура?",
+   "description": "Our expert betting writers share their top picks for Qualifying at Marina Bay.",
+   "description_ru": "Наши эксперты по ставкам делятся своими лучшими прогнозами на квалификацию в Марина Бэй.",
+   "type": "Feature",
+   "published": "2026-10-09T20:39:52.845Z",
+   "url": "https://www.formula1.com/en/latest/article/who-the-betting-markets-think-will-go-fastest-in-singapore-grand-prix-qualifying.0TS6DccooSF1duklRZ9yf",
+   "image": "https://media.formula1.com/image/upload/t_16by9Centre/f_auto/q_auto/v1791552679/trackside-images/2026/F1_Grand_Prix_Of_Singapore___Practice__Sprint_Qualifying/2299377289.jpg",
+   "image_alt": "SINGAPORE, SINGAPORE - OCTOBER 09: Lando Norris of Great Britain driving the (1) McLaren MCL40",
+   "page": "news/0TS6DccooSF1duklRZ9yf.html",
+   "fetched_body": true,
+   "blocks_trimmed": false,
+   "media_done": true,
+   "blocks_version": 3,
+   "body_paras": 25,
+   "media": 11
+  },
   {
    "id": "6XA2At9A5soF69ZOlOdRaD",
    "slug": "drivers-to-watch-closely-in-singapore-sprint-race-as-max-verstappen-starts-on-pole",
@@ -1300,7 +1320,8 @@
    "body_paras": 11,
    "media": 2,
    "media_done": true,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "3IImAHC95xmYoRr8QDgQvy",
@@ -1319,7 +1340,8 @@
    "body_paras": 27,
    "media": 3,
    "media_done": true,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "kacizmhSQaUfUkYHV5H47",
@@ -1338,7 +1360,8 @@
    "body_paras": 13,
    "media": 3,
    "media_done": true,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "1oz2f6p6qJsF3c58rtU8yd",
@@ -1357,7 +1380,8 @@
    "body_paras": 38,
    "media": 12,
    "media_done": true,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "2fYLsjB9qE4GOgoKO8wrlb",
@@ -1376,7 +1400,8 @@
    "body_paras": 26,
    "media": 10,
    "media_done": true,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "31mD5xtSaBYdMAkMZNxCHQ",
@@ -1395,7 +1420,8 @@
    "body_paras": 15,
    "media": 3,
    "media_done": true,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "2pwbKbJ3dldp6qKJS7Hwad",
@@ -1414,7 +1440,8 @@
    "body_paras": 14,
    "media": 3,
    "media_done": true,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "lpydtOJ2CszTQCvhK4pDo",
@@ -4175,6 +4202,41 @@
   "body::“Let’s see what tomorrow brings with Kimi on the upgrade. As a team, there’s still nothing telling us that it isn’t working, but it’s a sport driven by the stopwatch, and the stopwatch has not been great for the upgrade yet.”": "\"Давайте посмотрим, что принесет завтрашний день Кими с обновлением. Как команде, нам по-прежнему ничто не говорит о том, что это не работает, но это спорт, которым управляет секундомер, а секундомер пока не очень хорошо подходит для обновления\".",
   "body::Russell, who will take an engine-related grid drop for Sunday’s Grand Prix, then offered a few words on the Sprint race, and if the start will be his best chance of overhauling Verstappen.": "Рассел, который примет участие в воскресном Гран-при из-за двигателя, затем сказал несколько слов о спринтерской гонке и о том, будет ли старт его лучшим шансом обогнать Ферстаппена.",
   "body::“It’s going to be very challenging,” said Russell. “The grip left to right [on the grid] here is a big difference. The drivers on the pole side last year had a big advantage, so it’s probably going to be trying to maintain P2.": "«Это будет очень сложно», — сказал Рассел. \"Сцепление слева направо [на стартовой решетке] здесь имеет большую разницу. Пилоты на стороне поула в прошлом году имели большое преимущество, так что, вероятно, они будут пытаться сохранить второе место.",
-  "body::“I know Max is under investigation for the yellows, so let’s see.”": "«Я знаю, что Макс находится под следствием по поводу желтых, так что посмотрим»."
+  "body::“I know Max is under investigation for the yellows, so let’s see.”": "«Я знаю, что Макс находится под следствием по поводу желтых, так что посмотрим».",
+  "title::Who will go fastest in Singapore Grand Prix Qualifying?": "Кто быстрее всех пройдёт в квалификации Гран-при Сингапура?",
+  "description::Our expert betting writers share their top picks for Qualifying at Marina Bay.": "Наши эксперты по ставкам делятся своими лучшими прогнозами на квалификацию в Марина Бэй.",
+  "body::Our expert betting writers share their top picks for Qualifying at Marina Bay.": "Наши эксперты по ставкам делятся своими лучшими прогнозами на квалификацию в Марина Бэй.",
+  "body::Friday’s Sprint Qualifying set a high bar for entertainment value and F1 fans can expect even more excitement when the drivers battle it out in Qualifying for their place in Sunday’s Singapore Grand Prix.": "Пятничная квалификация спринта установила высокую планку зрелищности, и фанаты Формулы 1 могут ожидать еще большего волнения, когда гонщики сразятся в квалификации за место на воскресном Гран-при Сингапура.",
+  "body::Red Bull, Mercedes, Ferrari and McLaren were all involved in the fight for Sprint pole, with Max Verstappen setting the fastest time ahead of George Russell in second.": "Red Bull, Mercedes, Ferrari и McLaren участвовали в борьбе за поул в спринте, причем Макс Ферстаппен показал лучшее время, опередив Джорджа Рассела, занявшего второе место.",
+  "body::The four-time World Champion survived an investigation into a yellow flag infringement when he passed Lewis Hamilton during SQ1, with stewards deciding that Verstappen had “reacted appropriately to the yellow flag”.": "Четырехкратный чемпион мира пережил расследование нарушения прав на желтый флаг, когда он обогнал Льюиса Хэмилтона во время первого квартала, и стюарды решили, что Ферстаппен «отреагировал на желтый флаг соответствующим образом».",
+  "body::Charles Leclerc will start third ahead Oscar Piastri in fourth and his McLaren team mate Lando Norris in fifth, while Hamilton will line-up in sixth in front of Drivers’ Championship leader Kimi Antonelli in seventh.": "Шарль Леклер стартует третьим, опередив Оскара Пиастри на четвертом и его товарища по команде McLaren Ландо Норриса на пятом, а Хэмилтон выйдет на шестое место перед лидером чемпионата пилотов Кими Антонелли на седьмом.",
+  "body::After the Sprint, all drivers will then face Qualifying for Sunday’s Grand Prix, with Verstappen’s Sprint Qualifying pace making him the favourite to repeat his pole at 1/1 (2.0, +100).": "После спринта всем гонщикам предстоит пройти квалификацию воскресного Гран-при, а темп Ферстаппена в квалификации спринта делает его фаворитом на повторение своего поула с результатом 1/1 (2,0, +100).",
+  "body::Our expert betting writers have looked at the leading contenders for Qualifying and picked the best bets for Saturday's showdown at Marina Bay.": "Наши эксперты по ставкам изучили ведущих претендентов на квалификацию и выбрали лучшие ставки на субботний поединок в Марина Бэй.",
+  "body::Max Verstappen secured pole for the Singapore Sprint and is the early favourite to take pole in Grand Prix Qualifying too": "Макс Ферстаппен занял первое место в спринте в Сингапуре и является одним из первых фаворитов на поул в квалификации Гран-при.",
+  "body::Verstappen looks totally in the groove": "Ферстаппен выглядит полностью в своей тарелке",
+  "body::When Verstappen hits his stride, his rivals are in major trouble. While he claimed to be surprised to have gone fastest in SQ3, he looks a real contender to win the Sprint showdown before turning his focus to Qualifying for Sunday’s Grand Prix.": "Когда Ферстаппен добивается успеха, у его соперников возникают серьезные проблемы. Хотя он утверждал, что был удивлен тем, что показал лучшее время в SQ3, он выглядит реальным претендентом на победу в спринте, прежде чем сосредоточить свое внимание на квалификации воскресного Гран-при.",
+  "body::However, history is not on the Dutchman’s side as only one of the five drivers to have taken Sprint poles this season has also been fastest in Grand Prix Qualifying, which was Russell in Canada.": "Однако история не на стороне голландца: только один из пяти гонщиков, завоевавших поул в спринте в этом сезоне, также был самым быстрым в квалификации Гран-при, которым был Рассел в Канаде.",
+  "body::Leclerc should be in the mix again": "Леклер должен снова быть в игре",
+  "body::Leclerc was not sure Ferrari had too much more potential to extract after Sprint Qualifying but the Scuderia had a solid first day in Singapore and should be competitive again on Saturday.": "Леклер не был уверен, что у Ferrari есть слишком большой потенциал, который можно реализовать после квалификации в спринте, но Scuderia провела хороший первый день в Сингапуре и должна снова быть конкурентоспособной в субботу.",
+  "body::The Monegasque driver has taken pole in Singapore twice before in 2019 and 2022, and while he finished second in both races, he can be rapid around this circuit.": "До этого гонщик из Монако дважды выигрывал поул в Сингапуре – в 2019 и 2022 годах, и хотя в обеих гонках он финишировал вторым, на этой трассе он может быть быстрым.",
+  "body::Ferrari used a slightly different tyre preparation strategy from their rivals on Friday and maybe they will fall in line with the rest on their second Qualifying session of the week.": "В пятницу Ferrari использовала несколько иную стратегию подготовки шин, чем их соперники, и, возможно, они будут соответствовать остальным во второй квалификационной сессии недели.",
+  "body::Leclerc is the 4/1 (5.0, +400) second-favourite to qualify fastest for the Singapore Grand Prix.": "Леклер является вторым фаворитом в квалификации на Гран-при Сингапура с рейтингом 4/1 (5,0, +400).",
+  "body::Charles Leclerc should be competitive during Singapore Grand Prix Qualifying on Saturday": "Шарль Леклер должен быть конкурентоспособным во время квалификации Гран-при Сингапура в субботу.",
+  "body::Championship leader has work to do": "Лидеру чемпионата есть над чем работать",
+  "body::Antonelli is currently only the third-favourite to take pole for Sunday’s race at 13/2 (7.50, +650), and he may not have as many supporters as usual after he failed to finish in the top six during the battle for Sprint pole.": "Антонелли в настоящее время является лишь третьим фаворитом на получение поула в воскресной гонке с результатом 13/2 (7,50, +650), и у него, возможно, не так много сторонников, как обычно, после того, как он не смог финишировать в шестерке лучших во время битвы за поул в спринте.",
+  "body::The Italian was seventh-fastest in Sprint Qualifying and with Mercedes still working on getting the best out of the recent changes to their car, this may be a weekend of damage-limitation for the Championship leader.": "Итальянец был седьмым по скорости в квалификации спринта, а поскольку Mercedes все еще работает над тем, чтобы максимально эффективно использовать недавние изменения в своей машине, для лидера чемпионата этот уик-энд может стать периодом ограничения повреждений.",
+  "body::Norris could have more in the tank": "Норрис мог бы иметь больше в запасе",
+  "body::McLaren star Norris remains an interesting contender to go well in Qualifying as unlike most of his rivals, Norris blamed himself rather than his car after finishing fifth on Friday when he looked capable of challenging for the top three.": "Звезда McLaren Норрис остается интересным претендентом на успех в квалификации, поскольку, в отличие от большинства своих соперников, Норрис винил себя, а не свою машину после того, как в пятницу финишировал пятым, хотя выглядел способным побороться за тройку лучших.",
+  "body::Recent issues with his car seem to be behind him now and Norris, who has taken pole at three of the last six races, looks a positive option at odds of 17/2 (9.50, +850).": "Недавние проблемы с машиной, кажется, остались позади, и Норрис, завоевавший поул в трех из шести последних гонок, выглядит положительным вариантом с коэффициентом 17/2 (9,50, +850).",
+  "body::Reigning World Champion Lando Norris will be one to watch in Qualifying": "Действующий чемпион мира Ландо Норрис будет одним из тех, за кем будет наблюдать в квалификации.",
+  "body::Russell tricky to assess with penalty looming": "Расселу сложно оценить из-за приближающегося пенальти",
+  "body::Russell is set to start at the back of the grid in Sunday's race, so there is no major incentive for him to go all-out in Q3 to secure pole when it would not benefit him at all.": "Рассел собирается стартовать в конце стартовой решетки в воскресной гонке, поэтому у него нет серьезного стимула выкладываться на все сто в третьем квартале, чтобы завоевать поул, хотя это ему совсем не принесет пользы.",
+  "body::He can still be the fastest driver is Qualifying, and his performance on Friday suggests he would be a real contender if it was a level playing field, but with the penalty hanging over him it may be better to back drivers who have more to gain than Russell at 9/1 (10.0, +900).": "Он по-прежнему может быть самым быстрым гонщиком в квалификации, и его выступление в пятницу предполагает, что он был бы настоящим соперником, если бы все было в равных условиях, но с нависшим над ним штрафом, возможно, лучше поддержать гонщиков, которые могут выиграть больше, чем Рассел с 9/1 (10,0, +900).",
+  "body::Qualifying Betting verdict": "Вердикт по квалификационным ставкам",
+  "body::Verstappen is hard to oppose in his current mood and he looks the best bet to secure a second successive pole position.": "Ферстаппену трудно противостоять в его нынешнем настроении, и он выглядит лучшим кандидатом на то, чтобы обеспечить второй поул подряд.",
+  "body::He will be determined to take Marina Bay off the list of tracks where he has never won, but given his Friday performance and the fact that he was second in Singapore Qualifying in each of the last two seasons, there is no doubting his ability to turn in a quick lap here.": "Он будет полон решимости исключить Марину Бэй из списка трасс, на которых он ни разу не выигрывал, но, учитывая его пятничное выступление и тот факт, что он был вторым в квалификации в Сингапуре в каждом из последних двух сезонов, нет никаких сомнений в его способности проехать здесь быстрый круг.",
+  "body::Some bettors may prefer to take the only fractionally shorter price of 10/11 (1.91, -110) for Red Bull to be the winning team in Qualifying, which would also pay out if Isack Hadjar takes pole.": "Некоторые игроки, возможно, предпочтут взять единственную немного меньшую цену 10/11 (1,91, -110), чтобы Red Bull стала командой-победителем в квалификации, которая также окупится, если Исак Хаджар возьмет поул.",
+  "body::The best value of the other contenders could be Norris, who won from pole in Singapore in 2024 and looked strong in the early stages of Sprint Qualifying before a slightly under-par final effort.": "Лучшим соперником среди других претендентов может быть Норрис, который выиграл с поула в Сингапуре в 2024 году и выглядел сильным на ранних этапах квалификации спринта, прежде чем финальная попытка была немного ниже номинала.",
+  "body::There could be more to come from the defending World Champion and he looks worth backing at around 2/1 (3.0, +200) for a top-three finish in Qualifying or in Qualifying match bets with the Ferrari and Mercedes drivers.": "Действующий чемпион мира может добиться большего, и он, похоже, заслуживает поддержки с коэффициентом около 2/1 (3,0, +200) для попадания в тройку лучших в квалификации или в ставках на квалификационные матчи с гонщиками Ferrari и Mercedes."
  }
 }
