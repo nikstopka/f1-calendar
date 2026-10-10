@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-10T00:15:02Z",
+ "generated": "2026-10-10T02:45:45Z",
  "source": "https://www.formula1.com/en/latest",
  "translation": "Google (free, no key) + словарик терминов F1",
  "articles": [
@@ -1620,7 +1620,8 @@
    "body_paras": 4,
    "media": 1,
    "media_done": true,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "6qfpIHPch8mIVj2YgfHdCp",
@@ -1639,7 +1640,8 @@
    "body_paras": 63,
    "media": 16,
    "media_done": true,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "2OZA62x5JUuoxlociRPAxb",
@@ -1658,7 +1660,8 @@
    "body_paras": 6,
    "media": 1,
    "media_done": true,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "1dVSsWlJ2cJdgDnYdfRojh",
@@ -1677,7 +1680,8 @@
    "body_paras": 21,
    "media": 8,
    "media_done": true,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "4JA0f3Nea6tz5hqQW8ia4C",
@@ -1696,7 +1700,8 @@
    "body_paras": 24,
    "media": 8,
    "media_done": true,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "7HAxpuKocXghJCDmRL0dAD",
@@ -1715,7 +1720,8 @@
    "body_paras": 21,
    "media": 8,
    "media_done": true,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "4SD3W4TIvmAVQj1i1rZ4Oa",
@@ -1734,7 +1740,8 @@
    "body_paras": 18,
    "media": 8,
    "media_done": true,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   },
   {
    "id": "3PGUwV77YbdWsGaQDkDOXp",
@@ -1753,7 +1760,8 @@
    "body_paras": 82,
    "media": 14,
    "media_done": true,
-   "blocks_version": 2
+   "blocks_version": 3,
+   "blocks_trimmed": false
   }
  ],
  "translation_cache": {
