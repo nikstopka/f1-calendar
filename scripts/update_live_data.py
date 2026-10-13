@@ -296,6 +296,21 @@ def build_outline_from_any_driver(circuit_key, session, session_key, driver_list
 
 
 # ─── Session detail ───
+def _as_int(value, default=99):
+    """Coerce a numeric field that OpenF1 may send as int or as text.
+
+    Sorting a mixed list raises `TypeError: '<' not supported between instances
+    of 'str' and 'int'`, and that killed every run: the sort key was
+    `x.get("position") or 99`, so a session with "3" as text could not be ordered
+    next to a row with 4 as a number. Unfinished drivers have no position at all,
+    which is what the default stands for.
+    """
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return default
+
+
 def fetch_locations(session_key, start, end):
     """Pull location telemetry in bounded windows to avoid the 422 size cap.
 
@@ -654,7 +669,7 @@ def build_session(session):
             "n": r.get("driver_number"), "pos": r.get("position"),
             "laps": r.get("number_of_laps"), "dur": r.get("duration"),
             "gap": r.get("gap_to_leader"), "dnf": r.get("dnf"), "dsq": r.get("dsq"),
-        } for r in sorted(result, key=lambda x: x.get("position") or 99)],
+        } for r in sorted(result, key=lambda x: _as_int(x.get("position")))],
         "overtakes": [{
             "t": o.get("date"), "over": o.get("overtaking_driver_number"),
             "under": o.get("overtaken_driver_number"), "pos": o.get("position"),
