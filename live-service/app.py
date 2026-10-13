@@ -41,6 +41,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 
+from ftfeed import FormulaTimingFeed
 from livews import LiveFeed
 
 # FastF1 is imported lazily, never at module level.
@@ -134,7 +135,63 @@ def log(msg: str) -> None:
     print(f"[{now():%H:%M:%S}] {msg}", flush=True)
 
 
-feed = LiveFeed(log=log)
+class _FeedChain:
+    """The live sources, in preference order.
+
+    formula-timing first: it is the only one that answers us today. F1's own
+    socket is kept as the second choice rather than deleted — our parser already
+    subscribes to CarData.z and Position.z, so if the block on F1's CDN is lifted
+    the map comes back with no code change at all, and that source is better than
+    any stand-in because it also carries the coordinates.
+
+    Whichever source is usable right now answers `state` and `status()`, so
+    nothing downstream knows or cares which one it is.
+    """
+
+    ORDER = ("formula-timing", "f1-websocket")
+
+    def __init__(self, log=print):
+        self.log = log
+        self.ft = FormulaTimingFeed(log=log)
+        self.ws = LiveFeed(log=log)
+        self._all = {"formula-timing": self.ft, "f1-websocket": self.ws}
+        self._active = None
+
+    def start(self):
+        for src in self._all.values():
+            src.start()
+
+    def stop(self):
+        for src in self._all.values():
+            src.stop()
+
+    def _pick(self):
+        for name in self.ORDER:
+            st = self._all[name].status()
+            if st.get("connected") and st.get("messages", 0) > 0:
+                if self._active != name:
+                    self.log(f"источник живых данных: {name}")
+                self._active = name
+                return name
+        return None
+
+    @property
+    def state(self):
+        name = self._pick()
+        if name is None:
+            return self.ft.state          # keep the last good state readable
+        return self._all[name].state
+
+    def status(self):
+        name = self._pick()
+        own = self._all[name].status() if name else self.ft.status()
+        out = dict(own)
+        out["active"] = name
+        out["sources"] = {k: v.status() for k, v in self._all.items()}
+        return out
+
+
+feed = _FeedChain(log=log)
 
 
 def _elapsed_seconds(v):
@@ -610,7 +667,11 @@ async def poll_loop():
             st = feed.status()
             fresh = (st["connected"] and st["messages"] > 0
                      and (st["idle_seconds"] or 999) < 90)
-            if fresh and feed.state.cars:
+            # A live snapshot is usable once the roster is known. It used to
+            # require cars as well, which excluded the formula-timing source
+            # outright: it publishes the timing tower but no coordinates, so a
+            # race looked "not live" while the data was in fact streaming.
+            if fresh and feed.state.drivers:
                 sk = feed.state.session_info.get("key")
                 # SessionInfo carries Meeting.Circuit.Key directly, which is the
                 # same number space OpenF1 uses for circuit_key. Only fall back
@@ -623,11 +684,13 @@ async def poll_loop():
                 _state["snapshot"] = snap
                 _state["updated"] = now().isoformat()
                 _state["is_live"] = True
-                _state["source"] = "livefeed"
+                _state["source"] = st.get("source") or "livefeed"
                 _state["error"] = None
                 if not was_live:
                     log(f"живая сессия: key={_state['session_key']} "
-                        f"машин={len(feed.state.cars)}")
+                        f"машин={len(feed.state.cars)} "
+                        f"пилотов={len(feed.state.drivers)} "
+                        f"источник={_state['source']}")
                     was_live = True
                 await asyncio.sleep(POLL_SECONDS)
                 continue
@@ -790,6 +853,7 @@ async def root():
         "service": "F1 Live Timing Service",
         "docs": "/docs",
         "endpoints": ["/health", "/api/status", "/api/snapshot"],
-        "source": "F1 live timing WebSocket feed (no API key, non-commercial)",
+        "source": ("live timing via formula-timing.com SSE; F1's own WebSocket "
+                   "kept as second choice (its CDN answers us 403)"),
         "archive_fallback": ARCHIVE_FALLBACK,
     }

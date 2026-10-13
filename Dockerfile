@@ -33,7 +33,11 @@ COPY live-service/requirements-archive.txt ./requirements-archive.txt
 ARG ARCHIVE=0
 RUN if [ "$ARCHIVE" = "1" ]; then pip install -r requirements-archive.txt; fi
 
-COPY live-service/app.py live-service/livefeed.py live-service/livews.py ./
+# Явный список, и это ловушка: модуль, добавленный в live-service/, сюда не
+# попадёт, а сборка упадёт на импорте. Здесь уже так терялись news/ и feed.xml
+# в deploy.yml. Новый модуль — добавлять сюда же.
+COPY live-service/app.py live-service/livefeed.py live-service/livews.py \
+     live-service/ftfeed.py ./
 
 EXPOSE 8080
 
