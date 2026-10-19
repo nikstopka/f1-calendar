@@ -995,17 +995,66 @@
             const years = [...new Set(withDetail.map(s => s.year))].sort((a, b) => b - a);
             const ySel = document.getElementById('lvYear');
             ySel.innerHTML = years.map(y => `<option value="${y}">${y}</option>`).join('');
-            ySel.onchange = () => { fillEvents(); fillSessions(); loadLiveSession(+ySel.value); };
+            ySel.onchange = async () => {
+                await indexSeason(+ySel.value);
+                fillEvents(); fillSessions(); loadLiveSession(+ySel.value);
+            };
+
+            // Event names come from F1's own calendar, not from OpenF1.
+            //
+            // OpenF1 calls the Sepang circuit — where F1 ran the Bahrain Grand
+            // Prix in 2026 — "Kuala Lumpur", and leaves Bahrain's country code on
+            // it. The list therefore read "Kuala Lumpur BRN" for a race held in
+            // Malaysia, with nothing to say which Grand Prix it was.
+            //
+            // The calendar knows: it calls that weekend "Bahrain Grand Prix in
+            // Malaysia" and puts it at Sepang, Malaysia. The link between the two
+            // is the session start time, which both sides state exactly.
+            const seasonCache = new Map();
+            async function loadSeason(y) {
+                if (seasonCache.has(y)) return seasonCache.get(y);
+                let data = null;
+                try {
+                    const r = await fetch(`data/seasons/${y}.json`);
+                    if (r.ok) data = await r.json();
+                } catch (e) { data = null; }
+                seasonCache.set(y, data);
+                return data;
+            }
+            const byStart = new Map();     // utc start -> {gp, circuit, location}
+            async function indexSeason(y) {
+                const data = await loadSeason(y);
+                byStart.clear();
+                if (!data) return;
+                for (const race of data.races || []) {
+                    for (const s of race.sessions || []) {
+                        byStart.set(s.utc_start, {
+                            gp: race.gp, circuit: race.circuit,
+                            location: race.location, round: race.round,
+                        });
+                    }
+                }
+            }
+            await indexSeason(+ySel.value);
 
             function fillEvents() {
                 const y = +ySel.value;
                 const evs = [];
                 withDetail.filter(s => s.year === y).forEach(s => {
                     const k = s.circuit_key + '|' + s.circuit;
-                    if (!evs.find(e => e.k === k)) evs.push({ k, circuit: s.circuit, country: s.country });
+                    if (!evs.find(e => e.k === k)) {
+                        // Prefer F1's own name for the weekend; fall back to the
+                        // circuit name when the session is not in the calendar.
+                        const hit = byStart.get(s.start);
+                        evs.push({
+                            k,
+                            circuit: s.circuit, country: s.country,
+                            label: hit ? `${hit.gp} · ${hit.location}` : `${s.circuit} ${s.country}`,
+                        });
+                    }
                 });
                 const eSel = document.getElementById('lvEvent');
-                eSel.innerHTML = evs.map(e => `<option value="${e.k}">${e.circuit} ${e.country}</option>`).join('');
+                eSel.innerHTML = evs.map(e => `<option value="${e.k}">${e.label}</option>`).join('');
                 eSel.onchange = () => { fillSessions(); loadLiveSession(+ySel.value); };
             }
 
