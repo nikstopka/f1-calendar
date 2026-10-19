@@ -163,6 +163,11 @@ class LiveFeed:
         self.connected = False
 
     # ── diagnostics ────────────────────────────────────────────────────────
+    @property
+    def is_live(self):
+        """F1's socket only carries a session while it is running."""
+        return self.connected and self.messages > 0
+
     def status(self):
         return {
             "connected": self.connected,
@@ -171,6 +176,7 @@ class LiveFeed:
                              if self.last_message_at else None),
             "cars": len(self.state.cars),
             "drivers": len(self.state.drivers),
+            "is_live": self.is_live,
         }
 
 

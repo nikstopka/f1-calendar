@@ -112,7 +112,9 @@ class FormulaTimingFeed:
         """True while the session is actually running.
 
         A finished session still streams its snapshot, so liveness has to come
-        from the status flag and not from having received data.
+        from the status flag and not from having received data. Without this the
+        service would report a completed race as "Реальное время" and merge its
+        final classification into a replay.
         """
         return self.started_status not in (None, "", "Finished")
 

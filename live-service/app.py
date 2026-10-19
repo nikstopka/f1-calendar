@@ -182,6 +182,20 @@ class _FeedChain:
             return self.ft.state          # keep the last good state readable
         return self._all[name].state
 
+    @property
+    def is_live(self):
+        """Whether a session is genuinely running right now.
+
+        The formula-timing endpoint keeps streaming the snapshot of a finished
+        race, so "we are receiving data" does not mean "the session is live".
+        Reporting that as live made the site show a green "Реальное время" banner
+        over a completed race and merge its final classification into a replay.
+        """
+        name = self._pick()
+        if name is None:
+            return False
+        return bool(getattr(self._all[name], "is_live", False))
+
     def status(self):
         name = self._pick()
         own = self._all[name].status() if name else self.ft.status()
@@ -671,7 +685,7 @@ async def poll_loop():
             # require cars as well, which excluded the formula-timing source
             # outright: it publishes the timing tower but no coordinates, so a
             # race looked "not live" while the data was in fact streaming.
-            if fresh and feed.state.drivers:
+            if fresh and feed.state.drivers and feed.is_live:
                 sk = feed.state.session_info.get("key")
                 # SessionInfo carries Meeting.Circuit.Key directly, which is the
                 # same number space OpenF1 uses for circuit_key. Only fall back
