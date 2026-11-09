@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-11-08T18:29:43.554432+00:00",
+  "updated": "2026-11-08T23:55:00.174782+00:00",
   "current_round": 20,
   "has_sprint": true,
   "driver_standings": [
@@ -10,7 +10,7 @@
       "driver": "Andrea Kimi Antonelli",
       "code": "ANT",
       "team": "Mercedes",
-      "points": 380,
+      "points": 390,
       "wins": 9
     },
     {
@@ -19,26 +19,26 @@
       "driver": "Max Verstappen",
       "code": "VER",
       "team": "Red Bull",
-      "points": 261,
+      "points": 279,
       "wins": 3
     },
     {
       "pos": 3,
-      "driver_id": "hamilton",
-      "driver": "Lewis Hamilton",
-      "code": "HAM",
-      "team": "Ferrari",
-      "points": 259,
-      "wins": 1
-    },
-    {
-      "pos": 4,
       "driver_id": "russell",
       "driver": "George Russell",
       "code": "RUS",
       "team": "Mercedes",
-      "points": 250,
+      "points": 262,
       "wins": 3
+    },
+    {
+      "pos": 4,
+      "driver_id": "hamilton",
+      "driver": "Lewis Hamilton",
+      "code": "HAM",
+      "team": "Ferrari",
+      "points": 261,
+      "wins": 1
     },
     {
       "pos": 5,
@@ -46,7 +46,7 @@
       "driver": "Charles Leclerc",
       "code": "LEC",
       "team": "Ferrari",
-      "points": 245,
+      "points": 249,
       "wins": 1
     },
     {
@@ -55,8 +55,8 @@
       "driver": "Lando Norris",
       "code": "NOR",
       "team": "McLaren",
-      "points": 221,
-      "wins": 2
+      "points": 246,
+      "wins": 3
     },
     {
       "pos": 7,
@@ -64,7 +64,7 @@
       "driver": "Oscar Piastri",
       "code": "PIA",
       "team": "McLaren",
-      "points": 144,
+      "points": 152,
       "wins": 0
     },
     {
@@ -73,7 +73,7 @@
       "driver": "Isack Hadjar",
       "code": "HAD",
       "team": "Red Bull",
-      "points": 107,
+      "points": 122,
       "wins": 0
     },
     {
@@ -82,7 +82,7 @@
       "driver": "Liam Lawson",
       "code": "LAW",
       "team": "RB F1 Team",
-      "points": 83,
+      "points": 89,
       "wins": 0
     },
     {
@@ -136,7 +136,7 @@
       "driver": "Nico Hülkenberg",
       "code": "HUL",
       "team": "Audi",
-      "points": 13,
+      "points": 14,
       "wins": 0
     },
     {
@@ -234,31 +234,31 @@
     {
       "pos": 1,
       "team": "Mercedes",
-      "points": 630,
+      "points": 652,
       "wins": 12
     },
     {
       "pos": 2,
       "team": "Ferrari",
-      "points": 504,
+      "points": 510,
       "wins": 2
     },
     {
       "pos": 3,
       "team": "Red Bull",
-      "points": 382,
+      "points": 415,
       "wins": 3
     },
     {
       "pos": 4,
       "team": "McLaren",
-      "points": 365,
-      "wins": 2
+      "points": 398,
+      "wins": 3
     },
     {
       "pos": 5,
       "team": "RB F1 Team",
-      "points": 108,
+      "points": 114,
       "wins": 0
     },
     {
@@ -276,7 +276,7 @@
     {
       "pos": 8,
       "team": "Audi",
-      "points": 27,
+      "points": 28,
       "wins": 0
     },
     {
@@ -886,43 +886,13 @@
           "delta": 1
         },
         {
-          "driver_id": "hadjar",
-          "driver": "Isack Hadjar",
-          "team": "Red Bull",
+          "driver_id": "piastri",
+          "driver": "Oscar Piastri",
+          "team": "McLaren",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
           "pos": 11,
-          "delta": 0
-        },
-        {
-          "driver_id": "hulkenberg",
-          "driver": "Nico Hülkenberg",
-          "team": "Audi",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 12,
-          "delta": 0
-        },
-        {
-          "driver_id": "colapinto",
-          "driver": "Franco Colapinto",
-          "team": "Alpine F1 Team",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 13,
-          "delta": 0
-        },
-        {
-          "driver_id": "alonso",
-          "driver": "Fernando Alonso",
-          "team": "Aston Martin",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 14,
           "delta": 0
         },
         {
@@ -932,37 +902,27 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 15,
+          "pos": 12,
           "delta": 0
         },
         {
-          "driver_id": "albon",
-          "driver": "Alexander Albon",
-          "team": "Williams",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 16,
-          "delta": 0
-        },
-        {
-          "driver_id": "lawson",
-          "driver": "Liam Lawson",
-          "team": "RB F1 Team",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 17,
-          "delta": 0
-        },
-        {
-          "driver_id": "stroll",
-          "driver": "Lance Stroll",
+          "driver_id": "alonso",
+          "driver": "Fernando Alonso",
           "team": "Aston Martin",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 18,
+          "pos": 13,
+          "delta": 0
+        },
+        {
+          "driver_id": "hulkenberg",
+          "driver": "Nico Hülkenberg",
+          "team": "Audi",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 14,
           "delta": 0
         },
         {
@@ -972,7 +932,7 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 19,
+          "pos": 15,
           "delta": 0
         },
         {
@@ -982,13 +942,53 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
+          "pos": 16,
+          "delta": 0
+        },
+        {
+          "driver_id": "hadjar",
+          "driver": "Isack Hadjar",
+          "team": "Red Bull",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 17,
+          "delta": 0
+        },
+        {
+          "driver_id": "colapinto",
+          "driver": "Franco Colapinto",
+          "team": "Alpine F1 Team",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 18,
+          "delta": 0
+        },
+        {
+          "driver_id": "stroll",
+          "driver": "Lance Stroll",
+          "team": "Aston Martin",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 19,
+          "delta": 0
+        },
+        {
+          "driver_id": "sainz",
+          "driver": "Carlos Sainz",
+          "team": "Williams",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
           "pos": 20,
           "delta": 0
         },
         {
-          "driver_id": "piastri",
-          "driver": "Oscar Piastri",
-          "team": "McLaren",
+          "driver_id": "albon",
+          "driver": "Alexander Albon",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -996,9 +996,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sainz",
-          "driver": "Carlos Sainz",
-          "team": "Williams",
+          "driver_id": "lawson",
+          "driver": "Liam Lawson",
+          "team": "RB F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -1838,23 +1838,33 @@
           "delta": 8
         },
         {
-          "driver_id": "lawson",
-          "driver": "Liam Lawson",
-          "team": "RB F1 Team",
-          "sprint_pts": 2,
-          "race_pts": 6,
-          "total_after": 8,
-          "pos": 8,
-          "delta": 8
-        },
-        {
           "driver_id": "max_verstappen",
           "driver": "Max Verstappen",
           "team": "Red Bull",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 8,
+          "pos": 8,
+          "delta": 0
+        },
+        {
+          "driver_id": "lawson",
+          "driver": "Liam Lawson",
+          "team": "RB F1 Team",
+          "sprint_pts": 2,
+          "race_pts": 6,
+          "total_after": 8,
           "pos": 9,
+          "delta": 8
+        },
+        {
+          "driver_id": "arvid_lindblad",
+          "driver": "Arvid Lindblad",
+          "team": "RB F1 Team",
+          "sprint_pts": 0,
+          "race_pts": 0,
+          "total_after": 4,
+          "pos": 10,
           "delta": 0
         },
         {
@@ -1864,18 +1874,8 @@
           "sprint_pts": 0,
           "race_pts": 4,
           "total_after": 4,
-          "pos": 10,
-          "delta": 4
-        },
-        {
-          "driver_id": "arvid_lindblad",
-          "driver": "Arvid Lindblad",
-          "team": "RB F1 Team",
-          "sprint_pts": 0,
-          "race_pts": 0,
-          "total_after": 4,
           "pos": 11,
-          "delta": 0
+          "delta": 4
         },
         {
           "driver_id": "piastri",
@@ -1918,9 +1918,9 @@
           "delta": 1
         },
         {
-          "driver_id": "hulkenberg",
-          "driver": "Nico Hülkenberg",
-          "team": "Audi",
+          "driver_id": "alonso",
+          "driver": "Fernando Alonso",
+          "team": "Aston Martin",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
@@ -1928,23 +1928,13 @@
           "delta": 0
         },
         {
-          "driver_id": "alonso",
-          "driver": "Fernando Alonso",
-          "team": "Aston Martin",
+          "driver_id": "hulkenberg",
+          "driver": "Nico Hülkenberg",
+          "team": "Audi",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
           "pos": 17,
-          "delta": 0
-        },
-        {
-          "driver_id": "perez",
-          "driver": "Sergio Pérez",
-          "team": "Cadillac F1 Team",
-          "sprint_pts": 0,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 18,
           "delta": 0
         },
         {
@@ -1954,13 +1944,23 @@
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
+          "pos": 18,
+          "delta": 0
+        },
+        {
+          "driver_id": "ocon",
+          "driver": "Esteban Ocon",
+          "team": "Haas F1 Team",
+          "sprint_pts": 0,
+          "race_pts": 0,
+          "total_after": 0,
           "pos": 19,
           "delta": 0
         },
         {
-          "driver_id": "albon",
-          "driver": "Alexander Albon",
-          "team": "Williams",
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
+          "team": "Cadillac F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
@@ -1978,9 +1978,9 @@
           "delta": 0
         },
         {
-          "driver_id": "ocon",
-          "driver": "Esteban Ocon",
-          "team": "Haas F1 Team",
+          "driver_id": "albon",
+          "driver": "Alexander Albon",
+          "team": "Williams",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
@@ -2606,9 +2606,9 @@
           "delta": 2
         },
         {
-          "driver_id": "hadjar",
-          "driver": "Isack Hadjar",
-          "team": "Red Bull",
+          "driver_id": "arvid_lindblad",
+          "driver": "Arvid Lindblad",
+          "team": "RB F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 4,
@@ -2616,9 +2616,9 @@
           "delta": 0
         },
         {
-          "driver_id": "arvid_lindblad",
-          "driver": "Arvid Lindblad",
-          "team": "RB F1 Team",
+          "driver_id": "hadjar",
+          "driver": "Isack Hadjar",
+          "team": "Red Bull",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 4,
@@ -2646,29 +2646,29 @@
           "delta": 0
         },
         {
-          "driver_id": "colapinto",
-          "driver": "Franco Colapinto",
-          "team": "Alpine F1 Team",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 1,
-          "pos": 15,
-          "delta": 0
-        },
-        {
           "driver_id": "ocon",
           "driver": "Esteban Ocon",
           "team": "Haas F1 Team",
           "sprint_pts": null,
           "race_pts": 1,
           "total_after": 1,
-          "pos": 16,
+          "pos": 15,
           "delta": 1
         },
         {
-          "driver_id": "hulkenberg",
-          "driver": "Nico Hülkenberg",
-          "team": "Audi",
+          "driver_id": "colapinto",
+          "driver": "Franco Colapinto",
+          "team": "Alpine F1 Team",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 1,
+          "pos": 16,
+          "delta": 0
+        },
+        {
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
+          "team": "Cadillac F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -2686,23 +2686,13 @@
           "delta": 0
         },
         {
-          "driver_id": "perez",
-          "driver": "Sergio Pérez",
-          "team": "Cadillac F1 Team",
+          "driver_id": "hulkenberg",
+          "driver": "Nico Hülkenberg",
+          "team": "Audi",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
           "pos": 19,
-          "delta": 0
-        },
-        {
-          "driver_id": "albon",
-          "driver": "Alexander Albon",
-          "team": "Williams",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 20,
           "delta": 0
         },
         {
@@ -2712,13 +2702,23 @@
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 21,
+          "pos": 20,
           "delta": 0
         },
         {
           "driver_id": "stroll",
           "driver": "Lance Stroll",
           "team": "Aston Martin",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 21,
+          "delta": 0
+        },
+        {
+          "driver_id": "albon",
+          "driver": "Alexander Albon",
+          "team": "Williams",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -3598,9 +3598,9 @@
           "delta": 6
         },
         {
-          "driver_id": "hadjar",
-          "driver": "Isack Hadjar",
-          "team": "Red Bull",
+          "driver_id": "arvid_lindblad",
+          "driver": "Arvid Lindblad",
+          "team": "RB F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 4,
@@ -3608,9 +3608,9 @@
           "delta": 0
         },
         {
-          "driver_id": "arvid_lindblad",
-          "driver": "Arvid Lindblad",
-          "team": "RB F1 Team",
+          "driver_id": "hadjar",
+          "driver": "Isack Hadjar",
+          "team": "Red Bull",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 4,
@@ -3638,23 +3638,33 @@
           "delta": 0
         },
         {
-          "driver_id": "albon",
-          "driver": "Alexander Albon",
-          "team": "Williams",
-          "sprint_pts": 0,
-          "race_pts": 1,
-          "total_after": 1,
-          "pos": 16,
-          "delta": 1
-        },
-        {
           "driver_id": "ocon",
           "driver": "Esteban Ocon",
           "team": "Haas F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 1,
+          "pos": 16,
+          "delta": 0
+        },
+        {
+          "driver_id": "albon",
+          "driver": "Alexander Albon",
+          "team": "Williams",
+          "sprint_pts": 0,
+          "race_pts": 1,
+          "total_after": 1,
           "pos": 17,
+          "delta": 1
+        },
+        {
+          "driver_id": "alonso",
+          "driver": "Fernando Alonso",
+          "team": "Aston Martin",
+          "sprint_pts": 0,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 18,
           "delta": 0
         },
         {
@@ -3664,22 +3674,12 @@
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
-          "pos": 18,
-          "delta": 0
-        },
-        {
-          "driver_id": "alonso",
-          "driver": "Fernando Alonso",
-          "team": "Aston Martin",
-          "sprint_pts": 0,
-          "race_pts": 0,
-          "total_after": 0,
           "pos": 19,
           "delta": 0
         },
         {
-          "driver_id": "perez",
-          "driver": "Sergio Pérez",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
           "team": "Cadillac F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
@@ -3688,8 +3688,8 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
           "team": "Cadillac F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
@@ -4620,9 +4620,9 @@
           "delta": 0
         },
         {
-          "driver_id": "albon",
-          "driver": "Alexander Albon",
-          "team": "Williams",
+          "driver_id": "ocon",
+          "driver": "Esteban Ocon",
+          "team": "Haas F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 1,
@@ -4630,23 +4630,13 @@
           "delta": 0
         },
         {
-          "driver_id": "ocon",
-          "driver": "Esteban Ocon",
-          "team": "Haas F1 Team",
+          "driver_id": "albon",
+          "driver": "Alexander Albon",
+          "team": "Williams",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 1,
           "pos": 17,
-          "delta": 0
-        },
-        {
-          "driver_id": "hulkenberg",
-          "driver": "Nico Hülkenberg",
-          "team": "Audi",
-          "sprint_pts": 0,
-          "race_pts": 0,
-          "total_after": 0,
-          "pos": 18,
           "delta": 0
         },
         {
@@ -4656,12 +4646,22 @@
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
+          "pos": 18,
+          "delta": 0
+        },
+        {
+          "driver_id": "hulkenberg",
+          "driver": "Nico Hülkenberg",
+          "team": "Audi",
+          "sprint_pts": 0,
+          "race_pts": 0,
+          "total_after": 0,
           "pos": 19,
           "delta": 0
         },
         {
-          "driver_id": "perez",
-          "driver": "Sergio Pérez",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
           "team": "Cadillac F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
@@ -4670,8 +4670,8 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
           "team": "Cadillac F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
@@ -5288,24 +5288,24 @@
           "delta": 15
         },
         {
-          "driver_id": "lawson",
-          "driver": "Liam Lawson",
-          "team": "RB F1 Team",
-          "sprint_pts": null,
-          "race_pts": 10,
-          "total_after": 26,
-          "pos": 9,
-          "delta": 10
-        },
-        {
           "driver_id": "gasly",
           "driver": "Pierre Gasly",
           "team": "Alpine F1 Team",
           "sprint_pts": null,
           "race_pts": 6,
           "total_after": 26,
-          "pos": 10,
+          "pos": 9,
           "delta": 6
+        },
+        {
+          "driver_id": "lawson",
+          "driver": "Liam Lawson",
+          "team": "RB F1 Team",
+          "sprint_pts": null,
+          "race_pts": 10,
+          "total_after": 26,
+          "pos": 10,
+          "delta": 10
         },
         {
           "driver_id": "bearman",
@@ -5388,9 +5388,9 @@
           "delta": 1
         },
         {
-          "driver_id": "hulkenberg",
-          "driver": "Nico Hülkenberg",
-          "team": "Audi",
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
+          "team": "Cadillac F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -5398,9 +5398,9 @@
           "delta": 0
         },
         {
-          "driver_id": "perez",
-          "driver": "Sergio Pérez",
-          "team": "Cadillac F1 Team",
+          "driver_id": "hulkenberg",
+          "driver": "Nico Hülkenberg",
+          "team": "Audi",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -5408,9 +5408,9 @@
           "delta": 0
         },
         {
-          "driver_id": "stroll",
-          "driver": "Lance Stroll",
-          "team": "Aston Martin",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
+          "team": "Cadillac F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -5418,9 +5418,9 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
-          "team": "Cadillac F1 Team",
+          "driver_id": "stroll",
+          "driver": "Lance Stroll",
+          "team": "Aston Martin",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -6126,9 +6126,9 @@
           "delta": 0
         },
         {
-          "driver_id": "hulkenberg",
-          "driver": "Nico Hülkenberg",
-          "team": "Audi",
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
+          "team": "Cadillac F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -6136,9 +6136,9 @@
           "delta": 0
         },
         {
-          "driver_id": "perez",
-          "driver": "Sergio Pérez",
-          "team": "Cadillac F1 Team",
+          "driver_id": "hulkenberg",
+          "driver": "Nico Hülkenberg",
+          "team": "Audi",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -6724,24 +6724,24 @@
           "delta": 12
         },
         {
-          "driver_id": "norris",
-          "driver": "Lando Norris",
-          "team": "McLaren",
-          "sprint_pts": null,
-          "race_pts": 6,
-          "total_after": 79,
-          "pos": 5,
-          "delta": 6
-        },
-        {
           "driver_id": "leclerc",
           "driver": "Charles Leclerc",
           "team": "Ferrari",
           "sprint_pts": null,
           "race_pts": 4,
           "total_after": 79,
-          "pos": 6,
+          "pos": 5,
           "delta": 4
+        },
+        {
+          "driver_id": "norris",
+          "driver": "Lando Norris",
+          "team": "McLaren",
+          "sprint_pts": null,
+          "race_pts": 6,
+          "total_after": 79,
+          "pos": 6,
+          "delta": 6
         },
         {
           "driver_id": "max_verstappen",
@@ -6764,24 +6764,24 @@
           "delta": 8
         },
         {
-          "driver_id": "lawson",
-          "driver": "Liam Lawson",
-          "team": "RB F1 Team",
-          "sprint_pts": null,
-          "race_pts": 2,
-          "total_after": 32,
-          "pos": 9,
-          "delta": 2
-        },
-        {
           "driver_id": "gasly",
           "driver": "Pierre Gasly",
           "team": "Alpine F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 32,
-          "pos": 10,
+          "pos": 9,
           "delta": 0
+        },
+        {
+          "driver_id": "lawson",
+          "driver": "Liam Lawson",
+          "team": "RB F1 Team",
+          "sprint_pts": null,
+          "race_pts": 2,
+          "total_after": 32,
+          "pos": 10,
+          "delta": 2
         },
         {
           "driver_id": "bearman",
@@ -6794,24 +6794,24 @@
           "delta": 0
         },
         {
-          "driver_id": "colapinto",
-          "driver": "Franco Colapinto",
-          "team": "Alpine F1 Team",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 16,
-          "pos": 12,
-          "delta": 0
-        },
-        {
           "driver_id": "arvid_lindblad",
           "driver": "Arvid Lindblad",
           "team": "RB F1 Team",
           "sprint_pts": null,
           "race_pts": 1,
           "total_after": 16,
-          "pos": 13,
+          "pos": 12,
           "delta": 1
+        },
+        {
+          "driver_id": "colapinto",
+          "driver": "Franco Colapinto",
+          "team": "Alpine F1 Team",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 16,
+          "pos": 13,
+          "delta": 0
         },
         {
           "driver_id": "sainz",
@@ -6864,9 +6864,9 @@
           "delta": 0
         },
         {
-          "driver_id": "hulkenberg",
-          "driver": "Nico Hülkenberg",
-          "team": "Audi",
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
+          "team": "Cadillac F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -6874,9 +6874,9 @@
           "delta": 0
         },
         {
-          "driver_id": "perez",
-          "driver": "Sergio Pérez",
-          "team": "Cadillac F1 Team",
+          "driver_id": "hulkenberg",
+          "driver": "Nico Hülkenberg",
+          "team": "Audi",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -6884,9 +6884,9 @@
           "delta": 0
         },
         {
-          "driver_id": "stroll",
-          "driver": "Lance Stroll",
-          "team": "Aston Martin",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
+          "team": "Cadillac F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -6894,9 +6894,9 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
-          "team": "Cadillac F1 Team",
+          "driver_id": "stroll",
+          "driver": "Lance Stroll",
+          "team": "Aston Martin",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -7776,24 +7776,24 @@
           "delta": 6
         },
         {
-          "driver_id": "colapinto",
-          "driver": "Franco Colapinto",
-          "team": "Alpine F1 Team",
-          "sprint_pts": 0,
-          "race_pts": 2,
-          "total_after": 18,
-          "pos": 12,
-          "delta": 2
-        },
-        {
           "driver_id": "bearman",
           "driver": "Oliver Bearman",
           "team": "Haas F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 18,
-          "pos": 13,
+          "pos": 12,
           "delta": 0
+        },
+        {
+          "driver_id": "colapinto",
+          "driver": "Franco Colapinto",
+          "team": "Alpine F1 Team",
+          "sprint_pts": 0,
+          "race_pts": 2,
+          "total_after": 18,
+          "pos": 13,
+          "delta": 2
         },
         {
           "driver_id": "bortoleto",
@@ -7856,8 +7856,8 @@
           "delta": 0
         },
         {
-          "driver_id": "perez",
-          "driver": "Sergio Pérez",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
           "team": "Cadillac F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
@@ -7866,8 +7866,8 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
           "team": "Cadillac F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
@@ -8584,9 +8584,9 @@
           "delta": 0
         },
         {
-          "driver_id": "hulkenberg",
-          "driver": "Nico Hülkenberg",
-          "team": "Audi",
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
+          "team": "Cadillac F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -8594,9 +8594,9 @@
           "delta": 0
         },
         {
-          "driver_id": "perez",
-          "driver": "Sergio Pérez",
-          "team": "Cadillac F1 Team",
+          "driver_id": "hulkenberg",
+          "driver": "Nico Hülkenberg",
+          "team": "Audi",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -10134,24 +10134,24 @@
           "delta": 23
         },
         {
-          "driver_id": "russell",
-          "driver": "George Russell",
-          "team": "Mercedes",
-          "sprint_pts": 8,
-          "race_pts": 15,
-          "total_after": 183,
-          "pos": 2,
-          "delta": 23
-        },
-        {
           "driver_id": "hamilton",
           "driver": "Lewis Hamilton",
           "team": "Ferrari",
           "sprint_pts": 2,
           "race_pts": 12,
           "total_after": 183,
-          "pos": 3,
+          "pos": 2,
           "delta": 14
+        },
+        {
+          "driver_id": "russell",
+          "driver": "George Russell",
+          "team": "Mercedes",
+          "sprint_pts": 8,
+          "race_pts": 15,
+          "total_after": 183,
+          "pos": 3,
+          "delta": 23
         },
         {
           "driver_id": "norris",
@@ -10304,8 +10304,8 @@
           "delta": 0
         },
         {
-          "driver_id": "perez",
-          "driver": "Sergio Pérez",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
           "team": "Cadillac F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
@@ -10314,9 +10314,9 @@
           "delta": 0
         },
         {
-          "driver_id": "tsunoda",
-          "driver": "Yuki Tsunoda",
-          "team": "RB F1 Team",
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
+          "team": "Cadillac F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
@@ -10324,9 +10324,9 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
-          "team": "Cadillac F1 Team",
+          "driver_id": "tsunoda",
+          "driver": "Yuki Tsunoda",
+          "team": "RB F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 0,
@@ -13196,24 +13196,24 @@
           "delta": 0
         },
         {
-          "driver_id": "hulkenberg",
-          "driver": "Nico Hülkenberg",
-          "team": "Audi",
-          "sprint_pts": null,
-          "race_pts": 0,
-          "total_after": 7,
-          "pos": 15,
-          "delta": 0
-        },
-        {
           "driver_id": "alonso",
           "driver": "Fernando Alonso",
           "team": "Aston Martin",
           "sprint_pts": null,
           "race_pts": 4,
           "total_after": 7,
-          "pos": 16,
+          "pos": 15,
           "delta": 4
+        },
+        {
+          "driver_id": "hulkenberg",
+          "driver": "Nico Hülkenberg",
+          "team": "Audi",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 7,
+          "pos": 16,
+          "delta": 0
         },
         {
           "driver_id": "ocon",
@@ -14198,9 +14198,9 @@
           "delta": 0
         },
         {
-          "driver_id": "sainz",
-          "driver": "Carlos Sainz",
-          "team": "Williams",
+          "driver_id": "ocon",
+          "driver": "Esteban Ocon",
+          "team": "Haas F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 7,
@@ -14208,9 +14208,9 @@
           "delta": 0
         },
         {
-          "driver_id": "ocon",
-          "driver": "Esteban Ocon",
-          "team": "Haas F1 Team",
+          "driver_id": "sainz",
+          "driver": "Carlos Sainz",
+          "team": "Williams",
           "sprint_pts": 0,
           "race_pts": 0,
           "total_after": 7,
@@ -14228,8 +14228,8 @@
           "delta": 0
         },
         {
-          "driver_id": "perez",
-          "driver": "Sergio Pérez",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
           "team": "Cadillac F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
@@ -14238,8 +14238,8 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
           "team": "Cadillac F1 Team",
           "sprint_pts": 0,
           "race_pts": 0,
@@ -14976,9 +14976,9 @@
           "delta": 0
         },
         {
-          "driver_id": "stroll",
-          "driver": "Lance Stroll",
-          "team": "Aston Martin",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
+          "team": "Cadillac F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -14986,9 +14986,9 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
-          "team": "Cadillac F1 Team",
+          "driver_id": "stroll",
+          "driver": "Lance Stroll",
+          "team": "Aston Martin",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -15714,9 +15714,9 @@
           "delta": 0
         },
         {
-          "driver_id": "stroll",
-          "driver": "Lance Stroll",
-          "team": "Aston Martin",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
+          "team": "Cadillac F1 Team",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -15724,9 +15724,9 @@
           "delta": 0
         },
         {
-          "driver_id": "bottas",
-          "driver": "Valtteri Bottas",
-          "team": "Cadillac F1 Team",
+          "driver_id": "stroll",
+          "driver": "Lance Stroll",
+          "team": "Aston Martin",
           "sprint_pts": null,
           "race_pts": 0,
           "total_after": 0,
@@ -15741,7 +15741,7 @@
       "circuit": "Autódromo José Carlos Pace",
       "location": "São Paulo, Brazil",
       "sprint": false,
-      "status": "ongoing",
+      "status": "completed",
       "sessions": [
         {
           "name": "FirstPractice",
@@ -16004,6 +16004,472 @@
           "q1": "",
           "q2": "—",
           "q3": "—"
+        }
+      ],
+      "race_results": [
+        {
+          "pos": "1",
+          "driver_id": "norris",
+          "driver": "Lando Norris",
+          "code": "NOR",
+          "team_id": "mclaren",
+          "team": "McLaren",
+          "grid": 1,
+          "time": "1:35:23.504",
+          "points": 25
+        },
+        {
+          "pos": "2",
+          "driver_id": "max_verstappen",
+          "driver": "Max Verstappen",
+          "code": "VER",
+          "team_id": "red_bull",
+          "team": "Red Bull",
+          "grid": 21,
+          "time": "+14.602",
+          "points": 18
+        },
+        {
+          "pos": "3",
+          "driver_id": "hadjar",
+          "driver": "Isack Hadjar",
+          "code": "HAD",
+          "team_id": "red_bull",
+          "team": "Red Bull",
+          "grid": 5,
+          "time": "+24.485",
+          "points": 15
+        },
+        {
+          "pos": "4",
+          "driver_id": "russell",
+          "driver": "George Russell",
+          "code": "RUS",
+          "team_id": "mercedes",
+          "team": "Mercedes",
+          "grid": 7,
+          "time": "+33.991",
+          "points": 12
+        },
+        {
+          "pos": "5",
+          "driver_id": "antonelli",
+          "driver": "Andrea Kimi Antonelli",
+          "code": "ANT",
+          "team_id": "mercedes",
+          "team": "Mercedes",
+          "grid": 2,
+          "time": "+41.017",
+          "points": 10
+        },
+        {
+          "pos": "6",
+          "driver_id": "piastri",
+          "driver": "Oscar Piastri",
+          "code": "PIA",
+          "team_id": "mclaren",
+          "team": "McLaren",
+          "grid": 10,
+          "time": "+56.475",
+          "points": 8
+        },
+        {
+          "pos": "7",
+          "driver_id": "lawson",
+          "driver": "Liam Lawson",
+          "code": "LAW",
+          "team_id": "rb",
+          "team": "RB F1 Team",
+          "grid": 3,
+          "time": "+1:15.402",
+          "points": 6
+        },
+        {
+          "pos": "8",
+          "driver_id": "leclerc",
+          "driver": "Charles Leclerc",
+          "code": "LEC",
+          "team_id": "ferrari",
+          "team": "Ferrari",
+          "grid": 14,
+          "time": "+1:18.586",
+          "points": 4
+        },
+        {
+          "pos": "9",
+          "driver_id": "hamilton",
+          "driver": "Lewis Hamilton",
+          "code": "HAM",
+          "team_id": "ferrari",
+          "team": "Ferrari",
+          "grid": 20,
+          "time": "Lapped",
+          "points": 2
+        },
+        {
+          "pos": "10",
+          "driver_id": "hulkenberg",
+          "driver": "Nico Hülkenberg",
+          "code": "HUL",
+          "team_id": "audi",
+          "team": "Audi",
+          "grid": 4,
+          "time": "Lapped",
+          "points": 1
+        },
+        {
+          "pos": "11",
+          "driver_id": "arvid_lindblad",
+          "driver": "Arvid Lindblad",
+          "code": "LIN",
+          "team_id": "rb",
+          "team": "RB F1 Team",
+          "grid": 18,
+          "time": "Lapped",
+          "points": 0
+        },
+        {
+          "pos": "12",
+          "driver_id": "alonso",
+          "driver": "Fernando Alonso",
+          "code": "ALO",
+          "team_id": "aston_martin",
+          "team": "Aston Martin",
+          "grid": 8,
+          "time": "Lapped",
+          "points": 0
+        },
+        {
+          "pos": "13",
+          "driver_id": "colapinto",
+          "driver": "Franco Colapinto",
+          "code": "COL",
+          "team_id": "alpine",
+          "team": "Alpine F1 Team",
+          "grid": 13,
+          "time": "Lapped",
+          "points": 0
+        },
+        {
+          "pos": "14",
+          "driver_id": "gasly",
+          "driver": "Pierre Gasly",
+          "code": "GAS",
+          "team_id": "alpine",
+          "team": "Alpine F1 Team",
+          "grid": 15,
+          "time": "Lapped",
+          "points": 0
+        },
+        {
+          "pos": "15",
+          "driver_id": "albon",
+          "driver": "Alexander Albon",
+          "code": "ALB",
+          "team_id": "williams",
+          "team": "Williams",
+          "grid": 9,
+          "time": "Lapped",
+          "points": 0
+        },
+        {
+          "pos": "16",
+          "driver_id": "bortoleto",
+          "driver": "Gabriel Bortoleto",
+          "code": "BOR",
+          "team_id": "audi",
+          "team": "Audi",
+          "grid": 19,
+          "time": "Lapped",
+          "points": 0
+        },
+        {
+          "pos": "17",
+          "driver_id": "bearman",
+          "driver": "Oliver Bearman",
+          "code": "BEA",
+          "team_id": "haas",
+          "team": "Haas F1 Team",
+          "grid": 6,
+          "time": "Lapped",
+          "points": 0
+        },
+        {
+          "pos": "18",
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
+          "code": "PER",
+          "team_id": "cadillac",
+          "team": "Cadillac F1 Team",
+          "grid": 22,
+          "time": "Lapped",
+          "points": 0
+        },
+        {
+          "pos": "19",
+          "driver_id": "sainz",
+          "driver": "Carlos Sainz",
+          "code": "SAI",
+          "team_id": "williams",
+          "team": "Williams",
+          "grid": 12,
+          "time": "Lapped",
+          "points": 0
+        },
+        {
+          "pos": "20",
+          "driver_id": "rafael_camara",
+          "driver": "Rafael Camara",
+          "code": "",
+          "team_id": "haas",
+          "team": "Haas F1 Team",
+          "grid": 11,
+          "time": "Lapped",
+          "points": 0
+        },
+        {
+          "pos": "R",
+          "driver_id": "stroll",
+          "driver": "Lance Stroll",
+          "code": "STR",
+          "team_id": "aston_martin",
+          "team": "Aston Martin",
+          "grid": 16,
+          "time": "Retired",
+          "points": 0
+        },
+        {
+          "pos": "W",
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
+          "code": "BOT",
+          "team_id": "cadillac",
+          "team": "Cadillac F1 Team",
+          "grid": 17,
+          "time": "Did not start",
+          "points": 0
+        }
+      ],
+      "points_table": [
+        {
+          "driver_id": "antonelli",
+          "driver": "Andrea Kimi Antonelli",
+          "team": "Mercedes",
+          "sprint_pts": null,
+          "race_pts": 10,
+          "total_after": 390,
+          "pos": 1,
+          "delta": 10
+        },
+        {
+          "driver_id": "max_verstappen",
+          "driver": "Max Verstappen",
+          "team": "Red Bull",
+          "sprint_pts": null,
+          "race_pts": 18,
+          "total_after": 279,
+          "pos": 2,
+          "delta": 18
+        },
+        {
+          "driver_id": "russell",
+          "driver": "George Russell",
+          "team": "Mercedes",
+          "sprint_pts": null,
+          "race_pts": 12,
+          "total_after": 262,
+          "pos": 3,
+          "delta": 12
+        },
+        {
+          "driver_id": "hamilton",
+          "driver": "Lewis Hamilton",
+          "team": "Ferrari",
+          "sprint_pts": null,
+          "race_pts": 2,
+          "total_after": 261,
+          "pos": 4,
+          "delta": 2
+        },
+        {
+          "driver_id": "leclerc",
+          "driver": "Charles Leclerc",
+          "team": "Ferrari",
+          "sprint_pts": null,
+          "race_pts": 4,
+          "total_after": 249,
+          "pos": 5,
+          "delta": 4
+        },
+        {
+          "driver_id": "norris",
+          "driver": "Lando Norris",
+          "team": "McLaren",
+          "sprint_pts": null,
+          "race_pts": 25,
+          "total_after": 246,
+          "pos": 6,
+          "delta": 25
+        },
+        {
+          "driver_id": "piastri",
+          "driver": "Oscar Piastri",
+          "team": "McLaren",
+          "sprint_pts": null,
+          "race_pts": 8,
+          "total_after": 152,
+          "pos": 7,
+          "delta": 8
+        },
+        {
+          "driver_id": "hadjar",
+          "driver": "Isack Hadjar",
+          "team": "Red Bull",
+          "sprint_pts": null,
+          "race_pts": 15,
+          "total_after": 122,
+          "pos": 8,
+          "delta": 15
+        },
+        {
+          "driver_id": "lawson",
+          "driver": "Liam Lawson",
+          "team": "RB F1 Team",
+          "sprint_pts": null,
+          "race_pts": 6,
+          "total_after": 89,
+          "pos": 9,
+          "delta": 6
+        },
+        {
+          "driver_id": "gasly",
+          "driver": "Pierre Gasly",
+          "team": "Alpine F1 Team",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 42,
+          "pos": 10,
+          "delta": 0
+        },
+        {
+          "driver_id": "arvid_lindblad",
+          "driver": "Arvid Lindblad",
+          "team": "RB F1 Team",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 38,
+          "pos": 11,
+          "delta": 0
+        },
+        {
+          "driver_id": "colapinto",
+          "driver": "Franco Colapinto",
+          "team": "Alpine F1 Team",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 27,
+          "pos": 12,
+          "delta": 0
+        },
+        {
+          "driver_id": "bearman",
+          "driver": "Oliver Bearman",
+          "team": "Haas F1 Team",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 23,
+          "pos": 13,
+          "delta": 0
+        },
+        {
+          "driver_id": "bortoleto",
+          "driver": "Gabriel Bortoleto",
+          "team": "Audi",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 14,
+          "pos": 14,
+          "delta": 0
+        },
+        {
+          "driver_id": "hulkenberg",
+          "driver": "Nico Hülkenberg",
+          "team": "Audi",
+          "sprint_pts": null,
+          "race_pts": 1,
+          "total_after": 14,
+          "pos": 15,
+          "delta": 1
+        },
+        {
+          "driver_id": "alonso",
+          "driver": "Fernando Alonso",
+          "team": "Aston Martin",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 7,
+          "pos": 16,
+          "delta": 0
+        },
+        {
+          "driver_id": "sainz",
+          "driver": "Carlos Sainz",
+          "team": "Williams",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 7,
+          "pos": 17,
+          "delta": 0
+        },
+        {
+          "driver_id": "albon",
+          "driver": "Alexander Albon",
+          "team": "Williams",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 5,
+          "pos": 18,
+          "delta": 0
+        },
+        {
+          "driver_id": "perez",
+          "driver": "Sergio Pérez",
+          "team": "Cadillac F1 Team",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 19,
+          "delta": 0
+        },
+        {
+          "driver_id": "bottas",
+          "driver": "Valtteri Bottas",
+          "team": "Cadillac F1 Team",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 20,
+          "delta": 0
+        },
+        {
+          "driver_id": "rafael_camara",
+          "driver": "Rafael Camara",
+          "team": "Haas F1 Team",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 21,
+          "delta": 0
+        },
+        {
+          "driver_id": "stroll",
+          "driver": "Lance Stroll",
+          "team": "Aston Martin",
+          "sprint_pts": null,
+          "race_pts": 0,
+          "total_after": 0,
+          "pos": 22,
+          "delta": 0
         }
       ]
     },
