@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21T13:04:07Z",
+ "generated": "2026-11-21T14:53:31Z",
  "source": "https://www.formula1.com/en/latest",
  "translation": "Google (free, no key) + словарик терминов F1",
  "articles": [
@@ -176,9 +176,12 @@
    "image": "https://media.formula1.com/image/upload/f_auto/q_auto/v1795244312/fom-website/2026/Las%20Vegas/16x9%20single%20image%20-%202026-11-21T065823.404.png",
    "image_alt": "",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 15,
+   "media": 2,
+   "blocks_trimmed": false,
+   "media_done": true,
+   "blocks_version": 3
   },
   {
    "id": "5NIhyjb93o9jPrK39GLuRe",
@@ -193,9 +196,12 @@
    "image": "https://media.formula1.com/image/upload/t_16by9Centre/f_auto/q_auto/v1795241253/fom-website/2026/Las%20Vegas/16x9%20single%20image%20-%202026-11-21T060649.425.png",
    "image_alt": "",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 12,
+   "media": 2,
+   "blocks_trimmed": false,
+   "media_done": true,
+   "blocks_version": 3
   },
   {
    "id": "6y0zcnlPP6Lf9zoPv89j3W",
@@ -210,9 +216,12 @@
    "image": "https://media.formula1.com/image/upload/t_16by9North/f_auto/q_auto/v1795238218/trackside-images/2026/F1_Grand_Prix_of_Las_Vegas___Qualifying/2306147336.jpg",
    "image_alt": "LAS VEGAS, NEVADA - NOVEMBER 20: Second placed qualifier Max Verstappen of the Netherlands and",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 13,
+   "media": 3,
+   "blocks_trimmed": false,
+   "media_done": true,
+   "blocks_version": 3
   },
   {
    "id": "6jbNyvDSifesMfng2Dpet0",
@@ -227,9 +236,12 @@
    "image": "https://media.formula1.com/image/upload/t_16by9Centre/f_auto/q_auto/v1795235607/fom-website/2026/F1%20Academy/GettyImages-2306137450.jpg",
    "image_alt": "LAS VEGAS, NEVADA - NOVEMBER 20: Race winner Alba Larsen of Denmark and MP Motorsport (12)",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 13,
+   "media": 2,
+   "blocks_trimmed": false,
+   "media_done": true,
+   "blocks_version": 3
   },
   {
    "id": "6R7udh8iYMHunSOGI6zStK",
@@ -9993,16 +10005,6 @@
   }
  ],
  "translation_cache": {
-  "body::“So, it's felt quite different to previous [cars] and even a lot of the previous cars I've driven in general. That's been quite an adaptation process and learning to trust the car and retrain what feels like the limit is never an easy thing to try and adapt. But hopefully I’m making progress.”": "«Так что ощущения были совершенно другими по сравнению с предыдущими [машинами] и даже со многими другими автомобилями, на которых я ездил в целом. Это был довольно сложный процесс адаптации. Научиться доверять машине и заново понять, где находится предел возможностей, — задача, к которой никогда не бывает легко приспособиться. Но, надеюсь, я добиваюсь прогресса».",
-  "body::Oscar Piastri's padel skills have been the subject of some friendly teasing, with Alex Albon gifting the Australian padel lessons for the 2024 F1 Secret Santa.": "Навыки Оскара Пиастри в паделе стали предметом дружеских подшучиваний, а Алекс Элбон подарил австралийцу уроки паделя в рамках акции F1 Secret Santa 2024.",
-  "body::Gasly takes his passion for padel further": "Гасли развивает свою страсть к паделю",
-  "body::While many drivers enjoy padel recreationally, Pierre Gasly has become involved in the sport as a team owner.": "Многие пилоты играют в падел в свободное время, но Пьер Гасли стал владельцем команды.",
-  "body::The Alpine driver is an investor in 10Padel, a team competing in the Hexagon Cup, an international padel competition which has attracted several high-profile investors.": "Пилот Alpine является инвестором команды 10Padel, которая участвует в Hexagon Cup — международном турнире по паделю, привлекшем внимание нескольких крупных инвесторов.",
-  "body::\"Padel is something I really enjoy in my daily life, and I believe it's a sport with incredible business potential,\" Gasly told Reuters in February 2026. \"I'm happy to be a part of its growth through my team.\"": "«Падел — это то, что мне действительно нравится в повседневной жизни, и я считаю, что этот вид спорта обладает невероятным коммерческим потенциалом», — сказал Гасли агентству Reuters в феврале 2026 года. «Я рад внести свой вклад в его развитие благодаря своей команде».",
-  "body::For Gasly, exploring interests outside Formula 1 is an important part of his life.": "Для Гасли поиск интересов за пределами Формулы-1 — важная часть жизни.",
-  "body::\"Formula 1 opens many opportunities. While I wake up thinking about F1 and fall asleep thinking about it, there's more to life. I want to discover other things and mix them with my passions,\" he explained.": "«Формула-1 открывает множество возможностей. Хотя я просыпаюсь с мыслями о «Формуле-1» и засыпаю с мыслями о ней, в жизни есть и другие вещи. Я хочу открывать для себя что-то новое и сочетать это с моими увлечениями», — пояснил он.",
-  "body::Could Formula 1 help padel reach new audiences?": "Может ли «Формула-1» помочь паделю привлечь новую аудиторию?",
-  "body::With drivers regularly sharing their enthusiasm for padel and Aston Martin introducing its own equipment collection, the relationship between the two sports continues to develop.": "Пилоты регулярно делятся своим увлечением паделем, а Aston Martin представляет собственную коллекцию снаряжения. Таким образом, связь между двумя видами спорта продолжает развиваться.",
   "body::For Aston Martin's Bloom, the partnership offers an opportunity to engage with fans beyond the traditional motorsport environment.": "Для Блума из Aston Martin это партнерство — возможность взаимодействовать с поклонниками за пределами традиционной среды автоспорта.",
   "body::\"Formula 1 has an incredibly diverse fanbase, and for Aston Martin, it's about finding authentic ways to meet fans on their terms – that means in their communities beyond motorsport. Padel is a great example of that.": "«У Формулы-1 невероятно разнообразная фанатская база, и для Aston Martin важно найти действенные способы взаимодействия с болельщиками на их условиях — то есть в их сообществах за пределами автоспорта. Падел — отличный тому пример.",
   "body::\"Collaborations like this allow fans to engage with the team through something they enjoy themselves, creating a connection that extends beyond the racetrack. Ultimately, we want to be part of the conversations and communities that matter to our fans, wherever their interests lie.\"": "«Подобные коллаборации позволяют болельщикам взаимодействовать с командой через то, что им нравится, создавая связь, которая выходит за пределы гоночной трассы. В конечном счете, мы хотим участвовать в обсуждениях и сообществах, которые важны для наших болельщиков, независимо от их интересов».",
@@ -12492,6 +12494,16 @@
   "body::\"I’m relatively happy with my lap and I don’t think there was much more I could have got out of it. The car is working well in the corners, and the updates are doing what we expected. Our biggest opportunity is straight-line speed: we’re losing too much on the straights, particularly in the final sector, and we need to keep working to understand why.": "«Я относительно доволен своим кругом и не думаю, что мог бы получить от него что-то большее. Машина хорошо работает в поворотах, и обновления делают то, что мы ожидали. Наша самая большая возможность — это скорость на прямых: мы теряем слишком много на прямых, особенно в последнем секторе, и нам нужно продолжать работать, чтобы понять, почему».",
   "body::\"It’s difficult to predict the race because we’ve had only one dry session, but we think overtaking will be difficult with our straight-line speed. I’m not going to make predictions; we'll focus on what we can do with the car we have.\"": "«Трудно предсказать гонку, потому что у нас была только одна сухая сессия, но мы думаем, что обгоны будут затруднены с нашей скоростью на прямой. Я не собираюсь делать прогнозы; мы сосредоточимся на том, что мы можем сделать с имеющейся у нас машиной».",
   "body::\"Overall, I don't think we could have got much more, so I’m reasonably happy. While we obviously want to be further up, especially with our grid penalty, the general pace was encouraging.": "«В целом, я не думаю, что мы могли бы добиться большего, поэтому я вполне доволен. Хотя мы, очевидно, хотим подняться выше, особенно с учетом нашего промаха на стартовой решетке, общий темп был обнадеживающим.",
-  "body::\"Q3 fell away a little bit, and I did think we had more in it in that part of the session. The car didn't feel quite as good, and the balance was slightly out. We also couldn't quite get the slipstream, which is something that is really important here.": "«Третий сегмент немного отстал, и я думаю, что в этой части сессии мы добились большего. Машина чувствовала себя не так хорошо, и баланс немного нарушился. Мы также не смогли полностью поймать слипстрим, что здесь действительно важно."
+  "body::\"Q3 fell away a little bit, and I did think we had more in it in that part of the session. The car didn't feel quite as good, and the balance was slightly out. We also couldn't quite get the slipstream, which is something that is really important here.": "«Третий сегмент немного отстал, и я думаю, что в этой части сессии мы добились большего. Машина чувствовала себя не так хорошо, и баланс немного нарушился. Мы также не смогли полностью поймать слипстрим, что здесь действительно важно.",
+  "body::\"While we don't have the straight-line speed, I think overtaking will still be possible, so we will see what we can do. We will learn overnight and get dialled in to do as much overtaking as we can tomorrow. It should be fun.\"": "«Хотя у нас нет скорости на прямых, я думаю, что обгонять все равно будет возможно, так что посмотрим, что мы сможем сделать. За ночь мы проанализируем ситуацию и подготовимся к тому, чтобы завтра совершить как можно больше обгонов. Должно быть весело».",
+  "body::\"Lando was constantly in the fight for the very top positions and, had it not been for a plastic bag that had become caught on the floor's spat on the right side, causing a significant drop in downforce, he could have secured at least a front-row start. Oscar, aware of the penalty he’ll face for introducing his fifth ICE of the season, was not only competitive but also proved once again that he’s a team player.": "«Ландо постоянно боролся за самые высокие позиции, и если бы не пластиковый пакет, застрявший в дефлекторе на правой стороне днища, что привело к значительному снижению прижимной силы, он мог бы, как минимум, стартовать с первого ряда. Оскар, зная о штрафе, который ему грозит за использование пятого ДВС в сезоне, не только продемонстрировал конкурентоспособность, но и в очередной раз доказал, что он командный игрок.",
+  "body::\"Tomorrow’s race will be very unpredictable, not least because yesterday’s rain meant there was little opportunity to test our pace over the long distance. Our objective is very clear: to try and gain points on Red Bull in the battle for third place. It won’t be easy at all, both because of their competitiveness and, above all, because one of our drivers will be forced to start from the back of the grid.\"": "«Завтрашняя гонка будет очень непредсказуемой, не в последнюю очередь потому, что из-за вчерашнего дождя у нас было мало возможностей проверить наш темп на длинной дистанции. Наша цель предельно ясна: постараться отыграть очки у Red Bull в борьбе за третье место. Это будет совсем непросто, как из-за их конкурентоспособности, так и, прежде всего, потому что один из наших пилотов будет вынужден стартовать с последних позиций на стартовой решетке».",
+  "body::Racing Bulls looked quick in the dry, so it was no surprise to see both cars into Q3. Lawson had even flirted with the top few positions at times in Qualifying. When the top-10 shoot-out began, they were the only team to run used soft tyres at the beginning of Q3, which cost both drivers.": "Болиды Racing Bulls выглядели быстрыми на сухой трассе, поэтому неудивительно, что обе машины прошли в Q3. Во время квалификации Лоусон даже иногда приближался к нескольким лидирующим позициям. Когда началась борьба за попадание в первую десятку, они были единственной командой, которая использовала подержанные мягкие шины в начале Q3, что стоило обоим гонщикам.",
+  "body::Their last runs in Q3 on new rubber were better, with Lindblad towing Lawson but picking up an advantageous tow himself. The rookie was sixth, meaning he starts a career-best fifth tomorrow for the Grand Prix.": "Их последние заезды в третьей части квалификации на новых шинах были лучше: Линдблад тянул за собой Лоусона, но и сам получил преимущество от слипстрима. Дебютант занял шестое место, а это значит, что завтра он стартует в Гран-при с пятой позиции — лучшей в его карьере.",
+  "body::Mattia Spini, Head of Trackside Engineering": "Маттиа Спини, руководитель отдела технического обслуживания на трассе",
+  "body::\"A very positive day for the team, with both cars in Q3. After yesterday’s wet running, we had more than usual to learn on the dry tyres. The car showed good pace, and we expected a close fight with Alpine in Qualifying. We made only small setup adjustments between sessions, focusing on a run plan that would bring the tyres into their working range in the cold conditions.": "«Очень позитивный день для команды: обе машины прошли в Q3. После вчерашних заездов на мокрой трассе нам пришлось больше, чем обычно, изучать поведение машины на сликах. Машина показала хорошую скорость, и мы ожидали напряженной борьбы с Alpine в квалификации. Между сессиями мы внесли лишь небольшие корректировки в настройки, сосредоточившись на плане заездов, который позволил бы вывести шины в рабочий диапазон в холодных условиях.",
+  "body::\"Q1 went as expected. On his first run in Q2, Liam put together a very competitive lap, which proved enough to reach Q3, especially as he didn’t have a tow on his second lap. We were the only team not to use two new sets of tyres in Q3, saving a new Soft set for the race.": "«Первая часть квалификации прошла, как и ожидалось. В своей первой попытке во втором сегменте квалификации Лиам проехал очень конкурентоспособный круг, которого оказалось достаточно, чтобы пройти в третий сегмент, особенно с учетом того, что на втором круге у него не было слипстрима. Мы были единственной командой, которая не использовала два новых комплекта шин в Q3, сохранив новый комплект Soft для гонки.",
+  "body::\"On the new tyre, Arvid extracted everything from the car. Liam had lower straight-line speed because of a reduced tow effect and a lack of PU energy. Despite that, both drivers delivered excellent final laps to Qualify P6 and P8. With a few penalties needing to be taken by some of the other drivers ahead, we find ourselves in P5 and P7 in tomorrow’s race.\"": "«На новых шинах Арвид выжал из машины все, что мог. У Лиама была ниже скорость на прямых из-за сниженного эффекта слипстрима и недостатка энергии силовой установки. Несмотря на это, оба пилота отлично прошли последние круги и квалифицировались на 6-м и 8-м местах. Поскольку некоторые из пилотов, стартующих впереди, должны отбыть штрафы, завтра мы начнем гонку с 5-й и 7-й позиций».",
+  "body::Alpine were quick at Monza, so much was expected of them here. They managed to get both cars into Q3 in an impressive display and had two sets of new soft cars to play with. But unfortunately on their last runs, Colapinto clipped the wall which did for his lap, and Gasly could only manage ninth. Nonetheless, after a double Q1 exit last time out in Interlagos, getting both cars into Q3 had to be seen as a big plus.": "Пилоты Alpine были быстры в Монце, поэтому здесь от них ожидали многого. Им удалось вывести обе машины в Q3, продемонстрировав впечатляющий результат, и у них было два комплекта новых мягких шин, которыми они могли воспользоваться. Но, к сожалению, во время своих последних заездов Колапинто задел стену, что испортило его круг, а Гасли смог занять лишь девятое место. Тем не менее, после того как в прошлый раз в Интерлагосе обе машины выбыли из Q1, попадание обоих болидов в Q3 следовало рассматривать как большой успех."
  }
 }
