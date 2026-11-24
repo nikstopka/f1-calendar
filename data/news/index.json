@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T18:19:09Z",
+ "generated": "2026-11-24T20:47:59Z",
  "source": "https://www.formula1.com/en/latest",
  "translation": "Google (free, no key) + словарик терминов F1",
  "articles": [
@@ -176,9 +176,12 @@
    "image": "https://media.formula1.com/image/upload/t_16by9North/f_auto/q_auto/v1793909215/trackside-images/2026/F1_Grand_Prix_of_Brazil___Previews/2303705334.jpg",
    "image_alt": "SAO PAULO, BRAZIL - NOVEMBER 05: Freddie Slater of Great Britain and Audi F1 Team poses for photos",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 11,
+   "media": 3,
+   "blocks_trimmed": false,
+   "media_done": true,
+   "blocks_version": 3
   },
   {
    "id": "4U1Zq3JUB2gujP5OoTMW1Z",
@@ -193,9 +196,12 @@
    "image": "https://media.formula1.com/image/upload/ar_16:9,c_crop,g_north_west,h_1615,w_2871,x_359,y_235/f_auto/q_auto/v1795158148/fom-website/2026/Las%20Vegas/GettyImages-2305972965.jpg",
    "image_alt": "LAS VEGAS, NEVADA - NOVEMBER 19: Max Verstappen of the Netherlands and Oracle Red Bull Racing and",
    "page": "",
-   "fetched_body": false,
-   "body_paras": 0,
-   "media": 0
+   "fetched_body": true,
+   "body_paras": 30,
+   "media": 9,
+   "blocks_trimmed": false,
+   "media_done": true,
+   "blocks_version": 3
   },
   {
    "id": "4Y4Vmh0tOMo60qq4D2uXPN",
